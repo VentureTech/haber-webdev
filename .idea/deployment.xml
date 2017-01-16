@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" promptOnRemoteOverwrite="CHECK_CONTENT" serverName="Development (WebDAV)" showExcludedInSync="true">
+    <serverData>
+      <paths name="Development (WebDAV)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$/build" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Live (WebDAV)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$/build" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="QA (WebDAV)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$/build" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

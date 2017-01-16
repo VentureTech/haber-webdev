@@ -1,0 +1,396 @@
+@import "../config/base-vars";
+
+#header {
+	background: $color-white;
+	padding: 0 0 0 1rem;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-flow: row wrap;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+
+	> div {
+		display: flex;
+	}
+
+	.logo-con {
+		flex: 1 0 100%;
+		justify-content: space-between;
+		margin-right: 2rem;
+		padding: .75rem 0;
+
+		a {
+			display: block;
+			//min-width: 12rem;
+			//max-width: 14rem;
+		}
+
+		.fa.fa-bars {
+			display: block;
+			align-self: center;
+			font-weight: 300;
+			font-size: 1.5rem;
+			cursor: pointer;
+		}
+
+	}
+
+	.nav-profile-con {
+		flex: 2 1 auto;
+		align-items: center;
+		display: flex;
+		flex-flow: column nowrap;
+		height: calc(100vh - 60px);
+		background: #fff;
+		position: absolute;
+		top: 60px;
+		right: 0;
+		z-index: 99;
+		width: 0;
+		overflow: hidden;
+
+		.sidebar-open & {
+			width: auto;
+			min-width: 50%;
+		}
+
+	}
+
+	div.menu {
+		flex: 2;
+		justify-content: center;
+		font-family: $font-arial;
+		font-weight: 400;
+		align-self: flex-end;
+		width: 100%;
+		height: 100%;
+
+		ul.menubeanh li, ul.menubeanh-persistent li {
+			float: none;
+		}
+
+		> ul.menu {
+			display: flex;
+			width: 100%;
+			justify-content: flex-start;
+			flex-flow: column nowrap;
+			text-align: right;
+			height: 100%;
+
+			> li {
+				align-self: flex-end;
+				width: 100%;
+				height: 100%;
+				border-top: 3px solid transparent;
+				display: flex;
+				flex: 1 0 auto;
+
+				+ li {
+					margin-left: 0;
+				}
+
+				&.mi-active, &:hover {
+					background: linear-gradient(to bottom, $color-app-brand 0%, lighten($color-app-brand, 10%) 100%);
+					border-top: 3px solid $color-app-yellow;
+
+					> .menuitemlabel {
+						text-decoration: none;
+						color: $color-white;
+					}
+
+				}
+
+				> .menuitemlabel {
+					font-family: $font-arial;
+					text-transform: uppercase;
+					padding: .25rem .5rem;
+					display: flex;
+					color: $color-app-brand;
+					flex: 1 0 auto;
+					justify-content: center;
+
+					> span {
+						align-self: center;
+						&::before {
+							font-family: $font-glyph-lib;
+							font-size: 1.75rem;
+							margin: -5px 8px 0 0;
+							display: inline-block;
+							vertical-align: middle;
+							font-weight: 200;
+						}
+					}
+				}
+
+				ul {
+					width: auto;
+					border-right: 3px solid $color-app-yellow;
+					z-index: 999;
+					display: block;
+					position: relative;
+
+					li {
+						line-height: 2;
+
+						a {
+							line-height: 1;
+							padding: .75rem;
+							display: block;
+							color: $color-app-grey;
+						}
+
+						&:hover a, &.mi-active a {
+							background: $color-app-light-grey;
+							color: $color-white;
+						}
+
+					}
+
+				}
+
+				&.nav-dashboard a.menuitemlabel span::before {
+					content: '\f0e4';
+				}
+
+				&.nav-data a.menuitemlabel span::before {
+					content: '\f1e0';
+				}
+
+				&.nav-activity-log a.menuitemlabel span::before {
+					content: '\f126';
+				}
+
+				&.nav-validation-log a.menuitemlabel span::before {
+					content: '\f00c';
+				}
+
+				&.nav-config a.menuitemlabel span::before {
+					content: '\f1de';
+				}
+
+				&.nav-help a.menuitemlabel span::before {
+					content: '\f059';
+				}
+
+			}
+
+			a {
+				color: $color-app-grey;
+				text-decoration: none;
+			}
+
+		}
+
+	}
+
+	div.logout {
+		flex: 1;
+		justify-content: flex-end;
+		align-items: center;
+		font-size: 85%;
+		max-width: 8rem;
+		padding-right: 10px;
+
+		> ul.menu {
+			justify-content: flex-end;
+
+			> li.mi-parent {
+				cursor: pointer;
+				width: 100%;
+
+				> div.menuitemlabel {
+					text-align: right;
+					font-size: .75rem;
+					width: 100%;
+				}
+
+				> div.menuitemlabel:hover span {
+					font-weight: 600;
+				}
+
+				&:hover {
+
+					ul.menu-t2 {
+						display: block;
+						right: 0;
+						top: 50px;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+#header .company-selector {
+	position: relative;
+	left: 1rem;
+	font-size: .75rem;
+	cursor: pointer;
+	width: 9rem;
+	top: 20px;
+
+	.toggler-wrapper {
+		display: block;
+		width: 100%;
+		text-align: right;
+
+		.selected-logo {
+			position: relative;
+			left: auto;
+			top: auto;
+		}
+	}
+
+	span.fa.fa-chevron-right {
+		font-size: .5rem;
+		margin-left: .25rem;
+	}
+
+	&.show {
+		.dropdown-menu {
+			display: block;
+			top: 0;
+			left: 100%;
+		}
+		.dropdown-item {
+			padding: 3px 10px;
+			font-size: .75rem;
+		}
+	}
+
+}
+
+#header .selected-logo {
+	position: absolute;
+	left: 1rem;
+	top: .75rem;
+	font-size: .75rem;
+	width: 9rem;
+	text-align: right;
+}
+
+@media (max-width: 768px) {
+	#header {
+		.nav-profile-con {
+			.sidebar-open & {
+				width: auto;
+				min-width: 30%;
+			}
+		}
+	}
+}
+
+@media (min-width: 1024px) and
+(max-width: 1140px) {
+	#header div.menu > ul.menu > li > .menuitemlabel {
+		font-size: .9rem;
+		> span::before {
+			font-size: 1.25rem;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+
+	#header {
+
+		.logo-con {
+			flex: 1 0 auto;
+			justify-content: flex-start;
+			max-width: 9rem;
+			margin-right: 1rem;
+
+			a {
+				width: 100%;
+			}
+
+			.fa.fa-bars {
+				display: none;
+			}
+
+		}
+
+		.nav-profile-con {
+			flex: 2 1 75%;
+			align-items: center;
+			display: flex;
+			flex-flow: row nowrap;
+			height: auto;
+			min-width: 0;
+			background: transparent;
+			position: relative;
+			top: auto;
+			right: auto;
+			overflow: visible;
+			width: auto;
+
+			> div.menu:not(.logout) {
+				padding: 0 0 0 1.5rem;
+			}
+
+		}
+
+		div.menu {
+			align-self: center;
+			width: auto;
+
+			> ul.menu {
+				flex-flow: row nowrap;
+				text-align: center;
+				justify-content: space-between;
+
+				> li {
+					align-self: center;
+					width: auto;
+
+					> a.menuitemlabel {
+						padding: 0 5px;
+					}
+
+					&.mi-active > a, > a:hover {
+						background: transparent;
+						color: $color-app-grey;
+					}
+
+					ul {
+						width: 13rem;
+						border-right: none;
+						border-bottom: 3px solid $color-app-yellow;
+						background: $body-bg;
+						box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+						display: none;
+						position: absolute;
+						text-align: left;
+					}
+
+					&.over {
+
+						ul {
+							display: block;
+						}
+
+					}
+
+				}
+
+			}
+
+			&.logout {
+
+				> ul.menu{
+					text-align: right;
+					justify-content: flex-end;
+				}
+
+			}
+
+		}
+
+	}
+
+}
