@@ -1,0 +1,111 @@
+.activity-management .form_content .sales-presentation-cert .question,
+.genform .form_content .sales-presentation-cert .question {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.activity-management .form_content .sales-presentation-cert .question:first-child,
+.genform .form_content .sales-presentation-cert > div > .question:first-child {
+	border-bottom: none;
+	display: block;
+}
+
+.activity-management .form_content .sales-presentation-cert .question:nth-of-type(2n),
+.genform .form_content .sales-presentation-cert .question:nth-of-type(2n) {
+	background: #f3f4f5;
+}
+
+.activity-management .form_content .sales-presentation-cert .question:first-child .form_field,
+.genform .form_content .sales-presentation-cert > div > .question:first-child .form_field {
+	padding: 0;
+}
+
+.activity-management .form_content .sales-presentation-cert .question:first-child .form_field:nth-child(2),
+.genform .form_content .sales-presentation-cert .question:first-child .form_field:nth-child(2) {
+	width: 100%;
+	padding: 0;
+}
+
+.activity-management .form_content .sales-presentation-cert .question:first-child .form_field:nth-child(2) div,
+.genform .form_content .sales-presentation-cert .question:first-child .form_field:nth-child(2) div {
+	background: #25282a;
+	background: linear-gradient(to bottom,  #25282a 0%,#696c6e 100%);
+	display: inline-block;
+	vertical-align: top;
+	border-top: 1px solid #c2c2c2;
+	border-left: 1px solid #c2c2c2;
+	color: #fff;
+	font-size: 14px;
+	width: 20%;
+	padding: 10px;
+	margin-right: -4px;
+	box-sizing: border-box;
+	height: 60px;
+
+	@include media-breakpoint-up(lg) {
+		font-size: 16px;
+		height: auto;
+	}
+}
+
+.lt-ie9 .activity-management .form_content .sales-presentation-cert .question:first-child .form_field:nth-child(2) div,
+.lt-ie9 .genform .form_content .sales-presentation-cert .question:first-child .form_field:nth-child(2) div {
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25282a', endColorstr='#696c6e',GradientType=0 );
+}
+
+.activity-management .form_content .sales-presentation-cert .question .form_field,
+.genform .form_content .sales-presentation-cert .question .form_field {
+	width: 60%;
+	display: inline-block;
+	padding: 15px;
+}
+
+.activity-management .form_content .sales-presentation-cert .question .form_field div,
+.genform .form_content .sales-presentation-cert .question .form_field div {
+	width: 32.5%;
+	display: inline-block;
+	padding-right: 10px;
+	vertical-align: top;
+}
+
+.activity-management .form_content .sales-presentation-cert .question .form_field div.topic,
+.activity-management .form_content .sales-presentation-cert .question .form_field div.function,
+.genform .form_content .sales-presentation-cert .question .form_field div.topic,
+.genform .form_content .sales-presentation-cert .question .form_field div.function {
+	padding-left: 10px;
+}
+
+.activity-management .form_content .sales-presentation-cert .question .form_field div.question_consider,
+.genform .form_content .sales-presentation-cert .question .form_field div.question_consider {
+	padding-left: 15px;
+}
+
+.activity-management .form_content .sales-presentation-cert .question .form_field.prop-group,
+.genform .form_content .sales-presentation-cert .question .form_field.prop-group {
+	width: 20%;
+}
+
+.activity-management .form_content .sales-presentation-cert .question .form_field.prop-group:last-child div,
+.genform .form_content .sales-presentation-cert .question .form_field.prop-group:last-child div {
+	width: 100%;
+}
+
+.activity-management .form_content .sales-presentation-cert .question .form_field.prop-group .props span.extra_value_renderer_readonly,
+.genform .form_content .sales-presentation-cert .question .form_field.prop-group .props span.extra_value_renderer_readonly {
+	padding: 0;
+}
+
+.genform .form_content .sales-presentation-cert span.submit_registration_button {
+	display: block;
+	text-align: right;
+	clear: right;
+}
+
+.genform .form_content .sales-presentation-cert button.save_exit_button {
+	margin-left: 0;
+	float: right;
+	@include button-variant($color-white, $color-hab-orange, darken($color-hab-orange, 5%));
+	font-family: $font-open-sans;
+	font-weight: 700;
+}

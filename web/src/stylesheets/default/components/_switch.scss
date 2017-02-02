@@ -1,0 +1,131 @@
+/* toggle switch */
+.switcher-con {
+	width: 150px;
+	height: 18px;
+	margin-top: 15px;
+	border: 1px solid #d0d0d0;
+	position: relative;
+	transition: all 0.5s;
+	border-radius: 2px;
+}
+
+.switcher-con.active-option0 {
+	background-color: #ed6262;
+	border-color: #d75858;
+}
+.switcher-con.active-option1 {
+	background-color: #eee;
+}
+.switcher-con.active-option2 {
+	background-color: #abe9ab;
+	border-color: #79d479;
+}
+
+.switcher-con .slide-grip {
+	position: absolute;
+	height: 100%;
+	width: 50px;
+	background-color: #555;
+	z-index: 10;
+	transition: all 0.5s;
+	border-radius: 2px;
+}
+
+.switcher-con.active-option0 .slide-grip {
+	left: 0;
+	margin-left: 0;
+	background-color: #e10000;
+}
+
+.switcher-con.active-option1 .slide-grip {
+	left: 50%;
+	margin-left: -25px;
+	background-color: #999;
+}
+
+.switcher-con.active-option2 .slide-grip {
+	left: 100%;
+	margin-left: -50px;
+	background-color: limegreen;
+}
+
+.switcher-con .option {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 50px;
+	cursor: pointer;
+}
+
+.switcher-con .option:hover {
+	background-color: rgba(0,0,0,0.1);
+}
+
+.switcher-con .option0 {
+	left: 0;
+}
+
+.switcher-con .option1 {
+	left: 50%;
+	margin-left: -25px;
+}
+
+.switcher-con .option2 {
+	right: 0;
+}
+
+.switcher-con .option .hint {
+	position: absolute;
+	bottom: 100%;
+	font-size: 10px;
+	margin-bottom: 2px;
+	transition: all 0.5s;
+}
+
+.switcher-con .option0 .hint {
+	left: 0px;
+	color: #e10000;
+}
+
+.switcher-con .option1 .hint {
+	left: 5px;
+	display: none;
+}
+
+.switcher-con .option2 .hint {
+	right: 0px;
+	color: limegreen;
+}
+
+.switcher-con.active-option0 .option2 .hint {
+	opacity: 0.35;
+}
+
+.switcher-con.active-option2 .option0 .hint {
+	opacity: 0.35;
+}
+
+.status-canceled .switcher-con.active-option0 {
+	background-color: #dadada;
+	border-color: #ccc;
+}
+
+.status-canceled .switcher-con.active-option0 .slide-grip {
+	background-color: #dda3a3;
+	background-color: rgba(225, 108, 108, 0.5);
+}
+
+.status-canceled .switcher-con.active-option1 .slide-grip {
+	background-color: #c3c3c3;
+	background-color: rgba(153, 153, 153, 0.5);
+}
+
+.status-canceled .switcher-con.active-option2 {
+	background-color: #dadada;
+	border-color: #ccc;
+}
+
+.status-canceled .switcher-con.active-option2 .slide-grip {
+	background-color: #a9c3a9;
+	background-color: rgba(121, 172, 121, 0.5);
+}

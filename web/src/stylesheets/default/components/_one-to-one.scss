@@ -1,0 +1,230 @@
+@import "../../../../../bower_components/bootstrap/scss/mixins";
+@import "../../../../../bower_components/bootstrap/scss/mixins/buttons";
+@import "../../../../../bower_components/bootstrap/scss/buttons";
+
+.one-to-one-attachment-viewer .file-row  {
+	clear: left;
+	float: left;
+	width: 90%;
+}
+
+.one-to-one-attachment-viewer .file-row .delete {
+	display: block;
+	float: right;
+	margin-right: 10px;
+	@include button-variant($color-app-red, $color-white, $color-app-red);
+}
+
+.prop-wrapper.prop-gen .prop .ctb label {
+	margin: 0 0 0 9px;
+}
+
+input.file-upload-browse {
+	display: block;
+	margin: 0 auto;
+}
+
+.file-upload-drop-zone {
+	border: 2px dashed #ccc;
+	background-color: #e7e7e7;
+	position: relative;
+	font-style: italic;
+	font-family: Georgia, "Times New Roman", serif;
+	text-align: center;
+	color: #aaa;
+	max-height: 500px;
+	max-width: 600px;
+	padding: 20px;
+	margin: 15px auto 40px;
+	overflow: hidden;
+	-webkit-transition: all 250ms, max-height 500ms 250ms;
+	transition: all 250ms, max-height 500ms 250ms;
+}
+
+.file-upload-browse.has-files .file-upload-drop-zone {
+	max-height: 90px;
+}
+
+.file-upload-drop-zone.zone-active {
+	background-color: #ddd;
+	border: 2px solid #999;
+	color: #333;
+}
+
+.file-upload-drop-zone.zone-active .drop-zone-text-inactive {
+	display: none;
+}
+
+.file-upload-drop-zone.zone-active .drop-zone-text-active {
+	display: block;
+}
+
+.file-upload-drop-zone > span {
+	pointer-events: none;
+	/* fix for dragleave bug when hovering child elements */
+}
+
+.file-upload-drop-zone .drop-zone-text {
+	display: none;
+}
+
+.file-upload-drop-zone .drop-zone-text-inactive {
+	display: block;
+}
+
+.drop-zone-option-title:before {
+	display: block;
+	content: "- or -";
+	text-align: center;
+	font-style: italic;
+	font-family: Georgia, "Times New Roman", serif;
+	margin: 10px 0 15px;
+}
+
+.drop-zone-file-con {
+	display: block;
+	position: relative;
+	width: 200px;
+	height: 120px;
+	margin: 20px auto 5px;
+}
+
+.drop-zone-file {
+	display: block;
+	width: 90px;
+	height: 120px;
+	background-color: #fff;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	border-radius: 2px;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-transition: all 200ms;
+	transition: all 200ms;
+}
+
+.drop-zone-file1 {
+	-webkit-transform: translateX(-50%) translateY(-50%) rotateZ(-10deg);
+	transform: translateX(-50%) translateY(-50%) rotateZ(-10deg);
+}
+
+.drop-zone-file3 {
+	-webkit-transform: translateX(-50%) translateY(-50%) rotateZ(7deg);
+	transform: translateX(-50%) translateY(-50%) rotateZ(7deg);
+}
+
+.file-upload-drop-zone.zone-active .drop-zone-file {
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.file-upload-drop-zone.zone-active .drop-zone-file1 {
+	-webkit-transform: translateX(-85%) translateY(-45%) rotateZ(-5deg);
+	transform: translateX(-85%) translateY(-45%) rotateZ(-5deg);
+}
+
+.file-upload-drop-zone.zone-active .drop-zone-file3 {
+	-webkit-transform: translateX(-15%) translateY(-50%) rotateZ(10deg);
+	transform: translateX(-15%) translateY(-50%) rotateZ(10deg);
+}
+
+.file-upload-list-heading {
+	display: none;
+	margin-bottom: 10px;
+}
+
+.file-upload-browse.has-files .file-upload-list-heading {
+	display: block;
+}
+
+.file-upload-list {
+	display: none;
+	width: 100%;
+	border-bottom: 1px dotted #ddd;
+}
+
+.file-upload-browse.has-files .file-upload-list {
+	display: table;
+}
+
+.file-upload-list .file-upload {
+	position: relative;
+	display: table-row;
+}
+
+.file-upload .file-upload-part {
+	display: table-cell;
+	vertical-align: middle;
+	border-top: 1px dotted #ddd;
+}
+
+.file-upload .file-preview {
+	width: 50px;
+	position: relative;
+}
+
+.file-upload .file-preview img {
+	display: block;
+	margin: 0 auto;
+}
+
+.file-upload .file-preview-link {
+	width: 50px;
+	display: block;
+}
+
+.file-upload.nopreview .file-preview-link {
+	height: 37px;
+	width: 29px;
+	margin: 0 auto;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+	border-radius: 2px;
+	border: 1px solid #ddd;
+	border-bottom-color: #aaa;
+	border-right-color: #aaa;
+	background: center center #f7f7f7 no-repeat;
+}
+
+.file-upload .file-info {
+	padding: 0 10px;
+}
+
+.file-upload .file-name {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 5px;
+}
+
+.file-upload .file-size {
+	font-size: 12px;
+	color: #999;
+	font-style: italic;
+	display: inline-block;
+}
+
+.file-upload .file-modified {
+	display: block;
+	font-size: 12px;
+	color: #999;
+	clear: left;
+}
+
+.file-upload .file-actions {
+	width: 1%;
+	white-space: nowrap;
+	height: 50px;
+	padding-left: 5px;
+	padding-right: 5px;
+	position: relative;
+}
+
+.file-upload:hover .file-upload-part {
+	background-color: cornsilk;
+}
+
+.file-upload:hover .file-modified,
+.file-upload:hover .file-size {
+	color: #bdb149;
+}

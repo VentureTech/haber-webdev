@@ -1,0 +1,131 @@
+@import "../config/base-vars";
+@import "../../../../../bower_components/bootstrap/scss/mixins";
+@import "../../../../../bower_components/bootstrap/scss/mixins/buttons";
+@import "../../../../../bower_components/bootstrap/scss/buttons";
+
+.photo-upload .left, .photo-upload .right {
+	display: inline-block;
+	vertical-align: top;
+	min-height: 350px;
+}
+
+.photo-upload .left {
+	width: 60%;
+	padding: 0px 20px 0px 0px;
+}
+
+.photo-upload .right {
+	width: 40%;
+	padding: 30px;
+	background: #062B47;
+	border-radius: 3px;
+}
+
+.photo-upload .instructions .title {
+	font-size: 18px;
+	font-family: $font-open-sans;
+	font-weight: 700;
+}
+
+.photo-upload .instructions .list-item {
+	margin-top: 5px;
+}
+
+.photo-upload .left .photo-uploader {
+	width: 450px;
+	margin: auto;
+	margin-top: 40px;
+}
+
+.photo-upload .right .photo-preview {
+	width: 246px;
+	min-height: 290px;
+	margin: auto;
+	background: #C2C2C2;
+}
+
+.photo-upload .right .photo-preview + .photo-preview {
+	display: none;
+}
+
+.photo-uploader {
+	.btn {
+		display: block;
+		margin-top: 1rem;
+		@include button-variant($color-white, $color-hab-orange, darken($color-hab-orange, 5%));
+	}
+}
+
+
+/***************************
+***************************/
+/* MEDIA QUERIES */
+/***************************
+***************************/
+@media all and (min-width: 1024px) and (max-width: 1279px) {
+	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
+		width: 980px;
+		margin: 0 auto;
+	}
+
+	.primary-menu + .primary-menu{
+		margin-left: 30px;
+	}
+
+	.primary-menu .menu-t1 > .mi + .mi{
+		margin-left: 30px;
+	}
+}
+
+@media all and (min-width: 760px) and (max-width: 1023px) {
+	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
+		width: 730px;
+		margin: 0 auto;
+	}
+
+	.primary-menu + .primary-menu{
+		margin-left: 10px;
+	}
+
+	.primary-menu .menu-t1 > .mi + .mi{
+		margin-left: 10px;
+	}
+
+	.primary-menu .menu-t1 > .mi > .menuitemlabel{
+		padding: 5px 10px;
+		background: transparent;
+	}
+
+	.photo-upload .right{
+		padding: 10px;
+		min-height: 310px;
+	}
+
+}
+
+@media all and (max-width: 759px) {
+	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
+		width: 580px;
+		margin: 0 auto;
+	}
+
+	.primary-menu + .primary-menu{
+		margin-left: 5px;
+	}
+
+	.primary-menu .menu-t1 > .mi + .mi{
+		margin-left: 5px;
+	}
+
+	.primary-menu .menu-t1 > .mi > .menuitemlabel{
+		padding: 5px 10px;
+		background: transparent;
+	}
+
+	.photo-upload .right,
+	.photo-upload .left{
+		display: block;
+		width: auto;
+	}
+
+}

@@ -1,0 +1,88 @@
+@import "../components/activities";
+
+.activity-management {
+  > .actions a.btn {
+    background: transparent;
+    border: none;
+    font-size: .85rem;
+    color: $color-hab-orange;
+    padding: 0;
+    font-weight: 400;
+
+    &:hover {
+      text-decoration: underline;
+      background: transparent;
+    }
+
+    &:focus{
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}
+
+/* collapsible styles */
+.miwt-collapsable a.trigger {
+  color: #EE7421;
+  text-decoration: none;
+}
+
+.miwt-collapsable a.trigger:hover {
+  text-decoration: underline;
+}
+
+.miwt-collapsable .miwt-collapsable-content {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 6px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 0 6px rgba(0,0,0,0.3);
+  box-shadow: 0 0 6px rgba(0,0,0,0.3);
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  z-index: 35;
+  right: 0;
+  top: 100%;
+  white-space: nowrap;
+}
+
+.miwt-collapsable .prop-group .prop .label {
+  width: auto;
+  color: $font-default-color;
+}
+
+.miwt-collapsable .prop-wrapper .prop-footer-actions .actions {
+  margin-left: 0;
+  text-align: right;
+
+  .btn {
+    margin-bottom: 1rem;
+  }
+}
+
+.miwt-collapsable .prop-header-title {
+  background-color: #ee7929;
+  color: #fff;
+  font-size: 16px;
+  padding: 5px 10px;
+  -moz-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+
+.miwt-collapsable .prop-footer,
+.miwt-collapsable .prop-body {
+  padding: 0px 10px;
+}
+
+.miwt-collapsable .prop-wrapper .prop textarea {
+  width: 300px;
+  height: 80px;
+}
+
+.miwt-collapsable-content {
+  .prop.message {
+    background: transparent;
+
+    &::before {
+      display: none;
+    }
+  }
+}

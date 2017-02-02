@@ -1,30 +1,80 @@
 @import "../mixins/table";
 
-.miwt-table {
+.miwt-table, .gen-table {
 	@include style-table;
-	font-size: 90%;
+	font-size: 100%;
+	margin: 1rem 0;
+	border-collapse: separate;
+	border-radius: 4px;
+	border-spacing: 0px;
+	border: 1px solid #C2C2C2;
+	border-top: 1px solid #25282A;
+	border-bottom: none;
 
 	> thead > tr {
 		> th {
 			//@include style-table-heading;
-			background: lighten($color-app-light-grey, 25%);
-			color: $color-app-grey;
-			font-family: $font-roboto;
-			line-height: 24px;
-			padding: 5px 8px;
-			text-align: left;
+			background: #25282a;
+			background: linear-gradient(to bottom,  #25282a 0%,#696c6e 100%);
+			font-size: 18px;
+			color: $color-white;
 			font-weight: 400;
+			padding: 10px 15px;
+			text-align: left;
+			font-family: $font-open-sans;
+			border-bottom: 1px solid #C2C2C2;
+			line-height: 24px;
 
-			a {
-				color: $color-app-grey;
+			+ th {
+				border-left: 1px solid #C2C2C2;
 			}
 
+			a {
+				color: $color-hab-orange;
+			}
 		}
 	}
 
 	> tbody > tr {
-		@include style-table-data-row;
+		//@include style-table-data-row;
+
+		> td {
+			padding: 10px 15px;
+			border-bottom: 1px solid #C2C2C2;
+			font-size: 14px;
+			background-color: $color-white;
+
+			+ td {
+				border-left: 1px solid #C2C2C2;
+			}
+
+			&.action-column, &.last-column {
+				a {
+					font-size: 14px;
+					color: $color-hab-orange;
+					text-transform: uppercase;
+					font-weight: 600;
+					background: transparent;
+					border: none;
+					&:hover {
+						background: transparent;
+						border: none;
+						color: $color-hab-orange;
+					}
+
+					&:focus {
+						outline: none;
+						box-shadow: none;
+					}
+				}
+			}
+		}
+
+		&.even > td {
+			background-color: #F3F3F3;
+		}
 	}
+
 	caption {
 		caption-side: top;
 		text-align: left;

@@ -1,0 +1,232 @@
+@import "../config/base-vars";
+@import "../../../../../bower_components/bootstrap/scss/mixins";
+@import "../../../../../bower_components/bootstrap/scss/mixins/clearfix";
+@import "../../../../../bower_components/bootstrap/scss/mixins/buttons";
+@import "../components/sales-activity-calculator";
+@import "../components/attendees";
+@import "../components/customized-activity";
+@import "../components/one-to-one";
+@import "../components/big-day-survey";
+@import "../components/sales-presentation-cert";
+@import "../components/big-day-planning";
+@import "../components/weekly-team-meeting";
+@import "../components/recruiting-prospects";
+@import "../components/coaching-skill-review-notify";
+
+.activity-management {
+	.prop-wrapper .prop-header-title {
+		margin: 0;
+	}
+}
+
+/* Form buttons*/
+.form_content .btn.save_exit_button {
+	margin-left: 48%;
+	background: #ffffff;
+	color: #EE7421;
+}
+
+.form_content span.submit_button {
+	display: inherit;
+	padding-left: 1%;
+}
+
+/* Notify Manager button for SM & VP users */
+.activity-instance-editor .send-email .btn {
+	background: #ffffff;
+}
+
+/* ----- THIS MAY GET REMOVED ------ */
+#primary-content{
+	padding: 20px 40px;
+}
+
+.prop-wrapper .prop-footer .prop-footer-actions {
+	text-align: right;
+}
+
+.activity-result-editor .prop-wrapper .prop-header .actions{
+	display: block;
+}
+
+.rep-activity-main .activity-instance-viewer .prop-body {
+	margin: 15px 0;
+}
+
+.rep-activity-main .actions div.miwt-collapsable {
+	float: left;
+}
+.rep-activity-main .actions button.btn {
+	float: left;
+}
+/* ----- /THIS MAY GET REMOVED ----- */
+
+.activity-resources {
+	margin-top: 30px;
+	padding-top: 30px;
+	border-top: 1px solid #ddd;
+}
+
+.resource-box {
+	display: inline-block;
+	vertical-align: top;
+	width: 436px;
+	background-color: #fff;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color: #3b3e40;
+	border: 1px solid #c2c2c2;
+}
+
+.resource-box > .title {
+	background-color: #ee7929;
+	color: #fff;
+	font-family: $font-open-sans;
+	font-weight: 600;
+	font-size: 20px;
+	padding: 5px 10px;
+	-moz-border-radius: 3px 3px 0 0;
+	border-radius: 3px 3px 0 0;
+}
+
+.resource-box > .content {
+	padding: 20px;
+	font-size: 14px;
+	background: rgb(255,255,255); /* Old browsers */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(250,250,250,1) 100%); /* W3C */
+}
+
+.lt-ie9 .resource-box > .content {
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fafafa',GradientType=0 ); /* IE6-8 */
+}
+
+.resource-box + .resource-box {
+	margin-left: 55px;
+}
+
+.resource-box ul.resources {
+	margin: 0;
+	padding-left: 20px;
+}
+
+.resource-box .resource + .resource {
+	margin-top: 5px;
+
+}
+.resource-box .resource a {
+	color: #3b3e40;
+	text-decoration: none;
+}
+
+.resource-box .resource a:hover {
+	text-decoration: underline;
+}
+
+.activity-resources.media h2 {
+	margin-top: 0;
+}
+
+.videos .video {
+	width: 165px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.videos .video .thumb {
+	position: relative;
+	height: 130px;
+	background-image: url(/_resources/dyn/files/13483z3ed74d2/_fn/video-thumbnail-default.png);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: 3px solid #d8d8d8;
+}
+
+.videos .video .thumb:hover {
+	border-color: #ee7929;
+}
+
+.videos .video .thumb:before {
+	content: " ";
+	display: block;
+	width: 72px;
+	height: 72px;
+	background: center center transparent url(/_resources/dyn/files/13484z9d89e171/_fn/video-thumbnail-overlay.png) no-repeat;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -36px;
+	margin-top: -36px;
+}
+
+
+.videos .video + .video {
+	margin-left: 40px;
+}
+
+.videos .video a {
+	position: relative;
+	z-index: 30;
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+}
+
+.videos .video .name {
+	color: #3b3e40;
+	font-size: 13px;
+	margin: 5px 0;
+	text-align: center;
+}
+
+
+.activity-resources.media .videos-con {
+	position: relative;
+	margin: 20px 70px;
+}
+
+.activity-resources .mCSB_horizontal > .mCSB_container {
+	margin-bottom: 0;
+}
+
+.activity-resources .mCSB_scrollTools .mCSB_draggerContainer {
+	display: none;
+}
+
+.activity-resources .mCSB_horizontal.mCustomScrollBox > .mCSB_scrollTools {
+	width: 100%;
+	top: 47px;
+	height: 37px;
+	overflow: visible;
+}
+
+.activity-resources .mCustomScrollBox {
+	position: static !important;
+}
+
+.activity-resources .mCSB_scrollTools .mCSB_buttonLeft,
+.activity-resources .mCSB_scrollTools .mCSB_buttonRight {
+	width: 38px;
+	height: 37px;
+	position: absolute;
+	opacity: 0.5;
+	cursor: pointer;
+	background: url("/_resources/dyn/files/11040z9b510a33/_fn/featured-buttons.png") 0px 0px no-repeat;
+}
+
+.activity-resources .mCSB_scrollTools .mCSB_buttonLeft {
+	background-position: 0px 0px;
+	left: -48px;
+}
+
+.activity-resources .mCSB_scrollTools .mCSB_buttonRight {
+	background-position: -38px 0px;
+	right: -48px;
+}
+
+.activity-resources .mCSB_scrollTools .mCSB_buttonLeft:hover,
+.activity-resources .mCSB_scrollTools .mCSB_buttonRight:hover {
+	opacity: 1;
+}

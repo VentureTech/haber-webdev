@@ -6,13 +6,16 @@
 	margin-right:4px;
 }
 .actions .btn, .procedure-navigation .btn, .recipients .btn {
-	@include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+	@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+	font-family: $font-open-sans;
+	font-weight: 700;
+	padding: .4rem 1rem;
 
-	&.save, &.add, &.finish-button, &.save_exit, &.confirm, &.engagement-completed {
-		@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+	&.reset {
+		@include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
 	}
 
-	&.delete, &.remove, &.cancel, &.cancel-button, &.reschedule {
+	&.remove, &.cancel, &.cancel-button, &.reschedule {
 		background: $color-white;
 		color: $color-app-red;
 		border-color: $color-app-red;
@@ -28,6 +31,7 @@
 }
 
 .btn {
+	cursor: pointer;
 
 	&.engagement-completed {
 		@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
@@ -42,4 +46,12 @@
 
 .action-column .btn {
 	@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-xs, $btn-border-radius-sm);
+}
+
+span.submit_button .btn.submit_button {
+	@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+	font-family: $font-open-sans;
+	font-weight: 700;
+	padding: .4rem 1rem;
+	margin: .5rem 0;
 }

@@ -1,0 +1,55 @@
+.form_content .big-day-planning .question .form_field.prop-group {
+	display: block;
+	width: 100%;
+}
+
+.form_content .big-day-planning .question .form_field.prop-group > section > div {
+	display: inline-block;
+	vertical-align: top;
+	width: 48%;
+	padding: 10px;
+}
+
+.form_content .big-day-planning .question .form_field.prop-group > section > div.prop-group-title {
+	text-align: right;
+}
+
+.form_content .big-day-planning .question .form_field.prop-group > section > div.props {
+	text-align: left;
+}
+
+.form_content .big-day-planning.summary .question .form_field.prop-group > div.props {
+	width: 100%;
+	display: block;
+}
+
+.form_content .big-day-planning.summary .question .form_field.prop-group > div.props label,
+.form_content .big-day-planning.summary .question .form_field.prop-group > div.props span.extra_value_renderer_readonly {
+	width: 48%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.form_content .big-day-planning .question .form_field.prop-group > section > div h1.title {
+	font-size: 14px;
+	margin: 0;
+}
+
+.form_content .big-day-planning .question .form_field.prop-group div.props .label-after {
+	display: block;
+	margin-bottom: .5rem;
+}
+
+.form_content .big-day-planning .question .form_field.prop-group div.props .label-after label.tbl {
+	display: inline-block;
+	padding: 0;
+	vertical-align: middle;
+	width: auto;
+	text-align: left;
+	margin-left: 5px;
+}
+
+.form_content .big-day-planning span.submit_registration_button {
+	display: block;
+	padding-left: 49%;
+}

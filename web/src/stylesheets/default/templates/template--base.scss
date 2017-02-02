@@ -12,27 +12,84 @@
 @import "../components/pager";
 @import "../components/prop-ui";
 @import "../components/file-chooser";
+@import "../components/tooltipster"; //From EcSell/Haberfeld
+@import "../components/general-form"; //From EcSell/Haberfeld
+@import "../components/general-app"; //From EcSell/Haberfeld
+@import "../components/switch"; //From EcSell/Haberfeld
 
 body {
-	background: $body-bg;
-	font-family: $font-roboto;
+	background: left top $body-bg url(/_resources/dyn/files/8818z58d6fab9/_fn/body-bg-tile.jpg) repeat;
+	font-family: $font-open-sans;
+	font-size: 14px;
 	font-weight: 400;
 	color: $font-default-color;
 	text-rendering: optimizeLegibility;
 	-moz-osx-font-smoothing: antialiased;
 	-webkit-font-smoothing: antialiased;
-
-	div.page {
-		display: flex;
-		flex-flow: column nowrap;
-	}
-
 }
-#e-content {
+
+/*#e-content {
 	flex: 1 0 auto;
 	min-height: calc(100vh - 90px);
 	padding-bottom: 3rem;
+}*/
+
+/* content box defaults */
+.content-box h1 {
+	color: $font-default-color;
+	font-family: $font-open-sans;
+	font-weight: 400;
+	font-size: 26px;
+	margin-top: 0;
 }
+
+.content-box h2 {
+	color: $font-default-color;
+	font-family: $font-open-sans;
+	font-weight: 400;
+	font-size: 22px;
+}
+
+/* Interior Template styles */
+#t-interior #header-wc-0,
+#t-interior #primary-breadcrumbs-wc-0,
+#t-interior #e-content-wc-0 {
+	width: 1240px;
+	margin: 0 auto;
+}
+
+/* 2 column layout styles */
+.l-2col .aside-box {
+	width: 246px;
+	float: left;
+	margin-left: 10px;
+}
+
+.l-2col .content-box {
+	width: 960px;
+	margin-left: 280px;
+}
+
+/* Generic column styles */
+#t-interior .aside-box,
+#t-interior .content-box,
+#t-interior-full .content-box {
+	background: #fff;
+	border: 1px solid #d9d9d9;
+	box-shadow: 0 0 6px rgba(0,0,0,0.1);
+	padding: 10px 15px;
+	border-radius: 3px;
+	margin-bottom: 15px;
+}
+
+#t-interior .content-box {
+	margin-top: 15px;
+}
+
+#t-interior-full .content-box {
+	margin: 15px 10px;
+}
+
 #main-wrapper main { padding-bottom: 3rem; }
 
 ::selection {
@@ -69,37 +126,58 @@ section {
 	}
 }
 
+p a {
+	color: $color-hab-orange;
+
+	&:hover {
+		color: darken($color-hab-orange, 5%);
+	}
+}
+
+.close.btn,
+.dialog .titlebar .btn {
+	width: 30px;
+	height: 30px;
+	padding: 0px;
+	margin: 0px;
+	background: #EE7412 url(/_resources/dyn/files/9970zb929d85f/_fn/dialog-close.png) center center no-repeat;
+	font-size: 0.01px;
+}
+
 .miwt-calendar {
 	button.open,
 	button.clear {
 		border: none;
 		background: inherit;
 		box-shadow: none;
-		color: #fff;
+		color: transparent;
+		cursor: pointer;
 
 		&:before {
 			visibility: visible;
 			display: inline-block;
 			font: normal normal normal 14px/1 FontAwesome;
-			font-size: inherit;
+			font-size: 1.5rem;
+			vertical-align: middle;
 			text-rendering: auto;
 			-webkit-font-smoothing: antialiased;
 			-moz-osx-font-smoothing: grayscale;
 			content: "\f073";
-			color: $color-app-light-grey;
+			color: #444;
 		}
 		&:hover {
-			color: #fff;
+			color: transparent;
 			&:before {
-				color: $color-app-black;
+				color: $color-hab-orange;
 			}
 		}
 	}
 	button.clear {
-		padding-right: 0;
+		display: none;
+		/*padding-right: 0;
 		&:before {
 			content: '\f00d';
-		}
+		}*/
 	}
 }
 
@@ -152,6 +230,83 @@ p.instructions {
 
 div.calendar {
 	z-index: 1900 !important;
+}
+
+/* ----- Select 2 overrides */
+
+.select2-drop.fixed-width {
+	width: 250px !important;
+}
+
+.select2-container,
+.select2-drop {
+	font-size: .95rem;
+	text-align: left;
+}
+
+.select2-container {
+	min-width: 8rem;
+
+	.select2-choice  {
+		height: 30px;
+		line-height: 30px;
+		border: 1px solid #d0d0d0;
+		box-shadow:0 1px 3px rgba(0,0,0,0.15);
+		border-radius: 3px;
+
+		.select2-arrow {
+			width: 32px;
+			height: 100%;
+			border-radius: 0 4px 4px 0;
+			background: none;
+			filter: none;
+			border-left: 1px solid $color-hab-lightest-gray;
+
+			b {
+				background-position: -1px center;
+			}
+		}
+
+		> .select2-chosen {
+			margin-right: 40px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+}
+
+.select2-container-multi .select2-choices .select2-search-field input {
+	font-family: $font-open-sans;
+}
+
+.select2-dropdown-open .select2-choice {
+	border-radius: 3px;
+	z-index: 10000;
+}
+
+.select2-drop-active {
+	border: 1px solid $color-hab-lightest-gray;
+}
+
+.select2-results {
+	margin: 0;
+	padding: 0;
+
+	li + li {
+		border-top: 1px solid $color-hab-lightest-gray;
+	}
+
+	.select2-result-label {
+		padding: 8px;
+	}
+
+	.select2-highlighted {
+		background-color: $color-hab-orange
+	}
+}
+
+.select2-tall .select2-results {
+	max-height: 350px;
 }
 
 @media (max-width: 767px)

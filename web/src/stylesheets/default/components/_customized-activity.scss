@@ -1,0 +1,94 @@
+/* Style for customized activity forms */
+.customized .form_field {
+	display: block;
+	padding-top: 10px;
+}
+
+.customized .form_field span.label {
+	font-family: $font-open-sans;
+}
+
+/* Style JSC Custom for OSI Form Question */
+.or-performance-custom .extra_value_renderer  {
+	font-family: $font-open-sans;
+	width: 100%;
+	font-size: 14px;
+	padding: 10px;
+}
+
+.or-performance-custom .form_field {
+
+	font-size: 14px;
+}
+
+.or-performance-custom .question {
+	display: table;
+	width: 100%;
+}
+
+.customized.summary .form_field span.label {
+	width: 25%;
+}
+
+.customized textarea {
+	display: block;
+	width: 100%;
+}
+
+.customized .question {
+	display: table;
+	width: 100%;
+}
+
+.customized .question .form_field {
+	display: table-row;
+}
+
+.customized .form_field span.label {
+	margin-right: 10px;
+	width: 50%;
+	text-align: right;
+	display: table-cell;
+	padding: 10px;
+}
+
+.customized .extra_value_renderer {
+	display: table-cell;
+	margin-left: 5px;
+	padding: 10px;
+	vertical-align: top;
+}
+
+.customized span.submit_button/*, .activity-result-editor .actions*/ {
+	margin-left: 50%;
+	padding: 0 10px;
+}
+
+.customized .cal input {
+	display: inline-block;
+}
+
+/* Pre-Call Checklist */
+.precall_checklist .form_field {
+	display: block;
+	padding-top: 10px;
+}
+
+.precall_checklist .question {
+	margin-bottom: 5px;
+}
+
+.precall_checklist .form_field span.label {
+	margin-right: 10px;
+	font-family: $font-open-sans;
+	display: block;
+}
+
+.precall_checklist .extra_value_renderer_readonly {
+	display: block;
+}
+
+/* Rep View*/
+.rep-activity-main .activity-result-editor button.btn {
+	float: none;
+}

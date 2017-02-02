@@ -1,0 +1,281 @@
+@import "../config/base-vars";
+
+.support-menu{
+	display: none;
+}
+
+.support-header h1{
+	margin: 0;
+}
+
+.support-number{
+	width: 35%;
+	float: right;
+	margin: auto;
+	text-align: center;
+}
+
+.form_entry{
+	background: #FFFFFF;
+	position: relative;
+}
+
+.form_entry .message-container .message{
+	margin: 5px 20px 5px 0px;
+}
+
+.form_entry .question .form_field .label{
+	display: inline-block;
+	vertical-align: top;
+	width: 30%;
+	margin: 10px 0px;
+	font-family: $font-open-sans;
+	font-weight: 600;
+	text-align: right;
+}
+
+.form_entry .question .form_field .label+*{
+	display: inline-block;
+	vertical-align: top;
+	width: 60%;
+	margin: 10px 0px 10px 20px;
+}
+
+.phone_number_format .rtb + .rtb{
+	margin-left: 10px;
+}
+
+.form_entry .form_content .btn{
+	left: 32.5%;
+	position: absolute;
+	margin-left: 20px;
+}
+
+.form_entry .question .label.extension_label{
+	margin-left: 10px;
+}
+
+
+.formentry.genform{
+	border-right: 2px solid #C2C2C2;
+	margin-bottom: 35px;
+	margin-right: 35%;
+}
+
+.support-header{
+	margin-bottom: 15px;
+	padding-bottom: 8px;
+}
+
+.instructions{
+	width: 65%;
+	padding: 0px 20px 20px 0px;
+	margin-top: 30px;
+}
+
+.formentry.genform > .miwt-form{
+	padding-top: 90px;
+	padding-bottom: 40px;
+}
+
+.formentry.genform{
+	margin-top: -90px;
+}
+
+.text > p {
+	margin-bottom: 0;
+}
+
+/* BEGIN MEDIA QUERIES */
+
+@media all and (min-width: 1024px) and (max-width: 1279px) {
+	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
+		width: 980px;
+	}
+	.primary-menu + .primary-menu{
+		margin-left: 30px;
+	}
+
+	.primary-menu .menu-t1 > .mi + .mi{
+		margin-left: 30px;
+	}
+}
+@media all and (min-width: 760px) and (max-width: 1023px) {
+	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
+		width: 728px;
+	}
+	.primary-menu + .primary-menu{
+		margin-left: 10px;
+	}
+
+	.primary-menu .menu-t1 > .mi + .mi{
+		margin-left: 10px;
+	}
+	.primary-menu .menu-t1 > .mi > .menuitemlabel{
+		padding: 5px 10px;
+		background: transparent;
+	}
+
+	.formentry.genform{
+		margin-right: 0;
+		border: none;
+	}
+
+	.instructions{
+		width: 100%;
+	}
+
+	.support-number{
+		margin: 0;
+		width: 100%;
+		float: none;
+	}
+}
+
+@media all and (min-width: 480px) and (max-width: 759px) {
+	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
+		width: 580px;
+	}
+	.primary-menu + .primary-menu{
+		margin-left: 5px;
+	}
+
+	.primary-menu .menu-t1 > .mi + .mi{
+		margin-left: 5px;
+	}
+
+	.primary-menu .menu-t1 > .mi > .menuitemlabel{
+		padding: 5px 10px;
+		background: transparent;
+	}
+
+	.formentry.genform{
+		margin-right: 0;
+		border: none;
+	}
+
+	.instructions{
+		width: 100%;
+	}
+
+	.support-number{
+		margin: 0;
+		width: 100%;
+		float: none;
+	}
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
+	h1{
+		text-align: center;
+	}
+
+	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
+		width: 320px;
+	}
+
+	.primary-menu{
+		margin-top: 10px;
+	}
+
+	.primary-menu + .primary-menu{
+		margin-left: 2px;
+	}
+
+	.primary-menu .menu-t1 > .mi + .mi{
+		margin-left: 2px;
+	}
+
+	.primary-menu .menu-t1 > .mi > .menuitemlabel{
+		padding: 5px 2px;
+		background: transparent;
+		font-size: 12px;
+		border: 1px solid #FFFFFF;
+		border-radius: 3px;
+	}
+
+	.form_entry .question .form_field .label{
+		width: 25%;
+		font-size: 12px;
+	}
+
+	.form_entry .question .form_field .label+*{
+		margin-left: 5px;
+		width: 70%;
+		font-size: 12px;
+	}
+
+	.ecsell-login-profile .info{
+		display: none;
+	}
+
+	.formentry.genform{
+		margin-right: 0;
+		border: none;
+	}
+
+	.instructions{
+		width: 100%;
+	}
+
+	.support-number{
+		margin: 0;
+		width: 100%;
+		float: none;
+	}
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 479px) and (orientation : landscape) {
+	h1{
+		text-align: center;
+	}
+
+	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
+		width: 478px;
+	}
+	.primary-menu + .primary-menu{
+		margin-left: 2px;
+	}
+
+	.primary-menu .menu-t1 > .mi + .mi{
+		margin-left: 2px;
+	}
+
+	.primary-menu .menu-t1 > .mi > .menuitemlabel{
+		padding: 5px 2px;
+		background: transparent;
+		font-size: 12px;
+		border: 1px solid #FFFFFF;
+		border-radius: 3px;
+	}
+
+	.form_entry .question .form_field .label{
+		width: 25%;
+		font-size: 12px;
+	}
+
+	.form_entry .question .form_field .label+*{
+		margin-left: 5px;
+		width: 70%;
+		font-size: 12px;
+	}
+
+	.ecsell-login-profile .info{
+		display: none;
+	}
+
+	.formentry.genform{
+		margin-right: 0;
+		border: none;
+	}
+
+	.instructions{
+		width: 100%;
+	}
+
+	.support-number{
+		margin: 0;
+		width: 100%;
+		float: none;
+	}
+}

@@ -1,0 +1,367 @@
+/* save to complete the stream storage copy */
+button.btn,
+button.btn,
+button.btn {
+
+	&.addClient,
+	&.clientSetting,
+	&.importMembers {
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 0;
+		margin-left: 5px;
+	}
+}
+.edit-user {
+	min-height: 450px;
+}
+
+.permissions.prop-wrapper.prop-gen .actions.top{
+	display: block;
+	text-align: right;
+}
+
+.prop-wrapper.prop-gen {
+	&.company-visibility-setting-viewer,
+	&.company-emails {
+		.prop {
+			padding: 10px 0;
+		}
+
+		.label {
+			padding: 3px 10px 0;
+		}
+	}
+}
+
+.edit-user {
+	.user-picture-editor {
+		width: 33%;
+		min-width: 330px;
+		display: inline-block;
+		vertical-align: top;
+		margin-bottom: 20px;
+
+		.profile {
+			position: relative;
+			width: 246px;
+			z-index: 1;
+		}
+	}
+
+	.prop-wrapper {
+		width: 33%;
+		min-width: 330px;
+		display: inline-block;
+		vertical-align: top;
+		margin-bottom: 20px;
+	}
+
+	.hire-date {
+		.actions {
+			display: inline-block;
+			margin: 0;
+			margin-left: 20px;
+		}
+
+		.val {
+			margin-top: -16px;
+
+			span{
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+
+		.cal {
+			display: block;
+			margin-top: -6px;
+		}
+
+		button.btn{
+			margin-top: -6px;
+			font-size: 12px;
+			padding: 0px 5px;
+			height: auto;
+		}
+	}
+
+	.prop-footer .actions {
+		margin-right: 30px;
+	}
+
+	.prop-wrapper.prop-gen .props .prop .label{
+		width: auto;
+	}
+
+	.prop-wrapper .prop .val{
+		max-width: 260px;
+		word-wrap: break-word;
+
+		a.btn {
+			padding: 0;
+			font-size: 14px;
+		}
+	}
+}
+
+
+.activity-permission-list {
+
+	.checkbox-activate {
+		width: 1%;
+		font-size: 12px;
+		text-align: center;
+	}
+
+	.checkbox-activate .ctb {
+		margin: auto;
+		display: block;
+	}
+}
+
+.dialog .prop-header-actions{
+	display: none;
+}
+
+.permissions .prop-footer-actions{
+	display: none;
+}
+
+.activity-admin-editor .prop.activity-settings {
+
+	> .prop {
+		display: block;
+	}
+
+	.prop_group.fields {
+		> .prop > label {
+			display: inline-block;
+			vertical-align: top;
+			width: 10%;
+			font-family: "OpenSansSemiBold", Arial, sans-serif;
+			text-align: left;
+		}
+
+		> .prop > .val {
+			display: inline-block;
+			vertical-align: top;
+			width: 85%;
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			margin: 0;
+			padding: 15px 0;
+		}
+
+		> .prop > .val .ctb {
+			display: inline;
+			width: auto;
+		}
+	}
+}
+
+.edit-activity-tab {
+
+	.prop-group.notification {
+		.ind-email,
+		.mgr-completion-email,
+		.rep-completion-email {
+			margin-top: .5rem;
+		}
+	}
+
+	.prop .label {
+		width: 35%;
+	}
+
+	.prop-footer-actions .actions {
+		margin-left: 35%;
+	}
+
+	.enable-propagate .props {
+		margin-left: 41%;
+		padding-left: 21px;
+		margin-bottom: 1rem;
+	}
+
+	.schedule-editor-con .label {
+		text-align: left;
+		padding-top: 13px;
+	}
+
+	.email_template_selector {
+		background-color: #f9f9f9;
+		border: 1px solid #eaeaea;
+		display: inline-block;
+		padding: 5px;
+	}
+
+	.email_template_selector > div {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.email_template_selector .actions {
+		margin: 0 0 0 10px;
+	}
+
+	.email_template_selector .actions .btn {
+		margin: 0;
+		font-size: 12px;
+		padding: 3px 10px;
+		height: auto;
+	}
+
+	.activity-settings .entity_value_editor {
+		width: 570px;
+	}
+
+	.activity-settings .head_text {
+		font-weight: bold;
+		margin: 10px 0;
+	}
+
+	.activity-settings .head_text label {
+		width: 400px;
+		margin-right: 100px;
+	}
+
+	.activity-settings h2 {
+		font-size: 14px;
+		font-weight: bold;
+		float: left;
+		margin-top: 1rem;
+	}
+
+	.schedule-editor-con .schedule-frequency input,
+	.edit-activity-tab .schedule-editor-con .schedule-min-frequency input,
+	.edit-activity-tab .schedule-editor-con .schedule-max-frequency input,
+	.edit-activity-tab .schedule-editor-con .schedule-work-period input,
+	.edit-activity-tab .schedule-editor-con .schedule-heads-up input {
+		width: 45px;
+		text-align: center;
+		margin-right: 5px;
+	}
+
+	.activity-settings {
+		.prop, .prop_group {
+			display: block;
+			clear: both;
+		}
+
+		.prop + .prop {
+			margin-top: 10px;
+		}
+	}
+
+	.prop.activity-settings .prop_group.fields > .company_enum_field > .val {
+		display: inline-block;
+		padding: 0;
+		width: auto;
+	}
+
+	.activity-settings .tracked_topic > label,
+	.prop.activity-settings .prop_group.fields > .company_enum_field > label {
+		width: 170px;
+		margin-right: 10px;
+		text-align: right;
+	}
+
+	.activity-settings .tracked_topic > input,
+	.activity-settings .company_enum_field > .val > input {
+		width: 290px;
+	}
+
+	.activity-settings .company_enum_field > .val > .ctb {
+		display: inline-block;
+		margin-left: 50px;
+	}
+
+	.activity-settings h2 + .actions {
+		float: right;
+		margin: 1.5rem 0 1rem;
+	}
+
+	.activity-settings h2 + .actions .btn {
+		margin: 0;
+	}
+
+	.activity-settings .prop.tracked_topic {
+
+		+ h2 {
+			margin-top: 2rem;
+		}
+
+		label, input.val, span.ctb {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		label {
+			margin-bottom: 0;
+		}
+
+		span.ctb {
+			margin-left: .5rem;
+		}
+	}
+
+	.activity-settings .untracked_topic {
+		clear: both;
+		white-space: nowrap;
+		margin: 10px 0;
+		padding: 0;
+	}
+
+	.activity-settings .untracked_topic:after {
+		content: " ";
+		clear: both;
+		display: table;
+	}
+
+	.activity-settings .untracked_topic > div {
+		float: left;
+	}
+
+	.activity-settings .untracked_topic .prop {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.activity-settings .untracked_topic > .actions {
+		margin: 3px 0 0 17px;
+		padding: 0;
+
+	}
+
+	.activity-settings .untracked_topic > .actions .btn {
+		margin: 0;
+		padding: 3px 10px;
+		font-size: 12px;
+	}
+
+	.activity-settings .untracked_topic .prop label {
+		width: 170px;
+		margin-right: 10px;
+		display: inline-block;
+		vertical-align: middle;
+		text-align: right;
+		margin-bottom: 0;
+	}
+
+	.activity-settings .untracked_topic .prop input {
+		width: 290px;
+	}
+
+	.activity-settings .actions.top {
+		display: block;
+	}
+}
+
+.resources {
+	label {
+		font-size: 1.5rem;
+		font-weight: 600;
+		margin: 1rem 0 0;
+	}
+}

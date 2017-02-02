@@ -1,0 +1,732 @@
+@import "../config/base-vars";
+
+.dashboard,
+.vpdashboard {
+	position: relative;
+	margin: 0 10px 10px;
+}
+
+.dashboard:before,
+.vpdashboard:before {
+	content: " ";
+	display: table;
+}
+
+/* profile styles */
+.profile {
+	position: absolute;
+	max-width: 245px;
+}
+
+/* FEATURED RESOURCES SCROLLABLE */
+
+.featured-resources {
+	position: absolute;
+	top: 0;
+	left: 272px;
+	right: 351px;
+	opacity: 0;
+	-moz-transition: opacity 0.25s ease-in;
+	-webkit-transition: opacity 0.25s ease-in;
+	-o-transition: opacity 0.25s ease-in;
+	transition: opacity 0.25s ease-in;
+}
+
+.vpdashboard .featured-resources {
+	right: 0;
+}
+
+.featured-resources.loaded {
+	opacity: 1;
+}
+
+.featured-resources .heading {
+	margin: 0;
+	font-size: 24px;
+	font-family: OpenSansSemiBold, Arial, sans-serif;
+}
+
+.featured-resources .resources {
+	position: relative;
+	margin: 10px 48px 0;
+	height: 155px;
+	background: left top #e3e3e3 url(/_resources/dyn/files/8818z58d6fab9/_fn/body-bg-tile.jpg) repeat;
+}
+
+.featured-resources .resources .resource {
+	width: 104px;
+	height: 155px;
+	float: left;
+	margin-left: 5px;
+	margin-right: 5px;
+	position: relative;
+	border: 3px solid #FFFFFF;
+	background-color: #4e4e4e;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.featured-resources .resources .resource:hover,
+.featured-resources .resources .resource.default-preview:hover {
+	border-color: #EE7421 !important; /* I added the important instead of having to define the hover in a more verbose way */
+}
+
+.featured-resources .resources .resource.default-preview {
+	background-image: url("/_resources/dyn/files/10855z448ff920/_fn/default-featured-resource.png");
+	border-color: transparent;
+}
+
+.featured-resources .resources .resource.category-video-audio-podcast,
+.featured-resources .resources .resource.category-ecsell-webinars-jams,
+.featured-resources .resources .resource.category-summit-resource,
+.featured-resources .resources .resource.category-article,
+.featured-resources .resources .resource.category-best-practice-document,
+.featured-resources .resources .resource.category-case-study,
+.featured-resources .resources .resource.category-white-paper {
+	border-color: #fff;
+}
+
+.featured-resources .resources .resource.category-video-audio-podcast {
+	background-image: url(/_resources/dyn/files/15903ze6873255/_fn/resource-default-media2.jpg);
+}
+
+.featured-resources .resources .resource.category-ecsell-webinars-jams {
+	background-image: url(/_resources/dyn/files/15905zfe49760/_fn/resource-default-webinar.jpg);
+}
+
+.featured-resources .resources .resource.category-summit-resource {
+	background-image: url(/_resources/dyn/files/15904z78e3a7f6/_fn/resource-default-summit.jpg);
+}
+
+.featured-resources .resources .resource.category-article {
+	background-image: url(/_resources/dyn/files/15899zd6520a35/_fn/resource-default-article.jpg);
+}
+
+.featured-resources .resources .resource.category-best-practice-document {
+	background-image: url(/_resources/dyn/files/15900z7f8e63ef/_fn/resource-default-best-practice.jpg);
+}
+
+.featured-resources .resources .resource.category-case-study {
+	background-image: url(/_resources/dyn/files/15901z8895379/_fn/resource-default-case-study.jpg);
+}
+
+.featured-resources .resources .resource.category-white-paper {
+	background-image: url(/_resources/dyn/files/15906z96edc6da/_fn/resource-default-white-paper.jpg);
+}
+
+.featured-resources .resources .resource > a {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
+}
+
+.featured-resources .resources > .resource {
+	display: none;
+}
+
+.featured-resources-content {
+	height: 165px;
+	position: relative;
+}
+
+.featured-resources .resources .mCSB_scrollTools .mCSB_draggerContainer {
+	display: none;
+}
+
+.featured-resources .resources .mCSB_scrollTools {
+	width: 100%;
+	bottom: 55px;
+	height: 37px;
+	overflow: visible;
+}
+
+.featured-resources .resources .mCustomScrollBox.featured-pos {
+	position: static !important;
+}
+
+.featured-resources .mCSB_scrollTools .mCSB_buttonLeft,
+.featured-resources .mCSB_scrollTools .mCSB_buttonRight {
+	width: 38px;
+	height: 37px;
+	position: absolute;
+	opacity: 0.5;
+	cursor: pointer;
+	background-image: url("/_resources/dyn/files/11040z9b510a33/_fn/featured-buttons.png");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+.lt-ie9 .featured-resources .mCSB_scrollTools .mCSB_buttonLeft,
+.lt-ie9 .featured-resources .mCSB_scrollTools .mCSB_buttonRight {
+	filter: none; /* fix for ie8 rendering bug */
+}
+
+.featured-resources .mCSB_scrollTools .mCSB_buttonLeft {
+	background-position: 0px 0px;
+	left: -48px;
+}
+
+.featured-resources .mCSB_scrollTools .mCSB_buttonRight {
+	background-position: -38px 0px;
+	right: -48px;
+}
+
+.featured-resources .mCSB_scrollTools .mCSB_buttonLeft:hover,
+.featured-resources .mCSB_scrollTools .mCSB_buttonRight:hover {
+	opacity: 1;
+}
+
+/* specific period selector styles */
+.period-selector {
+	position: absolute;
+	top: 299px;
+	left: 0;
+	z-index: 10;
+}
+
+.period-selector select {
+	width: 246px;
+}
+
+/* QUICK VIEW */
+.quick-view {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 337px;
+}
+
+
+
+
+
+
+/* full view table styles */
+.full-view {
+	position: relative;
+	margin-top: 340px;
+}
+
+.full-view:before,
+.full-view:after {
+	display: table;
+	content: " ";
+}
+
+.full-view:after {
+	clear: both;
+}
+
+.full-view .table-partition.primary {
+	float: left;
+	width: 460px;
+}
+
+.table-partition.primary:before {
+	content: " ";
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	top: 0;
+	z-index: -1;
+	-webkit-box-shadow: 0 0 6px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 0 6px rgba(0,0,0,0.1);
+	box-shadow: 0 0 6px rgba(0,0,0,0.1);
+	background-color: #333639;
+}
+
+.full-view .table-partition.data {
+	position: absolute;
+	left: 460px;
+	right: 0;
+	top: -125px;
+}
+
+.full-view .table-partition.data > .scroller {
+	overflow-x: auto;
+}
+
+.full-view .table-partition.data > .table-part.key-metrics {
+	/* this is for before jquery transforms for slow computers (iOS) */
+	margin-top: 125px;
+}
+
+.full-view .table-partition.data .mCSB_container {
+	padding-top:125px
+}
+
+.full-view .table-partition.primary .table-part {
+	width: 100%;
+}
+
+/* table part collapsible */
+.table-part.closed  {
+	border-bottom: 3px solid #fff;
+}
+
+.table-part.closed tbody {
+	display: none;
+}
+
+.table-part th.label {
+	cursor: pointer;
+}
+
+.table-part th.label:before {
+	content: " ";
+	display: inline-block;
+	margin-right: 5px;
+	width: 20px;
+	height: 20px;
+	background: transparent url(/_resources/dyn/files/16246zec6143d1/_fn/expand-collapse.png) no-repeat;
+	background-position: 0px -40px;
+}
+
+.table-part th.label:hover:before {
+	background-position: 0 -60px;
+}
+
+.table-part.closed th.label:before {
+	background-position: 0px 0px;
+}
+
+.table-part.closed th.label:hover:before {
+	background-position: 0 -20px;
+}
+
+/* table part generic */
+.table-part th {
+	background-color: #333639;
+	color: #fff;
+	font-weight: normal;
+	font-size: 16px;
+	text-align: left;
+	height: 45px;
+	padding: 0 10px;
+}
+
+.table-part th.label {
+	font-size: 26px;
+}
+
+.table-part th.averages {
+	text-align: center;
+}
+
+.table-part th.person-data .name{
+	font-size: 0.75em;
+}
+
+.table-part th.person-data > .name {
+	/*padding-left: 10px;*/
+	text-align: center;
+}
+
+.table-part td {
+	text-align: center;
+	font-family: OpenSansSemiBold, Arial, Verdana, sans-serif;
+	background-color: #fff;
+	border: 1px solid #d6d6d6;
+	height: 45px;
+	padding: 0 10px;
+	-webkit-transition: background-color 0.1s;
+	-moz-transition: background-color 0.1s;
+	-ms-transition: background-color 0.1s;
+	transition: background-color 0.1s;
+}
+
+.table-part tr.odd td {
+	background-color: #f3f3f3;
+}
+
+.table-part tr.odd td.vacant,
+.table-part td.vacant {
+	background-color: #f3f3f3;
+}
+
+.table-part tr.odd td.previous-employee,
+.table-part td.previous-employee {
+	background-color: #f3f3f3;
+	color: #999;
+}
+
+.table-part tr.over td,
+.table-part tr.over td.vacant,
+.table-part tr.over td.previous-employee {
+	background-color: #ee7421;
+	color: #fff;
+	border-color: #ee7421;
+}
+
+.table-part th.label,
+.table-part td.label {
+	text-align: left;
+	width: 280px;
+}
+
+.table-part th > .inner,
+.table-part td > .inner {
+	position: relative;
+}
+
+/* table part sub rows */
+.table-part .subrow td {
+	display: none;
+}
+
+.table-part .subrow td.label {
+	padding-left: 35px;
+}
+
+.table-part .subrow td.label:before {
+	content: "-";
+	margin-right: 5px;
+}
+
+.table-part .subrow.active td {
+	display: table-cell;
+}
+
+/* table part person data */
+.table-part th.person-data {
+	padding: 0;
+	width: 141px;
+}
+
+.table-part th.person-data > .inner {
+	height: 44px;
+	width: 141px;
+}
+
+.table-part td.person-data > .inner {
+	width: 120px;
+}
+
+.table-part th.previous-employee .person:before {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 1;
+	background-color: #333639;
+	background-color: rgba(0,0,0,0.6);
+}
+
+.table-part th.vacant .person .name:before {
+	content: "\00a0"; /* SB - nbsp for spacing in current design */
+	display: block;
+}
+
+/* table part person styles */
+.table-part th .person {
+	position: absolute;
+	bottom: 32px;
+	left: 0;
+	right: 0;
+	height: 140px;
+	background-size: contain;
+}
+
+.table-part th .person .details {
+	z-index: 5;
+}
+
+.table-part th .person .meta {
+	margin-right: 35px;
+}
+
+.table-part th .person .notifications {
+	position: absolute;
+	bottom: 0px;
+	right: 0;
+	z-index: 15;
+}
+
+.table-part th .person .notifications .notification {
+	width: 40px;
+	height: 38px;
+	display: inline-block;
+	vertical-align: top;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: #333639;
+	background-color: rgba(0,0,0,0.2);
+	border-radius: 3px;
+	margin: 0px 2px;
+	-webkit-transition: all 0.25s;
+	-moz-transition: all 0.25s;
+	-ms-transition: all 0.25s;
+	transition: all 0.25s;
+}
+
+.table-part th .person:hover .notifications .notification {
+	background-color: rgb(0,0,0);
+}
+
+.table-part th .person .notifications .notification.birthday {
+	background-image: url("/_resources/dyn/files/10501z364d5a2f/_fn/birthday-cake.png");
+}
+
+.table-part th .person .notifications .notification.anniversary {
+	background-image: url("/_resources/dyn/files/10500z414a6ab9/_fn/anniversary-star.png");
+}
+
+.table-part th .person .notifications .notification.anniversary .count {
+	font-size: 12px;
+	color: #F07621;
+	line-height: 40px;
+	text-align: center;
+	display: block;
+}
+
+/* table part tooltip hide */
+.table-part td .tooltip {
+	display: none;
+}
+
+/* table part misc */
+.table-part .joint-sales-type-chooser {
+	margin-left: 10px;
+}
+
+.table-part .select2-container .select2-choice > .select2-chosen {
+	max-width: 90px;
+}
+
+/* picture frame over the images */
+.table-partition.data .picture-frame {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #333639;
+	height: 140px;
+
+}
+.table-partition.data .picture-frame .pf {
+	background-color: #333639;
+	position: absolute;
+	z-index: 20;
+}
+
+.table-partition.data .picture-frame .pf-top {
+	height: 3px;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.table-partition.data .picture-frame .pf-right {
+	width: 3px;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.table-partition.data .picture-frame .pf-bottom {
+	height: 3px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: none;
+}
+
+.table-partition.data .picture-frame .pf-left {
+	width: 3px;
+	left: 0;
+	top: 0;
+	bottom: 0;
+}
+
+/* scrollbar styling for data partition */
+.table-partition.data .mCSB_scrollTools {
+	position: absolute;
+	top: 147px;
+	z-index: 25;
+}
+
+.table-partition.data .mCSB_horizontal>.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	height: 16px;
+	margin: 0 auto;
+}
+
+.table-partition.data .mCSB_horizontal>.mCSB_scrollTools .mCSB_draggerRail {
+	height: 16px;
+	margin: 0;
+}
+
+/* tooltip specific styles */
+.tooltip .role {
+	display: table;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.tooltip .role .role-name,
+.tooltip .role .role-count {
+	display: table-cell;
+	padding: 5px 10px;
+	border: 1px solid #eaeaea;
+}
+
+.tooltip .role + .role .role-name,
+.tooltip .role + .role .role-count {
+	border-top: none;
+}
+
+.tooltip .role .role-count {
+	background-color: #f9f9f9;
+	width: 50px;
+	text-align: center;
+}
+
+
+/* notification data location - this should probably be json eventually, but doing HTML for now, this hides it initially */
+.notification-data {
+	display: none;
+}
+
+.popup-content.notification-bar .notification .hide {
+	display: none;
+}
+.popup-content.notification-bar .notification.hidden {
+	display: block;
+}
+
+/* Notification Bar */
+.notification-bar-con{
+	visibility: visible;
+	opacity: 1;
+	max-height: 400px;
+	overflow-y: auto;
+	-ms-transition: all 0.25s;
+	-moz-transition: all 0.25s;
+	-webkit-transition: all 0.25s;
+	transition: all 0.25s;
+}
+
+.notification-bar-con.hidden{
+	opacity: 0;
+	visibility: hidden;
+	max-height: 0;
+}
+
+.notification-bar .notification {
+	background-color: #d0d0d0;
+	padding: 5px 15px;
+	font-family: OpenSansBold, Arial, sans-serif;
+	font-size: 13px;
+	color: #fff;
+}
+
+.notification-bar .notification:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+.notification-bar .notification.quote {
+	background-color: #ee7421;
+}
+
+.notification-bar .notification.birthday,
+.notification-bar .notification.anniversary {
+	background-color: #4cbeee;
+}
+
+.notification-bar .notification.hidden {
+	display: none;
+}
+
+.notification-bar .notification + .notification {
+	border-top: 1px solid #ccc;
+}
+
+/*
+- hiding per dao's request
+.notification-bar .notification + .notification.quote {
+border-top-color: #d6681e;
+}
+
+.notification-bar .notification + .notification.birthday,
+.notification-bar .notification + .notification.anniversary {
+border-top-color: #1f88d8;
+}
+*/
+
+.notification-bar .notification .hide {
+	width: 20px;
+	height: 20px;
+	float: right;
+	margin-left: 15px;
+	background: center center transparent url(/_resources/dyn/files/14994z119d7bda/_fn/notification-close.png) no-repeat;
+	cursor: pointer;
+}
+
+.notification-bar .notification a {
+	color: #fff;
+}
+
+.notification-bar .notification a:hover {
+	text-decoration: none;
+}
+
+.notification-bar .notification p {
+	margin: 0;
+}
+
+.notification-bar .notification p + p {
+	margin-top: 1em;
+}
+
+.notification-bar .notification.quote .intro {
+	float: left;
+	margin-right: 5px;
+}
+
+.notification-bar .notification.quote .content {
+	font-family: OpenSans, Arial, sans-serif;
+}
+
+.notification-summary {
+	position: absolute;
+	right: 15px;
+	bottom: 5px;
+	background: center center transparent url(/_resources/dyn/files/14995z669a4b4c/_fn/notification-icon.png) no-repeat;
+	width: 30px;
+	height: 23px;
+	display: none;
+}
+
+.notification-summary.has-notifications {
+	cursor: pointer;
+	display: block;
+}
+
+.notification-summary .notification-count {
+	color: #eaeaea;
+	background-color: #aaa;
+	width: 20px;
+	height: 20px;
+	display: block;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 100%;
+	position: absolute;
+	top: -6px;
+	right: -6px;
+	font-size: 11px;
+}
+
+.notification-summary.visible-notifications .notification-count {
+	color: #fff;
+	background-color: #ee7421;
+}

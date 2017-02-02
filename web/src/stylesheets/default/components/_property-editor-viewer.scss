@@ -1,0 +1,802 @@
+@import "../config/base-vars";
+@import "../mixins/miwt-switch";
+@import "../../../../../bower_components/bootstrap/scss/mixins";
+@import "../../../../../bower_components/bootstrap/scss/mixins/clearfix";
+@import "../../../../../bower_components/bootstrap/scss/mixins/buttons";
+
+.custom-activities {
+	@include clearfix();
+
+	.custom-title {
+		float: left;
+	}
+
+	.company-actions-add {
+		float: right;
+		margin: 10px 0;
+
+		.btn.add {
+			@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+			font-size: .9rem;
+			padding: .45rem .75rem;
+			font-weight: 600;
+			line-height: 1;
+			border-radius: .2rem;
+		}
+	}
+}
+
+.property-wrapper .prop-wrapper {
+	.props .prop {
+		padding: 10px;
+
+		.label {
+			padding: 0 10px;
+		}
+	}
+}
+
+.prop-wrapper {
+	.prop {
+		> label {
+			display: inline-block;
+		}
+
+		&.activity-settings {
+			.props {
+				.label {
+					display: inline-block;
+					width: 100%;
+					max-width: 12rem;
+				}
+
+				.val {
+					display: inline-block;
+					input {
+						width: 100%;
+					}
+				}
+			}
+
+			.val a.btn {
+				color: $color-white;
+				text-decoration: none;
+			}
+		}
+
+		.date-from-to {
+			label {
+				margin: 0 .5rem;
+			}
+		}
+	}
+
+	&.cycle-viewer {
+		.prop-body .prop .val {
+			padding: 10px;
+		}
+	}
+
+	&.add-custom-activity {
+		.form-based-editor {
+			padding: 0;
+		}
+
+		.prop-body .prop {
+			label, .val {
+				display: table-cell;
+				width: 50%;
+				text-align: right;
+				vertical-align: top;
+				padding: 10px;
+				font-family: $font-open-sans;
+				font-weight: 600;
+			}
+
+			.val {
+				display: table-cell;
+				width: 50%;
+				text-align: left;
+				vertical-align: top;
+				padding: 10px;
+				font-family: $font-open-sans;
+
+				.select2-container {
+					padding: 0;
+				}
+			}
+
+			&.company-forms {
+				.select2-container {
+					max-width: 215px;
+				}
+			}
+
+			.label label {
+				padding: 0;
+				width: 100%;
+				display: block;
+			}
+
+			&.tbl {
+				display: inline;
+				margin-left: 5px;
+			}
+
+			&.template {
+
+				> label {
+					width: 16.5rem;
+				}
+
+				.select2-container {
+					max-width: 215px;
+				}
+
+				.actions .btn {
+					padding: 0;
+					background: transparent;
+					border: none;
+					color: $color-hab-orange;
+					margin-right: 1rem;
+
+					&:hover {
+						background: transparent;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+
+	&.edit-activity-tab {
+		.schedule.props {
+			> div.select2-container,
+			> span.ctb {
+				margin-left: 50%;
+			}
+
+			> span.ctb {
+				margin-top: .5rem;
+			}
+
+			> div:last-child {
+				display: table;
+				width: 100%;
+			}
+		}
+
+		.props .prop.enable-auto-send .val {
+			padding: 10px;
+		}
+	}
+
+	&.tracked-goals {
+		.prop.company-setting-goal {
+			> .val {
+				padding: 10px;
+			}
+		}
+		.prop span.ctb {
+			display: inline-block;
+		}
+	}
+}
+
+.prop-editor {
+	.prop span.ctb {
+		label.tbl {
+			text-align: left;
+		}
+
+		+ span.ctb {
+			padding-left: 0;
+		}
+	}
+}
+
+.property-editor{
+	padding: 10px 0;
+	font-family: $font-open-sans;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+.property-editor .prop>label{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 2px;
+	text-align: right;
+}
+
+.property-editor .prop>span{
+	width: 45%;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 2px;
+}
+.property-editor .prop>div{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 2px;
+}
+
+.property-editor .prop.category > div{
+	width: 100%;
+}
+
+.property-editor .prop.category-checkbox > div.val{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.property-editor .prop.category-checkbox span{
+	width: 100%;
+	display: block;
+}
+.property-editor .prop.category-checkbox>label{
+	width: 45%;
+	margin-bottom: 10px;
+}
+.property-editor .prop.category-checkbox input{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.property-editor .prop.opt-file .file.field{
+	width: 100%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.property-editor .prop.opt-file .actions{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 15px;
+}
+
+.opt-file .opt-file-choice{
+	width: 45%;
+	display: inline-block;
+	vertical-align: top;
+	text-align: right;
+}
+.opt-file .opt-file-choice label{
+	vertical-align: top;
+	display: inline-block;
+	margin-top: 2px;
+}
+
+.opt-file .opt-file-upload{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 15px;
+}
+
+.property-editor .prop-group{
+	width: 100%;
+}
+
+.property-editor .opt-url .opt-url-choice{
+	width: 45%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.property-editor .opt-url .opt-url-choice label{
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 2px;
+}
+
+.property-editor .opt-url .opt-url-field{
+	margin-left: 15px;
+}
+.property-editor .email_template_selector, .property-editor .email-template-selector{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 15px;
+}
+
+.property-editor .phone_number_form, .property-editor .phone_number_form{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.property-editor .phone_number_form .phone_number_format,
+.property-editor .phone-number-form .phone-number-format{
+	display: block;
+}
+
+
+.property-editor .phone_number_form .phone_number_entry,
+.property-editor .phone-number-form .phone-number-entry{
+	display: block;
+}
+
+.property-editor .phone_number_form .phone_number_format > span > input,
+.property-editor .phone-number-form .phone-number-format > span > input{
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 2px;
+}
+
+.property-editor .phone_number_form .phone_number_format > span > label,
+.property-editor .phone-number-form .phone-number-format > span > label{
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 2px;
+}
+
+.property-editor .phone_number_form .phone_number_format > span,
+.property-editor .phone-number-form .phone-number-format > span{
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.property-editor .phone_number_form .phone_number_entry td+td,
+.property-editor .phone-number-form .phone-number-entry td+td{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.property-editor .phone_number_form .phone_number_entry .nanp_number,
+.property-editor .phone-number-form .phone-number-entry .nanp-number{
+	margin-left: 10px;
+}
+
+.property-editor .prop{
+	margin: 5px;
+}
+
+.property-editor .val{
+	margin-left: 15px;
+	margin-right: 10px;
+}
+
+.property-editor div.val > label{
+	display: block;
+}
+
+.property-editor .val > label{
+	margin-left: 15px;
+	margin-right: 10px;
+}
+
+.property-editor .company-address .address_form label, .property-editor .address-form label{
+	width: 45%;
+	display: inline-block;
+	vertical-align: top;
+	text-align: right;
+}
+.property-editor .company-address .address_form span, .property-editor .address-form span{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 15px;
+}
+.property-editor .company-address .address_form input, .property-editor .address-form input{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 15px;
+}
+.property-editor .company-address .address_form span, .property-editor .address-form span{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 15px;
+}
+.property-editor .company-address .address_form select, .property-editor .address-form select{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 15px;
+}
+
+.property-editor .company-address .address_form, .property-editor .address-form{
+	width: 100%;
+}
+.property-editor .company-address .address_form .part, .property-editor .address-form .part{
+	margin: 5px;
+}
+.property-editor .company-address .address_form .address_lines > .address_line,
+.property-editor .address-form .address-lines > .address-line{
+	margin: 5px;
+}
+
+.property-editor .prop.picture .position-photo img{
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.entity_value_editor, .entity-value-editor{
+	width: 100%;
+}
+.entity_value_editor label, .entity-value-editor label{
+	display: block;
+	text-align: left;
+	/*width: 45%;
+	vertical-align: top;
+	text-align: right;*/
+}
+.entity_value_editor .val, .entity-value-editor .val{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 15px;
+	padding: 2px 5px;
+}
+
+.prop-wrapper.prop-gen .prop .val {
+	padding: 2px 5px;
+}
+
+.property-editor .val input+span{
+	margin-left: 15px;
+}
+.entity_value_editor .val input+span, .entity-value-editor .val input+span{
+	margin-left: 15px;
+}
+
+.property-editor .prop > div > span > label{
+	display: inline-block;
+	vertical-align: top;
+}
+.property-editor .prop > div > span > input{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/*TEMP: removes address fields until they can be removed from the component */
+.prop.address{
+	display: none;
+}
+
+.top-container .prop.title *{
+	font-size: 24px;
+	text-align: center;
+	display: block;
+}
+
+/* TEMP UNTIL HTML RESTRUCTURE */
+.head-text{
+	font-family: $font-open-sans;
+	font-weight: 700;
+}
+
+.head-text label{
+	margin-left: 130px;
+	margin-right: 20px;
+}
+label.goals-checkbox{
+	margin-left: 10px;
+}
+
+.prop.prompt{
+	font-family: $font-open-sans;
+	font-weight: 700;
+	font-size: 16px;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.prop.company-setting-goal>*{
+	margin-left: 20px;
+	width: 150px;
+}
+
+.standard-title, .custom-title{
+	font-family: $font-open-sans;
+	font-weight: 500;
+	font-size: 1.5rem;
+	margin: 10px 0;
+}
+
+.standard-table {
+	margin-bottom: 3rem;
+}
+
+.company-setting .remove.btn{
+	margin-left: 20px;
+}
+
+.company-name.title, .company-name.title h1{
+	font-family: $font-open-sans;
+	font-weight: 700;
+	font-size: 22px;
+}
+
+
+
+
+
+/* PROPERTY VIEWER */
+
+.property-viewer{
+	padding: 10px 0;
+	font-family: $font-open-sans;
+	font-weight: 600;
+	font-size: 14px;
+}
+
+.property-viewer > .actions{
+	width: 45%;
+	margin: 20px;
+}
+
+.property-viewer .prop>label{
+	width: 45%;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 2px;
+	text-align: right;
+}
+
+.property-viewer .prop>span{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 2px;
+}
+.property-viewer .prop>div{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 2px;
+}
+
+.property-viewer .prop.category > div{
+	width: 100%;
+}
+
+.property-viewer .prop.category-checkbox > div.val{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.property-viewer .prop.category-checkbox span{
+	width: 100%;
+	display: block;
+}
+.property-viewer .prop.category-checkbox>label{
+	width: 45%;
+	margin-bottom: 10px;
+}
+.property-viewer .prop.category-checkbox input{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.property-viewer .prop.opt-file .file.field{
+	width: 100%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.property-viewer .prop.opt-file .actions{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 15px;
+}
+
+.property-viewer .prop-group{
+	width: 100%;
+}
+
+.property-viewer .opt-url .opt-url-choice{
+	width: 45%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.property-viewer .opt-url .opt-url-choice label{
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 2px;
+}
+
+.property-viewer .opt-url .opt-url-field{
+	margin-left: 15px;
+}
+.property-viewer .email_template_selector,
+.property-viewer .email-template-selector{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 15px;
+}
+
+
+
+.property-viewer .prop{
+	margin: 5px;
+}
+
+.property-viewer .val{
+	margin-left: 15px;
+	margin-right: 10px;
+}
+
+.property-viewer div.val > label{
+	display: block;
+}
+
+.property-viewer .val > label{
+	margin-left: 15px;
+	margin-right: 10px;
+}
+
+.property-viewer .company-address .address_form label,
+.property-viewer .address-form label{
+	width: 45%;
+	display: inline-block;
+	vertical-align: top;
+	text-align: right;
+}
+.property-viewer .company-address .address_form span,
+.property-viewer .address-form span{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 15px;
+}
+.property-viewer .company-address .address_form input,
+.property-viewer .address-form input{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 15px;
+}
+.property-viewer .company-address .address_form span,
+.property-viewer .address-form span{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 15px;
+}
+.property-viewer .company-address .address_form select,
+.property-viewer .address-form select{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 15px;
+}
+
+.property-viewer .company-address .address_form,
+.property-viewer .address-form{
+	width: 100%;
+}
+.property-viewer .company-address .address_form .part,
+.property-viewer .address-form .part{
+	margin: 5px;
+}
+.property-viewer .company-address .address_form .address_lines > .address_line,
+.property-viewer .address-form .address-lines > .address-line{
+	margin: 5px;
+}
+
+.property-viewer .prop.picture .position-photo img{
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.property-viewer .val input+span{
+	margin-left: 15px;
+}
+
+.property-viewer .prop > div > span > label{
+	display: inline-block;
+	vertical-align: top;
+}
+.property-viewer .prop > div > span > input{
+	display: inline-block;
+	vertical-align: top;
+}
+
+
+
+/* PHONE NUMBER */
+
+.property-viewer .phone_number_form, .property-viewer .phone_number_form{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.property-viewer .phone_number_form .phone_number_format,
+.property-viewer .phone-number-form .phone-number-format{
+	display: block;
+}
+
+
+.property-viewer .phone_number_form .phone_number_entry,
+.property-viewer .phone-number-form .phone-number-entry{
+	display: block;
+}
+
+.property-viewer .phone_number_form .phone_number_format > span > input,
+.property-viewer .phone-number-form .phone-number-format > span > input{
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 2px;
+}
+
+.property-viewer .phone_number_form .phone_number_format > span > label,
+.property-viewer .phone-number-form .phone-number-format > span > label{
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 2px;
+}
+
+.property-viewer .phone_number_form .phone_number_format > span,
+.property-viewer .phone-number-form .phone-number-format > span{
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.property-viewer .phone_number_form .phone_number_entry td+td,
+.property-viewer .phone-number-form .phone-number-entry td+td{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.property-viewer .phone_number_form .phone_number_entry .nanp_number,
+.property-viewer .phone-number-form .phone-number-entry .nanp-number{
+	margin-left: 10px;
+}
+.phone_field .phone_number_format .rtb+.rtb{
+	margin-left: 15px;
+}
+
+.phone_field .phone_number_entry_con .label_con.extension_label_con .extension_label.label{
+	margin-left: 15px;
+}
+
+.prop-editor {
+	&.company-info {
+		.prop {
+			.val label {
+				width: 8rem;
+				padding-right: 1rem;
+				text-align: right;
+				margin-bottom: 1rem;
+			}
+		}
+	}
+}
+
+
+
+.company-setting-detail-info {
+	.resource-ui {
+		.btn {
+			@include button-variant($color-white, $color-hab-orange, darken($color-hab-orange, 5%));
+			font-size: .9rem;
+			font-weight: 600;
+			font-family: $font-open-sans;
+		}
+
+		.miwt-table .btn.remove {
+			padding: 0;
+			background: transparent;
+
+			&:hover {
+				background: transparent;
+			}
+		}
+	}
+}

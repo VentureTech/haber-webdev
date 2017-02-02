@@ -1,0 +1,15 @@
+.activity-management .miwt-collapsable-content {
+	top: 45px;
+	right: 87px;
+}
+
+/* Override an overly general rule elsewhere using specificity */
+.activity-instance-editor .miwt-collapsable-content .prop-group {
+	display: block;
+	vertical-align: left;
+	width: 100%;
+}
+
+.activity-management .miwt-collapsable-content .prop-header-actions {
+	display: none;
+}

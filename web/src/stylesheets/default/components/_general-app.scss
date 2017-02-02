@@ -1,0 +1,432 @@
+@import "../config/base-vars";
+
+/* save to complete the stream storage copy */
+/* Logged in user control for user information and actions */
+.user-control {
+	color: #fff;
+	text-align: right;
+	position: absolute;
+	right: 10px;
+	cursor: pointer;
+	margin-right: -10px;
+	padding: 5px 10px;
+	z-index: 900;
+}
+
+.user-control:hover {
+	background-color: #0b385b;
+}
+
+.user-control:before,
+.user-control:after {
+	content: " ";
+	display: table;
+}
+
+.user-control:after {
+	clear: both;
+}
+
+.user-control .collapsible-shown {
+	position: absolute;
+	top: 100%;
+	right: 0;
+}
+
+.user-control-trigger {
+	white-space: nowrap;
+}
+
+.user-control-trigger .photo {
+	border: 1px solid #fff;
+	width: 40px;
+	height: 40px;
+	float: right;
+	background: center top #f3f3f3 url(/_resources/dyn/files/9035za2fed25b/_fn/default-user-photo.png) no-repeat;
+	background-size: cover;
+}
+
+.user-control-trigger .info {
+	margin-right: 50px;
+	padding-top: 3px;
+}
+
+.user-control-trigger .intro {
+	font-size: 13px;
+	line-height: 1.25;
+}
+
+.user-control-trigger .name {
+	color: #ee7421;
+	line-height: 1.25;
+}
+
+/* control panel, generally used in the user control */
+.user-cp {
+	text-align: left;
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 0 3px rgba(0,0,0,0.3);
+	box-shadow: 0 0 3px rgba(0,0,0,0.3);
+	min-width: 150px
+}
+
+.user-cp .menu {
+	padding: 0;
+	margin: 0;
+}
+
+.user-cp .mi {
+	list-style: none;
+}
+
+.user-cp .menuitemlabel {
+	text-decoration: none;
+	background: #fff;
+	color: #ee7421;
+	display: block;
+	padding: 10px 20px;
+}
+
+.user-cp .menuitemlabel:hover {
+	background-color: #ee7421;
+	color: #fff;
+}
+
+.user-cp .first .menuitemlabel {
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.user-cp .last .menuitemlabel {
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.user-cp .admin{
+	font-size: 12px;
+}
+
+/* Generic breadcrumb styles for all ecsell breadcrumb components */
+.ecsellbreadcrumb {
+	margin: 15px 10px;
+}
+
+.ecsellbreadcrumb .crumbs {
+	margin: 0;
+	padding: 0;
+}
+
+.ecsellbreadcrumb .crumb {
+	list-style: none;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.ecsellbreadcrumb .crumb + .crumb:before {
+	content: " ";
+	display: inline-block;
+	vertical-align: middle;
+	width: 11px;
+	height: 14px;
+	margin: 0 10px;
+	background: center center transparent url(/_resources/dyn/files/9005z89d38198/_fn/breadcrumb-arrow.png) no-repeat;
+}
+
+.ecsellbreadcrumb .crumb a {
+	color: #4f5254;
+	text-decoration: none;
+	font-family: OpenSansSemiBold, Arial, sans-serif;
+}
+
+/* General activity link menu */
+.activitylinks .menu {
+	margin: 10px 0 10px;
+	padding: 0;
+	font-family: OpenSansSemiBold, Arial, sans-serif;
+}
+
+.activitylinks .mi {
+	list-style: none;
+}
+
+.activitylinks .menuitemlabel:hover {
+	text-decoration: none;
+}
+
+.activitylinks .menu-t1 {
+	margin-top: 0;
+}
+
+.activitylinks .menu-t1 > .mi > .menuitemlabel {
+	color: #ee7421;
+	font-size: 24px;
+}
+
+.activitylinks .menu-t2 > .mi + .mi {
+	margin-top: 25px;
+}
+
+.activitylinks .menu-t2 > .mi > .menuitemlabel {
+	color: #ee7421;
+	font-size: 18px;
+}
+
+.activitylinks .menu-t3 > .mi {
+	margin: 5px 0;
+}
+
+.activitylinks .menu-t3 > .mi > .menuitemlabel {
+	color: #3b3e40;
+}
+
+/* jquery ui updates */
+.ui-widget-header select {
+	color: #3b3e40;
+}
+
+
+/* Person styles */
+
+
+/* period selector generic styles */
+.period-selector {
+	position: relative;
+}
+
+.period-selector .control-extra {
+	position: absolute;
+	top: 50%;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+	padding: 10px;
+	-webkit-box-shadow: 0 0 6px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 0 6px rgba(0,0,0,0.1);
+	box-shadow: 0 0 6px rgba(0,0,0,0.1);
+	border: 1px solid #eaeaea;
+	background-color: #fff;
+}
+
+.period-selector .control-extra.active {
+	visibility: visible;
+	opacity: 1;
+	top: 100%;
+}
+
+.period-selector .actions {
+	margin-top: 5px;
+	text-align: right;
+}
+
+.period-selector .control-extra.date-range .question + .question {
+	margin-top: 5px;
+}
+
+.period-selector .control-extra.date-range .question label {
+	display: block;
+}
+
+.period-selector .control .summary {
+	position: absolute;
+	left: 100%;
+	top: 0;
+	line-height: 32px;
+	margin-left: 10px;
+	white-space: nowrap;
+}
+
+.period-selector .control .summary:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/* quick table view */
+.quick-view {
+	background: #062B47;
+	border-radius: 3px;
+	border: 3px solid #062B47;
+}
+
+.quick-view .heading {
+	font-size: 18px;
+	font-family: OpenSansBold, Arial, sans-serif;
+	color: #FFFFFF;
+	margin: 0;
+	padding: 10px 10px;
+}
+
+.quick-view .stats-con{
+	width: 100%;
+	height: 100%;
+	max-height: 146px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.quick-view .stats {
+	width: 100%;
+	display: table;
+	font-size: 14px;
+	font-family: OpenSansSemiBold, Arial, sans-serif;
+	color: #FFFFFF;
+}
+
+.quick-view .stats .stat {
+	display: table-row;
+}
+
+.quick-view .stats .stat.even {
+	background: #0B385B;
+}
+
+.quick-view .stats .stat .label {
+	display: table-cell;
+	padding: 1px 0px 2px 10px;
+}
+
+.quick-view .stats .stat .val {
+	display: table-cell;
+	/*width: 1%;*/
+	width: 125px;
+	text-align: right;
+	padding: 0 10px;
+	vertical-align: middle;
+	/*white-space: nowrap;*/
+	white-space: normal;
+}
+
+.quick-view .stat.subrow .label {
+	padding-left: 30px;
+}
+
+/* PROFILE PERSON */
+.person .photo {
+	background-size: cover;
+	background-position: center top;
+	background-color: #333639;
+	background-image: url(/_resources/dyn/files/9035za2fed25b/_fn/default-user-photo.png);
+	background-repeat: no-repeat;
+}
+
+.person .more {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 10;
+}
+
+.person .details {
+	color: #fff;
+	font-family: OpenSansBold, Arial, Verdana, sans-serif;
+	font-size: 14px;
+	padding: 5px;
+	position: relative;
+}
+
+.person .meta {
+	white-space: nowrap;
+}
+
+.person .meta .mi {
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.person .meta .position {
+	font-size: 11px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+
+.profile {
+	position: relative;
+	z-index: 35;
+	border: 3px solid #fff;
+	-webkit-box-shadow: 0 0 6px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 0 6px rgba(0,0,0,0.1);
+	box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+.profile .person .photo {
+	width: 240px;
+	height: 240px;
+}
+
+.profile .person .meta {
+	margin-right: 21px;
+}
+
+.profile .person .details {
+	background-color: #333639;
+}
+
+.profile .person .details {
+	.btn-glyph {
+		position: absolute;
+		width: 22px;
+		height: 23px;
+		color: transparent;
+
+		&::before {
+			font-family: $font-glyph-lib;
+			font-size: 1.35rem;
+			line-height: 1.5rem;
+			color: $color-white;
+			display: inline-block;
+		}
+
+		&.configure {
+			right: 4px;
+			top: 10px;
+
+			&::before {
+				content: '\f013';
+			}
+		}
+
+		&.activities {
+			right: 32px;
+			top: 11px;
+
+			.aside-box & {
+				right: 6px;
+			}
+
+			&::before {
+				content: '\f044';
+			}
+		}
+	}
+}
+
+/* DASHBOARD TABLE PERSONS */
+
+.person-data .photo {
+	height: 140px;
+}
+
+.person-data .details{
+	opacity: 0;
+	-webkit-transition: all 0.25s;
+	-moz-transition: all 0.25s;
+	-ms-transition: all 0.25s;
+	transition: all 0.25s;
+	position: absolute;
+	top: 97px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #333639;
+	background-color: rgba(0,0,0,0.6);
+}
+
+.person-data:hover .details {
+	opacity: 1;
+}
