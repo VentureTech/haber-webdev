@@ -1,0 +1,180 @@
+@import "../config/base-vars";
+@import "../components/property-editor-viewer"; //from EcSell/Haberfeld
+
+#e-content {
+	overflow: hidden;
+}
+
+#admin .primary-menu{
+	margin: 8px 40px 0;
+}
+
+#primary-content{
+	padding: 20px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.property-viewer, .property-editor, .actions, .pager,
+.custom-table, .miwt-table, .pageable, .pager-top, .pager-bottom, .search-wrapper {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.management {
+	.top-container .select2-container {
+		min-width: 175px;
+	}
+}
+
+.message-container.empty{
+	display: none;
+}
+
+.content-box {
+	padding: 2rem;
+
+	h1{
+		margin: 0;
+	}
+}
+
+.admin-header-text {
+	display: inline-block;
+	vertical-align: top;
+	font-family: $font-open-sans;
+	font-size: 32px;
+	color: #FFFFFF;
+}
+
+#admin #header-wc-0 .logo {
+	display: inline-block;
+	vertical-align: top;
+}
+
+label.title{
+	display: block;
+	font-size: 24px;
+	text-align: left;
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-bottom: 20px;
+}
+
+.first-row select.val{
+	margin: 5px;
+	height: 30px;
+}
+
+/* RESOURCE IMPORT PAGE */
+.resource-import{
+	background: #FFFFFF;
+	border-radius: 3px;
+	padding: 20px;
+
+	.title {
+		font-family: $font-open-sans;
+		font-weight: 700;
+		font-size: 24px;
+	}
+
+	.message{
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	div{
+		margin: 5px;
+	}
+
+	.instructions{
+		margin-bottom: 15px;
+	}
+
+	.instructions+.instructions{
+		margin-left: 15px;
+		margin-bottom: 5px;
+	}
+}
+
+
+
+/* UI TASKS */
+
+.uitask_list, .uitask-list {
+	.uitask + .uitask{
+		margin-left: 10px;
+	}
+}
+
+.uitask_label, .uitask-label{
+	line-height: 20px;
+}
+
+.uitask_actions, .uitask-actions {
+	button.btn{
+		width: 20px;
+		height: 19px;
+		background-position: -6px -8px;
+		margin: 0;
+		position: absolute;
+		right: 3px;
+		top: 3px;
+		background-color: $color-hab-orange;
+	}
+}
+
+.uitask {
+	background-color: #B1B5BB;
+	border-radius: 3px;
+	padding: 0px 35px 2px 5px;
+	margin: 0px 0px 15px;
+	font-family: OpenSansBold, Arial, sans-serif;
+	font-size: 14px;
+	-webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+	padding-top: 3px;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+
+	button.btn:hover, button.btn:hover{
+		background-color: darken($color-hab-orange, 5%);
+	}
+
+	&.selected {
+		background-color: #F3F4F5;
+
+		* {
+			text-shadow: none;
+			color: #3B3E40;
+		}
+	}
+
+	* {
+		color: #FFFFFF;
+		text-shadow: 0 1px 1px rgba(0,0,0,0.7);
+	}
+
+	a {
+		padding: 3px;
+	}
+
+	&:hover {
+		a{
+			color: darken($color-hab-orange, 5%);
+			text-decoration: none;
+		}
+	}
+}
+
+div.window.dialog {
+	input[type="text"] {
+		min-width: 8.5rem;
+	}
+}
+
+.prop-wrapper.prop-gen .prop .val a.btn {
+	color: $color-white;
+}

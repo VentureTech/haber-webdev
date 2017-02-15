@@ -1,0 +1,111 @@
+/******************************************/
+/******************************************/
+/***************MEDIA QUERIES**************/
+/******************************************/
+/******************************************/
+
+@media all and (min-width: 1024px) and (max-width: 1279px) {
+	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0 {
+		width: 980px;
+	}
+	.primary-menu + .primary-menu {
+		margin-left: 30px;
+	}
+
+	.primary-menu .menu-t1 > .mi + .mi {
+		margin-left: 30px;
+	}
+}
+@media all and (min-width: 760px) and (max-width: 1023px) {
+	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
+		width: 728px;
+	}
+	.primary-menu + .primary-menu{
+		margin-left: 10px;
+	}
+
+	.primary-menu .menu-t1 > .mi + .mi{
+		margin-left: 10px;
+	}
+	.primary-menu .menu-t1 > .mi > .menuitemlabel{
+		padding: 5px 10px;
+		background: transparent;
+	}
+}
+
+@media all and (min-width: 480px) and (max-width: 759px) {
+	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
+		width: 580px;
+	}
+	.primary-menu + .primary-menu{
+		margin-left: 5px;
+	}
+
+	.primary-menu .menu-t1 > .mi + .mi{
+		margin-left: 5px;
+	}
+
+	.primary-menu .menu-t1 > .mi > .menuitemlabel{
+		padding: 5px 10px;
+		background: transparent;
+	}
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
+	h1{
+		text-align: center;
+	}
+
+	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
+		width: 320px;
+	}
+
+	.primary-menu{
+		margin-top: 10px;
+	}
+
+	.primary-menu + .primary-menu{
+		margin-left: 2px;
+	}
+
+	.primary-menu .menu-t1 > .mi + .mi{
+		margin-left: 2px;
+	}
+
+	.primary-menu .menu-t1 > .mi > .menuitemlabel{
+		padding: 5px 2px;
+		background: transparent;
+		font-size: 12px;
+		border: 1px solid #FFFFFF;
+		border-radius: 3px;
+	}
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 479px) and (orientation : landscape) {
+	h1{
+		text-align: center;
+	}
+
+	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
+		width: 478px;
+	}
+	.primary-menu + .primary-menu{
+		margin-left: 2px;
+	}
+
+	.primary-menu .menu-t1 > .mi + .mi{
+		margin-left: 2px;
+	}
+
+	.primary-menu .menu-t1 > .mi > .menuitemlabel{
+		padding: 5px 2px;
+		background: transparent;
+		font-size: 12px;
+		border: 1px solid #FFFFFF;
+		border-radius: 3px;
+	}
+
+	.ecsell-login-profile .info{
+		display: none;
+	}
+}

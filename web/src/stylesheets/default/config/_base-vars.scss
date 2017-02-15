@@ -8,7 +8,17 @@ $color-app-black: #343940;
 $color-app-grey: #515B6B;
 $color-app-light-grey: #9699A6;
 
-$app-page-bg: #F1F2F7;
+//Haberfeld specific styles
+$color-hab-orange: #EE7421; //Brand
+$color-hab-lightest-gray: #c7c7c7; //select2 borders
+$color-hab-light-gray: #a1a1a1; //secondary buttons
+$color-hab-dark-gray: #6D6D6D; //secondary button border
+$color-hab-darkest-gray: #3b3e40; //default font color
+$color-hab-dark-blue: #062B47;
+$color-hab-almost-white: #F3F4F5;
+$color-hab-yellow: #FDC34D;
+
+$app-page-bg: #e3e3e3;
 
 $body-bg: $app-page-bg;
 $brand-primary: $color-app-brand;
@@ -17,13 +27,13 @@ $brand-warning: $color-app-yellow;
 $brand-info: $color-app-cyan;
 
 $btn-primary-color:              #fff;
-$btn-primary-bg:                 $brand-primary;
-$btn-primary-border:             darken($brand-primary, 5%);
+$btn-primary-bg:                 $color-hab-orange;
+$btn-primary-border:             darken($color-hab-orange, 5%);
 
-$btn-secondary-color:            $brand-primary;
-$btn-secondary-bg:               #fff;
-$btn-secondary-border:           $brand-primary;
-$enable-shadows:                 true;
+$btn-secondary-color:            #fff;
+$btn-secondary-bg:               $color-hab-light-gray;
+$btn-secondary-border:           $color-hab-dark-gray;
+$enable-shadows:                 false;
 
 @import "../../../../../bower_components/bootstrap/scss/variables";
 
@@ -51,10 +61,10 @@ $color-cornsilk: cornsilk;
 
 $font-monospace: monospace;
 $font-arial: $font-family-sans-serif;
-$font-open-sans: Open Sans, $font-arial;
+$font-open-sans: 'Open Sans', $font-arial;
 $font-roboto: "Roboto", $font-family-sans-serif;
 
-$font-default-color: $color-black;
+$font-default-color: $color-hab-darkest-gray;
 $font-default-size: 14px;
 $font-default-content-line-height: 1.4;
 
@@ -67,8 +77,7 @@ $bp-tablets-landscape: (min-width: 1024px);
 $bp-desktop: (min-width: 1280px);
 $bp-desktop-wide: (min-width: 1400px);
 
-
-$font-open-sans-bold: Open Sans Bold;
+$font-open-sans-bold: 'Open Sans';
 
 $font-glyph-lib: FontAwesome;
 

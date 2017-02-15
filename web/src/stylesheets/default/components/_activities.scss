@@ -1,0 +1,1086 @@
+@import "../config/base-vars";
+@import "../../../../../bower_components/bootstrap/scss/mixins";
+
+.inlinewindow {
+	position: relative;
+}
+
+.form_field {
+	input[type="text"] {
+		@include media-breakpoint-down(lg) {
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+}
+
+.activitylinks .profile .person .photo{
+	width: 100%;
+}
+
+.activity-management .select-action {
+	position: absolute;
+	top: 3px;
+	right: 75px;
+	padding-right: 10px;
+	height: 25px;
+	border-right: 2px solid #C2C2C2;
+}
+
+.activity-management .select-action > *{
+	margin: 0;
+	margin-top: -3px;
+}
+
+.activity-management > .actions {
+	text-align: right;
+}
+
+.activity-management .actions.print-actions {
+	margin-bottom: 1.5rem;
+}
+
+.activity-management .tab-content{
+	padding: 0 20px 20px;
+}
+
+.activity-management .actions button.btn.back {
+	margin: 0;
+}
+
+.activity-management .actions + .form_entry {
+	margin-top: 1rem;
+}
+
+.rep-activity-main .actions button.btn + button.btn,
+.activity-management .actions button.btn + button.btn{
+	margin-left: 1.2em;
+}
+
+.rep-activity-main .miwt-collapsable + button.btn,
+.activity-management .miwt-collapsable + button.btn{
+	margin-left: 1.2em;
+}
+
+.rep-activity-main .actions .btn.add_precall_plan,
+.activity-management .actions .btn.add_precall_plan{
+	float: right;
+}
+
+.rep-activity-main .actions .miwt-collapsable-content,
+.activity-management .actions .miwt-collapsable-content{
+	top: 45px;
+	right: 87px;
+}
+
+.search-wrapper .result-actions{
+	text-align: right;
+	margin-top: 10px;
+}
+
+.activity-quick-add {
+	position: relative;
+	float: right;
+}
+
+.activity-quick-add-bar label {
+	margin-right: 10px;
+}
+
+.activity-instance-editor .select-action label{
+	margin-right: 10px;
+}
+
+.tab-container .actions.top{
+	margin-top: 10px;
+}
+
+.answer_container {
+	border-radius: 5px;
+	border-collapse: separate;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	border: 1px solid #C2C2C2;
+}
+
+.answer_container tr:first-child {
+	background: #25282a;
+	background: linear-gradient(to bottom,  #25282a 0%,#696c6e 100%);
+	color: #FFFFFF;
+	font-family: OpenSansSemiBold, Arial, sans-serif;
+	height: 35px;
+}
+
+.lt-ie9 .answer_container tr:first-child td {
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25282a', endColorstr='#696c6e',GradientType=0 );
+}
+
+.answer_container tr {
+	color: #404040;
+}
+
+.answer_container td {
+	padding: 5px;
+	border-bottom: 1px solid #C2C2C2;
+}
+
+.answer_container tr:last-child td {
+	border-bottom: none;
+}
+
+.answer_container td + td {
+	border-left: 1px solid #C2C2C2;
+}
+
+.answer_container tr:first-child td:first-child {
+	border-top-left-radius: 4px;
+}
+
+.answer_container tr:last-child td:first-child {
+	border-bottom-left-radius: 4px;
+}
+
+.answer_container tr:first-child td:last-child {
+	border-top-right-radius: 4px;
+}
+
+.answer_container tr:last-child td:last-child {
+	border-bottom-right-radius: 4px;
+}
+
+
+.answer_container {
+	width: 100%;
+}
+
+.answer_container tr {
+	width: 100%;
+}
+
+.answer_container .topic_con {
+	width: 10%;
+}
+
+.answer_container .function_con {
+	width: 35%;
+}
+
+.answer_container .discription_con,
+.answer_container .description_con {
+	width: 25%;
+}
+
+.answer_container .rating_con {
+	width: 5%;
+	text-align: center;
+}
+
+.answer_container .notes_con {
+	width: 25%;
+}
+
+.answer_container .answer.recommendations  {
+	width: 307px;
+}
+
+.genform textarea {
+	width: 100%;
+	max-width: 100%;
+}
+
+.genform .answer_container textarea {
+	display: block;
+	min-height: 70px;
+	resize: vertical;
+	max-width: 100%;
+}
+.genform .answer_container input[type=text] {
+	width: 100%;
+	text-align: center;
+}
+
+.answer_container.total_line {
+	margin: 0;
+	border: 1px solid #C2C2C2;
+}
+
+.answer_container.total_line * {
+	border: none;
+}
+
+.activity-management .instructions,
+.rep-activity-main .instructions {
+	padding: 10px;
+	margin: 15px 0;
+	color: #8a6d3b;
+	background-color: #fcf8e3;
+	border: 1px solid #faebcc;
+}
+
+.rep-activity-main>.actions{
+	float: right;
+}
+
+/* property instance editor specific */
+.activity-management .prop-wrapper.prop-gen .prop.tracked .checkbox {
+	margin-bottom: 5px;
+}
+
+.activity-management .prop-wrapper.prop-gen .prop.tracked .ctb {
+	display: inline-block;
+	vertical-align: bottom;
+	margin-left: px;
+	margin-bottom: 0;
+}
+
+.activity-management .prop-wrapper.prop-gen .prop.tracked .ctb > input[type=checkbox] {
+	margin-top: 4px;
+}
+
+.activity-management .select-action label {
+	margin-right: 10px;
+}
+
+.activity-management .select-action .select2-container {
+	vertical-align: top;
+}
+
+.activity-management > .actions {
+	text-align: left;
+	float: left;
+}
+
+.activity-management .activity-instance-editor-upper:after {
+	clear: both;
+	content: " ";
+	display: table;
+}
+
+.activity-management .activity-instance-editor-upper > .actions {
+	float: right;
+}
+
+.activity-management .activity-instance-editor-upper > .actions .btn + .btn {
+	margin-left: 40px;
+}
+
+.activity-management .activity-instance-editor-upper .btn {
+	background-color: transparent;
+	font-size: .9rem;
+	border: none;
+	padding: 0;
+	color: $color-hab-orange;
+	font-weight: 400;
+
+	&:hover {
+		color: $color-hab-orange;
+		text-decoration: underline;
+	}
+}
+
+.activity-management .activity-instance-editor-upper .btn:before {
+	content: " ";
+	display: inline-block;
+	background-position: center center;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	width: 24px;
+	height: 24px;
+}
+
+.activity-management .activity-instance-editor-upper .complete-activity:before {
+	background-image: url(/_resources/dyn/files/17929z9e6d7142/_fn/checkbox.png);
+}
+
+/* credit: http://www.randomjabber.com/ */
+.activity-management .activity-instance-editor-upper .cancel-activity:before {
+	background-image: url(/_resources/dyn/files/17928ze96a41d4/_fn/cancel_round.png);
+}
+
+.activity-management .activity-instance-editor-upper .delete-activity:before {
+	background-image: url(/_resources/dyn/docroot/cms/filesystem/icons/delete.gif);
+}
+
+.activity-management .message-container {
+	clear: both;
+}
+
+/* popup email when you use "login as" and send a rep an email */
+.dialog .cc-me h4 {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.activity-instance-editor {
+	clear: both;
+}
+
+.activity-instance-editor .prop-group {
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+}
+
+.activity-instance-editor .prop-group.column-two {
+	text-align: right;
+}
+
+.activity-instance-editor .profile {
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+
+.activity-instance-editor .profile .person {
+	width: 150px;
+}
+
+.activity-instance-editor .profile .person .photo {
+	width: 150px;
+	height: 150px;
+}
+
+.prop-wrapper.activity-instance-editor .props {
+	display: block;
+}
+
+.prop-wrapper.activity-instance-editor .prop {
+	display: block;
+}
+
+.activity-instance-editor .prop + .prop {
+	margin-top: 5px;
+}
+
+.activity-instance-editor .prop label {
+	font-weight: bold;
+	margin-right: 7px;
+	letter-spacing: -0.06em;
+	white-space: nowrap;
+}
+
+.prop-wrapper.activity-instance-editor .prop .label {
+	padding: 0;
+	width: auto;
+}
+
+.prop-wrapper.activity-instance-editor .prop .val {
+	padding: 0;
+	white-space: nowrap;
+}
+
+.prop-wrapper.activity-instance-editor .column-two .prop .label,
+.prop-wrapper.activity-instance-editor .column-two .prop .val {
+	display: inline-block;
+}
+
+.activity-instance-editor .note-text-field {
+	display: inline-block;
+	border: 1px solid #ebeb55;
+	padding: 5px 10px;
+	font-size: 12px;
+	background-color: #ffffb9;
+	position: relative;
+	margin-bottom: 8px;
+	border-radius: 2px;
+	text-align: left;
+}
+.activity-instance-editor .note-text-field:before,
+.activity-instance-editor .note-text-field:after {
+	content: " ";
+	position: absolute;
+	top: 100%;
+	width: 0;
+	height: 0;
+}
+
+.activity-instance-editor .note-text-field:before {
+	right: 9px;
+	border: 12px solid transparent;
+	border-top: 11px solid #ebeb55;
+}
+.activity-instance-editor .note-text-field:after {
+	right: 11px;
+	border: 10px solid transparent;
+	border-top: 10px solid #ffffb9;
+}
+
+.activity-instance-editor .note-text-field.text-truncated  > span:after {
+	content: "...";
+	margin-left: 2px;
+}
+
+.prop-wrapper.activity-schedule .prop .label {
+	width: 30%;
+}
+
+.activity-schedule .schedule-frequency .freq-field input {
+	width: 50px;
+	margin: 0 10px;
+}
+
+.activity-schedule .schedule-work-period  input,
+.activity-schedule .schedule-heads-up  input {
+	width: 50px;
+	margin-right: 10px;
+}
+
+.prop-wrapper .meeting-date .actions{
+	display: inline-block;
+}
+
+.prop-wrapper .meeting-date .actions button.btn{
+	height: 20px;
+	padding: 0 10px;
+	font-size: 11px;
+	line-height: 10px;
+	margin: 0 5px;
+}
+
+.prop-wrapper .meeting-date.unconfirmed .val span{
+	background-color: rgb(251, 255, 161);
+	padding: 1px 3px;
+	border-radius: 3px;
+}
+
+.prop-wrapper .meeting-date.confirmed .val span{
+	background-color: rgb(218, 255, 215);
+	padding: 1px 3px;
+	border-radius: 3px;
+}
+
+
+.prop-wrapper.note-editor textarea {
+	width: 100%;
+}
+
+.prop-wrapper.note-editor .prop-footer-actions .actions {
+	text-align: right;
+	margin: 0;
+	padding: 0;
+}
+
+.call-plans-header {
+	float: left;
+}
+
+.call-plans-header h1 {
+	margin: 15px 0 10px;
+}
+
+.pre_call_plans.data {
+	width: 1225px;
+	margin-top: 20px;
+	clear: both;
+}
+
+.pre_call_plans .pre-call-plan-editor {
+	width: 300px;
+	border: 1px solid #ccc;
+	display: inline-block;
+	vertical-align: top;
+	padding: 10px 0 10px;
+	margin: 0 15px 20px 0;
+	border: 1px solid #eaeaea;
+	width: 393px;
+	background-color: #f9f9f9;
+	border-radius: 3px;
+}
+
+.pre_call_plans .pre-call-plan-editor .prop-header-title h2 {
+	margin: 0 10px 10px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.pre_call_plans .pre-call-plan-editor .prop-footer {
+	display: none;
+}
+
+.pre_call_plans .prop-wrapper.pre-call-plan-editor .prop-header-actions .actions {
+	margin-left: 0;
+	text-align: right;
+}
+
+.pre_call_plans .pre-call-plan-editor button.btn {
+	margin: 0;
+	font-size: 12px;
+	padding: 3px 8px;
+	font-family: $font-open-sans;
+	font-weight: 700;
+}
+
+.pre_call_plans .pre-call-plan-editor a.btn {
+	margin-left: 10px;
+	background: center center transparent url(/_resources/dyn/files/17933z67a3a91d/_fn/pdficon_small_download.png) no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	width: 24px;
+	height: 24px;
+
+	&.last {
+		border: none;
+	}
+}
+
+.pre_call_plans .pre-call-plan-editor a.btn span {
+	display: none;
+}
+
+.pre_call_plans .prop-wrapper.pre-call-plan-editor .props {
+	margin-top: 10px;
+}
+
+.pre_call_plans .prop-wrapper.pre-call-plan-editor .prop .label {
+	padding: 4px 10px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.pre_call_plans .prop-wrapper.pre-call-plan-editor  .prop .val {
+	padding: 4px 10px;
+}
+
+.activity-instance-editor .download-pdf .btn,
+.activity-instance-editor .send-email .btn,
+.activity-instance-editor .add-note .btn {
+	color: $color-hab-orange;
+	font-size: .9rem;
+	padding: 0;
+
+	&:hover {
+		color: $color-hab-orange;
+		text-decoration: underline;
+	}
+}
+
+.activity-instance-editor .download-pdf .btn:before,
+.activity-instance-editor .send-email .btn:before,
+.activity-instance-editor .add-note .btn:before {
+	content: " ";
+	display: inline-block;
+	background: center center transparent url(/_resources/dyn/files/17933z67a3a91d/_fn/pdficon_small_download.png) no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	width: 24px;
+	height: 24px;
+	margin-right: 5px;
+}
+
+.activity-instance-editor .download-pdf .btn:before {
+	background-image: url(/_resources/dyn/files/17933z67a3a91d/_fn/pdficon_small_download.png);
+}
+
+
+.activity-instance-editor .send-email .btn:before {
+	background-image: url(/_resources/dyn/files/17934zf9c73cbe/_fn/send_email.png);
+}
+
+
+.activity-instance-editor .add-note .btn:before {
+	background-image: url(/_resources/dyn/files/17931z89adc831/_fn/notepad_edit.png);
+}
+
+
+.pre-call-plan-editor > .actions {
+	float: right;
+}
+
+.pre-call-plan-editor > .actions button {
+	margin: 0;
+}
+
+.pre-call-plan-editor .prop-wrapper .prop.mgr-role select {
+	min-width: 130px;
+}
+
+.pre-call-plan-editor .prop-wrapper .prop.tracking select {
+	min-width: 130px;
+}
+
+.pre-call-plan-editor .prop-wrapper .prop.dress-code .val input {
+	width: 100%;
+}
+
+.pre-call-plan-editor .label .notice .icon {
+	margin-left: 2px;
+	display: inline-block;
+	vertical-align: middle;
+	width: 16px;
+	height: 16px;
+	background: center center transparent url(/_resources/dyn/files/17930zfeaaf8a7/_fn/error.png) no-repeat;
+}
+
+.attendees > .actions  {
+	text-align: right;
+	margin-right: 10px;
+}
+
+.attendees .prop-header-title {
+	display: none;
+}
+
+.prop-wrapper.attendee-viewer {
+	display: inline-block;
+	vertical-align: top;
+	padding: 20px;
+	border: 1px solid #eaeaea;
+	margin: 10px;
+	width: 563px;
+	background-color: #f9f9f9;
+	border-radius: 3px;
+}
+
+.prop-wrapper.attendee-viewer .prop .label {
+	width: 30%;
+}
+
+.prop-wrapper.attendee-viewer .prop .val {
+	width: 70%;
+}
+
+.prop-wrapper.attendee-viewer .prop-header-actions .actions,
+.prop-wrapper.attendee-viewer .prop-footer-actions .actions {
+	margin-left: 30%;
+}
+
+/* one to one meetings */
+.prop-wrapper.one-to-one .prop .label {
+	width: 30%;
+}
+
+.prop-wrapper.one-to-one .prop .val {
+	width: 70%;
+}
+
+.prop-wrapper.one-to-one .prop .val textarea {
+	height: 100px;
+}
+
+.prop-wrapper.one-to-one .prop-footer-actions .actions {
+	margin-left: 30%;
+}
+
+/* Sales call evaluation */
+.activity_admin_editor .actions {
+	text-align: right;
+}
+
+.activity_admin_editor .actions button {
+	margin: 0;
+}
+
+/* add/edit attendee popup */
+.add-edit-attendee .prop-wrapper.prop-gen .props .prop .label {
+	width: 150px;
+}
+
+.add-edit-attendee .prop-wrapper.prop-gen .prop-header-actions .actions,
+.add-edit-attendee .prop-wrapper.prop-gen .prop-footer-actions .actions {
+	margin-left: 0;
+	text-align: right;
+}
+
+.add-edit-attendee .prop.name input,
+.add-edit-attendee .prop.title input,
+.add-edit-attendee .prop.social-link input {
+	width: 100%;
+}
+
+.add-edit-attendee .prop.note textarea,
+.add-edit-attendee .prop.mgt textarea {
+	height: 100px;
+}
+
+.activity-management .prop-wrapper.prop-gen .actions.top,
+.pre-call-plan-editor .prop-wrapper.prop-gen .actions.top{
+	display: block;
+	margin-left: 0;
+	text-align: right;
+}
+
+.activity-management .prop-wrapper.prop-gen .actions.bottom {
+	&::after {
+		content: '';
+		clear: both;
+		display: table;
+	}
+
+	.btn.edit {
+		float: right;
+	}
+}
+
+.pipeline-link{
+	text-align: right;
+}
+
+/*****************/
+/*****************/
+/* MEDIA QUERIES */
+/*****************/
+/*****************/
+
+@media all and (min-width: 1024px) and (max-width: 1279px) {
+	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
+		width: 980px;
+		margin: 0 auto;
+	}
+	.activitylinks .menu-t2 > .mi{
+		display: inline-block;
+		vertical-align: top;
+		width: 33%;
+		padding-left: 20px;
+	}
+
+	.activitylinks .menu-t2 > .mi + .mi{
+		margin-top: 0px;
+	}
+
+	.l-2col .content-box{
+		width: 980px;
+		margin: auto;
+	}
+
+	.l-2col .aside-box{
+		width: 980px;
+		float: none;
+		margin: 0px auto 15px;
+	}
+
+	.primary-menu + .primary-menu{
+		margin-left: 30px;
+	}
+
+	.primary-menu .menu-t1 > .mi + .mi{
+		margin-left: 30px;
+	}
+
+	#t-interior .aside-box{
+		position: relative;
+	}
+
+	#t-interior .aside-box .miwt {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	#t-interior .aside-box .quick-view {
+		width: 720px;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		margin-top: 0px;
+	}
+
+	.period-selector .select2-container {
+		width: 246px;
+	}
+
+	.period-selector select{
+		width: 246px;
+	}
+
+	.activitylinks .profile{
+		width: 240px;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.activitylinks .menu-wrapper{
+		display: inline-block;
+		vertical-align: top;
+		width: 700px;
+		padding-left: 30px;
+	}
+
+	.pre_call_plans.data {
+		width: 963px;
+	}
+
+	.pre_call_plans .pre-call-plan-editor {
+		width: 466px;
+	}
+
+}
+@media all and (min-width: 760px) and (max-width: 1023px) {
+	.activitylinks .menu-t2 > .mi {
+		display: inline-block;
+		vertical-align: top;
+		width: 33%;
+		padding-left: 20px;
+	}
+
+	.activitylinks .menu-t2 > .mi + .mi {
+		margin-top: 0px;
+	}
+
+	.l-2col .content-box {
+		width: 730px;
+		margin: auto;
+	}
+
+	.l-2col .aside-box {
+		width: 730px;
+		float: none;
+		margin: 0px auto 15px;
+	}
+
+	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0 {
+		width: 730px;
+		margin: 0 auto;
+	}
+
+	.primary-menu + .primary-menu{
+		margin-left: 10px;
+	}
+
+	.primary-menu .menu-t1 > .mi + .mi{
+		margin-left: 10px;
+	}
+
+	.primary-menu .menu-t1 > .mi > .menuitemlabel{
+		padding: 5px 10px;
+		background: transparent;
+	}
+
+	.search-bar input.val{
+		max-width: 100px;
+	}
+
+	.search-bar .select2-container{
+		max-width: 180px;
+	}
+
+	#t-interior .aside-box{
+		position: relative;
+	}
+
+	#t-interior .aside-box .miwt {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	#t-interior .aside-box .quick-view {
+		width: 474px;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		margin-top: 0px;
+	}
+
+	.period-selector .select2-container {
+		width: 246px;
+	}
+
+	.period-selector select{
+		width: 246px;
+	}
+
+	.miwt-table th, .gen-table th{
+		padding: 5px 10px;
+		font-size: 16px;
+	}
+
+	.miwt-table td, .gen-table td{
+		padding: 5px 10px;
+		font-size: 12px
+	}
+
+	.answer_container td{
+		padding: 3px;
+		font-size: 12px;
+	}
+
+	.answer_container td *{
+		word-wrap: break-word;
+	}
+
+	.rep-activity-main > .actions > button.btn{
+		display: block;
+	}
+
+	.rep-activity-main > .actions > button.btn + button.btn{
+		margin-left: 0;
+		float: right;
+	}
+
+	.activitylinks .profile{
+		width: 240px;
+		float: right;
+	}
+
+	.activitylinks .menu-wrapper{
+		display: inline-block;
+		vertical-align: top;
+		width: 450px;
+		padding-left: 30px;
+	}
+
+	.activitylinks .menu-wrapper .menu-t2 li{
+		display: block;
+		width: 100%;
+	}
+
+	.pre_call_plans.data {
+		width: auto;
+	}
+
+	.pre_call_plans .pre-call-plan-editor {
+		width: auto;
+		margin-right: 0;
+		display: block;
+	}
+}
+
+@media all and (max-width: 759px) {
+	.activitylinks .menu-t2 > .mi {
+		display: inline-block;
+		vertical-align: top;
+		width: 33%;
+		padding-left: 20px;
+	}
+
+	.activitylinks .menu-t2 > .mi + .mi {
+		margin-top: 0px;
+	}
+
+	.l-2col .content-box {
+		width: 580px;
+		margin: auto;
+	}
+
+	.l-2col .aside-box {
+		width: 580px;
+		float: none;
+		margin: 0px auto 15px;
+	}
+
+	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0 {
+		width: 580px;
+		margin: 0 auto;
+	}
+
+	.primary-menu + .primary-menu{
+		margin-left: 5px;
+	}
+
+	.primary-menu .menu-t1 > .mi + .mi{
+		margin-left: 5px;
+	}
+
+	.primary-menu .menu-t1 > .mi > .menuitemlabel{
+		padding: 5px 10px;
+		background: transparent;
+	}
+
+	.search-bar input.val{
+		max-width: 80px;
+	}
+
+	.search-bar .select2-container{
+		max-width: 150px;
+	}
+
+	.miwt-table th, .gen-table th{
+		padding: 3px 3px;
+		font-size: 14px;
+	}
+
+	.miwt-table td, .gen-table td{
+		padding: 3px 3px;
+		font-size: 12px
+	}
+
+	.answer_container td{
+		padding: 2px;
+		font-size: 11px;
+	}
+
+	.answer_container td *{
+		word-wrap: break-word;
+	}
+
+	.user-control .collapsible-shown{
+		z-index: 900;
+	}
+
+	#t-interior .aside-box{
+		position: relative;
+	}
+
+	#t-interior .aside-box .miwt {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	#t-interior .aside-box .quick-view {
+		width: 324px;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		margin-top: 0px;
+	}
+
+	.period-selector .select2-container {
+		width: 246px;
+	}
+	.period-selector select{
+		width: 246px;
+	}
+
+	.rep-activity-main > .actions > button.btn{
+		display: block;
+	}
+
+	.rep-activity-main > .actions > button.btn + button.btn{
+		margin-left: 0;
+		float: right;
+	}
+
+	.activitylinks .profile{
+		width: 200px;
+		float: right;
+	}
+
+	.activitylinks .profile .photo{
+		height: 180px;
+	}
+
+	.activitylinks .menu-wrapper{
+		display: inline-block;
+		vertical-align: top;
+		width: 310px;
+		padding-left: 30px;
+	}
+
+	.activitylinks .menu-wrapper .menu-t2 li{
+		display: block;
+		width: 100%;
+	}
+
+	.pre_call_plans.data {
+		width: auto;
+	}
+
+	.pre_call_plans .pre-call-plan-editor {
+		width: auto;
+		margin-right: 0;
+		display: block;
+	}
+}
+
+.activityinstanceapp {
+	div.window.dialog {
+		left: 50% !important;
+		margin-left: -250px;
+
+		.note-editor .prop-footer {
+			margin-top: 1rem;
+		}
+	}
+}

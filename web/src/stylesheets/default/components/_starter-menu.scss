@@ -1,396 +1,152 @@
 @import "../config/base-vars";
 
+/* Header styles */
 #header {
-	background: $color-white;
-	padding: 0 0 0 1rem;
-	width: 100%;
-	height: auto;
-	display: flex;
-	flex-flow: row wrap;
-	box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+	background: rgb(6,43,72); /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzA2MmI0OCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjM2JSIgc3RvcC1jb2xvcj0iIzA2MmI0OCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwNTIzM2IiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  rgba(6,43,72,1) 0%, rgba(6,43,72,1) 36%, rgba(5,35,59,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(6,43,72,1)), color-stop(36%,rgba(6,43,72,1)), color-stop(100%,rgba(5,35,59,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(6,43,72,1) 0%,rgba(6,43,72,1) 36%,rgba(5,35,59,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(6,43,72,1) 0%,rgba(6,43,72,1) 36%,rgba(5,35,59,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(6,43,72,1) 0%,rgba(6,43,72,1) 36%,rgba(5,35,59,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(6,43,72,1) 0%,rgba(6,43,72,1) 36%,rgba(5,35,59,1) 100%); /* W3C */
+	border-bottom: 1px solid #0d3b61;
 
-	> div {
-		display: flex;
+	.lt-ie9 & {
+		background: none;
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#062b48', endColorstr='#05233b',GradientType=0 ); /* IE6-8 */
 	}
-
-	.logo-con {
-		flex: 1 0 100%;
-		justify-content: space-between;
-		margin-right: 2rem;
-		padding: .75rem 0;
-
-		a {
-			display: block;
-			//min-width: 12rem;
-			//max-width: 14rem;
-		}
-
-		.fa.fa-bars {
-			display: block;
-			align-self: center;
-			font-weight: 300;
-			font-size: 1.5rem;
-			cursor: pointer;
-		}
-
-	}
-
-	.nav-profile-con {
-		flex: 2 1 auto;
-		align-items: center;
-		display: flex;
-		flex-flow: column nowrap;
-		height: calc(100vh - 60px);
-		background: #fff;
-		position: absolute;
-		top: 60px;
-		right: 0;
-		z-index: 99;
-		width: 0;
-		overflow: hidden;
-
-		.sidebar-open & {
-			width: auto;
-			min-width: 50%;
-		}
-
-	}
-
-	div.menu {
-		flex: 2;
-		justify-content: center;
-		font-family: $font-arial;
-		font-weight: 400;
-		align-self: flex-end;
-		width: 100%;
-		height: 100%;
-
-		ul.menubeanh li, ul.menubeanh-persistent li {
-			float: none;
-		}
-
-		> ul.menu {
-			display: flex;
-			width: 100%;
-			justify-content: flex-start;
-			flex-flow: column nowrap;
-			text-align: right;
-			height: 100%;
-
-			> li {
-				align-self: flex-end;
-				width: 100%;
-				height: 100%;
-				border-top: 3px solid transparent;
-				display: flex;
-				flex: 1 0 auto;
-
-				+ li {
-					margin-left: 0;
-				}
-
-				&.mi-active, &:hover {
-					background: linear-gradient(to bottom, $color-app-brand 0%, lighten($color-app-brand, 10%) 100%);
-					border-top: 3px solid $color-app-yellow;
-
-					> .menuitemlabel {
-						text-decoration: none;
-						color: $color-white;
-					}
-
-				}
-
-				> .menuitemlabel {
-					font-family: $font-arial;
-					text-transform: uppercase;
-					padding: .25rem .5rem;
-					display: flex;
-					color: $color-app-brand;
-					flex: 1 0 auto;
-					justify-content: center;
-
-					> span {
-						align-self: center;
-						&::before {
-							font-family: $font-glyph-lib;
-							font-size: 1.75rem;
-							margin: -5px 8px 0 0;
-							display: inline-block;
-							vertical-align: middle;
-							font-weight: 200;
-						}
-					}
-				}
-
-				ul {
-					width: auto;
-					border-right: 3px solid $color-app-yellow;
-					z-index: 999;
-					display: block;
-					position: relative;
-
-					li {
-						line-height: 2;
-
-						a {
-							line-height: 1;
-							padding: .75rem;
-							display: block;
-							color: $color-app-grey;
-						}
-
-						&:hover a, &.mi-active a {
-							background: $color-app-light-grey;
-							color: $color-white;
-						}
-
-					}
-
-				}
-
-				&.nav-dashboard a.menuitemlabel span::before {
-					content: '\f0e4';
-				}
-
-				&.nav-data a.menuitemlabel span::before {
-					content: '\f1e0';
-				}
-
-				&.nav-activity-log a.menuitemlabel span::before {
-					content: '\f126';
-				}
-
-				&.nav-validation-log a.menuitemlabel span::before {
-					content: '\f00c';
-				}
-
-				&.nav-config a.menuitemlabel span::before {
-					content: '\f1de';
-				}
-
-				&.nav-help a.menuitemlabel span::before {
-					content: '\f059';
-				}
-
-			}
-
-			a {
-				color: $color-app-grey;
-				text-decoration: none;
-			}
-
-		}
-
-	}
-
-	div.logout {
-		flex: 1;
-		justify-content: flex-end;
-		align-items: center;
-		font-size: 85%;
-		max-width: 8rem;
-		padding-right: 10px;
-
-		> ul.menu {
-			justify-content: flex-end;
-
-			> li.mi-parent {
-				cursor: pointer;
-				width: 100%;
-
-				> div.menuitemlabel {
-					text-align: right;
-					font-size: .75rem;
-					width: 100%;
-				}
-
-				> div.menuitemlabel:hover span {
-					font-weight: 600;
-				}
-
-				&:hover {
-
-					ul.menu-t2 {
-						display: block;
-						right: 0;
-						top: 50px;
-					}
-
-				}
-
-			}
-
-		}
-
-	}
-
 }
 
-#header .company-selector {
+#header-wc-0 {
+	padding: 5px 10px;
 	position: relative;
-	left: 1rem;
-	font-size: .75rem;
-	cursor: pointer;
-	width: 9rem;
-	top: 20px;
+}
 
-	.toggler-wrapper {
+#header-wc-0:before,
+#header-wc-0:after {
+	content: " ";
+	display: table;
+}
+
+/* Generic Primary menu class.  Primarily used in top nav of the page */
+.primary-menu {
+	display: inline-block;
+	vertical-align: middle;
+
+	> .menu {
+		display: inline-block;
+	}
+
+	+ .primary-menu {
+		margin-left: 50px;
+	}
+
+	.menu {
+		margin: 0;
+		padding: 0;
+	}
+
+	.menuitemlabel {
 		display: block;
-		width: 100%;
-		text-align: right;
+		color: #fff;
+		text-decoration: none;
+		font-family: OpenSans, Arial, sans-serif;
+		padding: 5px;
+	}
 
-		.selected-logo {
+	div.menuitemlabel {
+		cursor: default;
+	}
+
+	.mi {
+		list-style: none;
+	}
+
+	.menu-t1 {
+
+		> .mi {
 			position: relative;
-			left: auto;
-			top: auto;
+			display: inline-block;
+
+			+ .mi {
+				margin-left: 50px;
+			}
+
+			> .menuitemlabel {
+				font-size: 18px;
+				padding: 5px 20px 5px 45px;
+				background: 0 -4px transparent url(/_resources/dyn/files/8955z43c92937/_fn/primary-menu-icons.png) no-repeat;
+			}
+		}
+
+		> .team > .menuitemlabel { background-position: 0 -4px; }
+		> .activities > .menuitemlabel { background-position: 0 -46px; }
+		> .training > .menuitemlabel { background-position: 0 -126px; }
+		> .support > .menuitemlabel { background-position: 0 -87px; }
+		> .events > .menuitemlabel { background-position: 0 -165px; }
+		> .coaching > .menuitemlabel { background-position: 0 -205px; }
+
+		> .mi.open-menu .menu-t2 {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		> .mi:active .menu-t2{
+			-webkit-transition: opacity .15s ease-out;
+			transition: opacity .15s ease-out;
 		}
 	}
 
-	span.fa.fa-chevron-right {
-		font-size: .5rem;
-		margin-left: .25rem;
+	/* SECONDARY MENU STYLES */
+	.menu-t2 {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 50;
+		width: 250px;
+		background: #062B47;
+		padding: 5px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		-webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
+		-moz-box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
+		box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
+		max-height: 210px;
+		overflow-y: auto;
+		opacity: 0;
+		visibility: hidden;
+		-webkit-transition: all 0.15s ease-out;
+		-moz-transition: all 0.15s ease-out;
+		-ms-transition: all 0.15s ease-out;
+		transition: all 0.15s ease-out;
+
+		> .mi {
+			background-color: #0B385B;
+			-moz-border-radius: 1px;
+			border-radius: 1px;
+			-webkit-transition: all 0.15s;
+			-moz-transition: all 0.15s;
+			-ms-transition: all 0.15s;
+			transition: all 0.15s;
+
+			+ .mi {
+				margin-top: 3px;
+			}
+
+			> .menuitemlabel {
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				line-height: 20px;
+				font-size: 14px;
+				padding: 3px 5px;
+			}
+		}
+
+		> .mi:hover {
+			background-color: #EE7421;
+		}
 	}
-
-	&.show {
-		.dropdown-menu {
-			display: block;
-			top: 0;
-			left: 100%;
-		}
-		.dropdown-item {
-			padding: 3px 10px;
-			font-size: .75rem;
-		}
-	}
-
-}
-
-#header .selected-logo {
-	position: absolute;
-	left: 1rem;
-	top: .75rem;
-	font-size: .75rem;
-	width: 9rem;
-	text-align: right;
-}
-
-@media (max-width: 768px) {
-	#header {
-		.nav-profile-con {
-			.sidebar-open & {
-				width: auto;
-				min-width: 30%;
-			}
-		}
-	}
-}
-
-@media (min-width: 1024px) and
-(max-width: 1140px) {
-	#header div.menu > ul.menu > li > .menuitemlabel {
-		font-size: .9rem;
-		> span::before {
-			font-size: 1.25rem;
-		}
-	}
-}
-
-@media (min-width: 1024px) {
-
-	#header {
-
-		.logo-con {
-			flex: 1 0 auto;
-			justify-content: flex-start;
-			max-width: 9rem;
-			margin-right: 1rem;
-
-			a {
-				width: 100%;
-			}
-
-			.fa.fa-bars {
-				display: none;
-			}
-
-		}
-
-		.nav-profile-con {
-			flex: 2 1 75%;
-			align-items: center;
-			display: flex;
-			flex-flow: row nowrap;
-			height: auto;
-			min-width: 0;
-			background: transparent;
-			position: relative;
-			top: auto;
-			right: auto;
-			overflow: visible;
-			width: auto;
-
-			> div.menu:not(.logout) {
-				padding: 0 0 0 1.5rem;
-			}
-
-		}
-
-		div.menu {
-			align-self: center;
-			width: auto;
-
-			> ul.menu {
-				flex-flow: row nowrap;
-				text-align: center;
-				justify-content: space-between;
-
-				> li {
-					align-self: center;
-					width: auto;
-
-					> a.menuitemlabel {
-						padding: 0 5px;
-					}
-
-					&.mi-active > a, > a:hover {
-						background: transparent;
-						color: $color-app-grey;
-					}
-
-					ul {
-						width: 13rem;
-						border-right: none;
-						border-bottom: 3px solid $color-app-yellow;
-						background: $body-bg;
-						box-shadow: 0 3px 5px rgba(0,0,0,0.1);
-						display: none;
-						position: absolute;
-						text-align: left;
-					}
-
-					&.over {
-
-						ul {
-							display: block;
-						}
-
-					}
-
-				}
-
-			}
-
-			&.logout {
-
-				> ul.menu{
-					text-align: right;
-					justify-content: flex-end;
-				}
-
-			}
-
-		}
-
-	}
-
 }

@@ -27,9 +27,7 @@
 					user-select: none;
 				}
 			}
-			/*.dow span.ctb {
-				@include checkboxSwitch(true);
-			}*/
+
 			.dow-wom-wrapper .actions {
 				display: block;
 				text-align: right;
@@ -80,7 +78,6 @@
 		}
 	}
 }
-
 
 .prop-group.schedule {
 	display: inline-block;

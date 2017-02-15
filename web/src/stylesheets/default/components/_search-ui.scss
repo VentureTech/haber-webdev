@@ -33,10 +33,8 @@
 /* Search Bar
    ========================================================================== */
 .search-bar {
-	margin: 10px 0;
-	padding: 10px;
-	//background-color: #F9F9F7;
-	//border: 1px dotted #CBC8B9;
+	margin: 10px 0 10px -10px;
+	padding: 10px 0;
 
 	input[type="text"] {
 		border: 1px solid #aaa;
@@ -55,8 +53,8 @@
 
 .search-bar .constraint label {
 	display: block;
-	font-size: 90%;
-	margin-bottom: .25rem;
+	margin-bottom: 0;
+	font-weight: 600;
 }
 
 .search-bar .search-actions {
@@ -72,9 +70,9 @@
    ========================================================================== */
 .search-wrapper .entity-actions,
 .search .entity-actions {
-	float: right;
+	/*float: right;
 	margin-top:-1rem;
-	margin-bottom: 1rem;
+	margin-bottom: 1rem;*/
 }
 
 .search-wrapper .result-actions,
@@ -146,7 +144,7 @@
 //}
 
 .search {
-	@include clearfix;
+	//@include clearfix;
 }
 
 select.bulk-actions,

@@ -1,0 +1,22 @@
+@import "../config/base-vars";
+@import "../../../../../bower_components/bootstrap/scss/variables";
+@import "../../../../../bower_components/bootstrap/scss/mixins";
+@import "../../../../../bower_components/bootstrap/scss/buttons";
+
+.resource-editor .category-checkbox {
+	> .the_6_pillars .ctb + .ctb,
+	> .type_of_research .ctb + .ctb {
+		margin-top: 5px;
+	}
+}
+
+.miwt-table .action-column {
+	min-width: 9.5rem;
+}
+
+.prop-body .props .prop {
+	&.category-the-6-pillars .val,
+	&.category-type-of-research .val {
+		padding: 10px 4px;
+	}
+}

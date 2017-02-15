@@ -1,0 +1,266 @@
+.activity-calc .question h3{
+	margin: 0;
+}
+
+.activity-calc .question h3 + p{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.form_entry .section-label{
+	font-size: 18px;
+	font-family: $font-open-sans;
+	font-weight: 700;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background: $color-hab-dark-blue;
+	color: $color-white;
+	height: 50px;
+	padding: 12px 0px 0px 10px;
+	border-radius: 3px;
+}
+
+.message-container.registration_validation_errors .message{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.activity-calc .question{
+	position: relative;
+}
+
+.activity-calc .question .letter, .activity-calc .question .lbl, .activity-calc .question .val, .form_field{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.label .form_field{
+	height: 35px;
+}
+
+.activity-calc .question .letter{
+	width: 45px;
+	font-size: 16px;
+	font-family: $font-open-sans;
+	text-align: center;
+	padding-top: 7px;
+	border-right: 2px solid $color-white;
+	height: 100%;
+}
+
+.activity-calc .question .lbl{
+	width: 1025px;
+	padding: 10px 0 0 10px;
+	height: 100%;
+}
+
+.activity-calc .question .val{
+	width: 130px;
+	border-left: 2px solid $color-white;
+	padding-left: 35px;
+	height: 35px;
+	text-align: right;
+}
+
+.activity-calc .question .val.text{
+	padding-top: 9px;
+	padding-right: 20px;
+}
+
+.activity-calc .question .val span.extra_value_renderer{
+	padding-right: 20px;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 8px;
+}
+
+.activity-calc .question .val input{
+	width: 100%;
+	margin-top: 3px;
+	text-align: right;
+}
+
+.activity-calc .part2.question .val input{
+	padding-right: 20px;
+}
+
+.activity-calc .question.even{
+	background: $color-hab-almost-white;
+	border-radius: 3px;
+}
+
+.activity-calc .question .symbol{
+	position: absolute;
+	top: 7px;
+	right: 10px;
+	font-size: 16px;
+	width: 10px;
+}
+
+.activity-calc .question .symbol.dollar{
+	left: 1095px;
+}
+
+.activity-calc .question.summary{
+	background: $color-hab-dark-blue;
+	border-radius: 3px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #FFFFFF;
+	font-family: $font-open-sans;
+}
+
+.activity-calc .question.summary .left, .summary .right{
+	display: inline-block;
+	vertical-align: top;
+	padding: 15px 15px;
+}
+
+.activity-calc .question.summary .sum-val{
+	font-size: 18px;
+	line-height: 18px;
+}
+
+.activity-calc .question.summary > .label,
+.activity-calc .question.summary > .val{
+	width: 50%;
+	height: 50px;
+}
+
+.activity-calc .question.summary > .val{
+	padding-right: 5px;
+}
+
+.activity-calc .question.summary > .val > input{
+	margin-left: 20px;
+	margin-top: -4px;
+	color: $color-hab-darkest-gray;
+}
+
+.activity-calc .question.summary > .val input,
+.activity-calc .question.summary > .val .extra_value_renderer{
+	width: 60px;
+}
+
+.activity-calc .question.summary .left .label{
+	margin-top: 0;
+}
+
+.activity-calc .question.summary .val span.extra_value_renderer{
+	display: inline;
+	vertical-align: none;
+	margin: 0;
+	padding-right: 20px;
+	padding-left: 10px;
+}
+
+.activity-calc .question.action{
+	text-align: right;
+}
+
+.activity-calc{
+	text-align: right;
+}
+
+.activity-calc .question{
+	text-align: left;
+}
+
+.question.summary > .val > span.label{
+	vertical-align: top;
+}
+
+.activity-calc button[disabled] {
+	display: none;
+}
+
+/******************************/
+/******************************/
+/* MEDIA QUERIES */
+/******************************/
+/******************************/
+
+@media all and (min-width: 1024px) and (max-width: 1279px) {
+	.activity-calc .question .lbl{
+		width: 765px;
+	}
+	.activity-calc .question .symbol.dollar{
+		left: 840px;
+	}
+	.activity-calc .question.summary > .label,
+	.activity-calc .question.summary > .val{
+		display: block;
+		width: auto;
+		height: 50px;
+		border-left: none;
+		text-align: left;
+	}
+
+	.activity-calc .question.summary > .val{
+		padding-left: 15px;
+	}
+
+	.activity-calc .question.summary > .label + .val{
+		border-top: 3px solid $color-white;
+	}
+}
+
+@media all and (min-width: 760px) and (max-width: 1023px) {
+	.activity-calc .question .lbl{
+		width: 515px;
+	}
+	.activity-calc .question .symbol.dollar{
+		left: 590px;
+	}
+	.activity-calc .question.summary > .label,
+	.activity-calc .question.summary > .val{
+		display: block;
+		width: auto;
+		height: 50px;
+		border-left: none;
+		text-align: left;
+	}
+
+
+	.activity-calc .question.summary > .val{
+		padding-left: 15px;
+	}
+
+	.activity-calc .question.summary > .label + .val{
+		border-top: 3px solid $color-white;
+	}
+}
+
+@media all and (max-width: 759px) {
+	.activity-calc .question .lbl{
+		width: 365px;
+	}
+	.activity-calc .question .symbol.dollar{
+		left: 440px;
+	}
+	.activity-calc .question.summary > .label,
+	.activity-calc .question.summary > .val{
+		width: auto;
+		display: block;
+		height: 50px;
+		border-left: none;
+		text-align: left;
+	}
+
+
+	.activity-calc .question.summary > .val{
+		padding-left: 15px;
+	}
+
+	.activity-calc .question.summary > .label + .val{
+		border-top: 3px solid $color-white;
+	}
+
+	.form_entry .form_content .activity-calc button.btn {
+		display: none;
+	}
+}
+
+/* Temp. hide form buttons in form view */
+.activity-calc > button:disabled, .sfw button:disabled, .activity-calc > button {
+	display: none;
+}

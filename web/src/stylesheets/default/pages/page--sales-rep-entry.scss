@@ -1,0 +1,38 @@
+@import "../config/base-vars";
+@import "../../../../../bower_components/bootstrap/scss/mixins/clearfix";
+@import "../components/sales-activity-calculator";
+@import "../components/attendees";
+@import "../components/customized-activity";
+@import "../components/one-to-one";
+@import "../components/big-day-survey";
+@import "../components/sales-presentation-cert";
+@import "../components/big-day-planning";
+@import "../components/weekly-team-meeting";
+
+#primary-content {
+	padding: 20px 40px;
+}
+
+.prop-wrapper .prop-footer .prop-footer-actions {
+	text-align: right;
+}
+
+.activity-result-editor .prop-wrapper .prop-header .actions{
+	display: block;
+}
+
+.rep-activity-main .activity-instance-viewer .prop-body {
+	margin: 15px 0;
+}
+
+.rep-activity-main .actions div.miwt-collapsable {
+	float: left;
+}
+.rep-activity-main .actions button.btn {
+	float: left;
+}
+
+.rep-activity-main .activity-result-editor .actions {
+	margin-left: 0;
+	@include clearfix();
+}

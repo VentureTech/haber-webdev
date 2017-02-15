@@ -1,0 +1,318 @@
+@import "../config/base-vars";
+
+#primary-content {
+	> .text > h1{
+		margin: 0 0 15px;
+	}
+
+	> div.freemarker {
+		padding: 0;
+		text-align: center;
+	}
+}
+
+.resource-search-container {
+	padding-bottom: 10px;
+}
+.resource-search-wrapper{
+	border: 1px solid #C2C2C2;
+	border-radius: 3px;
+	box-shadow: 1px 2px 3px #CCC;
+	padding: 10px;
+}
+
+.resource-search-wrapper .search-field{
+	display: inline-block;
+	vertical-align: top;
+	margin: 10px 5px 10px 20px;
+}
+
+.resource-search-wrapper .search-field label{
+	display: block;
+	text-align: left;
+	font-family: $font-open-sans;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+select.select2-dropdown{
+	min-width: 200px;
+}
+
+.resource-search-container .coaching-search-reset .reset-span{
+	background-color: #717171;
+	border: 1px solid #3D3D3D;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-family: $font-open-sans;
+	font-weight: 700;
+	padding: 5px 15px;
+	margin: 10px 0;
+	border-radius: 3px;
+	height: 30px;
+	cursor: pointer;
+	box-shadow: none;
+	text-shadow: none;
+	display: inline-block;
+}
+
+.resource-search-container .coaching-search-reset .reset-span:hover{
+	background-color: #919191;
+	border-color: #4D4D4D;
+}
+
+.resource-search-container .coaching-search-reset{
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	height: 30px;
+}
+
+.resource-search-wrapper > .action{
+	display: inline-block;
+	vertical-align: top;
+	margin: 24px 0px 0px 20px;
+}
+
+
+/* Freemarker Paging */
+
+.freemarker .resource-results{
+	padding: 20px;
+	text-align: left;
+}
+
+.freemarker .resource-results .resource{
+	border-top: 1px solid #DDDCDD;
+}
+
+.freemarker .resource-results .resource.first{
+	border: none;
+}
+
+.freemarker .resource-results .resource .info{
+	width: 70%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.freemarker .resource-results .resource .name{
+	margin: 15px 0 10px 0;
+}
+
+.freemarker .resource-results .resource .name > a{
+	color: #EE7421;
+	text-decoration: none;
+	font-size: 20px;
+	font-family: $font-open-sans;
+	font-weight: 600;
+}
+
+.freemarker .resource-results .resource .name > a:hover{
+	text-decoration: underline;
+}
+
+.freemarker .resource-results .resource .info .label{
+	font-family: OpenSans, Arial, sans-serif;
+	margin-right: 5px;
+}
+
+.freemarker .resource-results .resource .info > .author,
+.freemarker .resource-results .resource .info > .resource-type{
+	font-family: OpenSansSemiBold, Arial, sans-serif;
+	font-size: 16px;
+	margin: 10px 0px;
+}
+.freemarker .resource-results .resource .info .type-image{
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 5px;
+}
+
+.freemarker .resource-results .resource .info .type-image.document{
+	margin-bottom: 4px;
+}
+
+.freemarker .resource-results .resource .info .type-image.media{
+	margin-bottom: 7px;
+}
+
+.freemarker .resource-results .resource .info > .file-type{
+	font-family: $font-open-sans;
+	font-weight: 600;
+	font-size: 16px;
+	margin: -2px 0 -5px 0;
+}
+
+.freemarker .resource-results .resource .info .description{
+	margin-bottom: 30px;
+	line-height: 24px;
+}
+
+
+.freemarker .resource-results .resource .pillars{
+	width: 30%;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 20px;
+}
+
+.freemarker .resource-results .resource .pillars{
+	margin-top: 9px;
+}
+
+.freemarker .resource-results .resource .pillars .pillars-header{
+	font-size: 18px;
+	font-family: $font-open-sans;
+	font-weight: 600;
+}
+
+.freemarker .resource-results .resource .pillar-list{
+	padding-left: 30px;
+	margin-bottom: 15px;
+}
+
+.freemarker .resource-results .resource .pillar-list li{
+	color: #EE7421;
+	line-height: 28px;
+}
+
+.freemarker .resource-results .resource .pillar-list .pillar-list-item{
+	color: #3b3e40;
+}
+.freemarker .resource-results .no-result .val{
+	font-size: 18px;
+	color: #FF7777;
+}
+
+.freemarker .resource-results .resource .info .file-type a{
+	color: #EE7421;
+	text-decoration: none;
+}
+
+.freemarker .resource-results .resource .info .file-type a:hover{
+	text-decoration: underline;
+}
+
+/*********************************/
+/*********************************/
+/* MEDIA QUERIES */
+/*********************************/
+/*********************************/
+
+
+
+
+
+@media all and (min-width: 1024px) and (max-width: 1279px) {
+	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
+		width: 980px;
+		margin: 0 auto;
+	}
+
+	.primary-menu + .primary-menu{
+		margin-left: 30px;
+	}
+
+	.primary-menu .menu-t1 > .mi + .mi{
+		margin-left: 30px;
+	}
+}
+
+@media all and (min-width: 760px) and (max-width: 1023px) {
+	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
+		width: 730px;
+		margin: 0 auto;
+	}
+
+	.primary-menu + .primary-menu{
+		margin-left: 10px;
+	}
+
+	.primary-menu .menu-t1 > .mi + .mi{
+		margin-left: 10px;
+	}
+
+	.primary-menu .menu-t1 > .mi > .menuitemlabel{
+		padding: 5px 10px;
+		background: transparent;
+	}
+
+	.resource-search-container input.val{
+		max-width: 100px;
+	}
+
+	.resource-search-container .select2-container{
+		max-width: 160px;
+	}
+	.resource-search-container select{
+		max-width: 160px;
+	}
+
+	.resource-search-wrapper .search-field{
+		margin: 3px;
+	}
+
+	.resource-search-wrapper > .action{
+		margin: 17px 0 0 3px;
+	}
+
+	.freemarker .resource-results .resource .info{
+		display: block;
+		width: auto;
+	}
+
+	.freemarker .resource-results .resource .pillars{
+		display: block;
+		width: auto;
+	}
+
+}
+
+@media all and (max-width: 759px) {
+	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
+		width: 580px;
+		margin: 0 auto;
+	}
+
+	.primary-menu + .primary-menu{
+		margin-left: 5px;
+	}
+
+	.primary-menu .menu-t1 > .mi + .mi{
+		margin-left: 5px;
+	}
+
+	.primary-menu .menu-t1 > .mi > .menuitemlabel{
+		padding: 5px 10px;
+		background: transparent;
+	}
+
+	.resource-search-container input.val{
+		max-width: 90px;
+	}
+
+	.resource-search-container .select2-container{
+		max-width: 150px;
+	}
+	.resource-search-container select{
+		max-width: 150px;
+	}
+
+	.resource-search-wrapper .search-field{
+		margin: 3px;
+	}
+
+	.resource-search-wrapper > .action{
+		margin: 0;
+	}
+
+	.freemarker .resource-results .resource .info{
+		display: block;
+		width: auto;
+	}
+	.freemarker .resource-results .resource .pillars{
+		display: block;
+		width: auto;
+	}
+}

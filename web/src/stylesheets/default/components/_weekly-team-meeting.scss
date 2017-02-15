@@ -1,0 +1,60 @@
+.form_content .weekly-team-meeting .question:first-child {
+	display: block;
+	width: 100%;
+}
+
+.form_content .weekly-team-meeting .question:first-child .form_field {
+	display: block;
+	width: 100%;
+	max-width: 35rem;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.form_content .weekly-team-meeting .question .form_field p {
+	width: 100%;
+	font-weight: 600;
+	display: block;
+	padding: 1rem;
+	border: 1px solid gray;
+}
+
+.form_content .weekly-team-meeting .question .form_field.prop-group {
+	display: block;
+}
+
+.form_content .weekly-team-meeting .question .form_field.prop-group .props {
+	display: block;
+	padding: 10px;
+}
+
+.form_content .weekly-team-meeting .question .form_field.prop-group label,
+.form_content .weekly-team-meeting .question .form_field.prop-group .props span.extra_value_renderer_readonly {
+	display: inline-block;
+	width: 48%;
+	text-align: right;
+	vertical-align: top;
+	padding: 0 10px;
+}
+
+.form_content .weekly-team-meeting .question .form_field.prop-group .props span.extra_value_renderer_readonly {
+	text-align: left;
+}
+
+.form_content .weekly-team-meeting .question .form_field.prop-group input,
+.form_content .weekly-team-meeting .question .form_field.prop-group textarea {
+	width: 45%;
+	vertical-align: top;
+}
+
+.form_content .weekly-team-meeting span.submit_registration_button {
+	display: block;
+	padding-left: 48%;
+}
+
+.form_content .weekly-team-meeting button.save_exit_button {
+	@include button-variant($color-white, $color-hab-orange, darken($color-hab-orange, 5%));
+	font-family: $font-open-sans;
+	font-weight: 700;
+	padding: .4rem 1rem;
+}

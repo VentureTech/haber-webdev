@@ -3,182 +3,125 @@
 @import "../../../../../bower_components/bootstrap/scss/mixins";
 @import "../../../../../bower_components/bootstrap/scss/buttons";
 
+#e-wrapper {
+	width: 500px;
+	margin: 100px auto 0;
+	background: #fff;
+	border: 1px solid #d9d9d9;
+	box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+#header {
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+
+.content-box {
+	padding: 10px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+
+	h1 {
+		margin: 0 0 10px;
+	}
+
+	a {
+		color: #ee7421;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
 .login-body {
 	background-color: #f1f2f7;
 }
 
+/* generic login box components */
+.login {
+	margin: 10px 0;
 
-.form-signin .title {
-	padding: .6rem 0 .3rem;
-	text-align: center;
-	background: $color-app-brand;
-	border-radius: 5px 5px 0 0;
-	color: $headings-color;
-	font-size: 1.6rem;
-	text-transform: uppercase;
-	font-weight: $headings-font-weight;
-}
-
-.form-signin .checkbox {
-	margin-bottom: 14px;
-}
-.form-signin .checkbox {
-	font-family: $font-family-sans-serif;
-	color: #b6b6b6;
-	font-weight: 300;
-}
-.form-signin .form-control {
-	position: relative;
-	font-size: 16px;
-	height: auto;
-	padding: 10px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-.form-signin .form-control:focus {
-	z-index: 2;
-}
-.form-signin input[type="text"], .form-signin input[type="password"] {
-	padding-left: 5px;
-	border: 2px solid #71767c;
-	width: 100%;
-}
-
-.form-signin p {
-	text-align: center;
-	margin: 0;
-}
-
-
-.login-wrap {
-	padding: 20px;
-}
-
-.login-social-link  {
-	display: inline-block;
-	margin-top: 20px;
-	margin-bottom: 15px;
-}
-
-.login-social-link a {
-	color: #fff;
-	padding: 15px 28px;
-	border-radius: 4px;
-}
-
-.login-social-link a:hover {
-	color: #fff;
-}
-
-.login-social-link a i {
-	font-size: 20px;
-	padding-right: 10px;
-}
-
-.login-social-link a.facebook {
-	background: #5193ea;
-	margin-right: 22px;
-	box-shadow: 0 4px #2775e2;
-	float:left;
-}
-
-.login-social-link a.twitter {
-	background: #44ccfe;
-	box-shadow: 0 4px #2bb4e8;
-	float:left;
-}
-
-#authentication {
-	background-color: #f1f2f7;
-}
-
-.form-signin .message-container{
-	margin-top: 10px;
-}
-
-.form-signin .retrieve-password p {
-	padding:0 0 1rem;
-	background-color:#fff;
-	font-size:.85rem;
-	margin:0;
-	border-bottom-left-radius: .3rem;
-	border-bottom-right-radius:.3rem;
-	text-align:center;
-}
-
-.form-reset #retrieve-password {
-	text-align: center;
-}
-
-header#main-header {
-	display: none;
-}
-
-.composite {
-	width: 100%;
-	max-width: 370px;
-	margin: 0 auto;
-
-	.form-signin, .logged-in {
-		border-radius: 0.3rem;
-		margin-top: 5rem;
+	.title {
+		display: none;
 	}
-
-}
-
-.logged-in {
-	background: #fff;
-	padding: 2rem;
-	p {
-		margin-bottom: 0;
-	}
-}
-
-.field {
-	display: flex;
-	flex-direction: column;
-	padding: 1.5rem 3.5rem 0;
-	text-align: left;
 
 	.field {
-		background-color: #fff;
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 5px;
+
+		.label {
+			display: block;
+			color: #3b3e40;
+			font-family: $font-open-sans;
+			font-weight: 600;
+		}
+
+		.value input{
+			width: 199px;
+		}
 	}
-	.label {
-		padding: 0;
-		display: block;
-		border-radius: 0;
-		text-align: left;
+
+	.fields {
+		display: inline-block;
+		vertical-align: bottom;
+	}
+
+	&.password-reset {
+		.field {
+
+			&.username {
+				display: block;
+				margin-bottom: 10px;
+			}
+
+			.value input {
+				width: 154px;
+			}
+		}
+	}
+
+	.actions {
+		display: inline-block;
+		vertical-align: bottom;
+	}
+
+	.btn{
+		background: #EE7421;
+		border: 1px solid #CE5809;
+		color: #FFFFFF;
+		font-size: 14px;
+		font-family: $font-open-sans;
+		padding: 5px 15px;
+		margin: 0;
+		border-radius: 3px;
+		height: 30px;
+		cursor: pointer;
+		box-shadow: none;
+		text-shadow: none;
 	}
 }
 
-.form-content {
-	display: flex;
-	flex-direction: column;
-	color: black;
-	background: #fff;
-	padding-bottom: 1.5rem;
-	label {
-		color: #000;
-		font-size: .85rem;
-		text-transform: uppercase;
-		margin-bottom: .25rem;
+
+/* styles for the display when you visit the login page and the user is already logged in */
+.loggedin {
+	text-align: center;
+
+	.user {
+		font-family: $font-open-sans;
 	}
-	.actions {
-		text-align: center;
-		padding-top: 20px;
-		background-color: #fff;
-		.btn {
-			max-width: 10rem;
-			line-height: 1rem;
-			padding: .5rem 1rem;
-		}
+
+	.details {
+		display: block;
 	}
 }
 
 .retrieve-password-con {
 	background: #fff;
-	font-family: "open-sans", sans-serif;
+	font-family: $font-open-sans;
 	border-radius: 0.3rem;
 	margin-top: 5rem;
 	.html {
@@ -252,7 +195,12 @@ header#main-header {
 	box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 
-.retrieve-password-con .retrieve-password button:active:hover, .retrieve-password-con .retrieve-password button:active:focus, .retrieve-password-con .retrieve-password button:active.focus, .retrieve-password-con .retrieve-password button.active:hover, .retrieve-password-con .retrieve-password button.active:focus, .retrieve-password-con .retrieve-password button.active.focus,
+.retrieve-password-con .retrieve-password button:active:hover,
+.retrieve-password-con .retrieve-password button:active:focus,
+.retrieve-password-con .retrieve-password button:active.focus,
+.retrieve-password-con .retrieve-password button.active:hover,
+.retrieve-password-con .retrieve-password button.active:focus,
+.retrieve-password-con .retrieve-password button.active.focus,
 .open > .retrieve-password-con .retrieve-password button.dropdown-toggle:hover,
 .open > .retrieve-password-con .retrieve-password button.dropdown-toggle:focus,
 .open > .retrieve-password-con .retrieve-password button.dropdown-toggle.focus {
@@ -261,19 +209,53 @@ header#main-header {
 	border-color: black;
 }
 
-.retrieve-password-con .retrieve-password button.disabled:focus, .retrieve-password-con .retrieve-password button.disabled.focus, .retrieve-password-con .retrieve-password button:disabled:focus, .retrieve-password-con .retrieve-password button:disabled.focus {
+.retrieve-password-con .retrieve-password button.disabled:focus,
+.retrieve-password-con .retrieve-password button.disabled.focus,
+.retrieve-password-con .retrieve-password button:disabled:focus,
+.retrieve-password-con .retrieve-password button:disabled.focus {
 	background-color: #02549d;
 	border-color: #013e75;
 }
 
-.retrieve-password-con .retrieve-password button.disabled:hover, .retrieve-password-con .retrieve-password button:disabled:hover {
+.retrieve-password-con .retrieve-password button.disabled:hover,
+.retrieve-password-con .retrieve-password button:disabled:hover {
 	background-color: #02549d;
 	border-color: #013e75;
+}
+
+.retrieve-password div.email {
+	display: inline-block;
+}
+
+.retrieve-password span.email {
+	display: block;
+	color: #3b3e40;
+	font-family: OpenSansSemiBold, Arial, sans-serif;
+}
+
+.retrieve-password .email input {
+	width: 320px;
+}
+
+.retrieve-password button.submit {
+	width: 150px;
+	background: $color-hab-orange;
+	border: 1px solid $btn-primary-border;
+	color: $color-white;
+	font-size: 14px;
+	font-family: $font-open-sans;
+	padding: 5px 15px;
+	margin: 0 0 0 8px;
+	border-radius: 3px;
+	height: 30px;
+	cursor: pointer;
+	box-shadow: none;
+	text-shadow: none;
 }
 
 .password-reset {
 	background: #fff;
-	font-family: "open-sans", sans-serif;
+	font-family: $font-open-sans;
 	border-radius: 0.3rem;
 	margin-top: 5rem;
 }
@@ -300,7 +282,7 @@ header#main-header {
 	font-size: .85rem;
 	color: #343940;
 	text-transform: uppercase;
-	font-family: "open-sans", sans-serif;
+	font-family: $font-open-sans;
 }
 
 .password-reset .label label {

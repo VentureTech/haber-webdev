@@ -1,0 +1,845 @@
+@import "../config/base-vars";
+
+.salesmanagersettings {
+	position: relative;
+}
+
+.navigation-actions {
+	float: right;
+}
+
+.launch_wizard{
+	text-align: right;
+}
+
+.launch_wizard select{
+	min-width: 120px;
+}
+
+.btn.wizard{
+	vertical-align: top;
+	margin: 0 15px 0 5px;
+}
+
+.sales-numbers-tab {
+	.actions {
+		margin: 1rem 0 0;
+	}
+
+	.sales-goals, .sales-figures {
+		label {
+			font-size: 20px;
+			font-weight: 600;
+		}
+	}
+
+	.sales-figures {
+		margin-top: 2.25rem;
+		padding-top: 1.5rem;
+		border-top: 1px solid #d0d0d0;
+	}
+}
+
+.sales-goal-viewer-con .top-pane:after{
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+.sales-goal-viewer-con .top-pane .actions {
+	float: right;
+	margin-bottom: 20px;
+}
+
+.sales-goal-viewer-con .years {
+	float: left;
+	margin-bottom: 20px;
+}
+
+.salesmanagersettings .years select {
+	width: 80px;
+}
+
+.sales-goal-viewer-con .top-pane .actions button{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.sales-numbers-tab {
+	.goal-mode {
+		margin-bottom: .5rem;
+
+		> span, > a {
+			margin-right: 1rem;
+		}
+
+		> span {
+			font-weight: 700;
+			text-decoration: underline;
+		}
+
+		> a {
+			color: $color-hab-orange;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.mgr-goals {
+	border: 1px solid #d0d0d0;
+	padding: 15px;
+	border-radius: 3px;
+}
+
+.mgr-goals .goal {
+	display: inline-block;
+	margin-left: 40px;
+}
+
+.mgr-goals .goal .label {
+	display: inline;
+	margin-right: 5px;
+	font-family: $font-open-sans;
+	font-weight: 600;
+}
+
+.mgr-goals .goal .val {
+	display: inline;
+}
+
+.mgr-goals .goal .val input {
+	width: 100px;
+	text-align: right;
+}
+
+.sales-goal-viewer .mgr-goals .goal div.val {
+	padding: 0 10px;
+	text-align: right;
+	display: inline-block;
+	min-width: 100px;
+	background-color: #eaeaea;
+	color: #777;
+	line-height: 29px;
+	border: 1px solid #d0d0d0;
+}
+
+.goals-table-con {
+	overflow-x: auto;
+	margin: 20px 0;
+	clear: both;
+}
+
+.goals-table {
+	border: 1px solid #ccc;
+	width: 100%;
+}
+
+.goals-table td {
+	border: 1px solid #d0d0d0;
+}
+
+.goals-table .empty-con {
+	background-color: #ccc;
+}
+
+.goals-table .actions-con {
+	background-color: #eaeaea;
+	vertical-align: bottom;
+}
+
+.goals-table .actions {
+	padding: 5px;
+	width: 80px;
+	margin: 0 auto;
+}
+
+.goals-table .actions button {
+	margin: 0;
+	font-size: 12px;
+	padding: 3px 10px;
+	height: 24px;
+	width: 100%;
+}
+
+.goals-table .actions button + button {
+	margin-top: 3px;
+	margin-left: 0;
+}
+
+.goals-table .month-con {
+	background-color: #f5f5f5;
+	border: 1px solid #d0d0d0;
+	border-bottom: 2px solid #aaa;
+	padding: 5px 10px;
+	font-family: $font-open-sans;
+	font-weight: 600;
+}
+
+.figures-table-wrapper .goals-table .month-con {
+	width: 6.5%;
+}
+
+.goals-table .name-con {
+	background-color: rgb(6,43,72);
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+}
+
+.goals-table .goal-con {
+	background-color: #0B385B;
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+}
+
+.goals-table .name-con .name,
+.goals-table .goal-con .goal {
+	max-width: 140px;
+	white-space: nowrap;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #fff;
+}
+
+.goals-table input[type=text] {
+	min-width: 80px;
+	width: 100%;
+	border: none;
+	margin: 0;
+	padding: 0 10px;
+	height: 29px;
+	display: block;
+	line-height: 29px;
+	text-align: right;
+}
+
+.goals-table input:focus {
+	background: #fffddd;
+	box-shadow: 0 0 8px rgba(255,250,116,0.6) inset;
+	outline: 2px solid #EE7421;
+}
+
+.goals-table .data-con span.data {
+	padding: 0 10px;
+	text-align: right;
+	display: block;
+	min-width: 80px;
+	background-color: #eaeaea;
+	color: #777;
+	line-height: 29px;
+	height: 29px;
+}
+
+.resource-editor > .actions {
+	text-align: right;
+}
+
+.edit-user {
+	min-height: 450px;
+}
+
+.edit-user .header h2 {
+	margin-top: 0;
+}
+
+.edit-user > .actions {
+	float: right;
+}
+
+.edit-user > .actions button {
+	margin: 0;
+}
+
+
+.sales-numbers label {
+	font-size: 16px;
+}
+.sales-numbers .sales-goals {
+	margin-bottom: 25px;
+}
+.sales-numbers .year {
+	margin: 10px 0;
+}
+.sales-numbers .year .val {
+	margin-left: 35px;
+	width: 10%
+;
+}
+.sales-numbers .goals .val {
+	margin-left: 17px;
+	width: 10%
+;
+}
+.sales-numbers .year label,
+.sales-numbers .goals label,
+.sales-numbers .upload-by label{
+	font-size: inherit;
+}
+
+.upload-by {
+	margin-top: 10px;
+
+	div.select2-container.upload-by {
+		margin: 0 0 0 34px;
+	}
+}
+
+div.window.dialog {
+
+	.instructions {
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.sample-file {
+		margin-bottom: 1rem;
+
+		.btn {
+			background:none;
+			padding: 0;
+			color: $color-hab-orange;
+			text-decoration: underline;
+			font-size: .9rem;
+
+			&:hover {
+				background: none;
+				text-decoration: none;
+			}
+		}
+	}
+
+	div.upload {
+		display: block;
+		margin-bottom: 1rem;
+		div.upload {
+			display: inline-block;
+			padding: .5rem;
+			border: 1px solid #e5e5e5;
+
+			label {
+				margin: 0 .5rem 0 0;
+				font-weight: 600;
+			}
+		}
+	}
+
+	.schedule-values.props {
+		display: block;
+
+		.prop {
+			display: block;
+			margin-top: 1rem;
+
+			.label, .val {
+				padding: 0;
+			}
+
+			.label {
+				display: block;
+				text-align: left;
+
+				label {
+					color: $font-default-color;
+					margin-bottom: .25rem;
+				}
+			}
+
+			.val {
+				input[type="text"] {
+					width: 3.5rem;
+					margin-right: .5rem;
+				}
+			}
+
+			&.schedule-cyle-offset, &.schedule-next-cycle {
+				.select2-container:last-of-type {
+					width: 12rem !important;
+				}
+			}
+		}
+	}
+
+	.working-period {
+		margin-bottom: 1.5rem;
+		padding-bottom: 1.5rem;
+		border-bottom: 1px solid #e5e5e5;
+
+		label {
+			font-weight: 600;
+		}
+
+		input {
+			margin: 0 .5rem;
+		}
+	}
+
+	div.actions {
+		border-top: 1px solid #e5e5e5;
+		padding-top: 2rem;
+		margin-top: 1.25rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.edit-user .user-picture-editor {
+		text-align: center;
+	}
+
+	.edit-user .user-picture-editor .profile {
+		text-align: left;
+		display: inline-block;
+	}
+
+	.edit-user .prop-wrapper,
+	.edit-user .user-picture-editor {
+		width: 600px;
+		margin: 0 auto 20px;
+	}
+
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
+	.edit-user .user-picture-editor {
+		float: left;
+		width: 300px;
+	}
+	.edit-user .prop-wrapper {
+		width: auto;
+		margin-left: 350px;
+		margin-bottom: 20px;
+	}
+
+	.edit-user .prop-wrapper.prop-gen .props .prop .label {
+		width: 30%;
+	}
+
+	.prop-wrapper.prop-gen .prop-header-actions .actions,
+	.prop-wrapper.prop-gen .prop-footer-actions .actions {
+		margin-left: 30%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.edit-user .user-picture-editor {
+		width: 33%;
+		min-width: 330px;
+		display: inline-block;
+		vertical-align: top;
+		margin-bottom: 20px;
+	}
+
+	.edit-user .prop-wrapper {
+		width: 33%;
+		min-width: 330px;
+		display: inline-block;
+		vertical-align: top;
+		margin-bottom: 20px;
+	}
+
+	.edit-user .prop-wrapper.prop-gen .props .prop .label {
+		width: 30%;
+	}
+
+	.prop-wrapper.prop-gen .prop-header-actions .actions,
+	.prop-wrapper.prop-gen .prop-footer-actions .actions {
+		margin-left: 30%;
+	}
+}
+
+.edit-user .user-picture-editor .profile {
+	position: relative;
+	width: 246px;
+	z-index: 1;
+}
+
+.edit-user .hire-date .actions {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.edit-user .hire-date .val {
+	margin-top: -16px;
+}
+
+.edit-user .hire-date .cal {
+	display: block;
+	margin-top: -6px;
+}
+
+.edit-user .hire-date button.btn{
+	margin-top: -6px;
+	font-size: 12px;
+	padding: 0px 5px;
+	height: auto;
+}
+
+.edit-user .hire-date .val span{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.edit-user .prop-footer .actions {
+	margin-right: 30px;
+}
+
+.edit-user .prop-wrapper .prop .val{
+	max-width: 260px;
+	word-wrap: break-word;
+}
+
+
+/* position deleter popup */
+.position-deleter .prop-header-title h1 {
+	font-size: 18px;
+}
+
+.prop-wrapper.position-deleter .prop .label {
+	width: 150px;
+}
+
+.prop-wrapper.position-deleter .prop-footer-actions .actions {
+	margin-left: 0;
+	text-align: right;
+}
+
+.position-deleter .prop.positions .val select {
+	width: 300px;
+	margin: 0;
+}
+
+/* position editor popup */
+.prop-wrapper.position-editor .prop .label {
+	width: 150px;
+}
+
+.prop-wrapper.position-editor .prop-footer-actions .actions {
+	margin-left: 0;
+	text-align: right;
+}
+
+/* schedule editor popup */
+.prop-wrapper.schedule-editor .prop .label {
+	width: 40%;
+	vertical-align: middle;
+
+	label {
+		margin-bottom: 0;
+		font-family: $font-open-sans;
+		font-weight: 600;
+	}
+}
+
+.prop-wrapper.schedule-editor .prop .val {
+	vertical-align: middle;
+}
+
+.prop-wrapper.schedule-editor .prop-footer-actions .actions {
+	margin-left: 0;
+	text-align: right;
+}
+
+.prop-wrapper.schedule-editor .prop-footer-actions .actions button {
+	margin-bottom: 0;
+}
+
+.schedule-editor .prop.schedule-frequency input,
+.schedule-editor .prop.schedule-work-period input,
+.schedule-editor .prop.schedule-heads-up input {
+	width: 50px;
+	margin-right: 5px;
+}
+
+/* resource editor popup */
+.resource-editor .prop-header-title h1 {
+	font-size: 18px;
+}
+
+.prop-wrapper.resource-editor .prop .label {
+	width: 40%;
+}
+
+.prop-wrapper.resource-editor .prop-footer-actions .actions {
+	margin-left: 0;
+	text-align: right;
+}
+
+.prop-wrapper.resource-editor .prop-footer-actions .actions button {
+	margin-bottom: 0;
+}
+
+.resource-editor .prop.toggle-switch select {
+	width: 100px;
+}
+
+.resource-editor .prop.schedule-frequency select {
+	width: 140px;
+}
+
+.resource-editor .prop.schedule-frequency input,
+.resource-editor .prop.schedule-work-period input,
+.resource-editor .prop.schedule-heads-up input {
+	width: 50px;
+	margin-right: 5px;
+}
+
+/****************************/
+/* SALES GOAL WIZARD STYLES */
+/****************************/
+
+.sales-goal-wizard .help-content:before{
+	content: " ";
+	display: table;
+}
+
+.sales-goal-wizard-con .top-pane .actions button {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.sales-goal-wizard-con > .top-pane > .actions{
+	margin: 0;
+}
+
+.sales-goal-wizard-con > .top-pane{
+	float: right;
+}
+
+.sales-goal-wizard h1,
+.sales-goal-wizard h2,
+.sales-goal-wizard h3,
+.sales-goal-wizard p{
+	margin: 0;
+}
+
+.sales-goal-wizard .columns .reps-column,
+.sales-goal-wizard .columns .months-column{
+	display: inline-block;
+	padding: 20px;
+	height: 662px;
+	width: 50%;
+}
+
+.sales-goal-wizard .reps-column h3,
+.sales-goal-wizard .months-column h3{
+	width: 50%;
+	padding: 0 10px;
+	text-align: right;
+}
+
+.sales-goal-wizard .reps-column .prop .label,
+.sales-goal-wizard .months-column .prop .label{
+}
+
+.sales-goal-wizard .columns{
+	width: 905px;
+	margin: 0 auto;
+	white-space: nowrap;
+}
+
+.sales-goal-wizard .reps-column{
+	border-bottom-left-radius: 3px;
+	border-left: 1px solid #A1A1A1;
+	border-bottom: 1px solid #A1A1A1;
+}
+
+.sales-goal-wizard .months-column{
+	border-bottom-right-radius: 3px;
+	border-right: 1px solid #A1A1A1;
+	border-bottom: 1px solid #A1A1A1;
+}
+
+.sales-goal-wizard .prop .dollar{
+	position: absolute;
+	left: 9px;
+	top: 6px;
+}
+
+.sales-goal-wizard .prop .percent{
+	position: absolute;
+	left: 185px;
+	top: 6px;
+}
+
+.sales-goal-wizard > .prop-body{
+	width: 905px;
+	margin: 0 auto;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	padding: 20px;
+	border: 1px solid #A1A1A1;
+	border-bottom: none;
+}
+
+.sales-goal-wizard .markup_entry,
+.sales-goal-wizard .goal_entry,
+.sales-goal-wizard  .markup-entry,
+.sales-goal-wizard .goal-entry{
+	position: relative;
+}
+
+.sales-goal-wizard .markup_entry .val,
+.sales-goal-wizard .goal_entry .val,
+.sales-goal-wizard  .markup-entry .val,
+.sales-goal-wizard .goal-entry .val{
+	padding-left: 15px;
+}
+
+.sales-goal-wizard input[type=text]{
+	width: 200px;
+}
+.sales-goal-wizard .help-content > a.trigger{
+	font-size: 14px;
+}
+
+.sales-goal-wizard .help-content.shown > a.trigger{
+	font-size: 14px;
+}
+
+.sales-goal-wizard .help-content{
+	width: 905px;
+	height: 41px;
+	transition: all 0.25s ease-in-out;
+	-ms-transition: all 0.25s ease-in-out;
+	-moz-transition: all 0.25s ease-in-out;
+	-webkit-transition: all 0.25s ease-in-out;
+	margin: 10px 0;
+	color: #FFFFFF;
+	background: #F3F4F5;
+	border-radius: 3px;
+	padding: 10px;
+	box-shadow: 1px 1px 2px #C2C2C2;
+	border: 1px solid #A1A1A1;
+	font-size: 0.1px;
+	position: relative;
+	margin: 10px auto;
+}
+
+.sales-goal-wizard .help-content.shown{
+	height: 155px;
+	color: #404040;
+	font-size: 14px;
+}
+
+.sales-goal-wizard .help-content.shown a.trigger{
+	display: inline;
+}
+
+.sales-goal-wizard .help-content .help-con{
+	white-space: normal;
+}
+
+.sales-goal-wizard .prop.rounding select,
+.sales-goal-wizard .prop.rounding .select2-container{
+	width: 200px;
+	margin-left: 5px;
+}
+
+.sales-goal-wizard input.focused{
+	background: #FFFDDD;
+}
+
+.sales-goal-wizard .help-content a.trigger:after {
+	content: " ";
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	position: absolute;
+	right: 10px;
+	top: 12px;
+	background: #C2C2C2 url(/_resources/dyn/files/14724zf8f78f1b/_fn/collapsible-icons.png) no-repeat -3px 0px;
+	border-radius: 5px;
+	border: 1px solid #A1A1A1;
+}
+
+.sales-goal-wizard .help-content a.trigger:hover:after {
+	background-color: #EE7421;
+	border-color: #CE5809;
+}
+
+.sales-goal-wizard .help-content.shown a.trigger:after {
+	background-position: -3px -15px;
+}
+
+.sales-goal-wizard .help-content.shown a.trigger:hover:after {
+	background-color: #EE7421;
+	border-color: #CE5809;
+}
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+	.sales-goal-wizard .columns{
+		width: 100%;
+	}
+	.sales-goal-wizard > .prop-body{
+		width: 100%;
+	}
+
+	.sales-goal-wizard .help-content{
+		width: 100%;
+	}
+	.sales-goal-wizard .help-content.shown{
+		height: 190px;
+	}
+
+	.sales-goal-wizard .reps-column{
+		border-right: 1px solid #A1A1A1;
+		border-left: 1px solid #A1A1A1;
+		border-bottom: none;
+	}
+
+	.sales-goal-wizard .months-column{
+		border-bottom-left-radius: 3px;
+		border-bottom-right-radius: 3px;
+		border-right: 1px solid #A1A1A1;
+		border-left: 1px solid #A1A1A1;
+		border-bottom: 1px solid #A1A1A1;
+	}
+
+	.sales-goal-wizard .columns .reps-column,
+	.sales-goal-wizard .columns .months-column{
+		width: 100%;
+		display: block;
+		height: auto;
+	}
+
+}
+@media all and (max-width: 767px){
+	.sales-goal-wizard .columns{
+		width: 100%;
+	}
+	.sales-goal-wizard > .prop-body{
+		width: 100%;
+	}
+
+	.sales-goal-wizard .help-content{
+		width: 100%;
+	}
+	.sales-goal-wizard .help-content.shown{
+		height: 210px;
+	}
+
+	.sales-goal-wizard .reps-column{
+		border-right: 1px solid #A1A1A1;
+		border-left: 1px solid #A1A1A1;
+		border-bottom: none;
+	}
+
+	.sales-goal-wizard .months-column{
+		border-bottom-left-radius: 3px;
+		border-bottom-right-radius: 3px;
+		border-right: 1px solid #A1A1A1;
+		border-left: 1px solid #A1A1A1;
+		border-bottom: 1px solid #A1A1A1;
+	}
+
+	.sales-goal-wizard .columns .reps-column,
+	.sales-goal-wizard .columns .months-column{
+		width: 100%;
+		display: block;
+		height: auto;
+	}
+
+}

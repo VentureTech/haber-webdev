@@ -36,8 +36,6 @@
 		text-transform: uppercase;
 		text-decoration: none;
 		white-space: nowrap;
-		box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8) inset,
-		-1px -1px 0 rgba(0, 0, 0, 0.05) inset;
 	}
 
 }
@@ -85,14 +83,13 @@ input[type=number]{
 	}
 
 	.prop {
-		margin-bottom: 1rem;
-		padding: 5px;
 		> .actions, .selected-link {
 			.btn {
 				@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-xs, $btn-border-radius-sm);
 			}
 		}
 	}
+
 	.prop-group {
 		margin-bottom: 0;
 	}
@@ -139,9 +136,11 @@ input[type=number]{
 		.actions {
 			@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
 		}
+
 		span.rtb + span.rtb {
 			padding-left: 1rem;
 		}
+
 		span.ctb + span.ctb {
 			padding-left: 1rem;
 		}
@@ -245,3 +244,190 @@ input[type=number]{
 	}
 
 }
+
+/* FROM ECSELL / HABERFELD
+   ========================================================================== */
+
+/* Prop-EditorViewer Generic Styles*/
+.prop-wrapper.prop-gen .props {
+	display: table;
+	width: 100%;
+}
+
+.activity-management .form_content .question .form_field.prop-group {
+	display: table;
+	width: 100%;
+}
+
+.prop-wrapper.prop-gen .prop,
+.activity-management .form_content .question .form_field.prop-group .props {
+	display: table-row;
+}
+
+.prop-wrapper.prop-gen .prop .label,
+.question .form_field.prop-group .props label {
+	width: 50%;
+	text-align: right;
+	display: table-cell;
+	vertical-align: top;
+	padding: 10px;
+	font-family: OpenSansSemiBold, Arial, sans-serif;
+}
+
+.prop-wrapper.prop-gen .prop .val,
+.question .form_field.prop-group .props span.extra_value_renderer_readonly {
+	display: table-cell;
+	margin-left: 5px;
+	padding: 10px;
+	vertical-align: top;
+}
+
+.prop-wrapper.prop-gen .prop .rtb + .rtb {
+	margin-left: 15px;
+}
+
+.prop-wrapper.prop-gen .prop .rtb label {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 2px;
+}
+
+.prop-wrapper.prop-gen .prop .rtb > input[type=radio],
+.prop-wrapper.prop-gen .prop .ctb > input[type=checkbox] {
+	margin-top: 6px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.prop-wrapper.prop-gen .prop .ctb {
+	display: block;
+}
+
+.prop-wrapper.prop-gen .prop .ctb label {
+	display: inline-block;
+	vertical-align: top;
+	margin: 2px 0px 0px 9px;
+}
+
+.prop-wrapper.prop-gen .prop .cb-field .ctb {
+	margin-bottom: 15px;
+}
+
+.prop-wrapper.prop-gen .prop .label .secondary {
+	display: block;
+	font-size: 12px;
+}
+
+.prop-wrapper.prop-gen .prop textarea {
+	width: 100%;
+}
+
+.prop-wrapper.prop-gen .prop-header-actions .actions,
+.prop-wrapper.prop-gen .prop-footer-actions .actions {
+	margin-left: 50%;
+	padding: 0 10px;
+}
+
+.prop-wrapper.prop-gen .prop-group .prop-group-title > * {
+	text-align: left;
+	width: 100%;
+	display: inline-block;
+	margin: 20px 0px;
+	background: #062B47;
+	padding: 5px 20px;
+	border-radius: 3px;
+	font-family: OpenSansSemiBold, Arial, sans-serif;
+	font-size: 24px;
+	color: #FFFFFF;
+}
+
+.prop-wrapper.prop-gen .message-container .message {
+	margin: 10px 0px;
+}
+
+.prop-wrapper.prop-gen .actions.top {
+	display: none;
+}
+
+.prop-wrapper.prop-gen .phone_field .phone_number_format .rtb + .rtb {
+	margin-left: 15px;
+}
+
+.prop-wrapper.phone_field .phone_number_entry_con .label_con.extension_label_con .extension_label.label {
+	margin-left: 15px;
+}
+
+.prop-wrapper.prop-gen .prop.account-link .val input {
+	width: 100%;
+}
+
+.prop-wrapper.prop-gen .prop .val a {
+	color: #EE7421;
+	text-decoration: none;
+}
+
+.prop-wrapper.prop-gen .prop .val a:hover {
+	text-decoration: underline;
+}
+
+.prop-wrapper.prop-gen .prop .val .select2-choice {
+	color: #444;
+}
+
+.prop-wrapper.prop-gen .prop .val .select2-choice:hover {
+	text-decoration: none;
+}
+
+
+/* horizontal property edtior */
+.prop-wrapper.prop-horizontal .props {
+	display: table;
+	width: 100%;
+}
+
+.prop-wrapper.prop-horizontal .prop {
+	display: table-cell;
+	padding: 0 5px;
+}
+
+.prop-wrapper.prop-horizontal .prop .label {
+	font-family: OpenSansSemiBold;
+	margin-right: 5px;
+}
+
+.prop-wrapper.prop-horizontal .meeeting-date .actions button.btn {
+	margin: 0;
+}
+
+.prop-wrapper.prop-horizontal .meeeting-date .actions button.btn + .btn {
+	margin-left: 5px;
+}
+
+.prop-wrapper .prop.profile {
+	position: relative;
+	border: 0;
+}
+
+/* dialog specific props */
+.dialog.prop-wrapper.prop-gen .actions button {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.dialog.prop-wrapper.prop-gen.note-editor .prop > .label {
+	width: 10%;
+}
+
+.dialog.prop-wrapper.prop-gen.note-editor .prop > .val textarea {
+	min-height: 80px;
+}
+
+.dialog.prop-wrapper.prop-gen.note-editor .prop-footer-actions .actions {
+	margin-left: 0;
+	text-align: right;
+}
+
+.prop-wrapper.password-viewer.prop-gen .prop-header-actions .actions.top{
+	display: block;
+}
+

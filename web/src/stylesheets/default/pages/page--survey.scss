@@ -1,0 +1,100 @@
+@import "../config/base-vars";
+@import "../components/survey-response";
+
+.survey-title{
+	font-size: 20px;
+}
+
+.survey{
+	width: 90%;
+	margin: auto;
+	text-align: left;
+}
+
+.survey .question {
+	margin: 10px 0;
+	text-align: left;
+	border: 1px solid #EEEEEE;
+	padding: 10px;
+	position: relative;
+}
+
+.survey .question .label{
+	font-family: $font-open-sans;
+	font-weight: 600;
+}
+
+.survey .question .extra_value_renderer{
+	margin: 5px 20px;
+}
+
+.survey .next_button-con{
+	text-align: right;
+}
+
+.survey .question table.extra_value_renderer{
+	margin: 20px 0;
+	width: 100%;
+}
+
+.survey .question td{
+	width: 0.01%;
+	text-align: center;
+}
+
+.question .text_field span.label{
+	display: block;
+	vertical-align: top;
+}
+
+.question .text_field textarea.extra_value_renderer{
+	width: 100%;
+	margin: 10px 0 0;
+}
+
+.survey button[disabled=disabled]{
+	display: none;
+}
+
+.survey .question.submit{
+	text-align: right;
+}
+
+.survey .question.submit{
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+.survey .question .submit_button{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.survey .wizard_step_navigator {
+	margin: 2em 0;
+}
+
+.survey .wizard_step_navigator span {
+	padding: 10px 10px;
+	background: $color-hab-orange;
+	border: 1px solid $color-white;
+	color: $color-white;
+	font-family: $font-open-sans;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.survey .wizard_step_navigator a {
+	text-decoration: none;
+}
+
+.survey .wizard_step_navigator span.selected {
+	background-color: $color-hab-yellow;
+	color: #404040;
+}
+
+.survey .wizard_procedure_step_header {
+	display: none;
+}
