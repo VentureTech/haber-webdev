@@ -198,13 +198,8 @@
 	top: 50%;
 	visibility: hidden;
 	opacity: 0;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	-ms-transition: all 0.3s;
 	transition: all 0.3s;
 	padding: 10px;
-	-webkit-box-shadow: 0 0 6px rgba(0,0,0,0.1);
-	-moz-box-shadow: 0 0 6px rgba(0,0,0,0.1);
 	box-shadow: 0 0 6px rgba(0,0,0,0.1);
 	border: 1px solid #eaeaea;
 	background-color: #fff;
@@ -221,12 +216,95 @@
 	text-align: right;
 }
 
-.period-selector .control-extra.date-range .question + .question {
-	margin-top: 5px;
-}
+.period-selector {
 
-.period-selector .control-extra.date-range .question label {
-	display: block;
+	.control .select2-container {
+		width: 15.35rem !important;
+	}
+
+	.control-extra {
+		width: 15.35rem;
+
+		span.val {
+			width: 100%;
+
+			input {
+				width: inherit;
+			}
+		}
+
+		&.date-range,
+		&.cycle-range {
+			label {
+				display: block;
+			}
+			.question + .question {
+				margin-top: 5px;
+			}
+		}
+
+		.actions input[type="submit"] {
+			background: $color-hab-orange;
+			border: 1px solid darken($color-hab-orange, 5%);
+			font-weight: 700;
+			border-radius: $btn-border-radius;
+			box-shadow: none;
+			color: $color-white;
+			padding: .6rem 1rem .4rem;
+			line-height: 1.25;
+
+			&:hover {
+				background: darken($color-hab-orange, 5%);
+			}
+		}
+	}
+
+	.picker {
+		display: none;
+		margin-top: .5rem;
+		border: 1px solid #e5e5e5;
+		width: 100%;
+
+		.year-select {
+			background-color: $color-hab-orange;
+			text-align: center;
+
+			select {
+				width: 5rem;
+			}
+		}
+
+		.selection-container {
+
+			div {
+				display: inline-block;
+				vertical-align: top;
+				font-size: .85rem;
+				color: $color-hab-orange;
+				cursor: pointer;
+				border: 1px solid #e5e5e5;
+				border-collapse: collapse;
+				text-align: center;
+				font-weight: 600;
+			}
+
+			&.cycle {
+				div {
+					width: 33.33%;
+				}
+			}
+
+			&.month {
+				div {
+					width: 25%;
+				}
+			}
+		}
+
+		&.active {
+			display: block;
+		}
+	}
 }
 
 .period-selector .control .summary {

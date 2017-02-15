@@ -25,9 +25,7 @@
 			border-color: $color-app-red;
 			color: $color-white;
 		}
-
 	}
-
 }
 
 .btn {
@@ -41,7 +39,6 @@
 	&.go, &.back-home {
 		@include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
 	}
-
 }
 
 .action-column .btn {

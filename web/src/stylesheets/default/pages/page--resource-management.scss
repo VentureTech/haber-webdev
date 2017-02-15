@@ -3,9 +3,11 @@
 @import "../../../../../bower_components/bootstrap/scss/mixins";
 @import "../../../../../bower_components/bootstrap/scss/buttons";
 
-.resource-editor .category-checkbox > .the_6_pillars .ctb + .ctb,
-.resource-editor .category-checkbox > .type_of_research .ctb + .ctb {
-	margin-top: 5px;
+.resource-editor .category-checkbox {
+	> .the_6_pillars .ctb + .ctb,
+	> .type_of_research .ctb + .ctb {
+		margin-top: 5px;
+	}
 }
 
 .miwt-table .action-column {

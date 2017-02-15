@@ -1,5 +1,11 @@
 @import "../mixins/table";
 
+.miwt-table-con {
+	@include media-breakpoint-down(md) {
+		overflow: auto;
+	}
+}
+
 .miwt-table, .gen-table {
 	@include style-table;
 	font-size: 100%;
@@ -10,13 +16,14 @@
 	border: 1px solid #C2C2C2;
 	border-top: 1px solid #25282A;
 	border-bottom: none;
+	max-width: 100%;
 
 	> thead > tr {
 		> th {
 			//@include style-table-heading;
 			background: #25282a;
 			background: linear-gradient(to bottom,  #25282a 0%,#696c6e 100%);
-			font-size: 18px;
+			font-size: 14px;
 			color: $color-white;
 			font-weight: 400;
 			padding: 10px 15px;
@@ -24,6 +31,10 @@
 			font-family: $font-open-sans;
 			border-bottom: 1px solid #C2C2C2;
 			line-height: 24px;
+
+			@include media-breakpoint-up(xl) {
+				font-size: 18px;
+			}
 
 			+ th {
 				border-left: 1px solid #C2C2C2;
@@ -44,22 +55,34 @@
 			font-size: 14px;
 			background-color: $color-white;
 
+			a {
+				color: $color-hab-orange;
+			}
+
 			+ td {
 				border-left: 1px solid #C2C2C2;
 			}
 
 			&.action-column, &.last-column {
-				a {
-					font-size: 14px;
-					color: $color-hab-orange;
+
+				a, button {
+					@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+					@include button-size($btn-padding-y-sm, $btn-padding-x-sm, 13px, $btn-border-radius-sm);
+					font-size: 13px;
+					margin: 0 5px 5px 0;
 					text-transform: uppercase;
 					font-weight: 600;
-					background: transparent;
-					border: none;
+					display: inline-block;
+					vertical-align: middle;
+					text-align: center;
+
+					&.btn {
+						line-height: 1.25;
+						//padding: .25rem .5rem .35rem;
+					}
+
 					&:hover {
-						background: transparent;
-						border: none;
-						color: $color-hab-orange;
+						text-decoration: none;
 					}
 
 					&:focus {
@@ -67,6 +90,10 @@
 						box-shadow: none;
 					}
 				}
+			}
+
+			&.action-column {
+				min-width: 8.5rem;
 			}
 		}
 

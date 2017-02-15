@@ -5,14 +5,14 @@
 /******************************************/
 
 @media all and (min-width: 1024px) and (max-width: 1279px) {
-	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
+	#t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0 {
 		width: 980px;
 	}
-	.primary-menu + .primary-menu{
+	.primary-menu + .primary-menu {
 		margin-left: 30px;
 	}
 
-	.primary-menu .menu-t1 > .mi + .mi{
+	.primary-menu .menu-t1 > .mi + .mi {
 		margin-left: 30px;
 	}
 }

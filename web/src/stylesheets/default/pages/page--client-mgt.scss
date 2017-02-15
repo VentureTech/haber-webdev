@@ -1,3 +1,5 @@
+@import "../config/base-import";
+
 /* save to complete the stream storage copy */
 button.btn,
 button.btn,
@@ -170,6 +172,168 @@ button.btn {
 		}
 	}
 
+	&.prop-gen.prop-wrapper {
+
+		> .prop-body > .prop-group {
+			padding: 1rem;
+			border: 1px solid #e5e5e5;
+
+			+ .prop-group {
+				margin-top: 2rem;
+			}
+		}
+
+		.prop-editor {
+			padding: 0;
+		}
+
+		.props, .prop {
+			display: block;
+		}
+
+		.prop-group.activity-specific {
+			input[type="text"],
+			input[type="tel"],
+			input[type="email"] {
+				width: 100%;
+				max-width: 20rem;
+			}
+
+			.select2-container {
+				width: 20rem !important;
+			}
+		}
+
+		.props {
+
+			> label {
+				display: block;
+				font-weight: 500;
+				font-size: 1.25rem;
+			}
+
+			&.schedule {
+				> .select2-container {
+					padding: 10px;
+				}
+			}
+
+			.schedule-editor {
+
+				.freq-label {
+					margin-right: .35rem;
+				}
+
+				.prop .val {
+					input[type="text"] {
+						max-width: 8rem;
+						margin-right: .5rem;
+					}
+
+					.select2-container {
+						width: 9rem !important;
+					}
+				}
+
+				.prop.schedule-cyle-offset {
+					.val .select2-container:last-of-type {
+						width: 12.5rem !important;
+						margin-left: 0;
+						margin-top: .5rem;
+
+						@include media-breakpoint-up(lg) {
+							margin-top: 0;
+							margin-left: .35rem;
+						}
+					}
+				}
+			}
+		}
+
+		.prop {
+			.label, label, > .val {
+				display: inline-block;
+				vertical-align: top;
+				padding: 10px;
+			}
+
+			.label, label {
+				width: 35%;
+				text-align: left;
+				font-family: $font-open-sans;
+				font-weight: 600;
+				max-width: 20rem;
+
+				label {
+					width: 100%;
+					padding: 0;
+					display: block;
+				}
+			}
+
+			> .val {
+				width: 60%;
+				text-align: left;
+				margin-left: 10px;
+
+				.val {
+					display: inline-block;
+					vertical-align: top;
+					margin-left: 0;
+					padding: 0;
+				}
+
+				input[type="text"],
+				input[type="tel"],
+				input[type="email"] {
+					width: 100%;
+					max-width: 20rem;
+				}
+
+				.select2-container {
+					width: 20rem !important;
+				}
+
+				div.actions {
+					display: block;
+					vertical-align: middle;
+					padding: 0;
+					margin: .5rem 0 0;
+
+					@include media-breakpoint-up(xl) {
+						display: inline-block;
+						vertical-align: middle;
+						padding: 0 .5rem;
+						margin: -1px 0 0;
+					}
+				}
+			}
+		}
+
+		.ctb {
+			padding: 10px;
+
+			input.prop {
+				display: inline;
+			}
+			label.tbl {
+				display: inline;
+				margin-left: 5px;
+			}
+		}
+
+		.notification {
+			.prop > .val {
+				p {
+					margin: .5rem 0;
+				}
+				.select2-container {
+					width: 12.25rem !important;
+				}
+			}
+		}
+	}
+
 	.prop .label {
 		width: 35%;
 	}
@@ -194,6 +358,11 @@ button.btn {
 		border: 1px solid #eaeaea;
 		display: inline-block;
 		padding: 5px;
+		width: 100%;
+
+		@include media-breakpoint-up(lg) {
+			width: auto;
+		}
 	}
 
 	.email_template_selector > div {
@@ -358,10 +527,105 @@ button.btn {
 	}
 }
 
+div.window.dialog {
+	.prop-wrapper.prop-gen.email-selector {
+		.props, .prop {
+			display: block;
+		}
+
+		.prop {
+			.val, .label {
+				display: block;
+				width: 100%;
+				text-align: left;
+			}
+
+			.label {
+				padding: 0;
+			}
+
+			.val {
+				margin: 0 0 1rem;
+				padding: 0;
+			}
+
+			.select2-container {
+				max-width: 100%;
+			}
+		}
+	}
+}
+
 .resources {
 	label {
 		font-size: 1.5rem;
 		font-weight: 600;
 		margin: 1rem 0 0;
+	}
+}
+
+.company-cycles-setting-viewer {
+
+	.cycle-editor-con {
+		display: inline-block;
+		vertical-align: top;
+		padding: 1rem;
+		width: 46%;
+		margin: .75rem;
+		border: 1px solid #e5e5e5;
+
+		@include media-breakpoint-up(lg) {
+			width: 30.5%;
+		}
+
+		@include media-breakpoint-up(xl) {
+			width: 22.5%;
+		}
+	}
+
+	&.prop-wrapper .prop-body .prop {
+		display: block;
+		margin-bottom: .75rem;
+
+		.label, .val {
+			display: block;
+		}
+
+		.label {
+			width: 100%;
+			text-align: left;
+			padding: 0;
+			margin-bottom: 0;
+
+			label {
+				margin-bottom: 0;
+			}
+		}
+
+		.val {
+			width: 100%;
+			padding: 0;
+			margin-left: 0;
+		}
+	}
+
+	&.prop-wrapper .prop-footer-actions .actions {
+		margin-left: 0;
+		padding: 0;
+	}
+
+	.prop-editor .miwt-calendar {
+		input[type="text"] {
+			min-width: 5.5rem;
+			max-width: 5.5rem;
+		}
+	}
+}
+
+.prop-wrapper {
+	&.user-role-viewer, &.user-viewer {
+		.prop .val {
+			padding: 10px;
+		}
 	}
 }

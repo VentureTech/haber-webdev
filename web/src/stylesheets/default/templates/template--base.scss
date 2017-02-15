@@ -145,6 +145,13 @@ p a {
 }
 
 .miwt-calendar {
+	display: inline-block;
+	vertical-align: middle;
+
+	+ label {
+		display: inline-block;
+		vertical-align: middle;
+	}
 	button.open,
 	button.clear {
 		border: none;
@@ -171,13 +178,22 @@ p a {
 				color: $color-hab-orange;
 			}
 		}
+
+		&:focus {
+			outline: none;
+		}
 	}
+
+	button.open {
+		width: 30px;
+
+		&::before {
+		font-size: 1.15rem;
+	}
+	}
+
 	button.clear {
 		display: none;
-		/*padding-right: 0;
-		&:before {
-			content: '\f00d';
-		}*/
 	}
 }
 

@@ -49,7 +49,6 @@
 			text-align: left;
 		}
 
-
 		&:hover {
 			background-color: $color-cloud-grey;
 			> a.menu-item,
@@ -60,10 +59,12 @@
 	}
 
 	li.parent-menu {
+
 		> a.menu-item {
 			//background: url(/_resources/all/docroot/miwt/component/images/menu-expand.gif) no-repeat left center;
 			background: none;
 		}
+
 		> a.menu-item:before {
 			font-family: FontAwesome;
 			content: "\f0d9";

@@ -6,6 +6,10 @@
 	clear: left;
 	float: left;
 	width: 90%;
+
+	+ .file-row {
+		margin-top: .75rem;
+	}
 }
 
 .one-to-one-attachment-viewer .file-row .delete {
@@ -43,6 +47,10 @@ input.file-upload-browse {
 
 .file-upload-browse.has-files .file-upload-drop-zone {
 	max-height: 90px;
+}
+
+.file-upload-browse.has-files + .actions {
+	margin-top: 1rem;
 }
 
 .file-upload-drop-zone.zone-active {
@@ -218,6 +226,10 @@ input.file-upload-browse {
 	padding-left: 5px;
 	padding-right: 5px;
 	position: relative;
+
+	.btn.remove {
+		@include button-variant($color-app-red, $color-white, $color-app-red);
+	}
 }
 
 .file-upload:hover .file-upload-part {

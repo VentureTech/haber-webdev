@@ -287,6 +287,103 @@
 	}
 }
 
+div.window.dialog {
+
+	.instructions {
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.sample-file {
+		margin-bottom: 1rem;
+
+		.btn {
+			background:none;
+			padding: 0;
+			color: $color-hab-orange;
+			text-decoration: underline;
+			font-size: .9rem;
+
+			&:hover {
+				background: none;
+				text-decoration: none;
+			}
+		}
+	}
+
+	div.upload {
+		display: block;
+		margin-bottom: 1rem;
+		div.upload {
+			display: inline-block;
+			padding: .5rem;
+			border: 1px solid #e5e5e5;
+
+			label {
+				margin: 0 .5rem 0 0;
+				font-weight: 600;
+			}
+		}
+	}
+
+	.schedule-values.props {
+		display: block;
+
+		.prop {
+			display: block;
+			margin-top: 1rem;
+
+			.label, .val {
+				padding: 0;
+			}
+
+			.label {
+				display: block;
+				text-align: left;
+
+				label {
+					color: $font-default-color;
+					margin-bottom: .25rem;
+				}
+			}
+
+			.val {
+				input[type="text"] {
+					width: 3.5rem;
+					margin-right: .5rem;
+				}
+			}
+
+			&.schedule-cyle-offset, &.schedule-next-cycle {
+				.select2-container:last-of-type {
+					width: 12rem !important;
+				}
+			}
+		}
+	}
+
+	.working-period {
+		margin-bottom: 1.5rem;
+		padding-bottom: 1.5rem;
+		border-bottom: 1px solid #e5e5e5;
+
+		label {
+			font-weight: 600;
+		}
+
+		input {
+			margin: 0 .5rem;
+		}
+	}
+
+	div.actions {
+		border-top: 1px solid #e5e5e5;
+		padding-top: 2rem;
+		margin-top: 1.25rem;
+	}
+}
+
 @media (max-width: 768px) {
 	.edit-user .user-picture-editor {
 		text-align: center;

@@ -1,7 +1,17 @@
 @import "../config/base-vars";
+@import "../../../../../bower_components/bootstrap/scss/mixins";
 
 .inlinewindow {
 	position: relative;
+}
+
+.form_field {
+	input[type="text"] {
+		@include media-breakpoint-down(lg) {
+			width: 100%;
+			max-width: 100%;
+		}
+	}
 }
 
 .activitylinks .profile .person .photo{
@@ -689,6 +699,20 @@
 .activity-management .prop-wrapper.prop-gen .actions.top,
 .pre-call-plan-editor .prop-wrapper.prop-gen .actions.top{
 	display: block;
+	margin-left: 0;
+	text-align: right;
+}
+
+.activity-management .prop-wrapper.prop-gen .actions.bottom {
+	&::after {
+		content: '';
+		clear: both;
+		display: table;
+	}
+
+	.btn.edit {
+		float: right;
+	}
 }
 
 .pipeline-link{
@@ -1047,5 +1071,16 @@
 		width: auto;
 		margin-right: 0;
 		display: block;
+	}
+}
+
+.activityinstanceapp {
+	div.window.dialog {
+		left: 50% !important;
+		margin-left: -250px;
+
+		.note-editor .prop-footer {
+			margin-top: 1rem;
+		}
 	}
 }

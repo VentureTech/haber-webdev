@@ -35,14 +35,16 @@
 	border-top: 1px solid #c2c2c2;
 	border-left: 1px solid #c2c2c2;
 	color: #fff;
-	font-size: 14px;
+	font-size: 13px;
 	width: 20%;
 	padding: 10px;
 	margin-right: -4px;
 	box-sizing: border-box;
 	height: 60px;
+	word-wrap: break-word;
+	word-break: normal;
 
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(xl) {
 		font-size: 16px;
 		height: auto;
 	}
@@ -108,4 +110,22 @@
 	@include button-variant($color-white, $color-hab-orange, darken($color-hab-orange, 5%));
 	font-family: $font-open-sans;
 	font-weight: 700;
+}
+
+.activity-management .form_content,
+.genform .form_content {
+	.sales-presentation-cert {
+		.question.total-score {
+			width: 100%;
+
+			.form_field {
+				&:first-of-type {
+					width: 60%;
+				}
+				&:last-of-type {
+					width: 20%;
+				}
+			}
+		}
+	}
 }

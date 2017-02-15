@@ -120,7 +120,7 @@ label.title{
 		position: absolute;
 		right: 3px;
 		top: 3px;
-		background-color: #EE7421;
+		background-color: $color-hab-orange;
 	}
 }
 
@@ -140,7 +140,7 @@ label.title{
 	vertical-align: top;
 
 	button.btn:hover, button.btn:hover{
-		background-color: #CE5809;
+		background-color: darken($color-hab-orange, 5%);
 	}
 
 	&.selected {
@@ -163,7 +163,7 @@ label.title{
 
 	&:hover {
 		a{
-			color: #EE7421;
+			color: darken($color-hab-orange, 5%);
 			text-decoration: none;
 		}
 	}
@@ -173,4 +173,8 @@ div.window.dialog {
 	input[type="text"] {
 		min-width: 8.5rem;
 	}
+}
+
+.prop-wrapper.prop-gen .prop .val a.btn {
+	color: $color-white;
 }

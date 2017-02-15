@@ -3,10 +3,7 @@
 /* This is the default Tooltipster theme (feel free to modify or duplicate and create multiple themes!): */
 .tooltipster-base.ecsell-popup {
 	background-color: #fff;
-	-webkit-box-shadow: 0 0 6px rgba(0,0,0,0.1);
-	-moz-box-shadow: 0 0 6px rgba(0,0,0,0.1);
 	box-shadow: 0 0 6px rgba(0,0,0,0.1);
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 	color: #3b3e40;
 	font-family: OpenSansSemiBold, Arial, Verdana, sans-serif;
@@ -23,7 +20,6 @@
 	font-size: 16px;
 	line-height: 1.4;
 	padding: 5px 10px;
-	-moz-border-radius: 3px 3px 0 0;
 	border-radius: 3px 3px 0 0;
 }
 
