@@ -1,0 +1,76 @@
+.table_data_mgt {
+
+	.row_editor > div {
+		> div {
+			+ div {
+				margin-top: 1rem;
+			}
+		}
+	}
+
+	.row_editor {
+
+		> span.heading {
+			font-size: 16px;
+			font-weight: 600;
+			margin-bottom: 1rem;
+			display: block;
+		}
+
+		.name, .sort {
+			label {
+				display: block;
+				margin-bottom: .25rem;
+			}
+		}
+
+		.name input {
+			width: 15rem;
+		}
+
+		.sort input {
+			width: 4rem;
+		}
+
+		.company-wrapper {
+			.company {
+				margin-bottom: .25rem;
+
+				label {
+					font-weight: 600;
+
+					&::after {
+						content: ':';
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+
+		.add.activities {
+			label {
+				font-weight: 600;
+				margin-right: .5rem;
+				font-size: 16px;
+				vertical-align: middle;
+			}
+		}
+
+		.activities {
+			div + div {
+				margin-top: 1rem;
+			}
+
+			.activity {
+				display: block;
+				margin-bottom: .25rem;
+			}
+		}
+
+		.actions.persistence-actions {
+			margin-top: 1rem;
+			padding-top: 1rem;
+			border-top: 1px solid #e5e5e5;
+		}
+	}
+}
