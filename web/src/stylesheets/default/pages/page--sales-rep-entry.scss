@@ -35,4 +35,12 @@
 .rep-activity-main .activity-result-editor .actions {
 	margin-left: 0;
 	@include clearfix();
+
+	&.survey-activity {
+		text-align: right;
+
+		button.btn.edit {
+			float: none;
+		}
+	}
 }
