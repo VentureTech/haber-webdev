@@ -84,6 +84,10 @@
     border: none;
     float: none;
 
+    &.cancel::before {
+      background-image: url(/_resources/dyn/files/17928ze96a41d4/_fn/cancel_round.png)
+    }
+
     &:hover {
       background: none;
       border: none;
