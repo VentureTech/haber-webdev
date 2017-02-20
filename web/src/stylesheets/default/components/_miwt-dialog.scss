@@ -153,6 +153,10 @@ div.window.dialog /*specificity*/ {
 		padding: 2px 5px;
 	}
 
+	.prop-wrapper .prop-header-title {
+		margin: 0 0 1rem;
+	}
+
 	.prop-group.time {
 		label.prop-group-title {
 			margin-bottom: -2.5rem;

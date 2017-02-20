@@ -218,7 +218,7 @@
 
 .full-view .table-partition.primary {
 	float: left;
-	width: 460px;
+	width: 510px;
 }
 
 .table-partition.primary:before {
@@ -237,7 +237,7 @@
 
 .full-view .table-partition.data {
 	position: absolute;
-	left: 460px;
+	left: 510px;
 	right: 0;
 	top: -125px;
 }
@@ -280,6 +280,8 @@
 	height: 20px;
 	background: transparent url(/_resources/dyn/files/16246zec6143d1/_fn/expand-collapse.png) no-repeat;
 	background-position: 0px -40px;
+	vertical-align: top;
+	margin-top: 12px;
 }
 
 .table-part th.label:hover:before {
@@ -361,7 +363,20 @@
 .table-part th.label,
 .table-part td.label {
 	text-align: left;
-	width: 280px;
+	width: 310px;
+}
+
+.table-part th.label {
+	text-align: left;
+	width: 310px;
+	display: inline-block;
+	height: 44px;
+
+	span.label-title {
+		display: inline-block;
+		width: 90%;
+		vertical-align: middle;
+	}
 }
 
 .table-part th > .inner,

@@ -551,10 +551,18 @@
 	color: $color-hab-orange;
 	font-size: .9rem;
 	padding: 0;
+	text-transform: none;
+	background: transparent;
 
 	&:hover {
 		color: $color-hab-orange;
 		text-decoration: underline;
+	}
+
+	&:focus, &:active {
+		outline: none;
+		text-decoration: underline;
+		box-shadow: none;
 	}
 }
 

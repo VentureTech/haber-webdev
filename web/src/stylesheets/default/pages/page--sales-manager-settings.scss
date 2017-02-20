@@ -1,4 +1,5 @@
 @import "../config/base-vars";
+@import "../../../../../bower_components/bootstrap/scss/mixins";
 
 .salesmanagersettings {
 	position: relative;
@@ -381,6 +382,27 @@ div.window.dialog {
 		border-top: 1px solid #e5e5e5;
 		padding-top: 2rem;
 		margin-top: 1.25rem;
+	}
+
+	.props.schedule-values {
+		margin-bottom: 1rem;
+	}
+
+	div.confirm {
+		+ .actions.persistence-actions.bottom {
+			.btn {
+				display: block;
+
+				&:not(.cancel) {
+					width: 26.25rem;
+				}
+
+				+ .btn {
+					margin-left: 0;
+					margin-top: .5rem;
+				}
+			}
+		}
 	}
 }
 
@@ -767,6 +789,28 @@ div.window.dialog {
 .sales-goal-wizard .help-content.shown a.trigger:hover:after {
 	background-color: #EE7421;
 	border-color: #CE5809;
+}
+
+/* ----- TRACKED GOALS */
+.tracked-goal {
+
+	+ .tracked-goal {
+		margin-top: 1.5rem;
+		padding-top: 1rem;
+		border-top: 1px solid #e5e5e5;
+	}
+
+	.title {
+		font-weight: 600;
+		font-size: 20px;
+		margin-bottom: .5rem;
+	}
+
+	.actions {
+		.btn.disable {
+			@include button-variant($color-hab-orange, $color-white, $color-hab-orange);
+		}
+	}
 }
 
 @media all and (min-width: 768px) and (max-width: 1023px) {
