@@ -124,4 +124,12 @@ jQuery(function($) {
             showSelectedSubrows();
         });
     });
+
+    //Fit text to cells
+    $('.table-partition.primary th.label').textfill({
+        minFontPixels: 8,
+        maxFontPixels: 24,
+        debug: true
+    });
+
 });
