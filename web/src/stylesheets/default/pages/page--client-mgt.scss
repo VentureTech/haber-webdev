@@ -554,6 +554,49 @@ div.window.dialog {
 			}
 		}
 	}
+
+	.props.schedule-values {
+		margin-bottom: 1rem;
+	}
+
+	div.confirm {
+		+ .actions.persistence-actions.bottom {
+			.btn {
+				display: block;
+
+				&:not(.cancel) {
+					width: 26.5rem;
+				}
+
+				+ .btn {
+					margin-left: 0;
+					margin-top: .5rem;
+				}
+			}
+		}
+	}
+}
+
+/* ----- TRACKED GOALS */
+.tracked-goal {
+
+	+ .tracked-goal {
+		margin-top: 1.5rem;
+		padding-top: 1rem;
+		border-top: 1px solid #e5e5e5;
+	}
+
+	.title {
+		font-weight: 600;
+		font-size: 20px;
+		margin-bottom: .5rem;
+	}
+
+	.actions {
+		.btn.disable {
+			@include button-variant($color-hab-orange, $color-white, $color-hab-orange);
+		}
+	}
 }
 
 .resources {
