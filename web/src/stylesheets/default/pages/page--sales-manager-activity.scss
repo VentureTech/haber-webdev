@@ -230,3 +230,15 @@
 .activity-resources .mCSB_scrollTools .mCSB_buttonRight:hover {
 	opacity: 1;
 }
+
+.activity-quick-add {
+	a.btn {
+		color: $color-hab-orange;
+
+		&:focus, &:active {
+			box-shadow: none;
+			outline: none;
+			text-decoration: underline;
+		}
+	}
+}
