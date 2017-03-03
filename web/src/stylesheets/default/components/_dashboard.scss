@@ -435,6 +435,31 @@
 	display: block;
 }
 
+/* DASHBOARD TABLE PERSONS */
+
+.person-data .photo {
+	height: 140px;
+}
+
+.person-data .details{
+	opacity: 0;
+	-webkit-transition: all 0.25s;
+	-moz-transition: all 0.25s;
+	-ms-transition: all 0.25s;
+	transition: all 0.25s;
+	position: absolute;
+	//top: 97px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #333639;
+	background-color: rgba(0,0,0,0.6);
+}
+
+.person-data:hover .details {
+	opacity: 1;
+}
+
 /* table part person styles */
 .table-part th .person {
 	position: absolute;
@@ -451,6 +476,7 @@
 
 .table-part th .person .meta {
 	margin-right: 35px;
+	margin-bottom: -3px;
 }
 
 .table-part th .person .notifications {
@@ -505,6 +531,10 @@
 /* table part misc */
 .table-part .joint-sales-type-chooser {
 	margin-left: 10px;
+}
+
+tr.joint-sales-calls .select2-container {
+	margin-left: .5rem;
 }
 
 .table-part .select2-container .select2-choice > .select2-chosen {
