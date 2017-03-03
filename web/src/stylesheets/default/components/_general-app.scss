@@ -415,13 +415,13 @@
 	overflow: hidden;
 }
 
-.person .meta .position {
+.person .meta .position,
+.person .meta .disc {
 	font-size: 11px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-
 
 .profile {
 	position: relative;
@@ -482,29 +482,4 @@
 			}
 		}
 	}
-}
-
-/* DASHBOARD TABLE PERSONS */
-
-.person-data .photo {
-	height: 140px;
-}
-
-.person-data .details{
-	opacity: 0;
-	-webkit-transition: all 0.25s;
-	-moz-transition: all 0.25s;
-	-ms-transition: all 0.25s;
-	transition: all 0.25s;
-	position: absolute;
-	top: 97px;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: #333639;
-	background-color: rgba(0,0,0,0.6);
-}
-
-.person-data:hover .details {
-	opacity: 1;
 }
