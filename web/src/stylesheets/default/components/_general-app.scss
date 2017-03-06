@@ -483,3 +483,85 @@
 		}
 	}
 }
+
+.prop-wrapper.reminder-editor {
+	span.header {
+		font-size: 1.25rem;
+		display: block;
+		margin-bottom: 1rem;
+	}
+
+	.reminders-con .reminder-editor {
+		+ .reminder-editor {
+			border-top: 1px solid #e5e5e5;
+			margin-top: 1rem;
+			padding-top: 1rem;
+		}
+	}
+
+	.editor {
+		input[type="text"] {
+			width: 3.5rem;
+			vertical-align: middle;
+			min-width: auto;
+		}
+
+		> span {
+			margin-right: .35rem;
+			font-size: .9rem;
+		}
+
+		.select2-container {
+			margin-left: .5rem;
+
+			&:last-of-type {
+				width: 205px !important;
+			}
+		}
+
+		+ div.actions {
+			border-top: none;
+			padding-top: 0;
+			margin-top: .5rem;
+			text-align: right;
+			padding-right: 13px;
+
+			.btn {
+				@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
+
+				&.delete {
+					@include button-variant($color-app-red, $color-white, $color-app-red);
+				}
+			}
+		}
+	}
+
+	.reminders-con {
+		> .actions {
+			padding-top: 1.25rem;
+			border-top: 1px solid #e5e5e5;
+
+			.btn[data-text-confirm] {
+				padding: 0;
+				background: transparent;
+				color: $color-hab-orange;
+				border: none;
+				text-decoration: underline;
+				margin-top: 1rem;
+				text-transform: none;
+				display: block;
+				font-weight: 600;
+
+				&:focus, &:active {
+					box-shadow: none;
+					outline: none;
+					text-decoration: underline;
+				}
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
