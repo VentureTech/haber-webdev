@@ -2,7 +2,7 @@
 @import "../../../../../bower_components/bootstrap/scss/mixins";
 
 .salesmanagersettings {
-	position: relative;
+	//position: relative;
 }
 
 .navigation-actions {
@@ -250,6 +250,10 @@
 	float: right;
 }
 
+.edit-user > .user-picture-editor > .actions {
+	margin-top: 1rem;
+}
+
 .edit-user > .actions button {
 	margin: 0;
 }
@@ -404,6 +408,64 @@ div.window.dialog {
 			}
 		}
 	}
+
+	&.create-new-position {
+		width: 525px !important;
+
+		.prop-wrapper.prop-gen {
+			padding: 0;
+
+			.prop-body .prop-group {
+				padding: 0;
+			}
+
+			.prop-body .prop {
+
+				&.is-super-vp:first-of-type .val {
+					padding-bottom: 0;
+				}
+
+				&.is-super-vp:last-of-type .val {
+					padding-top: 0;
+				}
+
+				.label {
+					padding-left: 0;
+				}
+
+				> .val {
+					padding-left: 0;
+				}
+
+				.rtb {
+					.val {
+						width: auto;
+					}
+
+					label.val.tbl {
+						width: 75%;
+						padding: 0;
+					}
+				}
+			}
+
+			.prop .label {
+				width: 45%;
+				font-weight: 600;
+				text-align: left;
+				font-size: 1rem;
+			}
+
+			.prop .val {
+				width: 50%;
+
+				input[type="text"] {
+					width: 75%;
+					min-width: 8rem;
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: 768px) {
@@ -447,7 +509,7 @@ div.window.dialog {
 
 @media (min-width: 1200px) {
 	.edit-user .user-picture-editor {
-		width: 33%;
+		width: 25%;
 		min-width: 330px;
 		display: inline-block;
 		vertical-align: top;
@@ -455,7 +517,7 @@ div.window.dialog {
 	}
 
 	.edit-user .prop-wrapper {
-		width: 33%;
+		width: 31%;
 		min-width: 330px;
 		display: inline-block;
 		vertical-align: top;
@@ -463,7 +525,31 @@ div.window.dialog {
 	}
 
 	.edit-user .prop-wrapper.prop-gen .props .prop .label {
-		width: 30%;
+		width: 35%;
+		text-align: left;
+	}
+
+	.edit-user .prop-wrapper.prop-gen .props .prop.supervisor .btn {
+		padding: 0;
+		color: $color-hab-orange;
+		font-weight: 600;
+		text-decoration: underline;
+		font-size: 14px;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		&:active, &:focus {
+			box-shadow: none;
+			outline: none;
+			text-decoration: underline;
+		}
+	}
+
+	.edit-user .prop-wrapper.prop-gen.user-viewer .prop-footer-actions .actions {
+		margin: 0;
+		padding: 0 10px;
 	}
 
 	.prop-wrapper.prop-gen .prop-header-actions .actions,
@@ -546,7 +632,8 @@ div.window.dialog {
 /* schedule editor popup */
 .prop-wrapper.schedule-editor .prop .label {
 	width: 40%;
-	vertical-align: middle;
+	vertical-align: top;
+	text-align: left;
 
 	label {
 		margin-bottom: 0;
@@ -556,7 +643,11 @@ div.window.dialog {
 }
 
 .prop-wrapper.schedule-editor .prop .val {
-	vertical-align: middle;
+	vertical-align: top;
+
+	.select2-container {
+		margin-top: .75rem;
+	}
 }
 
 .prop-wrapper.schedule-editor .prop-footer-actions .actions {
