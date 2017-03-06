@@ -253,6 +253,14 @@
 	text-shadow: none;
 }
 
+.retrieve-password {
+	margin-top: .25rem;
+
+	a {
+		font-size: .8rem;
+	}
+}
+
 .password-reset {
 	background: #fff;
 	font-family: $font-open-sans;
@@ -296,4 +304,85 @@
 .password-reset .actions .btn {
 	margin: .5rem auto 0;
 	display: block;
+}
+
+.first-time {
+	+ .login.password-reset {
+		margin-top: 0;
+
+		.password-rules {
+			padding: 0;
+		}
+
+		.fields {
+			width: 100%;
+		}
+
+		.field.password,
+		.field.verify-password {
+			width: 49%;
+
+			.value input {
+				width: 100%;
+			}
+		}
+
+		.field.verify-password {
+			margin-right: 0;
+		}
+
+		.actions {
+			width: 100%;
+			padding: 0;
+			margin-bottom: 1rem;
+
+			.btn {
+				float: right;
+				margin: .5rem .35rem 0 0;
+			}
+		}
+	}
+}
+
+/* ----- CREATE PASSWORD */
+.create-password.password-reset {
+	margin-top: 0;
+	border-radius: 0;
+
+	p.password-rules {
+		padding: 0;
+	}
+
+	&.login {
+		.fields {
+			width: 100%;
+		}
+
+		.field.password,
+		.field.verify-password {
+			.value input {
+				width: 100%;
+			}
+		}
+
+		.field.password {
+			width: 49%;
+		}
+
+		.field.verify-password {
+			margin-right: 0;
+			width: 49%;
+		}
+	}
+
+	.actions {
+		width: 100%;
+		padding: 0;
+
+		.btn {
+			margin: .5rem .35rem 0 0;
+			float: right;
+		}
+	}
+
 }
