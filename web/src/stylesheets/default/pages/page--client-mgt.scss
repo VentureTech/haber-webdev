@@ -29,9 +29,23 @@ button.btn {
 		.prop {
 			padding: 10px 0;
 		}
+	}
 
-		.label {
-			padding: 3px 10px 0;
+	&.company-emails {
+
+		.prop .val {
+			padding: 6px 10px 10px;
+		}
+
+		.email_template_selector {
+			> div {
+				display: inline-block;
+			}
+
+			.actions {
+				padding: 0;
+				margin: 0 0 0 1rem;
+			}
 		}
 	}
 }
@@ -88,12 +102,34 @@ button.btn {
 		}
 	}
 
+	.prop-wrapper.prop-gen .prop .extension_label-con .extension_label {
+		font-size: .75rem;
+		width: 100%;
+		padding: 0;
+	}
+
+	.prop-wrapper.prop-gen .prop.supervisor .val a {
+		color: $color-hab-orange;
+		font-weight: 600;
+		text-decoration: underline;
+
+		&:focus, &:active {
+			box-shadow: none;
+			outline: none;
+			text-decoration: underline;
+		}
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
 	.prop-footer .actions {
 		margin-right: 30px;
 	}
 
 	.prop-wrapper.prop-gen .props .prop .label{
-		width: auto;
+		padding-left: 0;
 	}
 
 	.prop-wrapper .prop .val{
@@ -181,6 +217,11 @@ button.btn {
 			+ .prop-group {
 				margin-top: 2rem;
 			}
+
+			.prop-group {
+				border: none;
+				padding: 0;
+			}
 		}
 
 		.prop-editor {
@@ -197,6 +238,7 @@ button.btn {
 			input[type="email"] {
 				width: 100%;
 				max-width: 20rem;
+				padding: 2px 5px;
 			}
 
 			.select2-container {
@@ -204,12 +246,67 @@ button.btn {
 			}
 		}
 
+		.prop_group.topics {
+			.untracked_topic {
+				position: relative;
+				width: 53rem;
+
+				> div {
+					width: 80%;
+					display: inline-block;
+					vertical-align: middle;
+				}
+
+				.prop label {
+					width: 48%;
+				}
+
+				.actions {
+					display: inline-block;
+					margin: 0;
+					vertical-align: middle;
+					width: auto;
+				}
+			}
+		}
+
 		.props {
 
 			> label {
-				display: block;
-				font-weight: 500;
+				display: inline-block;
+				font-weight: 600;
+				font-size: 1.5rem;
+				position: relative;
+				background: $color-white;
+				padding: 0 3px;
+				top: -2.25rem;
+			}
+
+			> .entity_value_editor {
+				margin-top: -1.75rem;
+			}
+
+			h2 {
+				font-size: 1rem;
+				font-weight: 600;
+			}
+
+			.head_text {
+				margin: 1.5rem 0;
+				border-bottom: 1px solid #e5e5e5;
+				padding-bottom: .35rem;
+				font-weight: 600;
 				font-size: 1.25rem;
+
+				label {
+					width: 41.5rem;
+					display: inline-block;
+					margin-bottom: 0;
+				}
+			}
+
+			.prop_group.fields + h2 {
+				margin-top: 2rem;
 			}
 
 			&.schedule {
@@ -248,13 +345,56 @@ button.btn {
 					}
 				}
 			}
+
+			&.activity-specific {
+
+				.prop.allow-overdue {
+					margin-top: -1.75rem;
+				}
+
+				.prop.allow-overdue .val {
+					width: auto;
+				}
+
+				.prop.allow-overdue .val input[type="checkbox"] {
+					margin-top: 0;
+				}
+
+				.prop.allow-overdue .label {
+					padding-left: 0;
+					padding-right: 0;
+				}
+
+				.prop.allow-overdue .label,
+				.prop.allow-overdue .label label {
+					max-width: none;
+					width: auto;
+					margin-bottom: 0;
+				}
+
+				.entity_value_editor {
+					margin-top: 1rem;
+				}
+
+				.entity_value_editor > .ctb.label-after {
+					padding: 10px 0;
+				}
+
+				.entity_value_editor > .ctb.label-after label.allow-file-attachments {
+					margin-bottom: 1.5rem;
+					display: inline-block;
+				}
+
+				.entity_value_editor > .ctb.label-after label {
+					font-weight: 600;
+				}
+			}
 		}
 
 		.prop {
 			.label, label, > .val {
 				display: inline-block;
 				vertical-align: top;
-				padding: 10px;
 			}
 
 			.label, label {
@@ -263,11 +403,30 @@ button.btn {
 				font-family: $font-open-sans;
 				font-weight: 600;
 				max-width: 20rem;
+				padding: 10px 10px 10px 25px;
 
 				label {
 					width: 100%;
 					padding: 0;
 					display: block;
+				}
+
+			}
+
+			.ctb {
+				display: inline-block;
+				vertical-align: middle;
+				padding: 0;
+			}
+
+			.prop {
+				display: inline-block;
+				vertical-align: middle;
+				padding: 10px;
+				width: 21rem;
+
+				input.val {
+					margin-left: 0;
 				}
 			}
 
@@ -275,6 +434,7 @@ button.btn {
 				width: 60%;
 				text-align: left;
 				margin-left: 10px;
+				padding: 10px;
 
 				.val {
 					display: inline-block;
@@ -288,6 +448,7 @@ button.btn {
 				input[type="email"] {
 					width: 100%;
 					max-width: 20rem;
+					padding: 2px 5px;
 				}
 
 				.select2-container {
@@ -306,6 +467,22 @@ button.btn {
 						padding: 0 .5rem;
 						margin: -1px 0 0;
 					}
+				}
+			}
+
+			&.tracked_topic {
+
+				label {
+					padding: 0 0 0 10px;
+					margin: 0;
+				}
+
+				+ h2 {
+					margin-top: 2rem;
+				}
+
+				+ .tracked_topic {
+					margin-top: 1rem;
 				}
 			}
 		}
@@ -527,6 +704,42 @@ button.btn {
 	}
 }
 
+/* ----- CAREER DEV PLAN */
+.edit-activity-tab.prop-gen.prop-wrapper .prop-group.activity-specific .career_questions .career_question {
+	position: relative;
+	width: 53rem;
+
+	label {
+		width: 20rem;
+	}
+
+	input[type="text"] {
+		max-width: none;
+		width: 25rem;
+	}
+
+	+ .career_question {
+		margin-top: 1.5rem;
+	}
+
+	.actions {
+		position: absolute;
+		right: 0;
+		top: .9rem;
+	}
+}
+
+.tab-content .resources {
+
+	+ .resources {
+		margin-top: 2rem;
+	}
+
+	> label {
+		font-size: 1.5rem;
+	}
+}
+
 div.window.dialog {
 	.prop-wrapper.prop-gen.email-selector {
 		.props, .prop {
@@ -554,13 +767,314 @@ div.window.dialog {
 			}
 		}
 	}
+
+	.prop-wrapper.prop-gen {
+		> .prop-body > .prop-group {
+			padding: 0;
+			border: none;
+		}
+
+		.prop.schedule-frequency {
+			margin-top: 1.25rem;
+			padding-top: .75rem;
+			border-top: 1px solid #e5e5e5;
+		}
+	}
+
+	.activity-schedule {
+		.prop .select2-container {
+			margin: .25rem 0;
+			width: 180px !important;
+		}
+	}
+
+	.props.schedule-values {
+		margin-bottom: 1rem;
+	}
+
+	.activity-dashboard-stting ,
+	.activity-dashboard-setting {
+		padding: 0;
+
+		&.prop-wrapper.prop-gen {
+			.dsahboard-settings .prop,
+			.dashboard-settings .prop {
+				.val {
+					width: 45%;
+				}
+
+				.label {
+					width: 50%;
+					padding: 10px 0;
+				}
+			}
+		}
+	}
+
+	div.confirm {
+		+ .actions.persistence-actions.bottom {
+			.btn {
+				display: block;
+
+				&:not(.cancel) {
+					width: 26.5rem;
+				}
+
+				+ .btn {
+					margin-left: 0;
+					margin-top: .5rem;
+				}
+			}
+		}
+	}
+
+	.dashboard-display-instruction {
+		border-top: 1px solid #e5e5e5;
+		padding-top: 1rem;
+		margin-top: .75rem;
+	}
+
+	&.create-new-position {
+		width: 525px !important;
+
+		.prop-wrapper.prop-gen {
+			padding: 0;
+
+			.prop-body .prop-group {
+				padding: 0;
+			}
+
+			.prop-body .prop {
+
+				&.is-super-vp:first-of-type .val {
+					padding-bottom: 0;
+				}
+
+				&.is-super-vp:last-of-type .val {
+					padding-top: 0;
+				}
+
+				.label {
+					padding-left: 0;
+				}
+
+				> .val {
+					padding-left: 0;
+				}
+
+				.rtb {
+					.val {
+						width: auto;
+					}
+
+					label.val.tbl {
+						width: 75%;
+						padding: 0;
+					}
+				}
+			}
+
+			.prop .label {
+				width: 45%;
+			}
+
+			.prop .val {
+				width: 50%;
+
+				input[type="text"] {
+					width: 75%;
+					min-width: 8rem;
+				}
+			}
+		}
+	}
 }
 
-.resources {
-	label {
-		font-size: 1.5rem;
+div.window.dialog.property_wrapper {
+
+	.prop {
+		width: 100%;
+
+		label, .val {
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		label {
+			padding: 10px;
+			width: 35%;
+			max-width: 15rem;
+		}
+
+		.val:not(input[type="checkbox"]) {
+			padding: 2px 5px;
+			margin-left: 10px;
+			width: 60%;
+		}
+
+		input[type="text"] {
+			width: 60%;
+		}
+
+		textarea.val {
+			width: 60%;
+			height: 4.25rem;
+			margin-bottom: 1.5rem;
+		}
+
+		&.disabled {
+
+			input[type="checkbox"] {
+				margin: 5px 5px 0 0;
+			}
+
+			label.val {
+				width: 90%;
+				padding: 0;
+				max-width: none;
+			}
+
+			span.ctb.label-after {
+				display: inline-block;
+				padding: 10px;
+				width: 60%;
+			}
+		}
+	}
+
+	div.info {
+		margin-bottom: 1.25rem;
+		padding-top: 1rem;
+		border-top: 1px solid #e5e5e5;
+	}
+}
+
+.company-setting-detail-info {
+
+	.prop-wrapper.prop-gen {
+		padding: 1.5rem 1rem 1rem;
+		border: 1px solid #e5e5e5;
+	}
+
+	.prop-wrapper.prop-gen .resource-ui {
+		.btn {
+			@include button-variant($color-white, $color-hab-orange, darken($color-hab-orange, 5%));
+			font-size: .9rem;
+			font-weight: 600;
+			font-family: $font-open-sans;
+		}
+
+		.miwt-table a.btn.remove {
+			padding: 0;
+			background: transparent;
+			color: $color-hab-orange;
+			border: none;
+
+			&:hover {
+				background: transparent;
+			}
+		}
+	}
+
+	h1 {
+		.content-box & {
+			font-size: 1.5rem;
+			font-weight: 600;
+			margin: 1.25rem 0 0 1.5rem;
+			display: inline-block;
+			background: $color-white;
+			padding: 0 3px;
+		}
+
+		+ .prop-wrapper.prop-gen,
+		+ .meta-data {
+			margin-top: -1rem;
+		}
+	}
+
+	.prop-wrapper.prop-gen .prop-body > .prop-group {
+		padding: 0 1rem;
+		border: none;
+	}
+
+	.prop-wrapper.prop-gen .prop-footer-actions .actions {
+		padding-left: .65rem;
+	}
+
+	.meta-data {
+		padding: 1.5rem 1rem 1rem;
+		border: 1px solid #e5e5e5;
+
+		.prop {
+			width: 100%;
+
+			.label, .val {
+				display: inline-block;
+				vertical-align: top;
+			}
+
+			.label {
+				padding: 10px 10px 10px 25px;
+				width: 35%;
+				max-width: 20rem;
+				font-weight: 600;
+			}
+
+			.val {
+				width: 60%;
+				margin-left: 10px;
+
+				input[type="text"]:not(.program-start) {
+					width: 100%;
+					max-width: 18rem;
+				}
+			}
+
+			.miwt-calendar button.open {
+				vertical-align: top;
+				margin-top: 3px;
+			}
+		}
+	}
+}
+
+.company-visibility-setting-viewer {
+	&.prop-wrapper .prop-header-title {
+		margin: 1.25rem 0 0 1.5rem;
+		display: inline-block;
+		background: $color-white;
+		padding: 0 3px;
+
+		h2 {
+			font-size: 1.5rem;
+			font-weight: 600;
+		}
+	}
+
+	&.prop-wrapper .prop-body {
+		margin-top: -1.35rem;
+	}
+}
+
+/* ----- TRACKED GOALS */
+.tracked-goal {
+
+	+ .tracked-goal {
+		margin-top: 1.5rem;
+		padding-top: 1rem;
+		border-top: 1px solid #e5e5e5;
+	}
+
+	.title {
 		font-weight: 600;
-		margin: 1rem 0 0;
+		font-size: 20px;
+		margin-bottom: .5rem;
+	}
+
+	.actions {
+		.btn.disable {
+			@include button-variant($color-hab-orange, $color-white, $color-hab-orange);
+		}
 	}
 }
 
@@ -581,6 +1095,12 @@ div.window.dialog {
 		@include media-breakpoint-up(xl) {
 			width: 22.5%;
 		}
+	}
+
+	.prop-wrapper > .prop-body > .prop-group,
+	&.prop-wrapper.prop-gen > .prop-body > .prop-group {
+		border: none;
+		padding: 0;
 	}
 
 	&.prop-wrapper .prop-body .prop {
@@ -627,5 +1147,56 @@ div.window.dialog {
 		.prop .val {
 			padding: 10px;
 		}
+	}
+}
+
+/* ----- MEDIA QUERIES */
+@media (max-width: 1160px) {
+	.edit-user {
+		.user-picture-editor {
+			width: 51%;
+		}
+
+		.prop-wrapper {
+			width: 50%;
+		}
+	}
+}
+
+@media (max-width: 1023px) {
+	.edit-activity-tab.prop-gen.prop-wrapper .prop-group.activity-specific .career_questions .career_question {
+		width: 100%;
+
+		label {
+			width: 15rem;
+		}
+
+		input[type="text"] {
+			width: 15rem;
+		}
+	}
+
+	.edit-activity-tab.prop-gen.prop-wrapper .props .head_text label {
+		width: 30rem;
+	}
+
+	.edit-activity-tab.prop-gen.prop-wrapper .prop .ctb {
+		margin-left: 5px;
+	}
+
+	.edit-activity-tab.prop-gen.prop-wrapper .prop.company_enum_field > .val input[type="text"] {
+		max-width: 15rem;
+	}
+
+	.edit-activity-tab.prop-gen.prop-wrapper .prop_group.topics .untracked_topic > div {
+		width: 60%;
+	}
+
+	.edit-activity-tab.prop-gen.prop-wrapper .prop_group.topics .untracked_topic .prop label {
+		width: 32%;
+	}
+
+	.edit-user .prop-wrapper {
+		width: 65%;
 	}
 }

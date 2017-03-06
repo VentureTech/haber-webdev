@@ -551,10 +551,18 @@
 	color: $color-hab-orange;
 	font-size: .9rem;
 	padding: 0;
+	text-transform: none;
+	background: transparent;
 
 	&:hover {
 		color: $color-hab-orange;
 		text-decoration: underline;
+	}
+
+	&:focus, &:active {
+		outline: none;
+		text-decoration: underline;
+		box-shadow: none;
 	}
 }
 
@@ -585,6 +593,18 @@
 	background-image: url(/_resources/dyn/files/17931z89adc831/_fn/notepad_edit.png);
 }
 
+.activity-instance-editor .persistence-actions.send-email .btn.trigger {
+	@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+	@include button-size($btn-padding-y, $btn-padding-x, $font-default-size, $btn-border-radius);
+	text-decoration: none;
+	font-family: $font-open-sans;
+	text-transform: uppercase;
+	font-weight: 700;
+
+	&::before {
+		display: none;
+	}
+}
 
 .pre-call-plan-editor > .actions {
 	float: right;

@@ -6,3 +6,16 @@
 	font-size: 24px;
 	padding: 100px 20px;
 }
+
+.activity-completed {
+	padding: 1.5rem;
+
+	h1 {
+		color: $color-hab-orange;
+		font-weight: 600;
+	}
+
+	p {
+		margin: 0;
+	}
+}

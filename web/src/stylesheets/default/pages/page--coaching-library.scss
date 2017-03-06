@@ -1,4 +1,5 @@
 @import "../config/base-vars";
+@import "../../../../../bower_components/bootstrap/scss/mixins";
 
 #primary-content {
 	> .text > h1{
@@ -40,20 +41,17 @@ select.select2-dropdown{
 }
 
 .resource-search-container .coaching-search-reset .reset-span{
-	background-color: #717171;
-	border: 1px solid #3D3D3D;
-	color: #FFFFFF;
-	font-size: 14px;
+	@include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+	font-size: 1rem;
+	line-height: 1.25;
 	font-family: $font-open-sans;
 	font-weight: 700;
-	padding: 5px 15px;
-	margin: 10px 0;
-	border-radius: 3px;
-	height: 30px;
+	padding: .55rem 1rem;
 	cursor: pointer;
 	box-shadow: none;
 	text-shadow: none;
 	display: inline-block;
+	border-radius: $btn-border-radius;
 }
 
 .resource-search-container .coaching-search-reset .reset-span:hover{
@@ -72,6 +70,12 @@ select.select2-dropdown{
 	display: inline-block;
 	vertical-align: top;
 	margin: 24px 0px 0px 20px;
+
+	button.submit {
+		@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+		font-weight: 700;
+		font-family: $font-open-sans;
+	}
 }
 
 

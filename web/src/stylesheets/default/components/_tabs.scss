@@ -86,9 +86,10 @@ ul.tab-items {
 }
 
 .tab-items a:hover,
+.tab-items a:focus,
 .tab-items .tab-selected a:hover {
-	background-color: #EE7421;
-	border-color: #d75c18;
+	background-color: $color-hab-orange;
+	border-color: darken($color-hab-orange, 5%);
 	color: #FFFFFF;
 	text-shadow: 0 1px 1px rgba(0,0,0,0.7);
 }

@@ -271,7 +271,8 @@ input[type=number]{
 	display: table-cell;
 	vertical-align: top;
 	padding: 10px;
-	font-family: OpenSansSemiBold, Arial, sans-serif;
+	font-family: $font-open-sans;
+	font-weight: 600;
 }
 
 .prop-wrapper.prop-gen .prop .val,
@@ -294,9 +295,9 @@ input[type=number]{
 
 .prop-wrapper.prop-gen .prop .rtb > input[type=radio],
 .prop-wrapper.prop-gen .prop .ctb > input[type=checkbox] {
-	margin-top: 6px;
+	margin-top: 3px;
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: middle;
 }
 
 .prop-wrapper.prop-gen .prop .ctb {
@@ -324,8 +325,8 @@ input[type=number]{
 
 .prop-wrapper.prop-gen .prop-header-actions .actions,
 .prop-wrapper.prop-gen .prop-footer-actions .actions {
-	margin-left: 50%;
-	padding: 0 10px;
+	margin-left: 0;
+	padding: 0;
 }
 
 .prop-wrapper.prop-gen .prop-group .prop-group-title > * {

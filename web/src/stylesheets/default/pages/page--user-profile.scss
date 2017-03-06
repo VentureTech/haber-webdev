@@ -2,6 +2,13 @@
 	width: 1240px;
 	min-height: 570px;
 	margin: auto;
+	padding: 1.5rem;
+}
+
+.edit-profile::after {
+	content: '';
+	display: table;
+	clear: both;
 }
 
 .user-picture-editor{
@@ -11,7 +18,11 @@
 	.profile,
 	.actions {
 		width: 245px;
-		margin: auto;
+		//margin: auto;
+	}
+
+	.actions {
+		margin-top: 1rem;
 	}
 
 	.profile{
@@ -19,13 +30,18 @@
 	}
 }
 
-.user-viewer, .password-viewer{
+.user-viewer {
 	width: 50%;
 	float: right;
 }
 
-.password-viewer{
-	width: 100%;
+.prop-wrapper.prop-gen {
+	.prop {
+		.label {
+			width: 35%;
+			text-align: left;
+		}
+	}
 }
 
 .prop-wrapper.prop-gen .prop-header-actions .actions,
@@ -33,13 +49,17 @@
 	padding: 0 10px;
 }
 
-.password-editor.prop-editor {
+.password-editor.prop-editor,
+.password-viewer {
 	clear: both;
+	width: 50%;
+	float: right;
 }
 
-.password-viewer.prop-wrapper.prop-gen .prop-header-actions .actions{
-	margin-left: 75%;
-}
+/*.password-viewer.prop-wrapper.prop-gen .prop-header-actions .actions{
+	margin-left: 51.5%;
+	padding: 0;
+}*/
 
 @media all and (min-width: 1024px) and (max-width: 1279px){
 	#t-interior-full .content-box{
@@ -50,6 +70,15 @@
 @media all and (min-width: 768px) and (max-width: 1023px){
 	#t-interior-full .content-box{
 		width: 720px;
+	}
+
+	.user-picture-editor {
+		width: 40%;
+	}
+
+	.password-viewer,
+	.user-viewer {
+		width: 60%;
 	}
 }
 

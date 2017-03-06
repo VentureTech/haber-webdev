@@ -80,9 +80,9 @@ jQuery(function($) {
         });
 
         //Set up sub row switching functionality
-        $con.find('.table-partition.primary .table-part[data-table-key="individual-activities"]').each(function() {
+        $con.find('.table-partition.primary .table-part').each(function() {
             var $table = $(this);
-            var $allTableParts = $('.table-partition .table-part[data-table-key="individual-activities"]');
+            var $allTableParts = $('.table-partition .table-part');
             var $controlCell = $table.find('tr.joint-sales-calls td.label');
             var $salesRows = $allTableParts.find('tr[data-joint-call-type="sales-stage"]');
             var $trackedGoalsRows = $allTableParts.find('tr[data-joint-call-type="tracked-goal"]');
@@ -124,4 +124,12 @@ jQuery(function($) {
             showSelectedSubrows();
         });
     });
+
+    //Fit text to cells
+    $('.table-partition.primary th.label').textfill({
+        minFontPixels: 8,
+        maxFontPixels: 24,
+        debug: true
+    });
+
 });

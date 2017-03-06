@@ -30,9 +30,21 @@
 }
 .rep-activity-main .actions button.btn {
 	float: left;
+
+	&.edit {
+		float: right;
+	}
 }
 
 .rep-activity-main .activity-result-editor .actions {
 	margin-left: 0;
 	@include clearfix();
+
+	&.survey-activity, &.persistence-actions.form-based-activity {
+		text-align: right;
+
+		button.btn.edit {
+			float: none;
+		}
+	}
 }
