@@ -144,6 +144,12 @@ input[type=number]{
 		span.ctb + span.ctb {
 			padding-left: 1rem;
 		}
+
+		&.sales-stages {
+			span.ctb + span.ctb {
+				padding-left: 0;
+			}
+		}
 	}
 	.miwt-calendar {
 		input[type=text] {
