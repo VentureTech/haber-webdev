@@ -20,6 +20,11 @@
 	padding: 0;
 }
 
+.activity-management .form_content .sales-presentation-cert .question.intro-heading .form_field,
+.genform .form_content .sales-presentation-cert > div > .question.intro-heading .form_field {
+	width: 100%;
+}
+
 .activity-management .form_content .sales-presentation-cert .question:first-child .form_field:nth-child(2),
 .genform .form_content .sales-presentation-cert .question:first-child .form_field:nth-child(2) {
 	width: 100%;
@@ -96,6 +101,8 @@
 .activity-management .form_content .sales-presentation-cert .question .form_field.prop-group .props span.extra_value_renderer_readonly,
 .genform .form_content .sales-presentation-cert .question .form_field.prop-group .props span.extra_value_renderer_readonly {
 	padding: 0;
+	word-wrap: normal;
+	word-break: break-all;
 }
 
 .genform .form_content .sales-presentation-cert span.submit_registration_button {
