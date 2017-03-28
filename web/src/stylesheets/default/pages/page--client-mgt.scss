@@ -705,6 +705,13 @@ button.btn {
 }
 
 /* ----- CAREER DEV PLAN */
+.edit-activity-tab.prop-gen.prop-wrapper .prop-group.activity-specific {
+	.actions.persistence_actions.top {
+		display: block;
+		margin-top: -10px;
+	}
+}
+
 .edit-activity-tab.prop-gen.prop-wrapper .prop-group.activity-specific .career_questions .career_question {
 	position: relative;
 	width: 53rem;
