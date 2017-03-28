@@ -8,6 +8,8 @@ jQuery(function($) {
         var $con = $(this);
         var $dataPartition = $con.find('.table-partition.data');
 
+        $('.table-partition.data .table-part[data-table-key="key-metrics"]').addClass('key-metrics');
+
         $con.find('.table-partition:first-child .table-part').each(function() {
             var $tablePart = $(this);
             var $allTableParts = $con.find('table[data-table-key="'+$tablePart.data('tableKey')+'"]');
@@ -16,17 +18,22 @@ jQuery(function($) {
                 $allTableParts.toggleClass('closed');
             });
 
-            $allTableParts.on('mouseenter', 'tbody tr', function(evt) {
+            //$allTableParts.on('mouseenter', 'tbody tr', function(evt) {
+            $allTableParts.on('mouseenter', '.dash-row', function(evt) {
+                console.log($allTableParts);
                 var rowIndex = $(this).index();
                 $allTableParts.each(function() {
-                    $(this).find('tbody tr').eq(rowIndex).addClass('over');
+                    //$(this).find('tbody tr').eq(rowIndex).addClass('over');
+                    $(this).find('.dash-row').eq(rowIndex).addClass('over');
                 });
             });
 
-            $allTableParts.on('mouseleave', 'tbody tr', function(evt) {
+            //$allTableParts.on('mouseleave', 'tbody tr', function(evt) {
+            $allTableParts.on('mouseleave', '.dash-row', function(evt) {
                 var rowIndex = $(this).index();
                 $allTableParts.each(function() {
-                    $(this).find('tbody tr').eq(rowIndex).removeClass('over');
+                    //$(this).find('tbody tr').eq(rowIndex).removeClass('over');
+                    $(this).find('.dash-row').eq(rowIndex).removeClass('over');
                 });
             });
 
@@ -128,8 +135,8 @@ jQuery(function($) {
     //Fit text to cells
     $('.table-partition.primary th.label').textfill({
         minFontPixels: 8,
-        maxFontPixels: 24,
-        debug: true
+        maxFontPixels: 24
+        //debug: true
     });
 
 });
