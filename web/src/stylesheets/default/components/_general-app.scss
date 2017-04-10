@@ -57,7 +57,7 @@
 }
 
 .user-control-trigger .name {
-	color: #ee7421;
+	color: $color-hab-orange;
 	line-height: 1.25;
 }
 
@@ -82,13 +82,13 @@
 .user-cp .menuitemlabel {
 	text-decoration: none;
 	background: #fff;
-	color: #ee7421;
+	color: $color-hab-orange;
 	display: block;
 	padding: 10px 20px;
 }
 
 .user-cp .menuitemlabel:hover {
-	background-color: #ee7421;
+	background-color: $color-hab-orange;
 	color: #fff;
 }
 
@@ -158,7 +158,7 @@
 }
 
 .activitylinks .menu-t1 > .mi > .menuitemlabel {
-	color: #ee7421;
+	color: $color-hab-orange;
 	font-size: 24px;
 }
 
@@ -167,7 +167,7 @@
 }
 
 .activitylinks .menu-t2 > .mi > .menuitemlabel {
-	color: #ee7421;
+	color: $color-hab-orange;
 	font-size: 18px;
 }
 
@@ -427,8 +427,6 @@
 	position: relative;
 	z-index: 35;
 	border: 3px solid #fff;
-	-webkit-box-shadow: 0 0 6px rgba(0,0,0,0.1);
-	-moz-box-shadow: 0 0 6px rgba(0,0,0,0.1);
 	box-shadow: 0 0 6px rgba(0,0,0,0.1);
 }
 
