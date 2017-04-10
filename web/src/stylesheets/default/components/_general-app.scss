@@ -123,26 +123,31 @@
 }
 
 .ecsellbreadcrumb .crumb + .crumb:before {
-	content: " ";
+	content: '\f105';
+	font-family: $font-glyph-lib;
+	color: $color-hab-orange;
 	display: inline-block;
-	vertical-align: middle;
-	width: 11px;
-	height: 14px;
-	margin: 0 10px;
-	background: center center transparent url(/_resources/dyn/files/9005z89d38198/_fn/breadcrumb-arrow.png) no-repeat;
+	vertical-align: top;
+	margin: -4px 10px 0;
+	font-size: 1.15rem;
+	//width: 11px;
+	//height: 14px;
+	//background: center center transparent url(/_resources/dyn/files/9005z89d38198/_fn/breadcrumb-arrow.png) no-repeat;
 }
 
 .ecsellbreadcrumb .crumb a {
 	color: #4f5254;
 	text-decoration: none;
-	font-family: OpenSansSemiBold, Arial, sans-serif;
+	font-family: $font-open-sans;
+	font-weight: 600;
 }
 
 /* General activity link menu */
 .activitylinks .menu {
 	margin: 10px 0 10px;
 	padding: 0;
-	font-family: OpenSansSemiBold, Arial, sans-serif;
+	font-family: $font-open-sans;
+	font-weight: 600;
 }
 
 .activitylinks .mi {
