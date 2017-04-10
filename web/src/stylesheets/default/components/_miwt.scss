@@ -43,7 +43,7 @@ body div.miwt-ajax-progress {
 	}
 }
 .dnd-source {
-	cursor:move;
+	//cursor:move;
 	cursor:grab;
 	cursor:-webkit-grab;
 }
@@ -55,7 +55,8 @@ body div.miwt-ajax-progress {
 		cursor:-webkit-grabbing;
 	}
 	.dnd-target {
-		cursor:copy;
+		//cursor:copy;
+		cursor: grabbing;
 	}
 }
 

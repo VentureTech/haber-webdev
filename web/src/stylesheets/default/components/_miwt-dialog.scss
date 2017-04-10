@@ -86,6 +86,17 @@ div.window.dialog /*specificity*/ {
 			margin-left: 0;
 		}
 	}
+
+	.actions {
+		.btn.close {
+			width: auto;
+			height: auto;
+			font-size: 1rem;
+			padding: .5rem 1rem;
+			margin-top: .5rem;
+			background-image: none;
+		}
+	}
 	.actions.top {
 		border-top: none;
 		border-bottom: 1px solid $modal-footer-border-color;
@@ -334,6 +345,46 @@ div.window.dialog /*specificity*/ {
 
 				> .btn.done-action {
 					@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+				}
+			}
+		}
+	}
+
+	.confirm-date {
+
+		&.prop-wrapper {
+			padding-left: 0;
+		}
+
+		.prop-header-title {
+			margin-bottom: 0;
+			padding: 0;
+		}
+
+		p {
+			font-size: .9rem;
+		}
+
+		.prop-body {
+			margin-bottom: 1rem;
+
+			.prop {
+
+				.label,
+				.val {
+					display: inline-block !important;
+					text-align: left !important;
+					width: auto !important;
+					padding: 0;
+					vertical-align: middle;
+				}
+
+				.label {
+					width: 45%;
+				}
+
+				label {
+					margin-bottom: 0;
 				}
 			}
 		}
