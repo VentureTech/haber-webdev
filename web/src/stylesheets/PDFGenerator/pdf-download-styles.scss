@@ -1,0 +1,211 @@
+@font-face {
+	font-family: 'Libre Franklin Regular';
+	src: url('http://cultivate-growth.com/_resources/dyn/files/1082284zbe8f5e18/_fn/LibreFranklin-Regular.ttf') format('truetype');
+	-fs-pdf-font-embed: embed;
+	-fs-pdf-font-encoding: Identity-H;
+}
+
+@page {
+	size: 8.75in 11.25in; /* 8.5x11 + 0.125 bleed area on each edge */
+	margin: 0.5in;
+	@bottom-right-corner {
+		content: counter(page);
+		font-size: 12px;
+	}
+}
+
+body {
+	//font-family: Arial, sans-serif;
+	font-family: "Libre Franklin Regular", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.rep-activity-main {
+	margin: 0;
+	font-size: 14px;
+
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+h1 {
+	font-size: 26px;
+	margin-bottom: 26px;
+	//font-family: Arial, sans-serif;
+	font-family: LibreFranklin-Regular, sans-serif;
+	font-style: normal;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 16px;
+	margin: 10px 10px 10px 0;
+	//font-family: Arial, sans-serif;
+	font-family: Libre Franklin Regular, sans-serif;
+	font-style: normal;
+	font-weight: 700;
+}
+
+.activity-info {
+	margin-top: -15px;
+}
+
+.activity-info .left {
+	width: 4in;
+
+	.label {
+		width: .5in;
+	}
+}
+
+.activity-info .right {
+	margin-left: .95in;
+	width: 3in;
+}
+
+.activity-info .label {
+	width: 1.35in;
+	//text-align: right;
+	text-align: left;
+}
+
+.activity-info .val {
+	width: 1.15in;
+	margin-left: 0.125in;
+}
+
+.activity-result-editor {
+	margin-bottom: 0.375in;
+}
+
+.activity {
+	padding: 0.1in 0;
+}
+
+.ecsell {
+	margin: 0;
+	padding: 0;
+	float: right;
+	width: 186px;
+	height: 59px;
+}
+
+.header .label {
+	//font-family:Arial, sans-serif;
+	//font-weight: 700;
+	font-family: 'Libre Franklin Regular', sans-serif;
+	font-style: normal;
+	font-weight: 700;
+}
+
+.header {
+	margin-bottom: 0.125in;
+}
+
+.directions{
+	font-size: 14px;
+}
+
+.sac-section, .sac-summary{
+	margin-top: 0.35in;
+}
+
+.section-label th {
+	//font-family: Arial, sans-serif;
+	//font-weight: 600;
+	font-family: 'Libre Franklin Regular', sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	background: #052c49;
+	color: #FFFFFF;
+	padding: 5px;
+	border-right: 1px solid #fff;
+	text-align: center;
+
+	&:last-child {
+		border-right: none;
+	}
+}
+
+.question .label {
+	width: 6.5in;
+	margin-right: 0.25in;
+	margin-left: 0.25in;
+	padding: 0.05in;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+tbody > tr.question td {
+	padding: 0.05in .1in .05in .05in;
+	border-left: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+
+	&:last-child {
+		border-right: 1px solid #e5e5e5;
+	}
+}
+
+.big-day-planning,
+.weekly-team-meeting {
+	margin-top: -30px;
+
+	tbody > tr.question td {
+		&:first-child {
+			border-left: none;
+		}
+
+		&:last-child {
+			border-right: none;
+		}
+	}
+}
+
+.weekly-team-meeting {
+
+}
+
+.question .val {
+	width: 1in;
+	padding-left: 0.0625in;
+	text-align: left;
+}
+
+.sac-summary {
+	page-break-inside: avoid;
+}
+
+.sac-summary .val{
+	font-family: 'Libre Franklin Regular', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	background: #052c49;
+	color: #FFFFFF;
+	padding: 0.125in;
+}
+
+.sales-activity-calc  {
+	tbody > tr.question td {
+		border-right: none;
+		border-left: none;
+
+		&:first-child {
+			border-left: none;
+		}
+
+		&:last-child {
+			border-right: none;
+		}
+
+		&.val {
+			text-align: right;
+		}
+	}
+}

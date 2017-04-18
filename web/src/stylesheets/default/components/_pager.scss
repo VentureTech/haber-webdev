@@ -47,7 +47,7 @@ div.pager-top {
 	border-radius: 3px;
 	line-height: 26px;
 	padding: 0 5px;
-	color: #EE7421;
+	color: $color-hab-orange;
 	font-family: $font-open-sans;
 	font-weight: 600;
 	text-align: center;
@@ -58,8 +58,8 @@ div.pager-top {
 	min-width: 25px;
 
 	&:hover {
-		background-color: #EE7421;
-		border-color: #D75C18;
+		background-color: $color-hab-orange;
+		border-color: darken($color-hab-orange, 5%);
 		color: #FFFFFF;
 	}
 }

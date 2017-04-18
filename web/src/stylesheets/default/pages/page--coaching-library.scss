@@ -105,7 +105,7 @@ select.select2-dropdown{
 }
 
 .freemarker .resource-results .resource .name > a{
-	color: #EE7421;
+	color: $color-hab-orange;
 	text-decoration: none;
 	font-size: 20px;
 	font-family: $font-open-sans;
@@ -117,13 +117,19 @@ select.select2-dropdown{
 }
 
 .freemarker .resource-results .resource .info .label{
-	font-family: OpenSans, Arial, sans-serif;
+	font-family: $font-open-sans;
+	font-weight: 600;
 	margin-right: 5px;
+}
+
+.freemarker .resource-results .resource .info .resource-type .label {
+	margin-right: 1px;
 }
 
 .freemarker .resource-results .resource .info > .author,
 .freemarker .resource-results .resource .info > .resource-type{
-	font-family: OpenSansSemiBold, Arial, sans-serif;
+	font-family: $font-open-sans;
+	font-weight: 600;
 	font-size: 16px;
 	margin: 10px 0px;
 }
@@ -177,7 +183,7 @@ select.select2-dropdown{
 }
 
 .freemarker .resource-results .resource .pillar-list li{
-	color: #EE7421;
+	color: $color-hab-orange;
 	line-height: 28px;
 }
 
@@ -190,7 +196,7 @@ select.select2-dropdown{
 }
 
 .freemarker .resource-results .resource .info .file-type a{
-	color: #EE7421;
+	color: $color-hab-orange;
 	text-decoration: none;
 }
 

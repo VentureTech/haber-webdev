@@ -93,7 +93,7 @@ body {
 #main-wrapper main { padding-bottom: 3rem; }
 
 ::selection {
-	background: #FF6C60;
+	background: $color-hab-orange;
 	color: #fff;
 }
 
@@ -140,7 +140,7 @@ p a {
 	height: 30px;
 	padding: 0px;
 	margin: 0px;
-	background: #EE7412 url(/_resources/dyn/files/9970zb929d85f/_fn/dialog-close.png) center center no-repeat;
+	background: $color-hab-orange url(/_resources/dyn/files/9970zb929d85f/_fn/dialog-close.png) center center no-repeat;
 	font-size: 0.01px;
 }
 

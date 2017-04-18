@@ -69,7 +69,7 @@
 
 .featured-resources .resources .resource:hover,
 .featured-resources .resources .resource.default-preview:hover {
-	border-color: #EE7421 !important; /* I added the important instead of having to define the hover in a more verbose way */
+	border-color: $color-hab-orange !important; /* I added the important instead of having to define the hover in a more verbose way */
 }
 
 .featured-resources .resources .resource.default-preview {
@@ -355,9 +355,9 @@
 .table-part tr.over td,
 .table-part tr.over td.vacant,
 .table-part tr.over td.previous-employee {
-	background-color: #ee7421;
+	background-color: $color-hab-orange;
 	color: #fff;
-	border-color: #ee7421;
+	border-color: $color-hab-orange;
 }
 
 .table-part th.label,
@@ -517,7 +517,7 @@
 
 .table-part th .person .notifications .notification.anniversary .count {
 	font-size: 12px;
-	color: #F07621;
+	color: $color-hab-orange;
 	line-height: 40px;
 	text-align: center;
 	display: block;
@@ -674,7 +674,7 @@ tr.joint-sales-calls .select2-container {
 }
 
 .notification-bar .notification.quote {
-	background-color: #ee7421;
+	background-color: $color-hab-orange;
 }
 
 .notification-bar .notification.birthday,
@@ -768,5 +768,5 @@ border-top-color: #1f88d8;
 
 .notification-summary.visible-notifications .notification-count {
 	color: #fff;
-	background-color: #ee7421;
+	background-color: $color-hab-orange;
 }

@@ -1,0 +1,171 @@
+/* latin-ext */
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/librefranklin/v1/PFwjf3aDdAQPvNKUrT3U7xHoxYlEhdfxgPTmEO-jGTc.woff2) format('woff2');
+  -fs-pdf-font-embed: embed;
+}
+/* latin */
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/librefranklin/v1/PFwjf3aDdAQPvNKUrT3U77v_weys7n7jZxU_6MdmmbI.woff2) format('woff2');
+  -fs-pdf-font-embed: embed;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/librefranklin/v1/1_DGDtljMiPWFs5rl_p0yD-BceRXYvTsi1Mjv9l9pQU.woff2) format('woff2');
+  -fs-pdf-font-embed: embed;
+}
+/* latin */
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/librefranklin/v1/1_DGDtljMiPWFs5rl_p0yIJWTqmU4W9vHySYbujoyUw.woff2) format('woff2');
+  -fs-pdf-font-embed: embed;
+}
+
+@page {
+  size: 8.75in 11.25in; /* 8.5x11 + 0.125 bleed area on each edge */
+  margin: 0.5in;
+  @bottom-right-corner {
+    content: counter(page);
+    font-size: 12px;
+  }
+}
+
+body {
+  //font-family: Arial, sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.activity-header {
+  margin: 0;
+
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 26px;
+  //font-family: Arial, sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 16px;
+  margin: 10px 10px 10px 0;
+  //font-family: Arial, sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.activity-info {
+  margin: -10px 0 0;
+}
+
+.activity-info .left {
+  width: 4in;
+
+  .label {
+    width: .5in;
+  }
+}
+
+.activity-info .right {
+  margin-left: .95in;
+  width: 3in;
+}
+
+.activity-info .label {
+  width: 1.35in;
+  //text-align: right;
+  text-align: left;
+}
+
+.activity-info .val {
+  width: 1.15in;
+  margin-left: 0.125in;
+}
+
+.activity-result-editor {
+  margin-bottom: 0.375in;
+}
+
+.activity {
+  padding: 0.1in 0;
+}
+
+.ecsell {
+  margin: 0;
+  padding: 0;
+  float: right;
+  width: 186px;
+  height: 59px;
+}
+
+.header .label {
+  font-family: 'Libre Franklin', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.header {
+  margin-bottom: 0.125in;
+}
+
+.directions{
+  font-size: 14px;
+}
+
+.sac-section, .sac-summary{
+  margin-top: 0.5in;
+}
+
+.section-label th {
+  font-family: 'Libre Franklin', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  background: #052c49;
+  color: #FFFFFF;
+  height: 0.25in;
+}
+
+.question .label {
+  width: 6.5in;
+  margin-right: 0.25in;
+  margin-left: 0.25in;
+  padding: .05in .05in .05in .25in;
+}
+
+.question .val {
+  width: 1in;
+  padding-left: 0.0625in;
+  text-align: right;
+}
+
+.sac-summary .val{
+  font-family: 'Libre Franklin', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background: #052c49;
+  color: #FFFFFF;
+  padding: 0.125in;
+  width: 3.75in;
+}

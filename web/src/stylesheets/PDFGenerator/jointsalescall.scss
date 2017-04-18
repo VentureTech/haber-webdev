@@ -1,0 +1,227 @@
+@page {
+  size: 8.75in 11.25in; /* 8.5x11 + 0.125 bleed area on each edge */
+  margin: 0.5in;
+  @bottom-right-corner {
+    content: counter(page);
+    font-size: 12px;
+  }
+}
+
+body {
+  //font-family: Arial, sans-serif;
+  font-family: "Libre Franklin Regular", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.activity-header {
+  margin: 0;
+
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 26px;
+  //font-family: Arial, sans-serif;
+  font-family: LibreFranklin-Regular, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 16px;
+  margin: 10px 10px 10px 0;
+  //font-family: Arial, sans-serif;
+  font-family: Libre Franklin Regular, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.activity-info {
+  margin-top: -15px;
+}
+
+.activity-info .left {
+  width: 4in;
+
+  .label {
+    width: .5in;
+  }
+}
+
+.activity-info .right {
+  margin-left: .95in;
+  width: 3in;
+}
+
+.activity-info .label {
+  width: 1.35in;
+  //text-align: right;
+  text-align: left;
+}
+
+.activity-info .val {
+  width: 1.15in;
+  margin-left: 0.125in;
+}
+
+.activity-result-editor {
+  margin-bottom: 0.375in;
+}
+
+.activity {
+  padding: 0.1in 0;
+}
+
+.ecsell {
+  margin: 0;
+  padding: 0;
+  float: right;
+  width: 186px;
+  height: 59px;
+}
+
+.prop-wrapper .props {
+  display: table;
+  width: 100%;
+}
+
+.prop-wrapper .prop + .prop > .val, .prop-wrapper .prop + .prop > .label {
+  border-top: 1px solid #e5e5e5;
+}
+
+.prop-wrapper .props .prop .label {
+  width: 4.00in;
+  text-align: right;
+  display: table-cell;
+  vertical-align: top;
+  padding: 10px;
+}
+
+.prop-wrapper .props .prop .label > * {
+  text-align: right;
+}
+
+.prop-wrapper .props .prop .val {
+  display: table-cell;
+  width: 4.25in;
+  margin-left: 5px;
+  padding: 10px;
+  padding-left: 0.25in;
+  vertical-align: top;
+}
+
+.prop-wrapper .prop .rtb + .rtb {
+  margin-left: 15px;
+}
+
+.prop-wrapper .prop .rtb label {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 2px;
+}
+
+.prop-wrapper .prop .ctb {
+  display: block;
+}
+
+.prop-wrapper .prop .ctb label {
+  display: inline-block;
+  vertical-align: top;
+  margin: 2px 0px 0px 9px;
+}
+
+.prop-wrapper .prop .cb-field .ctb {
+  margin-bottom: 15px;
+}
+
+.prop-wrapper .prop .label .secondary {
+  display: block;
+  font-size: 12px;
+}
+
+.prop-wrapper .prop-group .prop-group-title > * {
+  text-align: left;
+  width: 100%;
+  display: inline-block;
+  margin: 20px 0px;
+  background: #F3F4F5;
+  padding: 5px 20px;
+  font-size: 24px;
+}
+
+.prop-wrapper .phone_field .phone_number_format .rtb + .rtb {
+  margin-left: 15px;
+}
+
+.prop-wrapper.phone_field .phone_number_entry_con .label_con.extension_label_con .extension_label.label {
+  margin-left: 15px;
+}
+
+.activity-result-editor {
+  margin-bottom: 0.375in;
+}
+
+.attendees {
+  margin-top: 0.125in;
+  page-break-inside: avoid;
+}
+
+.attendees caption {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+}
+
+.attendee + .attendee {
+  border-top: 1px solid #e5e5e5;
+}
+
+.attendee .name {
+  width: 1.25in;
+}
+
+.attendee .title {
+  width: 1in;
+}
+
+.attendee .linked-in {
+  width: 1.25in;
+}
+
+.attendee .notes {
+  width: 2.45in;
+}
+
+.attendee .prev-meeting {
+  width: 2.45in;
+}
+
+.attendee .val {
+  padding-left: 0.05in;
+  word-wrap: break-word;
+}
+
+.attendee-head th.label {
+  font-size: 16px;
+  background: #052c49;
+  color: #FFFFFF;
+  padding-left: 0.05in;
+}
+
+.activity {
+  padding: 0.1in 0;
+}
+
+.plan {
+  page-break-after: always;
+}
+
+.last-plan {
+  page-break-after: avoid;
+}

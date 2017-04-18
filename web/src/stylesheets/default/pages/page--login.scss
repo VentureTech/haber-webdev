@@ -14,6 +14,15 @@
 #header {
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
+
+	.text.logo {
+		padding: 5px 5px 2px 0;
+
+		img {
+			width: 175px;
+			height: auto;
+		}
+	}
 }
 
 
@@ -27,7 +36,7 @@
 	}
 
 	a {
-		color: #ee7421;
+		color: $color-hab-orange;
 		text-decoration: none;
 
 		&:hover {
@@ -90,8 +99,8 @@
 	}
 
 	.btn{
-		background: #EE7421;
-		border: 1px solid #CE5809;
+		background: $color-hab-orange;
+		border: 1px solid darken($color-hab-orange, 5%);
 		color: #FFFFFF;
 		font-size: 14px;
 		font-family: $font-open-sans;

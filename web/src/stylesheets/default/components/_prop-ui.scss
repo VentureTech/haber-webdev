@@ -79,7 +79,8 @@ input[type=number]{
 	}
 
 	.actions.bottom {
-		text-align: left;
+		text-align: right;
+		margin-top: 1rem;
 	}
 
 	.prop {
@@ -369,7 +370,7 @@ input[type=number]{
 }
 
 .prop-wrapper.prop-gen .prop .val a {
-	color: #EE7421;
+	color: $color-hab-orange;
 	text-decoration: none;
 }
 
