@@ -48,7 +48,7 @@
 }
 
 .activity-calc .question .lbl{
-	width: 1025px;
+	width: 1022px;
 	padding: 10px 0 0 10px;
 	height: 100%;
 }
@@ -63,7 +63,7 @@
 
 .activity-calc .question .val.text{
 	padding-top: 9px;
-	padding-right: 20px;
+	padding-right: 23px;
 }
 
 .activity-calc .question .val span.extra_value_renderer{
@@ -80,7 +80,7 @@
 }
 
 .activity-calc .part2.question .val input{
-	padding-right: 20px;
+	padding-right: 5px;
 }
 
 .activity-calc .question.even{
@@ -91,13 +91,13 @@
 .activity-calc .question .symbol{
 	position: absolute;
 	top: 7px;
-	right: 10px;
+	right: 13px;
 	font-size: 16px;
 	width: 10px;
 }
 
 .activity-calc .question .symbol.dollar{
-	left: 1095px;
+	left: 1090px;
 }
 
 .activity-calc .question.summary{
@@ -163,6 +163,12 @@
 
 .activity-calc .question{
 	text-align: left;
+
+	/*&.label + .label {
+		border-top: 1px solid #e5e5e5;
+		margin-top: 3px;
+	}*/
+
 }
 
 .question.summary > .val > span.label{
