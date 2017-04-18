@@ -220,7 +220,7 @@
 .goals-table input:focus {
 	background: #fffddd;
 	box-shadow: 0 0 8px rgba(255,250,116,0.6) inset;
-	outline: 2px solid #EE7421;
+	outline: 2px solid $color-hab-orange;
 }
 
 .goals-table .data-con span.data {
@@ -869,8 +869,8 @@ div.window.dialog {
 }
 
 .sales-goal-wizard .help-content a.trigger:hover:after {
-	background-color: #EE7421;
-	border-color: #CE5809;
+	background-color: $color-hab-orange;
+	border-color: darken($color-hab-orange, 5%);
 }
 
 .sales-goal-wizard .help-content.shown a.trigger:after {
@@ -878,8 +878,8 @@ div.window.dialog {
 }
 
 .sales-goal-wizard .help-content.shown a.trigger:hover:after {
-	background-color: #EE7421;
-	border-color: #CE5809;
+	background-color: $color-hab-orange;
+	border-color: darken($color-hab-orange, 5%);
 }
 
 /* ----- TRACKED GOALS */

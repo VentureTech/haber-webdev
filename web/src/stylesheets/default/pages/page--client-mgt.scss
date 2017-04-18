@@ -246,10 +246,71 @@ button.btn {
 			}
 		}
 
+		.miwt-table > tbody > tr {
+			&.even:hover td {
+				background: lighten(#e5e5e5, 8%);
+			}
+
+			&.odd:hover td {
+				background: lighten(#e5e5e5, 3%);
+			}
+
+			&.dnd-source {
+				cursor:move;
+				cursor:-webkit-grab;
+
+				.prop.topic,
+				label,
+				.actions {
+					cursor: grab;
+				}
+
+				&.dnd-target-active.odd td {
+					background: lighten(#e5e5e5, 3%);
+				}
+
+				&.dnd-target-active.even td {
+					background: lighten(#e5e5e5, 8%);
+				}
+			}
+		}
+
 		.prop_group.topics {
 			.untracked_topic {
 				position: relative;
 				width: 53rem;
+				cursor: move;
+
+				&:hover {
+					background: lighten(#e5e5e5, 5%);
+				}
+
+				&.dnd-source {
+					cursor:move;
+					cursor:-webkit-grab;
+
+					.prop.topic,
+					label,
+					.actions {
+						cursor: grab;
+					}
+
+					&.dnd-target-active {
+						background: lighten(#e5e5e5, 5%);
+
+						.prop.topic,
+						label,
+						.actions {
+							cursor: grabbing;
+						}
+					}
+				}
+
+				.prop.topic,
+				label,
+				.actions {
+					cursor: move;
+				}
 
 				> div {
 					width: 80%;
@@ -709,6 +770,33 @@ button.btn {
 	.actions.persistence_actions.top {
 		display: block;
 		margin-top: -10px;
+	}
+
+	.career_question {
+		&.dnd-source {
+			cursor:move;
+			cursor:-webkit-grab;
+
+			&:hover {
+				background: lighten(#e5e5e5, 5%);
+			}
+
+			.prop.topic,
+			label,
+			.actions {
+				cursor: grab;
+			}
+
+			&.dnd-target-active {
+				background: lighten(#e5e5e5, 5%);
+
+				.prop.topic,
+				label,
+				.actions {
+					cursor: grabbing;
+				}
+			}
+		}
 	}
 }
 
