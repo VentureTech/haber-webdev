@@ -278,7 +278,7 @@ input[type=number]{
 	display: table-cell;
 	vertical-align: top;
 	padding: 10px;
-	font-family: $font-open-sans;
+	font-family: $font-libre-gothic;
 	font-weight: 600;
 }
 
@@ -302,9 +302,16 @@ input[type=number]{
 
 .prop-wrapper.prop-gen .prop .rtb > input[type=radio],
 .prop-wrapper.prop-gen .prop .ctb > input[type=checkbox] {
-	margin-top: 3px;
 	display: inline-block;
 	vertical-align: middle;
+}
+
+.prop-wrapper.prop-gen .prop .rtb > input[type=radio] {
+	margin-top: 1px;
+}
+
+.prop-wrapper.prop-gen .prop .ctb > input[type=checkbox] {
+	margin: -2px 2px 0;
 }
 
 .prop-wrapper.prop-gen .prop .ctb {

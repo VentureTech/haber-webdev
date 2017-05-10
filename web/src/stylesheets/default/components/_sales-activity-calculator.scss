@@ -9,7 +9,7 @@
 
 .form_entry .section-label{
 	font-size: 18px;
-	font-family: $font-open-sans;
+	font-family: $font-libre-gothic;
 	font-weight: 700;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -40,7 +40,7 @@
 .activity-calc .question .letter{
 	width: 45px;
 	font-size: 16px;
-	font-family: $font-open-sans;
+	font-family: $font-libre-gothic;
 	text-align: center;
 	padding-top: 7px;
 	border-right: 2px solid $color-white;
@@ -80,7 +80,7 @@
 }
 
 .activity-calc .part2.question .val input{
-	padding-right: 5px;
+	padding-right: 17px;
 }
 
 .activity-calc .question.even{
@@ -106,7 +106,7 @@
 	margin-top: 10px;
 	margin-bottom: 10px;
 	color: #FFFFFF;
-	font-family: $font-open-sans;
+	font-family: $font-libre-gothic;
 }
 
 .activity-calc .question.summary .left, .summary .right{

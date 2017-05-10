@@ -43,7 +43,8 @@
 .featured-resources .heading {
 	margin: 0;
 	font-size: 24px;
-	font-family: OpenSansSemiBold, Arial, sans-serif;
+	font-family: $font-libre-gothic;
+	font-weight: 700;
 }
 
 .featured-resources .resources {
@@ -326,7 +327,8 @@
 
 .table-part td {
 	text-align: center;
-	font-family: OpenSansSemiBold, Arial, Verdana, sans-serif;
+	font-family: $font-libre-gothic;
+	font-weight: 700;
 	background-color: #fff;
 	border: 1px solid #d6d6d6;
 	height: 45px;
@@ -662,7 +664,8 @@ tr.joint-sales-calls .select2-container {
 .notification-bar .notification {
 	background-color: #d0d0d0;
 	padding: 5px 15px;
-	font-family: OpenSansBold, Arial, sans-serif;
+	font-family: $font-libre-gothic;
+	font-weight: 700;
 	font-size: 13px;
 	color: #fff;
 }
@@ -733,7 +736,8 @@ border-top-color: #1f88d8;
 }
 
 .notification-bar .notification.quote .content {
-	font-family: OpenSans, Arial, sans-serif;
+	font-family: $font-libre-gothic;
+	font-weight: 400;
 }
 
 .notification-summary {

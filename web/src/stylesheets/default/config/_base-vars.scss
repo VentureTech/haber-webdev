@@ -59,9 +59,11 @@ $color-charcoal: #333;
 
 $color-cornsilk: cornsilk;
 
+$font-libre-gothic: 'Libre Franklin', sans-serif;
 $font-monospace: monospace;
 $font-arial: $font-family-sans-serif;
-$font-open-sans: 'Open Sans', $font-arial;
+$font-open-sans: $font-libre-gothic;
+//$font-open-sans: 'Open Sans', $font-arial;
 $font-roboto: "Roboto", $font-family-sans-serif;
 
 $font-default-color: $color-hab-darkest-gray;

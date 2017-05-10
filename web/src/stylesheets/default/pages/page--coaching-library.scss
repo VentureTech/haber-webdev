@@ -31,7 +31,7 @@
 .resource-search-wrapper .search-field label{
 	display: block;
 	text-align: left;
-	font-family: $font-open-sans;
+	font-family: $font-libre-gothic;
 	font-weight: 600;
 	margin-bottom: 5px;
 }
@@ -44,7 +44,7 @@ select.select2-dropdown{
 	@include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
 	font-size: 1rem;
 	line-height: 1.25;
-	font-family: $font-open-sans;
+	font-family: $font-libre-gothic;
 	font-weight: 700;
 	padding: .55rem 1rem;
 	cursor: pointer;
@@ -74,7 +74,7 @@ select.select2-dropdown{
 	button.submit {
 		@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 		font-weight: 700;
-		font-family: $font-open-sans;
+		font-family: $font-libre-gothic;
 	}
 }
 
@@ -108,8 +108,8 @@ select.select2-dropdown{
 	color: $color-hab-orange;
 	text-decoration: none;
 	font-size: 20px;
-	font-family: $font-open-sans;
-	font-weight: 600;
+	font-family: $font-libre-gothic;
+	font-weight: 700;
 }
 
 .freemarker .resource-results .resource .name > a:hover{
@@ -117,7 +117,7 @@ select.select2-dropdown{
 }
 
 .freemarker .resource-results .resource .info .label{
-	font-family: $font-open-sans;
+	font-family: $font-libre-gothic;
 	font-weight: 600;
 	margin-right: 5px;
 }
@@ -126,9 +126,11 @@ select.select2-dropdown{
 	margin-right: 1px;
 }
 
+
+
 .freemarker .resource-results .resource .info > .author,
 .freemarker .resource-results .resource .info > .resource-type{
-	font-family: $font-open-sans;
+	font-family: $font-libre-gothic;
 	font-weight: 600;
 	font-size: 16px;
 	margin: 10px 0px;
@@ -148,10 +150,14 @@ select.select2-dropdown{
 }
 
 .freemarker .resource-results .resource .info > .file-type{
-	font-family: $font-open-sans;
+	font-family: $font-libre-gothic;
 	font-weight: 600;
 	font-size: 16px;
 	margin: -2px 0 -5px 0;
+}
+
+.freemarker .resource-results .resource .info > .file-type .label {
+	margin-right: 1px;
 }
 
 .freemarker .resource-results .resource .info .description{
@@ -173,7 +179,7 @@ select.select2-dropdown{
 
 .freemarker .resource-results .resource .pillars .pillars-header{
 	font-size: 18px;
-	font-family: $font-open-sans;
+	font-family: $font-libre-gothic;
 	font-weight: 600;
 }
 

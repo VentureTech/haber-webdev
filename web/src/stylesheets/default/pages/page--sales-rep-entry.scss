@@ -48,3 +48,38 @@
 		}
 	}
 }
+
+.team-retreat-summary {
+	.prop.summary {
+		margin-top: 1rem;
+		display: block;
+		padding: 0;
+
+		label {
+			margin-bottom: 0;
+		}
+
+		.val {
+			width: 50%;
+
+			textarea {
+				width: 100%;
+				height: 8rem;
+			}
+		}
+	}
+
+	&.prop-wrapper .actions.bottom {
+		text-align: left;
+	}
+}
+
+@media (max-width: 767px) {
+	.team-retreat-summary {
+		.prop.summary {
+			.val {
+				width: 100%;
+			}
+		}
+	}
+}

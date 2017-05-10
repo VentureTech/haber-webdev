@@ -7,8 +7,8 @@
 }
 .actions .btn, .procedure-navigation .btn, .recipients .btn {
 	@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
-	font-family: $font-open-sans;
-	font-weight: 700;
+	font-family: $font-libre-gothic;
+	font-weight: 600;
 	padding: .4rem 1rem;
 
 	&.reset {
@@ -47,8 +47,8 @@
 
 span.submit_button .btn.submit_button {
 	@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
-	font-family: $font-open-sans;
-	font-weight: 700;
+	font-family: $font-libre-gothic;
+	font-weight: 600;
 	padding: .4rem 1rem;
 	margin: .5rem 0;
 }

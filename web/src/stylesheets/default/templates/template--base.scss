@@ -19,7 +19,7 @@
 
 body {
 	background: left top $body-bg url(/_resources/dyn/files/8818z58d6fab9/_fn/body-bg-tile.jpg) repeat;
-	font-family: $font-open-sans;
+	font-family: $font-libre-gothic;
 	font-size: 14px;
 	font-weight: 400;
 	color: $font-default-color;
@@ -37,16 +37,16 @@ body {
 /* content box defaults */
 .content-box h1 {
 	color: $font-default-color;
-	font-family: $font-open-sans;
-	font-weight: 400;
+	font-family: $font-libre-gothic;
+	font-weight: 700;
 	font-size: 26px;
 	margin-top: 0;
 }
 
 .content-box h2 {
 	color: $font-default-color;
-	font-family: $font-open-sans;
-	font-weight: 400;
+	font-family: $font-libre-gothic;
+	font-weight: 600;
 	font-size: 22px;
 }
 
@@ -106,7 +106,7 @@ body {
 
 #main-content-wc-0 {
 	h1, h2, h3 {
-		font-weight: 300;
+		font-weight: 700;
 		padding: .75rem 0 1rem;
 	}
 	.text h1 {
@@ -292,7 +292,7 @@ div.calendar {
 }
 
 .select2-container-multi .select2-choices .select2-search-field input {
-	font-family: $font-open-sans;
+	font-family: $font-libre-gothic;
 }
 
 .select2-dropdown-open .select2-choice {

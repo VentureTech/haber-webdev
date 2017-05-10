@@ -19,6 +19,31 @@
 	}
 }
 
+.team-retreat-summary {
+	.prop.summary {
+		margin-top: 1rem;
+		display: block;
+		padding: 0;
+
+		label {
+			margin-bottom: 0;
+		}
+
+		.val {
+			width: 50%;
+
+			textarea {
+				width: 100%;
+				height: 8rem;
+			}
+		}
+	}
+
+	&.prop-wrapper .actions.bottom {
+		text-align: left;
+	}
+}
+
 /* Form buttons*/
 .form_content .btn.save_exit_button {
 	margin-left: 48%;
@@ -76,7 +101,7 @@
 .resource-box > .title {
 	background-color: #ee7929;
 	color: #fff;
-	font-family: $font-open-sans;
+	font-family: $font-libre-gothic;
 	font-weight: 600;
 	font-size: 20px;
 	padding: 5px 10px;
@@ -234,6 +259,16 @@
 			box-shadow: none;
 			outline: none;
 			text-decoration: underline;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.team-retreat-summary {
+		.prop.summary {
+			.val {
+				width: 100%;
+			}
 		}
 	}
 }

@@ -1,4 +1,5 @@
-@import "../config/base-import";
+@import "../config/base-vars";
+@import "../../../../../bower_components/bootstrap/scss/mixins";
 
 /* save to complete the stream storage copy */
 button.btn,
@@ -461,7 +462,7 @@ button.btn {
 			.label, label {
 				width: 35%;
 				text-align: left;
-				font-family: $font-open-sans;
+				font-family: $font-libre-gothic;
 				font-weight: 600;
 				max-width: 20rem;
 				padding: 10px 10px 10px 25px;
@@ -1056,7 +1057,7 @@ div.window.dialog.property_wrapper {
 			@include button-variant($color-white, $color-hab-orange, darken($color-hab-orange, 5%));
 			font-size: .9rem;
 			font-weight: 600;
-			font-family: $font-open-sans;
+			font-family: $font-libre-gothic;
 		}
 
 		.miwt-table a.btn.remove {
