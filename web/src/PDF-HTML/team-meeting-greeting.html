@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Weekly Team Meeting</title>
+    <link media="all" rel="stylesheet" href="http://cultivate-growth.com/_resources/dyn/files/1081000z600a6b89/_fn/pdf-download-styles.css" type="text/css" />
+</head>
+<body>
+<div class="rep-activity-main">
+    <div class="activity-instance-editor">
+        <div class="activity-instance-editor title">
+            <img src="http://www.cultivate-growth.com/_resources/dyn/files/14109zb0fded96/_fn/pdflogo.png" alt="Cultivate Growth" class="ecsell"/><h1>Weekly Team Meeting</h1>
+        </div>
+    </div>
+</div>
+<table class='activity-info'>
+    <tr><td>
+        <table class='left'>
+            <tr>
+                <td class='label'>
+                    Status:
+                </td>
+                <td class='val'>
+                    ${(activity_instance.status)!"Unknown"}
+                </td>
+            </tr>
+            <tr>
+                <td class='label'>
+                    Team Leader:
+                </td>
+                <td class='val'>
+                    ${(activity_instance.sales_manager.name.first)!"Unknown"} ${(activity_instance.sales_manager.name.last)!"Unknown"}
+                </td>
+            </tr>
+            <tr>
+                <td class='label'>
+                    Team Member:
+                </td>
+                <td class='val'>
+                    ${(activity_instance.for.name.first)!"Unknown"} ${(activity_instance.for.name.last)!"Unknown"}
+                </td>
+            </tr>
+        </table></td><td>
+        <table class='right'>
+            <tr>
+                <td class='label'>
+                    Due Date:
+                </td>
+                <td class='val'>
+                    ${(activity_instance.due_date)!"Unknown"}
+                </td>
+            </tr>
+            <tr>
+                <td class='label'>
+                    Date Completed:
+                </td>
+                <td class='val'>
+                    ${(activity_instance.date)!"Unknown"}
+                </td>
+            </tr>
+        </table></td></tr>
+</table>
+<div class="sac" >
+    <div class="weekly-team-meeting" >
+        <table class="sac-section">
+            <thead>
+            <tr class="section-label question">
+                <th class="title label" style="text-align: left">Team Meeting Questions</th><th class="val">Comments</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="question">
+                <td class="label">Team Progress to Goal</td>
+                <td class="val" style="width: 60%;">${(weekly_team_meeting_1.data.progress_to_goal)!"Unknown"}</td>
+            </tr>
+            <tr class="question">
+                <td class="label">Best Practice Sharing</td>
+                <td class="val" style="width: 60%;">${(weekly_team_meeting_1.data.best_practice_sharing)!"Unknown"}</td>
+            </tr>
+            <tr class="question">
+                <td class="label">Weekly Questions/Challenges</td>
+                <td class="val" style="width: 60%;">${(weekly_team_meeting_1.data.questions)!"Unknown"}</td>
+            </tr>
+            <tr class="question">
+                <td class="label">Weekly Development Topic</td>
+                <td class="val" style="width: 60%;">${(weekly_team_meeting_1.data.dev_topic)!"Unknown"}</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+</body>
+</html>
