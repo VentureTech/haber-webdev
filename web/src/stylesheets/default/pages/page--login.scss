@@ -65,12 +65,12 @@
 		.label {
 			display: block;
 			color: #3b3e40;
-			font-family: $font-open-sans;
+			font-family: $font-libre-gothic;
 			font-weight: 600;
 		}
 
 		.value input{
-			width: 199px;
+			width: 196px;
 		}
 	}
 
@@ -103,7 +103,7 @@
 		border: 1px solid darken($color-hab-orange, 5%);
 		color: #FFFFFF;
 		font-size: 14px;
-		font-family: $font-open-sans;
+		font-family: $font-libre-gothic;
 		padding: 5px 15px;
 		margin: 0;
 		border-radius: 3px;
@@ -120,7 +120,7 @@
 	text-align: center;
 
 	.user {
-		font-family: $font-open-sans;
+		font-family: $font-libre-gothic;
 	}
 
 	.details {
@@ -130,7 +130,7 @@
 
 .retrieve-password-con {
 	background: #fff;
-	font-family: $font-open-sans;
+	font-family: $font-libre-gothic;
 	border-radius: 0.3rem;
 	margin-top: 5rem;
 	.html {
@@ -252,7 +252,7 @@
 	border: 1px solid $btn-primary-border;
 	color: $color-white;
 	font-size: 14px;
-	font-family: $font-open-sans;
+	font-family: $font-libre-gothic;
 	padding: 5px 15px;
 	margin: 0 0 0 8px;
 	border-radius: 3px;
@@ -272,7 +272,7 @@
 
 .password-reset {
 	background: #fff;
-	font-family: $font-open-sans;
+	font-family: $font-libre-gothic;
 	border-radius: 0.3rem;
 	margin-top: 5rem;
 }
@@ -299,7 +299,7 @@
 	font-size: .85rem;
 	color: #343940;
 	text-transform: uppercase;
-	font-family: $font-open-sans;
+	font-family: $font-libre-gothic;
 }
 
 .password-reset .label label {
