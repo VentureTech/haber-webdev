@@ -138,7 +138,7 @@
 .ecsellbreadcrumb .crumb a {
 	color: #4f5254;
 	text-decoration: none;
-	font-family: $font-open-sans;
+	font-family: $font-libre-gothic;
 	font-weight: 600;
 }
 
@@ -146,7 +146,7 @@
 .activitylinks .menu {
 	margin: 10px 0 10px;
 	padding: 0;
-	font-family: $font-open-sans;
+	font-family: $font-libre-gothic;
 	font-weight: 600;
 }
 
@@ -335,7 +335,8 @@
 
 .quick-view .heading {
 	font-size: 18px;
-	font-family: OpenSansBold, Arial, sans-serif;
+	font-family: $font-libre-gothic;
+	font-weight: 700;
 	color: #FFFFFF;
 	margin: 0;
 	padding: 10px 10px;
@@ -353,7 +354,8 @@
 	width: 100%;
 	display: table;
 	font-size: 14px;
-	font-family: OpenSansSemiBold, Arial, sans-serif;
+	font-family: $font-libre-gothic;
+	font-weight: 600;
 	color: #FFFFFF;
 }
 
@@ -405,7 +407,8 @@
 
 .person .details {
 	color: #fff;
-	font-family: OpenSansBold, Arial, Verdana, sans-serif;
+	font-family: $font-libre-gothic;
+	font-weight: 700;
 	font-size: 14px;
 	padding: 5px;
 	position: relative;
@@ -454,6 +457,7 @@
 		width: 22px;
 		height: 23px;
 		color: transparent;
+		font-weight: 400;
 
 		&::before {
 			font-family: $font-glyph-lib;
@@ -461,6 +465,7 @@
 			line-height: 1.5rem;
 			color: $color-white;
 			display: inline-block;
+			font-weight: 400;
 		}
 
 		&.configure {
@@ -469,6 +474,7 @@
 
 			&::before {
 				content: '\f013';
+				font-weight: 400;
 			}
 		}
 
@@ -482,6 +488,7 @@
 
 			&::before {
 				content: '\f044';
+				font-weight: 400;
 			}
 		}
 	}

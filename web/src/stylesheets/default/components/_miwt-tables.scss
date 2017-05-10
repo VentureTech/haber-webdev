@@ -28,7 +28,7 @@
 			font-weight: 400;
 			padding: 10px 15px;
 			text-align: left;
-			font-family: $font-open-sans;
+			font-family: $font-libre-gothic;
 			border-bottom: 1px solid #C2C2C2;
 			line-height: 24px;
 
@@ -77,8 +77,8 @@
 					text-align: center;
 
 					&.btn {
-						line-height: 1.25;
-						//padding: .25rem .5rem .35rem;
+						line-height: 1;
+						padding: .35rem .5rem;
 					}
 
 					&:hover {
