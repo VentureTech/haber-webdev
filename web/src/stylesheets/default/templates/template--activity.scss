@@ -1,5 +1,9 @@
 @import "../components/activities";
 
+.select2-drop .select2-results {
+  max-height: 300px;
+}
+
 .activity-management {
   > .actions a.btn {
     background: transparent;

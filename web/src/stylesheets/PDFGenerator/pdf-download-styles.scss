@@ -1,6 +1,20 @@
 @font-face {
-	font-family: 'Libre Franklin Regular';
-	src: url('http://cultivate-growth.com/_resources/dyn/files/1082284zbe8f5e18/_fn/LibreFranklin-Regular.ttf') format('truetype');
+	font-family: FranklinGothic URW Demi;
+	src: url('http://haber-qa.venturetech.net/_resources/dyn/files/1086553z1f683424/_fn/URW%2B%2B%20-%20FranklinGothicURW-Dem.otf');
+	-fs-pdf-font-embed: embed;
+	-fs-pdf-font-encoding: Identity-H;
+}
+
+@font-face {
+	font-family: FranklinGothic URW Cond Medium;
+	src: url('http://haber-qa.venturetech.net/_resources/dyn/files/1086552z686f04b2/_fn/URW%2B%2B%20-%20FranklinGothicURWCon-Med.otf');
+	-fs-pdf-font-embed: embed;
+	-fs-pdf-font-encoding: Identity-H;
+}
+
+@font-face {
+	font-family: FranklinGothic URW Book;
+	src: url('http://haber-qa.venturetech.net/_resources/dyn/files/1086551zf1665508/_fn/URW%2B%2B%20-%20FranklinGothicURW-Boo.otf');
 	-fs-pdf-font-embed: embed;
 	-fs-pdf-font-encoding: Identity-H;
 }
@@ -15,8 +29,7 @@
 }
 
 body {
-	//font-family: Arial, sans-serif;
-	font-family: "Libre Franklin Regular", sans-serif;
+	font-family: FranklinGothic URW Book, sans-serif;
 	font-style: normal;
 	font-weight: 400;
 }
@@ -35,19 +48,17 @@ body {
 h1 {
 	font-size: 26px;
 	margin-bottom: 26px;
-	//font-family: Arial, sans-serif;
-	font-family: LibreFranklin-Regular, sans-serif;
+	font-family: FranklinGothic URW Demi,sans-serif;
 	font-style: normal;
-	font-weight: 700;
+	font-weight: normal;
 }
 
 h2 {
 	font-size: 16px;
 	margin: 10px 10px 10px 0;
-	//font-family: Arial, sans-serif;
-	font-family: Libre Franklin Regular, sans-serif;
+	font-family: FranklinGothic URW Demi,sans-serif;
 	font-style: normal;
-	font-weight: 700;
+	font-weight: normal;
 }
 
 .activity-info {
@@ -95,11 +106,8 @@ h2 {
 }
 
 .header .label {
-	//font-family:Arial, sans-serif;
-	//font-weight: 700;
-	font-family: 'Libre Franklin Regular', sans-serif;
+	font-family: FranklinGothic URW Demi,sans-serif;
 	font-style: normal;
-	font-weight: 700;
 }
 
 .header {
@@ -115,11 +123,9 @@ h2 {
 }
 
 .section-label th {
-	//font-family: Arial, sans-serif;
-	//font-weight: 600;
-	font-family: 'Libre Franklin Regular', sans-serif;
+	font-family: FranklinGothic URW Demi,sans-serif;
 	font-style: normal;
-	font-weight: 700;
+	font-weight: normal;
 	font-size: 16px;
 	background: #052c49;
 	color: #FFFFFF;
@@ -183,9 +189,8 @@ tbody > tr.question td {
 }
 
 .sac-summary .val{
-	font-family: 'Libre Franklin Regular', sans-serif;
+	font-family: FranklinGothic URW Book, sans-serif;
 	font-style: normal;
-	font-weight: 400;
 	background: #052c49;
 	color: #FFFFFF;
 	padding: 0.125in;

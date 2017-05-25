@@ -1,3 +1,24 @@
+@font-face {
+  font-family: FranklinGothic URW Demi;
+  src: url('http://haber-qa.venturetech.net/_resources/dyn/files/1086553z1f683424/_fn/URW%2B%2B%20-%20FranklinGothicURW-Dem.otf');
+  -fs-pdf-font-embed: embed;
+  -fs-pdf-font-encoding: Identity-H;
+}
+
+@font-face {
+  font-family: FranklinGothic URW Cond Medium;
+  src: url('http://haber-qa.venturetech.net/_resources/dyn/files/1086552z686f04b2/_fn/URW%2B%2B%20-%20FranklinGothicURWCon-Med.otf');
+  -fs-pdf-font-embed: embed;
+  -fs-pdf-font-encoding: Identity-H;
+}
+
+@font-face {
+  font-family: FranklinGothic URW Book;
+  src: url('http://haber-qa.venturetech.net/_resources/dyn/files/1086551zf1665508/_fn/URW%2B%2B%20-%20FranklinGothicURW-Boo.otf');
+  -fs-pdf-font-embed: embed;
+  -fs-pdf-font-encoding: Identity-H;
+}
+
 @page {
   size: 8.75in 11.25in; /* 8.5x11 + 0.125 bleed area on each edge */
   margin: 0.5in;
@@ -9,9 +30,9 @@
 
 body {
   //font-family: Arial, sans-serif;
-  font-family: "Libre Franklin Regular", sans-serif;
+  font-family: FranklinGothic URW Book, sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
 }
 
 .activity-header {
@@ -27,19 +48,17 @@ body {
 h1 {
   font-size: 26px;
   margin-bottom: 26px;
-  //font-family: Arial, sans-serif;
-  font-family: LibreFranklin-Regular, sans-serif;
+  font-family: FranklinGothic URW Demi, sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: normal;
 }
 
 h2 {
   font-size: 16px;
   margin: 10px 10px 10px 0;
-  //font-family: Arial, sans-serif;
-  font-family: Libre Franklin Regular, sans-serif;
+  font-family: FranklinGothic URW Demi, sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: normal;
 }
 
 .activity-info {
@@ -174,8 +193,6 @@ h2 {
 
 .attendees caption {
   font-size: 18px;
-  font-weight: 700;
-  font-family: Arial, sans-serif;
 }
 
 .attendee + .attendee {
@@ -208,6 +225,7 @@ h2 {
 }
 
 .attendee-head th.label {
+  font-family: FranklinGothic URW Demi, sans-serif;
   font-size: 16px;
   background: #052c49;
   color: #FFFFFF;

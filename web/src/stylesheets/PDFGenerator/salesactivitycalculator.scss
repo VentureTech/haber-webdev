@@ -1,34 +1,22 @@
-/* latin-ext */
 @font-face {
-  font-family: 'Libre Franklin';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/librefranklin/v1/PFwjf3aDdAQPvNKUrT3U7xHoxYlEhdfxgPTmEO-jGTc.woff2) format('woff2');
+  font-family: FranklinGothic URW Demi;
+  src: url('http://haber-qa.venturetech.net/_resources/dyn/files/1086553z1f683424/_fn/URW%2B%2B%20-%20FranklinGothicURW-Dem.otf');
   -fs-pdf-font-embed: embed;
+  -fs-pdf-font-encoding: Identity-H;
 }
-/* latin */
+
 @font-face {
-  font-family: 'Libre Franklin';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/librefranklin/v1/PFwjf3aDdAQPvNKUrT3U77v_weys7n7jZxU_6MdmmbI.woff2) format('woff2');
+  font-family: FranklinGothic URW Cond Medium;
+  src: url('http://haber-qa.venturetech.net/_resources/dyn/files/1086552z686f04b2/_fn/URW%2B%2B%20-%20FranklinGothicURWCon-Med.otf');
   -fs-pdf-font-embed: embed;
+  -fs-pdf-font-encoding: Identity-H;
 }
-/* latin-ext */
+
 @font-face {
-  font-family: 'Libre Franklin';
-  font-style: normal;
-  font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/librefranklin/v1/1_DGDtljMiPWFs5rl_p0yD-BceRXYvTsi1Mjv9l9pQU.woff2) format('woff2');
+  font-family: FranklinGothic URW Book;
+  src: url('http://haber-qa.venturetech.net/_resources/dyn/files/1086551zf1665508/_fn/URW%2B%2B%20-%20FranklinGothicURW-Boo.otf');
   -fs-pdf-font-embed: embed;
-}
-/* latin */
-@font-face {
-  font-family: 'Libre Franklin';
-  font-style: normal;
-  font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/librefranklin/v1/1_DGDtljMiPWFs5rl_p0yIJWTqmU4W9vHySYbujoyUw.woff2) format('woff2');
-  -fs-pdf-font-embed: embed;
+  -fs-pdf-font-encoding: Identity-H;
 }
 
 @page {
@@ -42,12 +30,12 @@
 
 body {
   //font-family: Arial, sans-serif;
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: FranklinGothic URW Book, sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
 }
 
-.activity-header {
+.activity-header{
   margin: 0;
 
   &::after {
@@ -60,19 +48,17 @@ body {
 h1 {
   font-size: 26px;
   margin-bottom: 26px;
-  //font-family: Arial, sans-serif;
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: FranklinGothic URW Demi,sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: normal;
 }
 
 h2 {
   font-size: 16px;
   margin: 10px 10px 10px 0;
-  //font-family: Arial, sans-serif;
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: FranklinGothic URW Demi,sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: normal;
 }
 
 .activity-info {
@@ -120,9 +106,9 @@ h2 {
 }
 
 .header .label {
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: FranklinGothic URW Demi, sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: normal;
 }
 
 .header {
@@ -138,9 +124,9 @@ h2 {
 }
 
 .section-label th {
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: FranklinGothic URW Demi, sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: normal;
   font-size: 16px;
   background: #052c49;
   color: #FFFFFF;
@@ -161,9 +147,9 @@ h2 {
 }
 
 .sac-summary .val{
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: FranklinGothic URW Demi, sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: normal;
   background: #052c49;
   color: #FFFFFF;
   padding: 0.125in;
