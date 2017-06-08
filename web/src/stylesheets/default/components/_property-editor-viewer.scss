@@ -115,6 +115,29 @@
 			}
 		}
 	}
+
+	.trackedby-val-con {
+		max-width: 15rem;
+		padding: 0;
+		display: inline-block;
+		vertical-align: middle;
+		width: auto;
+
+		span.ctb {
+			display: block;
+			width: 100%;
+
+			label {
+				color: $color-hab-lightest-gray;
+				width: 6.5rem;
+			}
+
+			input[type="checkbox"] {
+				margin-top: 2px;
+				margin-left: 0;
+			}
+		}
+	}
 }
 
 .prop-wrapper {
@@ -268,6 +291,10 @@
 		}
 		.prop span.ctb {
 			display: inline-block;
+
+			input[type="checkbox"] {
+				margin-left: 10px;
+			}
 		}
 	}
 }
