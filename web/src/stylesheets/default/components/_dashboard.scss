@@ -195,16 +195,67 @@
 
 /* QUICK VIEW */
 .quick-view {
-	position: absolute;
+	position: relative;
 	top: 0;
 	right: 0;
-	width: 337px;
+	background: none;
+	border-radius: 0;
+	border: none;
+	width: 100%;
+	padding-left: 300px;
+	min-height: 200px;
+	max-height: 330px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;
+
+	> div {
+		height: 100%;
+		width: calc(50% - 1rem);
+		display: inline-block;
+		vertical-align: top;
+		background: #062B47;
+		border-radius: 3px;
+		border: 3px solid #062B47;
+
+		.stats-con {
+			max-height: 183px;
+
+			.stat {
+				//background: #e6e6e6;
+				background: #efefef;
+				color: $color-hab-darkest-gray;
+
+				&.even {
+					background: $color-white;
+				}
+
+				&:hover {
+					background: $color-hab-orange;
+					color: $color-white;
+				}
+
+				.label {
+					padding: 2px 0 3px 10px;
+				}
+
+				.val {
+					width: 90px;
+				}
+			}
+		}
+	}
+
+	.quick-view-goals {
+		margin-right: 1rem;
+	}
 }
 
 /* full view table styles */
 .full-view {
 	position: relative;
-	margin-top: 340px;
+	//margin-top: 340px;
+	margin-top: 160px;
 }
 
 .full-view:before,
@@ -773,4 +824,26 @@ border-top-color: #1f88d8;
 .notification-summary.visible-notifications .notification-count {
 	color: #fff;
 	background-color: $color-hab-orange;
+}
+
+
+@media (max-width: 1024px) {
+	.quick-view {
+		padding-left: 240px;
+	}
+}
+
+@media (max-width: 767px) {
+	.quick-view {
+		padding-left: 260px;
+
+		> div {
+			width: 100%;
+
+			&.quick-view-goals {
+				margin-right: 0;
+				margin-bottom: 1rem;
+			}
+		}
+	}
 }
