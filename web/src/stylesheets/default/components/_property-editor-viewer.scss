@@ -128,7 +128,6 @@
 			width: 100%;
 
 			label {
-				color: $color-hab-lightest-gray;
 				width: 6.5rem;
 			}
 
@@ -285,8 +284,14 @@
 
 	&.tracked-goals {
 		.prop.company-setting-goal {
+			padding: 1rem;
+
 			> .val {
 				padding: 10px;
+			}
+
+			&:nth-of-type(2n+1) {
+				background: #f3f3f3;
 			}
 		}
 		.prop span.ctb {
