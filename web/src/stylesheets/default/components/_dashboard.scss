@@ -240,7 +240,7 @@
 				}
 
 				.val {
-					width: 90px;
+					width: 190px;
 				}
 			}
 		}
@@ -830,6 +830,10 @@ border-top-color: #1f88d8;
 @media (max-width: 1024px) {
 	.quick-view {
 		padding-left: 240px;
+
+		> div .stats-con .stat .val {
+			width: 90px;
+		}
 	}
 }
 
@@ -839,6 +843,10 @@ border-top-color: #1f88d8;
 
 		> div {
 			width: 100%;
+
+			.stats-con .stat .val {
+				width: 90px;
+			}
 
 			&.quick-view-goals {
 				margin-right: 0;
