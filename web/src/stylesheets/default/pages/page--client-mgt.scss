@@ -1154,6 +1154,7 @@ div.window.dialog.property_wrapper {
 
 /* ----- TRACKED GOALS */
 .tracked-goal {
+	margin-top: 1.5rem;
 
 	+ .tracked-goal {
 		margin-top: 1.5rem;
@@ -1170,6 +1171,35 @@ div.window.dialog.property_wrapper {
 	.actions {
 		.btn.disable {
 			@include button-variant($color-hab-orange, $color-white, $color-hab-orange);
+		}
+	}
+
+	.prop.trackedby {
+		margin-top: 1rem;
+
+		> label.tbl {
+			vertical-align: top;
+			width: auto;
+			margin-right: 1rem;
+
+			&::after {
+				content: ':';
+			}
+		}
+
+		.trackedby-val-con {
+			display: inline-block;
+			vertical-align: top;
+
+			span.ctb {
+				display: block;
+				margin-bottom: .25rem;
+
+				label {
+					margin-bottom: 0;
+					margin-right: 5px;
+				}
+			}
 		}
 	}
 }
