@@ -20,7 +20,7 @@ jQuery(function($) {
 
             //$allTableParts.on('mouseenter', 'tbody tr', function(evt) {
             $allTableParts.on('mouseenter', '.dash-row', function(evt) {
-                console.log($allTableParts);
+                // console.log($allTableParts);
                 var rowIndex = $(this).index();
                 $allTableParts.each(function() {
                     //$(this).find('tbody tr').eq(rowIndex).addClass('over');
