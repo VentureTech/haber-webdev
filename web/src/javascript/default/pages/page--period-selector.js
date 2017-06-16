@@ -4,8 +4,6 @@
 
 jQuery(function($) {
 
-    $('.control > select').select2();
-
     $('.period-selector').each(function() {
         var $con = $(this);
         var $form = $con.find('form');
@@ -19,11 +17,13 @@ jQuery(function($) {
         var $cycleRange = $con.find('.control-extra.cycle-range');
         var $dateRange = $con.find('.control-extra.date-range');
 
+        $submit.val('Submit');
+
         $('.control > select').on('change', function() {
             var selected = $(this).val();
             var name = $('.control > select').attr('name');
 
-            console.log(selected);
+            // console.log(selected);
 
             if( $(this).val() == 'cr' ) {
                 //console.log("yay cycle");
@@ -68,6 +68,8 @@ jQuery(function($) {
                 $cycleRange.removeClass(ACTIVE_CLASS);
                 $dateRange.addClass(ACTIVE_CLASS);
 
+
+
                 return;
             }
         });
@@ -106,7 +108,9 @@ jQuery(function($) {
         $extraControls.filter('.date-range').each(function() {
             var $dateCon = $(this);
             var $dateFields = $dateCon.find('.question input');
+            var $dstartCon = $dateCon.find('.start .val');
             var $dstart = $dateCon.find('.start input');
+            var $dendCon = $dateCon.find('.end .val');
             var $dend = $dateCon.find('.end input');
             var dstartVal = $dstart.val();
             var dendVal = $dend.val();
@@ -116,12 +120,45 @@ jQuery(function($) {
             var $monthPicker = $dateCon.find('.month-picker');
             var DATE_PARSE_FORMAT = 'YYYY-MM';
             var DATE_OUTPUT_FORMAT = 'MMM YYYY';
+            var dstartValYear = dstartVal.substr(0, 4);
+            var dendValYear = dendVal.substr(0, 4);
+            var dstartValPlus = +dstartVal.substr(dstartVal.indexOf('-') + 1).toString() + 1;
+            var dendValPlus = +dendVal.substr(dendVal.indexOf('-') + 1).toString() + 1;
+            var dstartValCorrected = dstartValYear + '-' + dstartValPlus;
+            var dendValCorrected = dendValYear + '-' + dendValPlus;
+            var dstartValFormatted = moment(dstartValCorrected, DATE_PARSE_FORMAT).format(DATE_OUTPUT_FORMAT);
+            var dendValFormatted = moment(dendValCorrected, DATE_PARSE_FORMAT).format(DATE_OUTPUT_FORMAT);
             var today = new Date();
+
+            //Append calendar icon to custom month range input container
+            $dstartCon.append('<span class="start-cal cal"><i class="fa fa-calendar" aria-hidden="true"></i></span>');
+            $dendCon.append('<span class="end-cal cal"><i class="fa fa-calendar" aria-hidden="true"></i></span>');
+
+            var $dateCal = $('span.cal');
+
+            //Make the date fields readonly so people can't keyspam
+            $dateFields.attr('readonly', true);
+
+            if(!$dstart.attr('value')) {
+                $dstart.addClass('no-value');
+            } else {
+                $dstart.val(dstartValFormatted);
+            }
+
+            if(!$dend.attr('value')) {
+                $dend.addClass('no-value');
+            } else {
+                $dend.val(dendValFormatted);
+            }
 
             var lastFocus = [];
             $dateFields.on('focus', function(){
                 $monthPicker.addClass(ACTIVE_CLASS);
                 lastFocus = $(this);
+            });
+
+            $dateCal.on('click', function(){
+               $(this).closest('.val').find('input').focus();
             });
 
             $yearSelect.on('change', function(event){
@@ -145,15 +182,17 @@ jQuery(function($) {
                 var input = $('.date-range input.active');
                 var selectedYear = $yearSelect.val();
 
+                console.log('Selection is' + selection + ' ' + selectedYear);
+
                 $(lastFocus).val(selection + ' ' + selectedYear).attr('value', selectionId);
                 $monthPicker.removeClass(ACTIVE_CLASS);
             });
 
             if (dstartVal.length) {
                 displayString += 'Custom: ';
-                displayString += moment(dstartVal, DATE_PARSE_FORMAT).format(DATE_OUTPUT_FORMAT);
+                displayString += moment(dstartValCorrected, DATE_PARSE_FORMAT).format(DATE_OUTPUT_FORMAT);
                 displayString += ' - ';
-                displayString += (dendVal.length ? moment(dendVal, DATE_PARSE_FORMAT).format(DATE_OUTPUT_FORMAT) : 'Present');
+                displayString += (dendVal.length ? moment(dendValCorrected, DATE_PARSE_FORMAT).format(DATE_OUTPUT_FORMAT) : 'Present');
 
                 $control.find('option[data-extra-control-key="'+$dateCon.data('extraControl')+'"]').each(function() {
                     $(this).text(displayString);
@@ -170,18 +209,19 @@ jQuery(function($) {
                     var curPosition = $('.period-selector > input[type="hidden"]');
                     var param1 = $('.control-extra.date-range #q-start');
                     var param2 = $('.control-extra.date-range #q-end');
-                    var year = $('.month.year-select select option:selected');
+                    var startYear = $dstart.val().slice(-4);
+                    var endYear = $dend.val().slice(-4);
 
                     var newUrl;
 
                     if ( url.indexOf('?') > 0 ) {
                         newUrl = url + '&' + curPosition.attr('name') + '=' + curPosition.attr('value') + '&' +
-                            'dr=cmr&' + param1.attr('name')+ '=' + year.attr('value') + '-' + param1.attr('value') + '&' +
-                            param2.attr('name') + '=' + year.attr('value') + '-' + param2.attr('value');
+                            'dr=cmr&' + param1.attr('name') + '=' + startYear + '-' + param1.attr('value').substr(param1.attr('value').indexOf('-') + 1) + '&' +
+                            param2.attr('name') + '=' + endYear + '-' + param2.attr('value').substr(param2.attr('value').indexOf('-') + 1);
                     } else {
                         newUrl = url + '?' + curPosition.attr('name') + '=' + curPosition.attr('value') + '&' +
-                            'dr=cmr&' + param1.attr('name')+ '=' + year.attr('value') + '-' + param1.attr('value') + '&' +
-                            param2.attr('name') + '=' + year.attr('value') + '-' + param2.attr('value');
+                            'dr=cmr&' + param1.attr('name')+ '=' + startYear + '-' + param1.attr('value').substr(param1.attr('value').indexOf('-') + 1) + '&' +
+                            param2.attr('name') + '=' + endYear + '-' + param2.attr('value').substr(param2.attr('value').indexOf('-') + 1);
                     }
 
                     window.location.href = newUrl;
@@ -194,16 +234,31 @@ jQuery(function($) {
         $extraControls.filter('.cycle-range').each(function() {
             var $dateCon = $(this);
             var $dateFields = $dateCon.find('.question input');
+            var $dstartWrap = $dateCon.find('.start .val');
             var $dstart = $dateCon.find('.start input');
+            var $dendWrap = $dateCon.find('.end .val');
             var $dend = $dateCon.find('.end input');
             var $yearSelect = $dateCon.find('.year-select select');
             var $selectionContainer = $dateCon.find('.selection-container');
             var $cyclePicker = $dateCon.find('.cycle-picker');
 
+            //Append calendar icon to custom month range input container
+            $dstartWrap.append('<span class="start-cycle cycle-icon"><i class="fa fa-refresh" aria-hidden="true"></i></span>');
+            $dendWrap.append('<span class="end-cycle cycle-icon"><i class="fa fa-refresh" aria-hidden="true"></i></span>');
+
+            var $dateCal = $('span.cycle-icon');
+
+            //Make the date fields readonly so people can't keyspam
+            $dateFields.attr('readonly', true);
+
             var lastFocus = [];
             $dateFields.on('focus', function(){
                 $cyclePicker.addClass(ACTIVE_CLASS);
                 lastFocus = $(this);
+            });
+
+            $dateCal.on('click', function(){
+                $(this).closest('.val').find('input').focus();
             });
 
             $yearSelect.on('change', function(event){
@@ -235,7 +290,7 @@ jQuery(function($) {
                     $cyclePicker.removeClass('active');
                 });
 
-                console.log(nameList + ',' + idList);
+                // console.log(nameList + ',' + idList);
             });
 
 
@@ -271,7 +326,7 @@ jQuery(function($) {
                             param2.data('selectedId');
                     }
 
-                    console.log(url + ',' + newUrl);
+                    // console.log(url + ',' + newUrl);
 
                     //$(location).attr('href', newUrl);
                     window.location.href = newUrl;
@@ -309,9 +364,14 @@ jQuery(function($) {
         $activeExtraControl = getControlExtra(activeControlKey);
 
         if ($activeExtraControl.length) {
+            console.log($activeExtraControl.data('summary'));
             updateControlSummary($activeExtraControl.data('summary'));
         }
 
         showControlExtra();
+    });
+
+    $('.control > select').select2({
+        minimumResultsForSearch: 20
     });
 });
