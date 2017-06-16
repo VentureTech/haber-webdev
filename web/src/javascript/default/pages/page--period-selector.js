@@ -122,8 +122,8 @@ jQuery(function($) {
             var DATE_OUTPUT_FORMAT = 'MMM YYYY';
             var dstartValYear = dstartVal.substr(0, 4);
             var dendValYear = dendVal.substr(0, 4);
-            var dstartValPlus = +dstartVal.toString().split('').pop() + 1;
-            var dendValPlus = +dendVal.toString().split('').pop() + 1;
+            var dstartValPlus = +dstartVal.substr(dstartVal.indexOf('-') + 1).toString() + 1;
+            var dendValPlus = +dendVal.substr(dendVal.indexOf('-') + 1).toString() + 1;
             var dstartValCorrected = dstartValYear + '-' + dstartValPlus;
             var dendValCorrected = dendValYear + '-' + dendValPlus;
             var dstartValFormatted = moment(dstartValCorrected, DATE_PARSE_FORMAT).format(DATE_OUTPUT_FORMAT);
@@ -209,18 +209,19 @@ jQuery(function($) {
                     var curPosition = $('.period-selector > input[type="hidden"]');
                     var param1 = $('.control-extra.date-range #q-start');
                     var param2 = $('.control-extra.date-range #q-end');
-                    var year = $('.month.year-select select option:selected');
+                    var startYear = $dstart.val().slice(-4);
+                    var endYear = $dend.val().slice(-4);
 
                     var newUrl;
 
                     if ( url.indexOf('?') > 0 ) {
                         newUrl = url + '&' + curPosition.attr('name') + '=' + curPosition.attr('value') + '&' +
-                            'dr=cmr&' + param1.attr('name')+ '=' + year.attr('value') + '-' + param1.attr('value') + '&' +
-                            param2.attr('name') + '=' + year.attr('value') + '-' + param2.attr('value');
+                            'dr=cmr&' + param1.attr('name') + '=' + startYear + '-' + param1.attr('value').substr(param1.attr('value').indexOf('-') + 1) + '&' +
+                            param2.attr('name') + '=' + endYear + '-' + param2.attr('value').substr(param2.attr('value').indexOf('-') + 1);
                     } else {
                         newUrl = url + '?' + curPosition.attr('name') + '=' + curPosition.attr('value') + '&' +
-                            'dr=cmr&' + param1.attr('name')+ '=' + year.attr('value') + '-' + param1.attr('value') + '&' +
-                            param2.attr('name') + '=' + year.attr('value') + '-' + param2.attr('value');
+                            'dr=cmr&' + param1.attr('name')+ '=' + startYear + '-' + param1.attr('value').substr(param1.attr('value').indexOf('-') + 1) + '&' +
+                            param2.attr('name') + '=' + endYear + '-' + param2.attr('value').substr(param2.attr('value').indexOf('-') + 1);
                     }
 
                     window.location.href = newUrl;
