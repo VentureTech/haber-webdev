@@ -134,7 +134,8 @@
 }
 
 .goals-table {
-	border: 1px solid #ccc;
+	//border: 1px solid #ccc;
+	border: none;
 	width: 100%;
 }
 
@@ -143,7 +144,8 @@
 }
 
 .goals-table .empty-con {
-	background-color: #ccc;
+	//background-color: #ccc;
+	background-color: transparent;
 }
 
 .goals-table .actions-con {
@@ -170,13 +172,27 @@
 	margin-left: 0;
 }
 
-.goals-table .month-con {
-	background-color: #f5f5f5;
-	border: 1px solid #d0d0d0;
-	border-bottom: 2px solid #aaa;
-	padding: 5px 10px;
-	font-family: $font-libre-gothic;
-	font-weight: 600;
+.goals-table tr {
+	.month-con,
+	.cycle-con {
+		background-color: #f5f5f5;
+		border: 1px solid #d0d0d0;
+		border-bottom: 2px solid #aaa;
+		padding: 5px 10px;
+		font-family: $font-libre-gothic;
+		font-weight: 600;
+	}
+
+	td {
+		/*&:nth-last-of-type(2) {
+			border-right: none;
+		}*/
+
+		&:empty {
+			border: none;
+			//border-top: 1px solid #d0d0d0;
+		}
+	}
 }
 
 .figures-table-wrapper .goals-table .month-con {
