@@ -399,10 +399,12 @@
 	background-color: #f3f3f3;
 }
 
-.table-part tr.odd td.previous-employee,
-.table-part td.previous-employee {
+//.table-part tr.odd td.previous-employee,
+//.table-part tr.odd td.inactive,
+.table-part td.previous-employee,
+.table-part td.inactive{
 	background-color: #f3f3f3;
-	color: #999;
+	color: #c5c5c5;
 }
 
 .table-part tr.over td,
@@ -470,7 +472,8 @@
 	width: 120px;
 }
 
-.table-part th.previous-employee .person:before {
+.table-part th.previous-employee .person:before,
+.table-part th.inactive .person:before {
 	content: " ";
 	display: block;
 	position: absolute;
@@ -480,7 +483,7 @@
 	bottom: 0;
 	z-index: 1;
 	background-color: #333639;
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0,0,0,0.5);
 }
 
 .table-part th.vacant .person .name:before {
