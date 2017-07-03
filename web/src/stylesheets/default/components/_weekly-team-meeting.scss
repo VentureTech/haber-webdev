@@ -37,6 +37,22 @@
 	padding: 0 10px;
 }
 
+.form_content .weekly-team-meeting .question .form_field.prop-group .prop-group-title {
+	display: inline-block;
+	width: 48%;
+	text-align: right;
+	vertical-align: top;
+	padding: 0 10px;
+
+	+ .props {
+		display: inline-block;
+	}
+
+	h1.title {
+		font-size: 14px;
+	}
+}
+
 .form_content .weekly-team-meeting .question .form_field.prop-group .props span.extra_value_renderer_readonly {
 	text-align: left;
 }
