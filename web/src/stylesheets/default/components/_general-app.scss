@@ -167,14 +167,11 @@
 }
 
 .activitylinks a.header {
-	color: #3b3e40;
+	color: $color-hab-orange;
+	margin-top: 1rem;
 	font-size: 24px;
 	display: block;
-	text-decoration: underline;
-
-	&:hover {
-		text-decoration: none;
-	}
+	text-decoration: none;
 }
 
 .activitylinks .subheader {
@@ -189,15 +186,12 @@
 	}
 
 	&.myactivities {
-		text-decoration: underline;
-
-		&.menuitemlabel:hover {
-			text-decoration: none;
-		}
+		text-decoration: none;
 	}
 
 	&.menuitemlabel {
-		color: #3b3e40;
+		//color: #3b3e40;
+		color: $color-hab-orange;
 
         &:hover {
           text-decoration: underline;
