@@ -411,7 +411,8 @@ button.btn {
 			&.activity-specific {
 
 				.prop.allow-overdue {
-					margin-top: -1.75rem;
+					padding-left: 1.65rem;
+					margin-top: .5rem;
 				}
 
 				.prop.allow-overdue .val {
@@ -833,6 +834,194 @@ button.btn {
 
 	> label {
 		font-size: 1.5rem;
+	}
+}
+
+/* ----- COMPANY PROGRAM MANAGEMENT */
+.company-program-mgt {
+	position: relative;
+
+	> span.title {
+		font-size: 1.5rem;
+		font-weight: 600;
+		margin: 1.25rem 0 0 1.5rem;
+		display: inline-block;
+		background: #fff;
+		padding: 0 3px;
+	}
+
+	> .programs {
+		margin-top: -1rem;
+		padding: 2.75rem 1rem 1rem;
+		border: 1px solid #e5e5e5;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+
+		.program {
+			flex: 1 1 auto;
+			max-width: calc(100% / 5 - 1rem);
+			padding: 1rem;
+			box-sizing: border-box;
+			border: 1px solid #e5e5e5;
+			margin: .5rem;
+			display: flex;
+			flex-flow: column nowrap;
+			min-height: 12rem;
+			justify-content: flex-start;
+
+			span.title {
+				font-weight: 600;
+				flex: 0 0 auto;
+			}
+
+			.miwt-collapsable {
+				margin: 0 0 1rem;
+				flex: 1 0 auto;
+
+				.btn.trigger {
+					background: transparent;
+					border: none;
+					padding: 0;
+					color: $color-hab-orange;
+
+					&::after {
+						content: '+';
+						font-size: 1rem;
+						display: inline-block;
+						margin-left: 5px;
+						color: inherit;
+					}
+
+					&:hover {
+						color: $color-hab-dark-gray;
+					}
+
+					&:active,
+					&:focus {
+						border: none;
+						box-shadow: none;
+					}
+				}
+
+				&.shown {
+					.btn.trigger {
+						&::after {
+							content: '-';
+						}
+					}
+
+					.miwt-collapsable-content {
+						max-height: 55rem;
+					}
+				}
+
+				&.hidden .miwt-collapsable-content {
+					visibility: collapse !important;
+					max-height: 0;
+				}
+
+				.miwt-collapsable-content {
+					position: relative !important;
+				}
+			}
+
+			.actions {
+				align-self: flex-end;
+				text-align: right;
+				margin: 0;
+				flex: 0 1 auto;
+
+				.btn {
+					margin-bottom: 4px;
+				}
+			}
+
+			.activities {
+				span {
+					display: block;
+					font-size: .85rem;
+
+					+ span {
+						margin-top: 5px;
+					}
+				}
+			}
+		}
+	}
+
+	> .actions {
+		position: absolute;
+		top: 3.15rem;
+		right: 5px;
+		margin: 0;
+	}
+}
+
+.program-editor {
+	position: relative;
+
+	div.name {
+		padding-top: 4rem;
+
+		span {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		> span:not(.actions) {
+			font-size: 1.5rem;
+			font-weight: 600;
+		}
+
+		span.actions {
+			vertical-align: middle;
+			margin: 0 0 0 1rem;
+
+			.btn {
+				@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
+			}
+		}
+	}
+
+	.btn.back {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.btn.back,
+	.add-activity .btn {
+		@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+		font-weight: 700;
+		font-family: $font-open-sans;
+	}
+
+	.add-activity {
+		float: right;
+		margin-top: 3rem;
+	}
+
+	.activity-admin-editor {
+		.activity-type {
+			label {
+				display: none;
+			}
+
+			h2 {
+				margin: 1.5rem 0;
+			}
+		}
+
+		.activity.name {
+			padding-top: 0;
+		}
+	}
+
+	.entity_value_editor {
+		.prop.name {
+			padding-top: 0;
+		}
 	}
 }
 
@@ -1277,6 +1466,18 @@ div.window.dialog.property_wrapper {
 }
 
 /* ----- MEDIA QUERIES */
+@media (max-width: 1280px) {
+	.company-program-mgt {
+
+		> .programs {
+
+			.program {
+				max-width: calc(100% / 4 - 1rem);
+			}
+		}
+	}
+}
+
 @media (max-width: 1160px) {
 	.edit-user {
 		.user-picture-editor {
@@ -1324,5 +1525,17 @@ div.window.dialog.property_wrapper {
 
 	.edit-user .prop-wrapper {
 		width: 65%;
+	}
+}
+
+@media (max-width: 960px) {
+	.company-program-mgt {
+
+		> .programs {
+
+			.program {
+				max-width: calc(100% / 2 - 1rem);
+			}
+		}
 	}
 }
