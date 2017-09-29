@@ -32,7 +32,7 @@ body {
   //font-family: Arial, sans-serif;
   font-family: FranklinGothic URW Book, sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 .activity-header{
@@ -123,14 +123,15 @@ h2 {
 
 .activity th.header {
   font-family: FranklinGothic URW Demi, sans-serif;
-  background: #052c49;
-  height: 30px;
-  color: #FFFFFF;
+  font-style: normal !important;
+  font-weight: 400 !important;
   font-size: 16px;
-  padding: 5px;
-  text-align: center;
-  line-height: 14px;
+  background: #052c49;
+  color: #FFFFFF;
   border-right: 1px solid #fff;
+  text-align: center;
+  padding: 0.05in;
+  height: auto;
 
   &:last-child {
     border-right: none;

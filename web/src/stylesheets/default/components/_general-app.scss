@@ -148,23 +148,55 @@
 	padding: 0;
 	font-family: $font-libre-gothic;
 	font-weight: 600;
+
+	&.menu-t3 {
+		margin-top: 0;
+	}
 }
 
 .activitylinks .mi {
 	list-style: none;
 }
 
-.activitylinks .menuitemlabel:hover {
-	text-decoration: none;
+.activitylinks a.menuitemlabel:hover {
+	text-decoration: underline;
 }
 
 .activitylinks .menu-t1 {
 	margin-top: 0;
 }
 
-.activitylinks .menu-t1 > .mi > .menuitemlabel {
+.activitylinks a.header {
 	color: $color-hab-orange;
+	margin-top: 1rem;
 	font-size: 24px;
+	display: block;
+	text-decoration: none;
+}
+
+.activitylinks .subheader {
+	color: #3b3e40;
+	display: block;
+	font-size: 16px;
+
+	&.myactivities,
+	&.myteam {
+		font-size: 18px;
+		margin: 1rem 0 .25rem;
+	}
+
+	&.myactivities {
+		text-decoration: none;
+	}
+
+	&.menuitemlabel {
+		//color: #3b3e40;
+		color: $color-hab-orange;
+
+        &:hover {
+          text-decoration: underline;
+        }
+	}
 }
 
 .activitylinks .menu-t2 > .mi + .mi {
@@ -173,7 +205,7 @@
 
 .activitylinks .menu-t2 > .mi > .menuitemlabel {
 	color: $color-hab-orange;
-	font-size: 18px;
+	font-weight: 400;
 }
 
 .activitylinks .menu-t3 > .mi {
@@ -181,7 +213,8 @@
 }
 
 .activitylinks .menu-t3 > .mi > .menuitemlabel {
-	color: #3b3e40;
+	color: $color-hab-orange;
+	font-weight: 400;
 }
 
 /* jquery ui updates */
