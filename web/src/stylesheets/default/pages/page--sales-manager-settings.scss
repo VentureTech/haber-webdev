@@ -1,6 +1,10 @@
 @import "../config/base-vars";
 @import "../../../../../bower_components/bootstrap/scss/mixins";
 
+.tab-container .tab-items li.activity-schedules-tab {
+	display: none; //HAB-662
+}
+
 .salesmanagersettings {
 	//position: relative;
 }
