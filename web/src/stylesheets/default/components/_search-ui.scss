@@ -75,14 +75,29 @@
 	margin-bottom: 1rem;*/
 }
 
-.search-wrapper .result-actions {
-	text-align: right;
-	display: block;
-	padding: 0;
-	margin: 0 0 10px;
 
-	label {
+.search {
+
+	&.search-wrapper .result-actions {
+		margin: -10px 0 10px;
+	}
+
+	.result-actions {
+		text-align: right;
 		display: block;
+		padding: 0 0 10px;
+		margin: 0 0 10px;
+
+		label {
+			display: block;
+			margin-bottom: 0;
+			font-weight: 600;
+			font-size: 14px;
+		}
+
+		.select2-container {
+			width: 160px !important;
+		}
 	}
 }
 
