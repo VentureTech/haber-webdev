@@ -1105,6 +1105,10 @@ div.window.dialog {
 					width: 26.5rem;
 				}
 
+				&.change {
+					width: auto;
+				}
+
 				+ .btn {
 					margin-left: 0;
 					margin-top: .5rem;
@@ -1170,6 +1174,14 @@ div.window.dialog {
 					width: 75%;
 					min-width: 8rem;
 				}
+			}
+		}
+	}
+
+	.position-editor {
+		.prop.program {
+			.select2-container {
+				max-width: 76%;
 			}
 		}
 	}

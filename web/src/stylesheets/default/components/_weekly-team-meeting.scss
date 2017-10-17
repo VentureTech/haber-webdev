@@ -19,17 +19,18 @@
 	border: 1px solid gray;
 }
 
-.form_content .weekly-team-meeting .question .form_field.prop-group {
-	display: block;
-}
-
-.form_content .weekly-team-meeting .question .form_field.prop-group .props {
+.form_content .weekly-team-meeting .question .form_field.text_field {
 	display: block;
 	padding: 10px;
 }
 
-.form_content .weekly-team-meeting .question .form_field.prop-group label,
-.form_content .weekly-team-meeting .question .form_field.prop-group .props span.extra_value_renderer_readonly {
+.form_content .weekly-team-meeting .question .form_field.text_field .props {
+	display: block;
+}
+
+.form_content .weekly-team-meeting .question .form_field.text_field label,
+.form_content .weekly-team-meeting .question .form_field.text_field .label,
+.form_content .weekly-team-meeting .question .form_field.text_field span.extra_value_renderer_readonly {
 	display: inline-block;
 	width: 48%;
 	text-align: right;
@@ -37,7 +38,12 @@
 	padding: 0 10px;
 }
 
-.form_content .weekly-team-meeting .question .form_field.prop-group .prop-group-title {
+.form_content .weekly-team-meeting .question .form_field.text_field label,
+.form_content .weekly-team-meeting .question .form_field.text_field .label {
+	font-weight: 600;
+}
+
+.form_content .weekly-team-meeting .question .form_field.text_field .prop-group-title {
 	display: inline-block;
 	width: 48%;
 	text-align: right;
@@ -53,12 +59,12 @@
 	}
 }
 
-.form_content .weekly-team-meeting .question .form_field.prop-group .props span.extra_value_renderer_readonly {
+.form_content .weekly-team-meeting .question .form_field.text_field span.extra_value_renderer_readonly {
 	text-align: left;
 }
 
-.form_content .weekly-team-meeting .question .form_field.prop-group input,
-.form_content .weekly-team-meeting .question .form_field.prop-group textarea {
+.form_content .weekly-team-meeting .question .form_field.text_field input,
+.form_content .weekly-team-meeting .question .form_field.text_field textarea {
 	width: 45%;
 	vertical-align: top;
 }

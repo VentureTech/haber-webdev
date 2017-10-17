@@ -1,0 +1,179 @@
+@import "../config/base-vars";
+@import "../mixins/general-mixins";
+@import "../../../../../bower_components/bootstrap/scss/mixins/clearfix";
+@import "../../../../../bower_components/bootstrap/scss/mixins/buttons";
+
+.kudos-con {
+
+	.cms-popup-control {
+		position: absolute;
+		right: 56px;
+		bottom: 3px;
+		cursor: pointer;
+	}
+
+	.kudos-control {
+
+		.fa {
+			font-size: 1.5rem;
+			color: $color-white;
+		}
+	}
+}
+
+.cms-popup-content {
+	width: 500px;
+
+	&::before {
+		content: '';
+		background: rgba(42,53,66,0.9);
+		display: block;
+		height: 100%;
+		width: 100%;
+		z-index: 499;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+	.cms-popup-close {
+		background-color: lighten($color-app-light-grey, 25%);
+		padding: $modal-header-padding;
+		border-bottom: 1px solid $modal-header-border-color;
+		z-index: 501;
+		position: relative;
+		border-top-left-radius: $border-radius-lg;
+		border-top-right-radius: $border-radius-lg;
+		text-align: right;
+
+		button {
+			background: $color-hab-orange;
+			color: transparent;
+			border: 1px solid darken($color-hab-orange, 8%);
+			border-radius: $border-radius-sm;
+			width: 35px;
+			overflow: hidden;
+			white-space: nowrap;
+			display: inline-block;
+			padding: 0;
+
+			&:hover {
+				background: darken($color-hab-orange, 8%);
+			}
+
+			&::before {
+				content: '\f00d';
+				font-family: $font-glyph-lib;
+				color: $color-white;
+				font-size: 1.25rem;
+				padding-left: 9px;
+			}
+		}
+
+		&.close_bottom {
+			display: none;
+		}
+	}
+
+	.inner_con {
+		padding: 25px;
+		background: $color-white;
+		position: relative;
+		z-index: 500;
+		border-bottom-left-radius: $border-radius-lg;
+		border-bottom-right-radius: $border-radius-lg;
+	}
+
+	.question {
+
+		+ .question {
+			margin-top: 1.25rem;
+		}
+
+		.form_field.prop-group {
+			&.cheer-message {
+				.props label {
+					vertical-align: top;
+				}
+			}
+
+			.props {
+				display: table;
+				width: 100%;
+
+				input,
+				textarea {
+					border: 1px solid #B7B7B5;
+					padding: 3px 5px;
+					vertical-align: middle;
+				}
+
+				label {
+					padding: 0 10px;
+					vertical-align: middle;
+				}
+
+				textarea {
+					line-height: 1.25;
+					width: 100%;
+					vertical-align: top;
+				}
+
+				.miwt-calendar button.open {
+					height: 25px;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+
+	.cheer-date {
+
+		> section {
+			display: table;
+			width: 100%;
+
+			.prop-group-title {
+				display: table-cell;
+				width: 50%;
+				text-align: right;
+				padding: 0 10px;
+
+				h1 {
+					font-size: 14px;
+					line-height: 1.5;
+					font-weight: 600;
+				}
+			}
+
+			.props {
+				display: table-cell;
+				width: 50%;
+			}
+
+			.date_fields {
+
+				span {
+					display: inline-block;
+					vertical-align: middle;
+
+					+ span {
+						margin-left: 8px;
+					}
+				}
+			}
+		}
+	}
+
+	span.submit_button {
+		border-top: 1px solid $modal-footer-border-color;
+		display: block;
+		text-align: right;
+		margin-top: 1rem;
+		padding-top: 1rem;
+
+		.btn {
+			margin: 0;
+		}
+	}
+}
