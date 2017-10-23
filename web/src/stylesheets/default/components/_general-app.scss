@@ -143,15 +143,16 @@
 }
 
 /* General activity link menu */
-.menu-wrapper {
+.activitylinks {
 
-	> select {
+	select {
 		max-width: 100%;
 	}
 
-	> .select2-container {
+	.select2-container {
 		max-width: 100%;
-		margin-top: 1rem;
+		margin-top: .25rem;
+		font-weight: 400;
 	}
 }
 
