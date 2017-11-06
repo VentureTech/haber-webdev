@@ -7,7 +7,7 @@
 
 	.cms-popup-control {
 		position: absolute;
-		right: 56px;
+		right: 12px;
 		bottom: 3px;
 		cursor: pointer;
 	}
@@ -88,6 +88,10 @@
 
 		+ .question {
 			margin-top: 1.25rem;
+		}
+
+		.form_field {
+			width: 100%;
 		}
 
 		.form_field.prop-group {
