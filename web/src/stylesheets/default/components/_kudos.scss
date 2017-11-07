@@ -36,6 +36,15 @@
 		left: 0;
 	}
 
+	.kudo-intro {
+		margin-bottom: 1.75rem;
+
+		h1 {
+			font-size: 1.5rem;
+			font-weight: 700;
+		}
+	}
+
 	.cms-popup-close {
 		background-color: lighten($color-app-light-grey, 25%);
 		padding: $modal-header-padding;
