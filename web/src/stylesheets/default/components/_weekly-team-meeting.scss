@@ -4,11 +4,15 @@
 }
 
 .form_content .weekly-team-meeting .question:first-child .form_field {
-	display: block;
 	width: 100%;
-	max-width: 35rem;
-	text-align: center;
-	margin: 0 auto;
+
+	p {
+		display: block;
+		width: 100%;
+		max-width: 35rem;
+		text-align: center;
+		margin: 0 auto;
+	}
 }
 
 .form_content .weekly-team-meeting .question .form_field p {
@@ -68,6 +72,11 @@
 	width: 45%;
 	vertical-align: top;
 }
+
+/*.form_content .weekly-team-meeting .question .form_field.text_field textarea {
+	width: 100%;
+	vertical-align: top;
+}*/
 
 .form_content .weekly-team-meeting span.submit_registration_button {
 	display: block;

@@ -62,8 +62,17 @@ jQuery(function($) {
                 scrollButtons: {
                     enable: false
                 },
+                mouseWheel: {
+                    enable: false,
+                    preventDefault: true,
+                    axis: "x",
+                    disableOver: ['.scroller', 'table', 'tr', 'td']
+                },
                 scrollInertia: 0,
-                horizontalScroll: true
+                // horizontalScroll: true,
+                axis: "x",
+                contentTouchScroll: false,
+                documentTouchScroll: false
             });
         });
 
