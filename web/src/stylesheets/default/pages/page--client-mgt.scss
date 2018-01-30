@@ -78,7 +78,6 @@ button.btn {
 		.actions {
 			display: inline-block;
 			margin: 0;
-			margin-left: 20px;
 		}
 
 		.val {
@@ -87,16 +86,45 @@ button.btn {
 			span{
 				display: inline-block;
 				vertical-align: top;
+				margin-right: 20px;
 			}
 		}
 
 		.cal {
 			display: block;
 			margin-top: -6px;
+
+			input {
+				margin-bottom: 8px;
+			}
 		}
 
 		button.btn{
-			margin-top: -6px;
+			margin-top: -4px;
+			font-size: 12px;
+			padding: 0px 5px;
+			height: auto;
+		}
+	}
+
+	.start-date {
+		.val > div > span {
+			margin-right: 20px;
+		}
+
+		.actions {
+			display: inline-block;
+			margin: 0;
+		}
+
+		.cal {
+			input {
+				margin-bottom: 8px;
+			}
+		}
+
+		button.btn{
+			margin-top: -4px;
 			font-size: 12px;
 			padding: 0px 5px;
 			height: auto;
