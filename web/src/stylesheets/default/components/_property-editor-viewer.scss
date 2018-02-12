@@ -304,6 +304,12 @@
 	}
 }
 
+.resource-editor {
+	.property-editor .persistence-actions.bottom {
+		text-align: right;
+	}
+}
+
 .prop-editor {
 	.prop span.ctb {
 		label.tbl {
