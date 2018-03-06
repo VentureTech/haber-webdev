@@ -991,29 +991,10 @@ button.btn {
 
 	div.settings {
 		margin-bottom: 2rem;
-		display: flex;
-		flex-flow: row wrap;
-		align-items: flex-start;
 
-		label,
-		span {
-			display: block;
-		}
-
-		label {
-			margin-bottom: 0;
-		}
-
-		.name,
-		.prog-id,
-		.actions {
-			//flex: 1;
-			width: auto;
-			max-width: 30%;
-		}
-
-		.name, .prog-id {
+		.name {
 			padding-top: 4rem;
+			margin-bottom: 10px;
 
 			span {
 				font-size: 1.5rem;
@@ -1021,19 +1002,30 @@ button.btn {
 				line-height: 1;
 				margin-top: 5px;
 			}
+		}
 
-			input {
-				width: 100%;
+		.name,
+		.prog-id {
+			label {
+				margin: 0;
+
+				&::after {
+					content: ':';
+					display: inline-block;
+					vertical-align: baseline;
+					margin-right: 5px;
+				}
 			}
 		}
 
-		.prog-id {
-			margin-left: 2rem;
+		.prog-id,
+		.actions {
+			display: inline-block;
+			vertical-align: middle;
 		}
 
 		.actions {
-			padding-top: 5.25rem;
-			margin: 0 0 0 2rem;
+			margin: 0 0 0 15px;
 
 			.btn {
 				@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
