@@ -989,22 +989,43 @@ button.btn {
 .program-editor {
 	position: relative;
 
-	div.name {
-		padding-top: 4rem;
+	div.settings {
+		margin-bottom: 2rem;
 
-		span {
+		.name {
+			padding-top: 4rem;
+			margin-bottom: 10px;
+
+			span {
+				font-size: 1.5rem;
+				font-weight: 600;
+				line-height: 1;
+				margin-top: 5px;
+			}
+		}
+
+		.name,
+		.prog-id {
+			label {
+				margin: 0;
+
+				&::after {
+					content: ':';
+					display: inline-block;
+					vertical-align: baseline;
+					margin-right: 5px;
+				}
+			}
+		}
+
+		.prog-id,
+		.actions {
 			display: inline-block;
 			vertical-align: middle;
 		}
 
-		> span:not(.actions) {
-			font-size: 1.5rem;
-			font-weight: 600;
-		}
-
-		span.actions {
-			vertical-align: middle;
-			margin: 0 0 0 1rem;
+		.actions {
+			margin: 0 0 0 15px;
 
 			.btn {
 				@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
@@ -1027,7 +1048,7 @@ button.btn {
 
 	.add-activity {
 		float: right;
-		margin-top: 3rem;
+		margin: 3rem 1rem 0 0;
 	}
 
 	.activity-admin-editor {
