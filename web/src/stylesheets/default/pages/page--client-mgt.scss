@@ -989,22 +989,51 @@ button.btn {
 .program-editor {
 	position: relative;
 
-	div.name {
-		padding-top: 4rem;
+	div.settings {
+		margin-bottom: 2rem;
+		display: flex;
+		flex-flow: row wrap;
+		align-items: flex-start;
 
+		label,
 		span {
-			display: inline-block;
-			vertical-align: middle;
+			display: block;
 		}
 
-		> span:not(.actions) {
-			font-size: 1.5rem;
-			font-weight: 600;
+		label {
+			margin-bottom: 0;
 		}
 
-		span.actions {
-			vertical-align: middle;
-			margin: 0 0 0 1rem;
+		.name,
+		.prog-id,
+		.actions {
+			//flex: 1;
+			width: auto;
+			max-width: 30%;
+		}
+
+		.name, .prog-id {
+			padding-top: 4rem;
+
+			span {
+				font-size: 1.5rem;
+				font-weight: 600;
+				line-height: 1;
+				margin-top: 5px;
+			}
+
+			input {
+				width: 100%;
+			}
+		}
+
+		.prog-id {
+			margin-left: 2rem;
+		}
+
+		.actions {
+			padding-top: 5.25rem;
+			margin: 0 0 0 2rem;
 
 			.btn {
 				@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
@@ -1027,7 +1056,7 @@ button.btn {
 
 	.add-activity {
 		float: right;
-		margin-top: 3rem;
+		margin: 3rem 1rem 0 0;
 	}
 
 	.activity-admin-editor {
