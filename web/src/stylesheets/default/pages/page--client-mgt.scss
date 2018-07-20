@@ -878,9 +878,20 @@ button.btn {
 		padding: 0 3px;
 	}
 
+	> .filter {
+		padding: .25rem 0 0 1.5rem;
+		margin-bottom: 1.625rem;
+
+		label {
+			display: block;
+			margin-bottom: 0;
+			font-weight: 600;
+		}
+	}
+
 	> .programs {
-		margin-top: -1rem;
-		padding: 2.75rem 1rem 1rem;
+		margin-top: -6rem;
+		padding: 5rem 1rem 1rem;
 		border: 1px solid #e5e5e5;
 		display: flex;
 		flex-flow: row wrap;
