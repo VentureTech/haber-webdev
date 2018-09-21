@@ -1100,9 +1100,11 @@
 
 .activityinstanceapp {
 	div.window.dialog {
-		left: 50% !important;
-		margin-left: -250px;
-
+		.actions {
+			&:last-child {
+				margin-top: 15px;
+			}
+		}
 		.note-editor .prop-footer {
 			margin-top: 1rem;
 		}

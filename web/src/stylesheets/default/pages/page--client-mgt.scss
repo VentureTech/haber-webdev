@@ -793,6 +793,15 @@ button.btn {
 	.activity-settings .actions.top {
 		display: block;
 	}
+
+	.topic {
+		&-con {
+			&.current {
+				font-weight: bold;
+			}
+		}
+	}
+
 }
 
 /* ----- CAREER DEV PLAN */
