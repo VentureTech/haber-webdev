@@ -1,0 +1,71 @@
+@import "../config/base-vars";
+
+.topiclist-viewer {
+  .prop-header-actions {
+    .top.actions {
+      text-align: left;
+      display: block;
+    }
+  }
+  .name {
+    .actions {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 0 0 10px;
+    }
+    h1 {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    input {
+      display: inline-block;
+      vertical-align: middle;
+      color: $color-hab-darkest-gray;
+      font-family: "Libre Franklin",sans-serif;
+      font-weight: 700;
+      font-size: 26px;
+      background: rgba($color-white,0.15);
+      border: 1px solid rgba($color-black,0.1);
+      padding: 0;
+    }
+  }
+  .actions {
+    .btn {
+      &.edit {
+        display: inline-block;
+        position: relative;
+        background: transparent;
+        border: none;
+        padding: 0;
+        vertical-align: middle;
+        margin-left: 5px;
+        text-indent: -99999px;
+        width: 25px;
+        height: 25px;
+
+        &:after {
+          content: '\f040';
+          font-family: $font-glyph-lib;
+          font-weight: 300;
+          color: $color-hab-darkest-gray;
+          text-indent: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+  .company {
+    margin-bottom: 15px;
+    .label {
+      display: inline-block;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+    .name {
+      display: inline-block;
+    }
+  }
+}
