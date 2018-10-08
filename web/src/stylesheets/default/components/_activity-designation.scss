@@ -1,0 +1,12 @@
+@import "../config/base-vars";
+
+.dialog {
+  .activity, .leave, .designatee {
+    margin: 15px 0;
+    label {
+      min-width: 110px;
+      margin: 0 5px 0 0;
+      font-weight: bold;
+    }
+  }
+}

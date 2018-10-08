@@ -1,5 +1,49 @@
 @import "../config/base-vars";
 
+body {
+  &:before {
+    content: '';
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color-black, 0);
+    transition: z-index .25s ease, background .25s ease;
+  }
+  &.dnd-active {
+    &:before {
+      content: '';
+      z-index: 998;
+      background: rgba($color-black, .33);
+    }
+    .topic.editor {
+      .miwt-table-con {
+        position: relative;
+        z-index: 999;
+      }
+    }
+    .dnd-target-active-above {
+      td {
+        border-top: 2px solid $color-hab-orange;
+      }
+    }
+    .dnd-target-active-below {
+      td {
+        border-bottom: 1px solid rgba($color-hab-orange, 0);
+      }
+      + tr {
+        td {
+          border-top: 2px solid $color-hab-orange;
+        }
+      }
+    }
+  }
+}
+
+
+
 .topiclist-viewer {
   .prop-header-actions {
     .top.actions {
@@ -12,6 +56,32 @@
       display: inline-block;
       vertical-align: middle;
       margin: 0 0 0 10px;
+      .btn {
+        &.edit {
+          display: inline-block;
+          position: relative;
+          background: transparent;
+          border: none;
+          padding: 0;
+          vertical-align: middle;
+          margin-left: -5px;
+          text-indent: -99999px;
+          width: 25px;
+          height: 25px;
+
+          &:after {
+            content: '\f040';
+            font-family: $font-glyph-lib;
+            font-weight: 300;
+            color: $color-hab-darkest-gray;
+            text-indent: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
     }
     h1 {
       display: inline-block;
@@ -29,34 +99,7 @@
       padding: 0;
     }
   }
-  .actions {
-    .btn {
-      &.edit {
-        display: inline-block;
-        position: relative;
-        background: transparent;
-        border: none;
-        padding: 0;
-        vertical-align: middle;
-        margin-left: 5px;
-        text-indent: -99999px;
-        width: 25px;
-        height: 25px;
 
-        &:after {
-          content: '\f040';
-          font-family: $font-glyph-lib;
-          font-weight: 300;
-          color: $color-hab-darkest-gray;
-          text-indent: 0;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
-      }
-    }
-  }
   .company {
     margin-bottom: 15px;
     .label {
@@ -66,6 +109,12 @@
     }
     .name {
       display: inline-block;
+    }
+  }
+  .miwt-table {
+    td {
+      box-sizing: border-box;
+      border-top: 2px solid rgba($color-white, 0);
     }
   }
 }

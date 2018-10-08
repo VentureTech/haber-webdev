@@ -1,0 +1,120 @@
+@import "../config/base-vars";
+
+.topic-lists {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.topic-list {
+  max-width: calc(100% / 2 - 1rem);
+  flex: 1 1 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+  border: 1px solid #e5e5e5;
+  margin: .5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 12rem;
+  justify-content: flex-start;
+  .title {
+    font-weight: 600;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+  }
+  .topics {
+    > button {
+      padding: 0;
+      margin: 0;
+      color: $color-hab-orange;
+      cursor: pointer;
+      outline: none;
+      box-shadow: none;
+      &:after {
+        content: ' +';
+      }
+    }
+    ul.topics {
+      display: none;
+    }
+    &.is-open {
+      ul {
+        display: block;
+      }
+    }
+    li {
+      display: block;
+      font-size: .85rem;
+    }
+  }
+
+
+  .actions {
+    align-self: flex-end;
+    text-align: right;
+    margin: auto 0 0;
+    flex: 0 1 auto;
+  }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1279px) {
+  .topic-list {
+    max-width: calc(100% / 5 - 1rem);
+  }
+  #t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
+    width: 980px;
+    margin: 0 auto;
+  }
+
+  .primary-menu + .primary-menu{
+    margin-left: 30px;
+  }
+
+  .primary-menu .menu-t1 > .mi + .mi{
+    margin-left: 30px;
+  }
+}
+
+@media all and (min-width: 760px) and (max-width: 1023px) {
+  .topic-list {
+    max-width: calc(100% / 4 - 1rem)
+  }
+  #t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
+    width: 730px;
+    margin: 0 auto;
+  }
+
+  .primary-menu + .primary-menu{
+    margin-left: 10px;
+  }
+
+  .primary-menu .menu-t1 > .mi + .mi{
+    margin-left: 10px;
+  }
+
+  .primary-menu .menu-t1 > .mi > .menuitemlabel{
+    padding: 5px 10px;
+    background: transparent;
+  }
+
+}
+
+@media all and (max-width: 759px) {
+  #t-interior #header-wc-0, #t-interior #primary-breadcrumbs-wc-0, #t-interior #e-content-wc-0{
+    width: 580px;
+    margin: 0 auto;
+  }
+
+  .primary-menu + .primary-menu{
+    margin-left: 5px;
+  }
+
+  .primary-menu .menu-t1 > .mi + .mi{
+    margin-left: 5px;
+  }
+
+  .primary-menu .menu-t1 > .mi > .menuitemlabel{
+    padding: 5px 10px;
+    background: transparent;
+  }
+}
