@@ -308,6 +308,13 @@
 	background-image: url(/_resources/dyn/docroot/cms/filesystem/icons/delete.gif);
 }
 
+.activity-management .activity-instance-editor-upper a.designate-activity:before {
+	content: '\f0e8';
+	font-family: $font-glyph-lib;
+	color: $color-hab-orange;
+	line-height: 24px;
+}
+
 .activity-management .message-container {
 	clear: both;
 }
