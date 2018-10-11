@@ -122,8 +122,8 @@ jQuery(function($) {
             var DATE_OUTPUT_FORMAT = 'MMM YYYY';
             var dstartValYear = dstartVal.substr(0, 4);
             var dendValYear = dendVal.substr(0, 4);
-            var dstartValPlus = +dstartVal.substr(dstartVal.indexOf('-') + 1).toString() + 1;
-            var dendValPlus = +dendVal.substr(dendVal.indexOf('-') + 1).toString() + 1;
+            var dstartValPlus = dstartVal.substr(dstartVal.indexOf('-') + 1).toString();
+            var dendValPlus = dendVal.substr(dendVal.indexOf('-') + 1).toString();
             var dstartValCorrected = dstartValYear + '-' + dstartValPlus;
             var dendValCorrected = dendValYear + '-' + dendValPlus;
             var dstartValFormatted = moment(dstartValCorrected, DATE_PARSE_FORMAT).format(DATE_OUTPUT_FORMAT);
@@ -215,14 +215,15 @@ jQuery(function($) {
                     var newUrl;
 
                     if ( url.indexOf('?') > 0 ) {
-                        newUrl = url + '&' + curPosition.attr('name') + '=' + curPosition.attr('value') + '&' +
-                            'dr=cmr&' + param1.attr('name') + '=' + startYear + '-' + param1.attr('value').substr(param1.attr('value').indexOf('-') + 1) + '&' +
-                            param2.attr('name') + '=' + endYear + '-' + param2.attr('value').substr(param2.attr('value').indexOf('-') + 1);
+                        newUrl = url + '&';
                     } else {
-                        newUrl = url + '?' + curPosition.attr('name') + '=' + curPosition.attr('value') + '&' +
-                            'dr=cmr&' + param1.attr('name')+ '=' + startYear + '-' + param1.attr('value').substr(param1.attr('value').indexOf('-') + 1) + '&' +
-                            param2.attr('name') + '=' + endYear + '-' + param2.attr('value').substr(param2.attr('value').indexOf('-') + 1);
+                        newUrl = url + '?';
                     }
+
+                    newUrl = newUrl + curPosition.attr('name') + '=' + curPosition.attr('value')
+                        + '&dr=cmr'
+                        + '&' + param1.attr('name')+ '=' + startYear + '-' + param1.attr('value').substr(param1.attr('value').indexOf('-') + 1)
+                        + '&' + param2.attr('name') + '=' + endYear + '-' + param2.attr('value').substr(param2.attr('value').indexOf('-') + 1);
 
                     window.location.href = newUrl;
                 }
@@ -317,14 +318,15 @@ jQuery(function($) {
                     var newUrl;
 
                     if ( url.indexOf('?') > 0 ) {
-                        newUrl = url + '&' + curPosition.attr('name') + '=' + curPosition.attr('value') + '&' +
-                            'dr=cr&' + param1.attr('name')+ '=' + param1.data('selectedId') + '&' + param2.attr('name') + '=' +
-                            param2.data('selectedId');
+                        newUrl = url + '&';
                     } else {
-                        newUrl = url + '?' + curPosition.attr('name') + '=' + curPosition.attr('value') + '&' +
-                            'dr=cr&' + param1.attr('name')+ '=' + param1.data('selectedId') + '&' + param2.attr('name') + '=' +
-                            param2.data('selectedId');
+                        newUrl = url + '?';
                     }
+
+                    newUrl = newUrl + curPosition.attr('name') + '=' + curPosition.attr('value')
+                        + '&dr=cr'
+                        + '&' + param1.attr('name')+ '=' + param1.data('selectedId')
+                        + '&' + param2.attr('name') + '=' + param2.data('selectedId');
 
                     // console.log(url + ',' + newUrl);
 
