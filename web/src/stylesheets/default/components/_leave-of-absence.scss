@@ -1,0 +1,32 @@
+@import "../config/base-vars";
+
+.search-bar {
+  .range-constraint {
+    .constraint-input {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .miwt-calendar {
+      margin: 0 0 0 5px;
+    }
+  }
+}
+
+.dialog {
+  .miwt-calendar {
+    button.open {
+      line-height: 0;
+      vertical-align: middle;
+      display: inline-block;
+      margin-bottom: 3px;
+    }
+  }
+  .absentee, .absentee ~ .date {
+    margin: 15px 0;
+    label {
+      min-width: 90px;
+      margin-right: 5px;
+      font-weight: bold;
+    }
+  }
+}

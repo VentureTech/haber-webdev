@@ -76,6 +76,13 @@ h2 {
 .activity-info .right {
 	margin-left: .95in;
 	width: 3in;
+	.val {
+		white-space: nowrap;
+		vertical-align: bottom;
+	}
+	.label {
+		white-space: nowrap;
+	}
 }
 
 .activity-info .label {
@@ -214,3 +221,41 @@ tbody > tr.question td {
 		}
 	}
 }
+
+.topic-con {
+  margin: 30px 0;
+  padding-bottom: 30px;
+  table {
+    border-collapse: separate !important;
+  }
+  tr {
+    + tr {
+      td {
+        padding-top: 15px;
+      }
+    }
+  }
+   .label {
+     vertical-align: top;
+     margin: 0 0 0 5px;
+     white-space: nowrap;
+		 word-break: none;
+     width: 1.25in;
+		 strong {
+			 white-space: nowrap;
+		 }
+   }
+  a {
+    margin: 0;
+    color: #052c49;
+  }
+  p {
+    margin: 0;
+  }
+  .attachment-con {
+    display: block;
+    + .attachment-con {
+      margin-top: 15px;
+    }
+  }
+ }

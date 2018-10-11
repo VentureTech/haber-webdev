@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <title>${(activity_instance.activity_name)!"Observation Coaching"}</title>
+  <link media="all" rel="stylesheet" href="https://haber-qa.proteus.co/_resources/dyn/files/1081000z600a6b89/_fn/pdf-download-styles.css" type="text/css" />
+</head>
+<body>
+<div class="rep-activity-main">
+  <div class="activity-instance-editor">
+    <div class="activity-instance-editor title">
+      <img src="http://www.cultivate-growth.com/_resources/dyn/files/14109zb0fded96/_fn/pdflogo.png" alt="Cultivate Growth" class="ecsell"/>
+      <h1>${(activity_instance.activity_name)!"Observation Coaching"}</h1>
+    </div>
+  </div>
+</div>
+<table class='activity-info'>
+  <tr><td>
+    <table class='left'>
+      <tr>
+        <td class='label'>
+          Status:
+        </td>
+        <td class='val'>
+          ${(activity_instance.status)!"Unknown"}
+        </td>
+      </tr>
+      <tr>
+        <td class='label'>
+          Team Leader:
+        </td>
+        <td class='val'>
+          ${(activity_instance.sales_manager.name.first)!"Unknown"} ${(activity_instance.sales_manager.name.last)!"Unknown"}
+        </td>
+      </tr>
+      <tr>
+        <td class='label'>
+          Team Member:
+        </td>
+        <td class='val'>
+          ${(activity_instance.for.name.first)!"Unknown"} ${(activity_instance.for.name.last)!"Unknown"}
+        </td>
+      </tr>
+    </table></td><td>
+    <table class='right'>
+      <tr>
+        <td class='label'>
+          Due Date:
+        </td>
+        <td class='val'>
+          ${(activity_instance.due_date)!"Unknown"}
+        </td>
+      </tr>
+      <tr>
+        <td class='label'>
+          Date Completed:
+        </td>
+        <td class='val'>
+          ${(activity_instance.date)!"Unknown"}
+        </td>
+      </tr>
+    </table></td></tr>
+</table>
+
+[#if activity_instance.topics?size > 0]
+[#assign topic = (activity_instance.topics[0])!{}]
+<div class="topic-con">
+  <table>
+    <tr>
+      <td class="label"><strong>Topic:</strong></td>
+      <td>${topic.name!""}</td>
+    </tr>
+    <tr>
+      <td class="label"><strong>Description:</strong></td>
+      <td>${topic.description!""}</td>
+    </tr>
+    <tr class="attachments-con">
+      <td class="label"><strong>Attachment(s):</strong></td>
+      <td>
+          [#list topic.attachments as attachment]
+            [#if attachment.link?has_content]
+              <span class="attachment-con">
+                <span class="name"><a href="${(attachment.link)!""}">${attachment.name!""}</a></span>
+                <span class="description">${attachment.description!""}</span>
+              </span>
+            [/#if]
+          [/#list]
+      </td>
+    </tr>
+  </table>
+</div>
+[/#if]
+
+<div class="sac" >
+  <div class="weekly-team-meeting" >
+    <table class="sac-section">
+      <thead>
+      <tr class="section-label question">
+        <th class="title label" style="text-align: left">Observation Coaching Agenda</th><th class="val">Comments</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="question">
+        <td class="label">${(observation_coaching.data.things_went_well.config.prompt)!"Unknown"}</td>
+        <td class="val" style="width: 60%;">${(observation_coaching.data.things_went_well)!"Unknown"}</td>
+      </tr>
+      <tr class="question">
+        <td class="label">${(observation_coaching.data.can_be_improved.config.prompt)!"Unknown"}</td>
+        <td class="val" style="width: 60%;">${(observation_coaching.data.can_be_improved)!"Unknown"}</td>
+      </tr>
+      <tr class="question">
+        <td class="label">${(observation_coaching.data.action_plan.config.prompt)!"Unknown"}</td>
+        <td class="val" style="width: 60%;">${(observation_coaching.data.action_plan)!"Unknown"}</td>
+      </tr>
+      <tr class="question">
+        <td class="label">${(observation_coaching.data.meeting_notes.config.prompt)!"Unknown"}</td>
+        <td class="val" style="width: 60%;">${(observation_coaching.data.meeting_notes)!"Unknown"}</td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+</body>
+</html>

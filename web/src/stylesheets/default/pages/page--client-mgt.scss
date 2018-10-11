@@ -793,6 +793,15 @@ button.btn {
 	.activity-settings .actions.top {
 		display: block;
 	}
+
+	.topic {
+		&-con {
+			&.current {
+				font-weight: bold;
+			}
+		}
+	}
+
 }
 
 /* ----- CAREER DEV PLAN */
@@ -1611,3 +1620,5 @@ div.window.dialog.property_wrapper {
 		}
 	}
 }
+
+@import "../components/schedule-editor";

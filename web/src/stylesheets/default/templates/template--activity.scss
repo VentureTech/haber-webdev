@@ -140,3 +140,11 @@
     }
   }
 }
+
+.dialog {
+  .windowcontent {
+    > .actions {
+      margin-top: 15px;
+    }
+  }
+}

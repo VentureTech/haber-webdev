@@ -1,0 +1,86 @@
+@import "../config/base-vars";
+
+.meetingtopic-editor {
+  border: 1px solid #c2c2c2;
+  border-radius: 3px;
+  padding: 20px;
+  background-color: $color-white;
+  > header {
+    .persistence-actions {
+      display: none;
+    }
+  }
+  .prop {
+    &.topic, &.description {
+      label {
+        display: inline-block;
+        vertical-align: top;
+        width: 35%;
+        text-align: left;
+        font-family: "Libre Franklin", sans-serif;
+        font-weight: 600;
+        max-width: 20rem;
+        padding: 10px 10px 10px 25px;
+      }
+      > .prop {
+        display: inline-block;
+        width: 60%;
+        text-align: left;
+        margin-left: 10px;
+        padding: 10px;
+      }
+    }
+  }
+  section {
+    header {
+      display: flex;
+      align-items: flex-end;
+      h1 {
+        font-size: 1rem;
+        margin-right: 10px;
+      }
+      .actions {
+        margin: 10px 0 0;
+      }
+    }
+  }
+}
+
+.content-box {
+  .dialog {
+    .prop {
+      margin-bottom: 15px;
+      ~ div, ~ span {
+        display: block;
+        margin-bottom: 15px;
+        > label {
+          display: block;
+          margin: 0;
+          font-weight: bold;
+        }
+      }
+      label {
+        display: block;
+        margin: 0;
+        font-weight: bold;
+      }
+    }
+    .rtb {
+      display: inline-block;
+      + .rtb {
+        margin-left: 15px;
+      }
+      label {
+        display: inline-block;
+      }
+      input[type=radio] {
+        display: inline-block;
+        vertical-align: top;
+        margin: 4px 5px 0 0;
+      }
+    }
+    .file-name {
+      margin-right: 5px;
+    }
+  }
+}

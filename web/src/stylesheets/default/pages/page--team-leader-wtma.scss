@@ -1,0 +1,31 @@
+@import "../config/base-vars";
+
+.miwt-table>tbody>tr>td.last-column.type-meeting-topic .attachment-con {
+  display: inline;
+  .link-con {
+    display: inline;
+  }
+  a {
+    display: inline;
+    background: transparent;
+    padding: 0;
+    margin: 0 5px 0 0;
+    color: $color-hab-orange;
+    text-transform: none;
+    &:hover {
+      background: transparent;
+      text-decoration: underline;
+    }
+    &:after {
+      content: ',';
+      color: $color-hab-darkest-gray;
+    }
+  }
+  &:last-of-type {
+    a {
+      &:after {
+        content: none;
+      }
+    }
+  }
+}
