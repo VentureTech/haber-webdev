@@ -42,16 +42,26 @@ body {
   }
 }
 
-
-
 .topiclist-viewer {
   .prop-header-actions {
     .top.actions {
+      margin-top: -.5rem;
       text-align: left;
       display: block;
     }
   }
+
+  .activities {
+    margin-top: 1.75rem;
+  }
+
+  .topic.editor {
+    margin-top: 2rem;
+  }
+
   .name {
+    margin-top: .5rem;
+
     .actions {
       display: inline-block;
       vertical-align: middle;

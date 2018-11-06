@@ -100,4 +100,11 @@ ul.tab-items {
 	border-radius: 3px;
 	padding: 20px;
 	background-color: #FFFFFF;
+
+	&.leaves-tab .designations {
+		.miwt-table > tbody > tr > td.action-column {
+			min-width: auto;
+			width: 3rem;
+		}
+	}
 }

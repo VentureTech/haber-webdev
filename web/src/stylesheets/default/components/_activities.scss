@@ -251,20 +251,28 @@
 	float: left;
 }
 
+.rep-activity-main .activity-instance-editor-upper:after,
 .activity-management .activity-instance-editor-upper:after {
 	clear: both;
 	content: " ";
 	display: table;
 }
 
+.rep-activity-main .activity-instance-editor-upper > .actions {
+	margin-right: 40px;
+}
+
+.rep-activity-main .activity-instance-editor-upper > .actions,
 .activity-management .activity-instance-editor-upper > .actions {
 	float: right;
 }
 
+.rep-activity-main .activity-instance-editor-upper > .actions .btn + .btn,
 .activity-management .activity-instance-editor-upper > .actions .btn + .btn {
 	margin-left: 40px;
 }
 
+.rep-activity-main .activity-instance-editor-upper .btn,
 .activity-management .activity-instance-editor-upper .btn {
 	background-color: transparent;
 	font-size: .9rem;
@@ -283,6 +291,7 @@
 	font-size: 1.25rem;
 }
 
+.rep-activity-main .activity-instance-editor-upper .btn:before,
 .activity-management .activity-instance-editor-upper .btn:before {
 	content: " ";
 	display: inline-block;
@@ -295,15 +304,18 @@
 	height: 24px;
 }
 
+.rep-activity-main .activity-instance-editor-upper .complete-activity:before,
 .activity-management .activity-instance-editor-upper .complete-activity:before {
 	background-image: url(/_resources/dyn/files/17929z9e6d7142/_fn/checkbox.png);
 }
 
 /* credit: http://www.randomjabber.com/ */
+.rep-activity-main .activity-instance-editor-upper .cancel-activity:before,
 .activity-management .activity-instance-editor-upper .cancel-activity:before {
 	background-image: url(/_resources/dyn/files/17928ze96a41d4/_fn/cancel_round.png);
 }
 
+.rep-activity-main .activity-instance-editor-upper .delete-activity:before,
 .activity-management .activity-instance-editor-upper .delete-activity:before {
 	background-image: url(/_resources/dyn/docroot/cms/filesystem/icons/delete.gif);
 }
@@ -311,7 +323,7 @@
 .activity-management .activity-instance-editor-upper a.designate-activity:before {
 	content: '\f0e8';
 	font-family: $font-glyph-lib;
-	color: $color-hab-orange;
+	color: $color-hab-dark-blue;
 	line-height: 24px;
 }
 

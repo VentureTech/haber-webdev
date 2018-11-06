@@ -91,6 +91,19 @@
 		> .support > .menuitemlabel { background-position: 0 -87px; }
 		> .events > .menuitemlabel { background-position: 0 -165px; }
 		> .coaching > .menuitemlabel { background-position: 0 -205px; }
+		> .topic-list-management > .menuitemlabel,
+		> .topic-lists > .menuitemlabel {
+			background: none;
+			&::before {
+				content: '\f022';
+				font-family: $font-glyph-lib;
+				font-weight: 400;
+				font-size: 28px;
+				position: absolute;
+				left: 6px;
+				top: -2px;
+			}
+		}
 
 		> .mi.open-menu .menu-t2 {
 			opacity: 1;
