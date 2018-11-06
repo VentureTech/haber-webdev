@@ -1,5 +1,15 @@
 @import "../config/base-vars";
 
+.company.selector {
+  margin: 1.5rem 0 1rem;
+}
+
+.no-lists {
+  display: block;
+  padding-bottom: .5rem;
+  font-style: italic;
+}
+
 .topic-lists {
   display: flex;
   flex-flow: row wrap;
