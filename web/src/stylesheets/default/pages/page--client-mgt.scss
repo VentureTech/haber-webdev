@@ -451,12 +451,14 @@ button.btn {
 					margin-top: 0;
 				}
 
-				.prop.allow-overdue .label {
+				.prop.allow-overdue div.label {
+					width: 18.3rem;
 					padding-left: 0;
 					padding-right: 0;
+					max-width: none;
+					margin-bottom: 0;
 				}
 
-				.prop.allow-overdue .label,
 				.prop.allow-overdue .label label {
 					max-width: none;
 					width: auto;
@@ -465,6 +467,57 @@ button.btn {
 
 				.entity_value_editor {
 					margin-top: 1rem;
+
+					> h2,
+					> .actions {
+						display: inline-block;
+						vertical-align: middle;
+					}
+
+					> h2 + .actions {
+						margin: 0 0 -23px 10px;
+					}
+
+					.ctb {
+						padding-left: 1.5rem;
+					}
+
+					.ctb label {
+						display: inline-block;
+						vertical-align: top;
+						font-weight: 600;
+						font-size: 14px;
+						width: 19.7rem;
+						margin-left: 0;
+					}
+
+					textarea {
+						margin-left: 0;
+						width: 100%;
+					}
+
+					.topics {
+						h1 {
+							font-size: 1rem;
+							font-weight: 600;
+						}
+
+						h1,
+						.actions {
+							display: inline-block;
+							vertical-align: middle;
+						}
+
+						.actions {
+							margin-left: 10px;
+							.btn.add {
+								margin: 0;
+								font-size: 12px;
+								padding: 3px 10px;
+								height: auto;
+							}
+						}
+					}
 				}
 
 				.entity_value_editor > .ctb.label-after {
