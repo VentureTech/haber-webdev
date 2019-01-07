@@ -135,5 +135,36 @@
 				}
 			}
 		}
+
+		.question {
+			.radio {
+				padding: 15px 0;
+
+				.props {
+					width: 100%;
+				}
+
+				tr {
+					display: inline-block;
+				}
+
+				.choice {
+					width: auto;
+					padding: 0;
+				}
+
+				.rtb {
+					display: block;
+					width: 2.75rem;
+					text-align: center;
+
+					label {
+						display: block;
+						width: 100%;
+						text-align: center;
+					}
+				}
+			}
+		}
 	}
 }
