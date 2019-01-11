@@ -703,6 +703,14 @@ div.window.dialog {
 	font-size: 18px;
 }
 
+.property-wrapper{
+	&.resource-editor {
+		+ .resource-editor {
+			margin-top: 15px;
+		}
+	}
+}
+
 .prop-wrapper.resource-editor .prop .label {
 	width: 40%;
 }
@@ -1040,6 +1048,25 @@ div.window.dialog {
 		height: auto;
 	}
 
+}
+
+/* ----- team management */
+
+.team-mgt-tab {
+	.resource-editor {
+		.actions.top {
+			.ctb {
+				margin-right: 4px;
+			}
+		}
+	}
+
+	.add-existing-user-viewer {
+		.actions.bottom {
+			display: flex;
+			flex-flow: row nowrap;
+		}
+	}
 }
 
 @import "../components/schedule-editor";
