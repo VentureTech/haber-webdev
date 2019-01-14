@@ -1062,9 +1062,29 @@ div.window.dialog {
 	}
 
 	.add-existing-user-viewer {
+		padding: 0.5rem 0;
+
+		.prop-header-title {
+			h2 {
+				font-size: 1.15rem;
+			}
+		}
+
 		.actions.bottom {
-			display: flex;
-			flex-flow: row nowrap;
+			width: 100%;
+			margin-left: 0;
+
+			&:after {
+				content: "";
+				display: table;
+				width: 100%;
+				float: none;
+				clear: both;
+			}
+
+			button.back {
+				float: left;
+			}
 		}
 	}
 }
