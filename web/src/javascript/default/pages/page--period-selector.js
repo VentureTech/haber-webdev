@@ -5,25 +5,22 @@
 jQuery(function($) {
 
     $(window).on('load', function() {
-        var positionId = null;
-        var dateRange = null;
+        var $positionId = null;
+        var $dateRange = null;
         var results1 = new RegExp('[\?&]vp=([^&#]*)').exec($('.crumbs > li.first > a').attr('href'));
         if (results1 != null) {
-            positionId = decodeURI(results1[1]);
+            $positionId = decodeURI(results1[1]);
         }
         var results2 = new RegExp('[\?&]dr=([^&#]*)').exec(window.location.href);
         if (results2 != null) {
-            dateRange = decodeURI(results2[1]);
+            $dateRange = decodeURI(results2[1]);
         }
-        console.log('PositoinId: ' + positionId);
-        console.log('DateRange: ' + dateRange);
-        if (positionId == '6788' && dateRange == null) {
-            console.log('It is the demo dashboard!');
+        if ($positionId == '6788' && $dateRange == null) {
             $('.control > select').val("ly");
             $('.control > select').trigger('change');
         }
     });
-
+  
     $('.period-selector').each(function() {
         var $con = $(this);
         var $form = $con.find('form');
@@ -87,6 +84,8 @@ jQuery(function($) {
                 //console.log("yay month");
                 $cycleRange.removeClass(ACTIVE_CLASS);
                 $dateRange.addClass(ACTIVE_CLASS);
+
+
 
                 return;
             }
@@ -192,6 +191,7 @@ jQuery(function($) {
                     $monthPicker.removeClass(ACTIVE_CLASS);
                 });
             });
+
 
             $('.selection-container > div').on('click', function(){
                 var selection = $(this).text();
@@ -345,6 +345,9 @@ jQuery(function($) {
                         + '&' + param1.attr('name')+ '=' + param1.data('selectedId')
                         + '&' + param2.attr('name') + '=' + param2.data('selectedId');
 
+                    // console.log(url + ',' + newUrl);
+
+                    //$(location).attr('href', newUrl);
                     window.location.href = newUrl;
                 }
             });
