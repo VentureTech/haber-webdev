@@ -4,6 +4,23 @@
 
 jQuery(function($) {
 
+    $(window).on('load', function() {
+        var $positionId = null;
+        var $dateRange = null;
+        var results1 = new RegExp('[\?&]vp=([^&#]*)').exec($('.crumbs > li.first > a').attr('href'));
+        if (results1 != null) {
+            $positionId = decodeURI(results1[1]);
+        }
+        var results2 = new RegExp('[\?&]dr=([^&#]*)').exec(window.location.href);
+        if (results2 != null) {
+            $dateRange = decodeURI(results2[1]);
+        }
+        if ($positionId == '6788' && $dateRange == null) {
+            $('.control > select').val("ly");
+            $('.control > select').trigger('change');
+        }
+    });
+  
     $('.period-selector').each(function() {
         var $con = $(this);
         var $form = $con.find('form');
