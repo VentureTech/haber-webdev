@@ -14,6 +14,22 @@
 	}
 }
 
+.manager-profile:after {
+	//clearfix for floated contents.
+	content: "";
+	display: block;
+	width: 100%;
+	clear: both;
+	float: none;
+}
+
+.activitylinks .profile-wrapper{
+	.actions {
+		margin: 1rem auto 0;
+		text-align: center;
+	}
+}
+
 .activitylinks .profile .person .photo{
 	width: 100%;
 }
@@ -828,8 +844,9 @@
 		width: 246px;
 	}
 
-	.activitylinks .profile{
+	.activitylinks .profile-wrapper{
 		width: 240px;
+		float: right;
 		display: inline-block;
 		vertical-align: top;
 	}
@@ -952,7 +969,8 @@
 		float: right;
 	}
 
-	.activitylinks .profile{
+
+	.activitylinks .profile-wrapper{
 		width: 240px;
 		float: right;
 	}
@@ -962,6 +980,7 @@
 		vertical-align: top;
 		width: 450px;
 		padding-left: 30px;
+		float: left;
 	}
 
 	.activitylinks .menu-wrapper .menu-t2 li{
@@ -981,6 +1000,7 @@
 }
 
 @media all and (max-width: 759px) {
+
 	.activitylinks .menu-t2 > .mi {
 		display: inline-block;
 		vertical-align: top;
@@ -1085,7 +1105,7 @@
 		float: right;
 	}
 
-	.activitylinks .profile{
+	.activitylinks .profile-wrapper{
 		width: 200px;
 		float: right;
 	}

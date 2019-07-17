@@ -37,15 +37,72 @@
 	}
 }*/
 
-.rep-activity-main .activity-result-editor .actions {
-	margin-left: 0;
-	@include clearfix();
+.rep-activity-main .activity-result-editor {
+	.actions {
+		margin-left: 0;
+		@include clearfix();
 
-	&.survey-activity, &.persistence-actions.form-based-activity {
-		text-align: right;
+		&.survey-activity, &.persistence-actions.form-based-activity {
+			text-align: right;
 
-		button.btn.edit {
-			float: none;
+			button.btn.edit {
+				float: none;
+			}
+		}
+	}
+
+	.prop-wrapper .prop-header-title {
+		margin: 0;
+	}
+	.topic {
+		&-list-heading {
+			display: none;
+		}
+		&-con {
+			> h1 {
+				text-align: center;
+			}
+			> .description {
+				text-align: center;
+				width: 80%;
+				max-width: 720px;
+				margin: 15px auto 30px;
+			}
+		}
+	}
+	.attachment {
+		&-list-con {
+			> h1 {
+				display: inline-block;
+				width: 50%;
+				padding: 0 10px;
+				vertical-align: top;
+				text-align: right;
+				line-height: 1.1;
+				font-size: 1.25rem;
+			}
+		}
+		&-con {
+			display: inline-block;
+			width: 50%;
+			padding: 0 10px;
+			+ .attachment-con {
+				margin-left: 50%;
+			}
+			> h1 {
+				font-size: 1.125rem;
+				margin-bottom: 5px;
+				line-height: 1.1;
+				a {
+					font-size: 1em;
+					font-weight: bold;
+					color: $color-hab-orange;
+					text-decoration: underline;
+					&:hover {
+						color: $color-hab-orange;
+					}
+				}
+			}
 		}
 	}
 }
