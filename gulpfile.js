@@ -1,7 +1,8 @@
 //noinspection JSUnresolvedVariable
 require('dotenv').config({
-    path: `${process.env.HOME}/.gradle/gradle.properties`
+    path: `${process.env.HOME || process.env.USERPROFILE}/.gradle/gradle.properties`
 });
+
 var gulp = require('gulp');
 var del = require('del');
 
