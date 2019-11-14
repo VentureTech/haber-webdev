@@ -34,8 +34,9 @@ body {
   font-style: normal;
 }
 
-.activity-header {
+.sales-activity {
   margin: 0;
+  font-size: 14px;
 
   &::after {
     content: '';
@@ -61,31 +62,41 @@ h2 {
 }
 
 .activity-info {
-  margin: -10px 0 0;
+  margin: -15px 0 0;
+  width: 7.5in;
 }
 
-.activity-info .left {
-  width: 4in;
+.activity-info > tbody > tr > td {
+  vertical-align: bottom;
+}
 
-  .label {
-    width: .5in;
-  }
+.activity-info .left,
+.activity-info .right {
+  width: 3.5in;
 }
 
 .activity-info .right {
-  margin-left: .95in;
-  width: 3in;
+  margin-left: 0.25in;
+  .val {
+    white-space: nowrap;
+    vertical-align: bottom;
+    text-align: right;
+  }
+  .label {
+    white-space: nowrap;
+  }
 }
 
 .activity-info .label {
   width: 1.35in;
-  //text-align: right;
   text-align: left;
 }
 
 .activity-info .val {
-  width: 1.15in;
-  margin-left: 0.125in;
+  box-sizing: border-box;
+  width: 2.15in;
+  padding-left: 0.125in;
+  padding-right: 0.125in;
 }
 
 .activity-result-editor {
@@ -105,15 +116,17 @@ h2 {
 }
 
 .answers{
-  width: 7.75in;
+  width: 7.65in;
 }
 
 .answer-con{
   width: 100%;
+  box-sizing: border-box;
 }
 
 .answers .answer-con label{
   width: 100%;
+  box-sizing: border-box;
   display: block;
   font-family: FranklinGothic URW Demi, sans-serif;
   font-weight: normal;
@@ -128,6 +141,7 @@ h2 {
 .answers .answer-con .value{
   display: block;
   width: 100%;
+  box-sizing: border-box;
   margin: 10px 0px;
   padding: 0px 15px;
 }
