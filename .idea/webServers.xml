@@ -3,13 +3,19 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="6142783d-1503-4427-8495-10dc9a545451" name="Development (WebDAV)" url="http://russ1-dev.russ1-vdm.vipasuite.com/_files/Web">
-        <fileTransfer port="0" mountedRoot="$PROJECT_DIR$/mounts/dev-web" accessType="MOUNT" />
+        <fileTransfer port="0" mountedRoot="C:\Users\Aprille\WebStorm Projects\haber-webdev\mounts\dev-web" accessType="MOUNT" />
       </webServer>
       <webServer id="f66afc96-2a07-44ca-ac6c-993cd2c356f5" name="QA (WebDAV)" url="https://starter-app-qa.veturetech.net/_files/Web">
         <fileTransfer port="0" mountedRoot="$PROJECT_DIR$/mounts/qa-web" accessType="MOUNT" />
       </webServer>
       <webServer id="33a50adc-d11e-42c5-9bb0-768e2e5dd2d1" name="Live (WebDAV)" url="https://starter-app-release.venturetech.net/_files/Web">
-        <fileTransfer port="0" mountedRoot="$PROJECT_DIR$/mounts/live-web" accessType="MOUNT" />
+        <fileTransfer port="0" mountedRoot="C:\Users\Aprille\WebStorm Projects\haber-webdev\mounts\live-web" accessType="MOUNT" />
+      </webServer>
+      <webServer id="fd89ca0e-7697-443d-810e-85b73f020052" name="Haberfeld - Release" url="http://localhost">
+        <fileTransfer port="0" mountedRoot="W:\cultivate-growth.com\Web\Stylesheets" accessType="MOUNT" />
+      </webServer>
+      <webServer id="f6d12b26-9532-4d4f-8187-afcf965e6156" name="Haberfeld - QA" url="http://localhost">
+        <fileTransfer port="0" mountedRoot="W:\haber-qa.proteus.co\Web" accessType="MOUNT" />
       </webServer>
     </option>
   </component>

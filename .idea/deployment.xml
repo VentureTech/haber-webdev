@@ -9,10 +9,59 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="Engage Live">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Engage QA">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Engage TEST">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Haberfeld - QA">
+        <serverdata>
+          <mappings>
+            <mapping deploy="Stylesheets\default" local="$PROJECT_DIR$/build/Stylesheets/default" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Haberfeld - Release">
+        <serverdata>
+          <mappings>
+            <mapping deploy="default" local="$PROJECT_DIR$/build/Stylesheets/default" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="Live (WebDAV)">
         <serverdata>
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$/build" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="ProteusCMS Live">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="ProteusCMS QA">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
