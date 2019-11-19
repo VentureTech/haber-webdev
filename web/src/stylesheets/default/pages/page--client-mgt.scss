@@ -1591,6 +1591,26 @@ div.window.dialog.property_wrapper {
 	}
 }
 
+/* Cheer settings */
+div.default.recipients,
+div.default.bcc {
+	display: table;
+
+	.recipient {
+		display: table-row;
+
+		span {
+			display: table-cell;
+			padding: 5px;
+		}
+	}
+}
+
+.cheerrecipient-editor label {
+	font-weight: 600;
+	padding-right: 5px;
+}
+
 .prop-wrapper {
 	&.user-role-viewer, &.user-viewer {
 		.prop .val {
