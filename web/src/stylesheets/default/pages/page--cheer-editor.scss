@@ -1,0 +1,58 @@
+@import "../components/property-editor-viewer";/* Cheer settings */
+
+div.recipients {
+	display: table;
+	background:  white;
+	border-collapse: separate;
+	border-spacing: 0;
+	border: 1px solid #c2c2c2;
+
+	.recipient {
+		display: table-row;
+
+		&.odd {
+			background-color: #fff;
+		}
+
+		&.even {
+			background-color: #f3f3f3;
+		}
+
+		span {
+			display: table-cell;
+			padding: 5px;
+			border-bottom: 1px solid #c2c2c2;
+		}
+	}
+}
+
+.prop.notify {
+	margin : 10px 0;
+	background: white;
+	padding: 5px;
+}
+
+div.select.notifications {
+	display: table;
+	.notify {
+		display: table-row;
+		span {
+			display: table-cell;
+			padding: 5px;
+		}
+	}
+}
+
+.cheerrecipient-editor label {
+	font-weight: 600;
+	padding-right: 5px;
+}
+
+.cheer-editor .prop label {
+	font-weight: 600;
+	padding-right: 5px;
+}
+
+.cheer-editor .notification.editor {
+	display: block;
+}
