@@ -387,5 +387,26 @@ and (orientation:portrait) {
 		}
 
 	}
+}
 
+.send-cheer-con {
+	div.send-cheer {
+		display: inline-block;
+		position: absolute;
+		right: 56px;
+		bottom: 3px;
+	}
+	a.send-cheer {
+		font: normal normal normal 1.5rem FontAwesome;
+		color: #fff;
+
+		&:before {
+			content: "\f005";
+		}
+
+		&:hover {
+			text-decoration: none;
+			color: $color-hab-orange;
+		}
+	}
 }
