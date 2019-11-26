@@ -25,10 +25,10 @@
     "run-sequence": "^1.2.1"
   },
   "dependencies": {
-    "node": "^11.6.0",
     "bootstrap": "^4.3.1",
-    "breakpoint-sass": "^2.7.1",
     "bower": "^1.8.8",
-    "bower-components": "^1.0.0"
+    "npm": "^5.7.1",
+    "jquery": "^1.9.1",
+    "popper.js": "^1.14.7"
   }
 }
