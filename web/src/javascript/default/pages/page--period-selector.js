@@ -355,7 +355,7 @@ jQuery(function($) {
 
         $('body').on('click', function(evt) {
             var $focused = $(':focus');
-            console.log($focused);
+            //console.log($focused);
             if ( !($('input.select2-search__field').is(':focus') || $('span.select2-selection.select2-selection--single').is(':focus') )) {
                 closeControlExtras();
             }

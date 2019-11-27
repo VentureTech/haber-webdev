@@ -1,30 +1,44 @@
-/* Required. */
-//=require ../components/responsive-view.js 
-//=require ../components/select2.js 
-//=require ../components/error-messages.js 
-//=require ../components/charts.js 
-//=require ../components/data-download.js 
-//=require ../components/nav-highlight.js 
-//=require ../components/tooltips.js 
+/*const*/
+var SELECT2_INIT = "select2-init";
 
-/* Bundle */
-//=require ../components/top-menu.js 
+// select2
+function initSelect2(ctx) {
+	var $select = $(ctx || document).find('select');
+	if($select.length === 0 && !!ctx && ctx.nodeName.toLowerCase() == 'select') $select = $(ctx);
+	if ($select.length && !($select.closest('.cke_dialog').length || $select.closest('tr[data-dnd-source-def]').length)) {
 
+		//noinspection JSUnresolvedVariable
+		var $result = $select
+			.select2({
+				minimumResultsForSearch: 10,
+				dropdownAutoWidth: true,
+				width: 'resolve'
+			})
+			.addClass(SELECT2_INIT)
+			.filter('[data-features~="watch"]');
+		if (window.miwt) {
+			//noinspection JSUnresolvedVariable
+			$result.on('change', miwt.observerFormSubmit);
+		}
+	}
+}
+
+function destroySelect2(ctx) {
+	if(!ctx) return;
+	var $select = $(ctx);
+	if (!$select.hasClass(SELECT2_INIT)) {
+		$select = $select.find('select').filter('.' + SELECT2_INIT);
+	}
+
+	if ($select.length) {
+		$select.removeClass(SELECT2_INIT).select2('destroy');
+	}
+}
 
 // Note: openSidebar function is declared in the HTML of the page (header)
 jQuery(function () {
 
-	setupErrorMessages();
-
 	initSelect2();
-
-	handleDataDownload();
-
-	enableTooltips();
-
-	setupCharts();
-
-	navHighlight();
 
 	$('form.miwt-form').each(function (idx, form) {
 		//noinspection JSUnusedGlobalSymbols
@@ -36,15 +50,6 @@ jQuery(function () {
 			postProcessNode: function (data) {
 				$.each(data, function (idx, ctx) {
 					initSelect2(ctx);
-					handleDataDownload(ctx);
-					enableTooltips(ctx);
-					setupCharts(ctx);
-					navHighlight();
-					if($(ctx).hasClass('message-container') || $(ctx).find('.message-container').length > 0)
-						errorMessageCleanup();
-					setTimeout(function () {
-						setupErrorMessages(ctx);
-					}, 1);
 				});
 			},
 			postUpdate: function () {
@@ -52,6 +57,4 @@ jQuery(function () {
 			}
 		};
 	});
-
-
 });
