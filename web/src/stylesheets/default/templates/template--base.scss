@@ -144,8 +144,8 @@ p a {
 .dialog .titlebar .btn {
 	width: 30px;
 	height: 30px;
-	padding: 0px;
-	margin: 0px;
+	padding: 0;
+	margin: 0;
 	background: $color-hab-orange url(/_resources/dyn/files/9970zb929d85f/_fn/dialog-close.png) center center no-repeat;
 	font-size: 0.01px;
 }
@@ -393,6 +393,7 @@ and (orientation:portrait) {
 }
 
 .send-cheer-con {
+	/** menu item */
 	div.send-cheer {
 		display: inline-block;
 		position: absolute;
@@ -411,5 +412,20 @@ and (orientation:portrait) {
 			text-decoration: none;
 			color: $color-hab-orange;
 		}
+	}
+
+	/** Send Cheer Editor */
+  .prop {
+    padding-top: 5px;
+	  label {
+		  width: 13%;
+	  }
+	  &.cheer-message label {
+		  vertical-align: top;
+	  }
+  }
+
+	div.prop-header-actions {
+		display: none;
 	}
 }
