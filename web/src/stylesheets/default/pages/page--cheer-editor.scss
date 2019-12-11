@@ -1,14 +1,15 @@
 @import "../components/property-editor-viewer";/* Cheer settings */
 
-div.recipients {
+div.recipients,
+div.bcc {
 	display: table;
 	background:  white;
 	border-collapse: separate;
 	border-spacing: 0;
-	border: 1px solid #c2c2c2;
 
 	.recipient {
 		display: table-row;
+		border: 1px solid #c2c2c2;
 
 		&.odd {
 			background-color: #fff;
@@ -21,7 +22,7 @@ div.recipients {
 		span {
 			display: table-cell;
 			padding: 5px;
-			border-bottom: 1px solid #c2c2c2;
+
 		}
 	}
 }

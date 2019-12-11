@@ -1,9 +1,11 @@
 .params {
 	.param {
 		padding: 3px;
-		input,
-		select {
-			margin-left: 3px;
+		label {
+			width: 10%;
+		}
+		button {
+			white-space: nowrap;
 		}
 	}
 }
