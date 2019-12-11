@@ -12,7 +12,7 @@ function initSelect2(ctx) {
 			.select2({
 				minimumResultsForSearch: 10,
 				dropdownAutoWidth: true,
-				width: 'resolve'
+				width: 'style'
 			})
 			.addClass(SELECT2_INIT)
 			.filter('[data-features~="watch"]');
