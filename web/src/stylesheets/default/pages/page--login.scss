@@ -274,7 +274,6 @@
 	background: #fff;
 	font-family: $font-libre-gothic;
 	border-radius: 0.3rem;
-	margin-top: 5rem;
 }
 
 .password-reset .title {
@@ -291,10 +290,6 @@
 	font-weight: 700;
 }
 
-.password-reset p {
-	padding: 2rem 2rem 0;
-}
-
 .password-reset .label {
 	font-size: .85rem;
 	color: #343940;
@@ -306,9 +301,7 @@
 	margin-bottom: .25rem;
 }
 
-.password-reset .actions {
-	padding: 0 3rem 2rem;
-}
+
 
 .password-reset .actions .btn {
 	margin: .5rem auto 0;
