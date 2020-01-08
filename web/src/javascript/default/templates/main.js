@@ -10,7 +10,7 @@ function initSelect2(ctx) {
 		//noinspection JSUnresolvedVariable
 		var $result = $select
 			.select2({
-				minimumResultsForSearch: 10,
+				minimumResultsForSearch: 6,
 				dropdownAutoWidth: true,
 				width: 'style'
 			})
