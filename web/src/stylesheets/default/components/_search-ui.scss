@@ -103,6 +103,9 @@
 
 /* Results Table
    ========================================================================== */
+.pager-search-results .miwt-table-con {
+	overflow: scroll;
+}
 .search-wrapper .miwt-table {
 	width: 100%;
 	margin: 20px 0;
