@@ -5,16 +5,9 @@
 .user-control {
 	color: #fff;
 	text-align: right;
-	position: absolute;
-	right: 10px;
 	cursor: pointer;
-	margin-right: -10px;
-	padding: 5px 10px;
 	z-index: 900;
-}
-
-.user-control:hover {
-	background-color: #0b385b;
+	position: relative;
 }
 
 .user-control:before,
@@ -27,6 +20,18 @@
 	clear: both;
 }
 
+.user-control {
+	.collapsible-control {
+		display: inline-block;
+		min-width: 170px;
+		padding: 10px;
+
+		&:hover {
+			background-color: #0b385b;
+		}
+	}
+}
+
 .user-control .collapsible-shown {
 	position: absolute;
 	top: 100%;
@@ -35,6 +40,9 @@
 
 .user-control-trigger {
 	white-space: nowrap;
+	&:hover {
+		background-color: #0b385b;
+	}
 }
 
 .user-control-trigger .photo {

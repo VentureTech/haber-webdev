@@ -794,12 +794,11 @@ border-top-color: #1f88d8;
 }
 
 .notification-summary {
-	position: absolute;
-	right: 15px;
-	bottom: 5px;
+	position: relative;
+	height: 26px;
+	width: 26px;
+	margin-right: 6px;
 	background: center center transparent url(/_resources/dyn/files/14995z669a4b4c/_fn/notification-icon.png) no-repeat;
-	width: 30px;
-	height: 23px;
 	display: none;
 }
 
@@ -819,7 +818,7 @@ border-top-color: #1f88d8;
 	border-radius: 100%;
 	position: absolute;
 	top: -6px;
-	right: -6px;
+	right: 0;
 	font-size: 11px;
 }
 
