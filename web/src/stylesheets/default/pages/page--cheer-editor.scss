@@ -58,3 +58,23 @@ div.select.notifications {
 .cheer-editor .notification.editor {
 	display: block;
 }
+
+/* Override title margins */
+.cheer-editor.prop-wrapper .prop-header-title {
+	font-weight: bold;
+	margin: 0;
+}
+
+/** Front end dialog specific adjustments */
+.send-cheer-con .window.dialog {
+	.activewindowtitle {
+		font-weight: bold;
+	}
+
+	.prop-editor {
+		.instructions {
+			padding-top: 0;
+		}
+		padding: 0 0.5rem 0.5rem 0.5rem;
+	}
+}
