@@ -2,15 +2,69 @@
 
 /* Header styles */
 #header {
-	background: rgb(6,43,72); /* Old browsers */
-	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzA2MmI0OCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjM2JSIgc3RvcC1jb2xvcj0iIzA2MmI0OCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwNTIzM2IiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: rgb(6,43,72); /* Fallback for older browsers that don't support linear gradient */
 	background: linear-gradient(to bottom,  rgba(6,43,72,1) 0%,rgba(6,43,72,1) 36%,rgba(5,35,59,1) 100%); /* W3C */
 	border-bottom: 1px solid #0d3b61;
 
-	.lt-ie9 & {
-		background: none;
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#062b48', endColorstr='#05233b',GradientType=0 ); /* IE6-8 */
+	> .box-wc {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px 0 10px 10px;
+
+		/* use flexbox to make sure the elements are displayed in the order we want them. */
+		> div {
+			order: 3;
+		}
+
+		.logo {
+			order: 1;
+		}
+
+		.user-control {
+			order: 2;
+		}
+
+		.logo,
+		.user-control {
+			flex-basis: 50%;
+		}
+
+		.custom-menu,
+		.coaching-library {
+			flex-basis: 48%;
+
+			ul.menu-t1 {
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: space-around;
+				width: 100%;
+			}
+		}
+
+		.dashboard-quickfind {
+			flex-basis: calc(100% - 65px);
+			text-align: right;
+
+			.select2-container {
+				max-width: 100%;
+			}
+		}
+
+		.send-cheer-con,
+		.notifications-summary {
+			flex-basis: 28px;
+			text-align: center;
+		}
+
+		@media only screen and (min-width: 1240px){
+			.custom-menu,
+			.coaching-library,
+			.dashboard-quickfind {
+				flex-basis: calc(35% - 65px);
+			}
+		}
 	}
 
 	.text.logo {
@@ -22,16 +76,6 @@
 	}
 }
 
-#header-wc-0 {
-	padding: 5px 10px;
-	position: relative;
-}
-
-#header-wc-0:before,
-#header-wc-0:after {
-	content: " ";
-	display: table;
-}
 
 /* Generic Primary menu class.  Primarily used in top nav of the page */
 .primary-menu {
@@ -41,10 +85,6 @@
 
 	> .menu {
 		display: inline-block;
-	}
-
-	+ .primary-menu {
-		margin-left: 50px;
 	}
 
 	.menu {
@@ -74,35 +114,55 @@
 			position: relative;
 			display: inline-block;
 
-			+ .mi {
-				margin-left: 50px;
-			}
-
 			> .menuitemlabel {
 				font-size: 18px;
 				padding: 5px 20px 5px 45px;
 				background: 0 -4px transparent url(/_resources/dyn/files/8955z43c92937/_fn/primary-menu-icons.png) no-repeat;
+
+				@media only screen and (max-width: 759px){
+					font-size: 17px;
+					padding: 5px 10px;
+					background: 0 0;
+				}
 			}
 		}
 
-		> .team > .menuitemlabel { background-position: 0 -4px; }
-		> .activities > .menuitemlabel { background-position: 0 -46px; }
-		> .training > .menuitemlabel { background-position: 0 -126px; }
-		> .support > .menuitemlabel { background-position: 0 -87px; }
-		> .events > .menuitemlabel { background-position: 0 -165px; }
-		> .coaching > .menuitemlabel { background-position: 0 -205px; }
-		> .reports > .menuitemlabel { background-position: 0 -46px; }
-		> .topic-list-management > .menuitemlabel,
-		> .topic-lists > .menuitemlabel {
-			background: none;
-			&::before {
-				content: '\f022';
-				font-family: $font-glyph-lib;
-				font-weight: 400;
-				font-size: 28px;
-				position: absolute;
-				left: 6px;
-				top: -2px;
+		@media only screen and (min-width: 760px) {
+
+			> .team > .menuitemlabel {
+				background-position: 0 -4px;
+			}
+			> .activities > .menuitemlabel {
+				background-position: 0 -46px;
+			}
+			> .training > .menuitemlabel {
+				background-position: 0 -126px;
+			}
+			> .support > .menuitemlabel {
+				background-position: 0 -87px;
+			}
+			> .events > .menuitemlabel {
+				background-position: 0 -165px;
+			}
+			> .coaching > .menuitemlabel {
+				background-position: 0 -205px;
+			}
+			> .reports > .menuitemlabel {
+				background-position: 0 -46px;
+			}
+			> .topic-list-management > .menuitemlabel,
+			> .topic-lists > .menuitemlabel {
+				background: none;
+
+				&::before {
+					content: '\f022';
+					font-family: $font-glyph-lib;
+					font-weight: 400;
+					font-size: 28px;
+					position: absolute;
+					left: 6px;
+					top: -2px;
+				}
 			}
 		}
 
