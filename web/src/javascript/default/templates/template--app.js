@@ -4,9 +4,7 @@
 
 jQuery(function($) {
     var SELECT_OPTIONS = {
-        width: function() {
-            return parseInt(this.element.width(), 10) + 15;
-        },
+        width: 'style',
         minimumResultsForSearch: -1
     };
 
@@ -114,7 +112,7 @@ jQuery(function($) {
                 });
             }
         });
-    };
+    }
 
     function checkForPreCallPlans() {
         var $con = $(this);

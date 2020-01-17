@@ -167,7 +167,7 @@
 }
 
 .featured-resources .mCSB_scrollTools .mCSB_buttonLeft {
-	background-position: 0px 0px;
+	background-position: 0 0;
 	left: -48px;
 }
 
@@ -340,7 +340,7 @@
 }
 
 .table-part.closed th.label:before {
-	background-position: 0px 0px;
+	background-position: 0 0;
 }
 
 .table-part.closed th.label:hover:before {
@@ -536,7 +536,7 @@
 
 .table-part th .person .notifications {
 	position: absolute;
-	bottom: 0px;
+	bottom: 0;
 	right: 0;
 	z-index: 15;
 }
@@ -551,7 +551,7 @@
 	background-color: #333639;
 	background-color: rgba(0,0,0,0.2);
 	border-radius: 3px;
-	margin: 0px 2px;
+	margin: 0 2px;
 	-webkit-transition: all 0.25s;
 	-moz-transition: all 0.25s;
 	-ms-transition: all 0.25s;
@@ -855,4 +855,9 @@ border-top-color: #1f88d8;
 			}
 		}
 	}
+}
+
+/** Keep the dashboard finder a bit bigger */
+.dashboard-search .select2-container {
+	min-width: 15rem;
 }
